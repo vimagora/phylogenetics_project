@@ -1,0 +1,8 @@
+# Downloaded genome data (large, re-download with scripts/download_mycocosm_genomes.sh)
+01_genomes/*
+!01_genomes/.gitkeep
+*.part
+*.log
+
+# Windows download metadata
+*:Zone.Identifier
