@@ -21,7 +21,7 @@
 # Fill in --account and --partition above before submitting. The log is written to
 # 01_genomes/download_<jobid>.log. Re-submitting skips files that were already downloaded.
 
-cd /scratch/project_2015320/phylogenetics_project/
+cd /scratch/project_2015320/phylogenetics_project/ || exit 1
 
 echo "Job $SLURM_JOB_ID on $(hostname), started $(date)"
 
