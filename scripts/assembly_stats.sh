@@ -13,13 +13,12 @@
 #   genomes_dir  Folder with one subdirectory per portal (default: 01_genomes).
 #   output_file  Where the report is saved (default: 03_assembly_stats/assembly_stats.tsv).
 #
-# Uses SeqKit from the Roihu bio-apps modules. Uses $SLURM_CPUS_PER_TASK threads inside a
-# Slurm job, 4 otherwise.
+# Uses SeqKit from the Roihu bio-apps modules. The ';' comment lines at the top of MycoCosm
+# files are removed on the fly, since seqkit rejects them; the files themselves are not changed.
 
 PORTAL_LIST=${1:-00_inputs/mycocosm_datasets.tsv}
 GENOMES_DIR=${2:-01_genomes}
 OUT_FILE=${3:-03_assembly_stats/assembly_stats.tsv}
-THREADS=${SLURM_CPUS_PER_TASK:-4}
 
 if [[ ! -f "$PORTAL_LIST" ]]; then
     echo "Portal list file '$PORTAL_LIST' not found" >&2
@@ -63,24 +62,38 @@ if (( ${#ASSEMBLIES[@]} == 0 )); then
 fi
 
 mkdir -p "$(dirname "$OUT_FILE")"
-echo "Computing statistics for ${#ASSEMBLIES[@]} assemblies with $THREADS threads ..."
+echo "Computing statistics for ${#ASSEMBLIES[@]} assemblies ..."
 
-# Writes to a .part file first, so a failed run never overwrites an existing report.
-# A 'portal' column (taken from the file name) is added in front of the seqkit columns.
-# pipefail makes a seqkit error count as a failure, not only an awk error.
+# MycoCosm files start with ';' comment lines, which seqkit rejects as invalid FASTA, so each
+# assembly is streamed to seqkit without them. One assembly at a time, so every result can be
+# checked: pipefail makes a zcat or seqkit error count, and seqkit must return exactly one row.
+# The report is written to a .part file first, so a failed run never overwrites an existing one.
+# A 'portal' column is added in front, and seqkit's 'file' column ('-' for stdin) gets the path.
 set -o pipefail
-if ! seqkit stats --all --tabular --threads "$THREADS" "${ASSEMBLIES[@]}" \
-    | awk -F '\t' -v OFS='\t' '
-        NR == 1 { print "portal", $0; next }
-        { portal = $1; sub(/.*\//, "", portal); sub(/_repeatmasked-assembly\.fasta\.gz$/, "", portal)
-          print portal, $0 }' > "$OUT_FILE.part"; then
-    echo "seqkit failed, report not written" >&2
+N_DONE=0
+FAILED=()
+for ASSEMBLY in "${ASSEMBLIES[@]}"; do
+    PORTAL=$(basename "$(dirname "$ASSEMBLY")")
+    if ! STATS=$(zcat "$ASSEMBLY" | sed '/^;/d' | seqkit stats --all --tabular -) \
+        || [[ $(wc -l <<< "$STATS") -ne 2 ]]; then
+        FAILED+=("$PORTAL")
+        continue
+    fi
+    awk -F '\t' -v OFS='\t' -v portal="$PORTAL" -v file="$ASSEMBLY" -v header=$(( N_DONE == 0 )) '
+        NR == 1 { if (header) print "portal", $0; next }
+        { $1 = file; print portal, $0 }' <<< "$STATS"
+    N_DONE=$(( N_DONE + 1 ))
+done > "$OUT_FILE.part"
+
+if (( ${#FAILED[@]} )); then
+    echo "seqkit failed on ${#FAILED[@]} assemblies, report not written:" >&2
+    printf '  %s\n' "${FAILED[@]}" >&2
     rm -f "$OUT_FILE.part"
     exit 1
 fi
 mv "$OUT_FILE.part" "$OUT_FILE"
 
-echo "Saved statistics of ${#ASSEMBLIES[@]} assemblies to $OUT_FILE"
+echo "Saved statistics of $N_DONE assemblies to $OUT_FILE"
 if (( ${#MISSING[@]} )); then
     echo "${#MISSING[@]} portals on the list have no assembly:" >&2
     printf '  %s\n' "${MISSING[@]}" >&2

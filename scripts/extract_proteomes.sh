@@ -39,6 +39,8 @@ sed -i 's/\r$//' "$PORTAL_LIST"
 # Portal IDs: column 1, skipping the header row
 PORTALS=$(awk -F '\t' 'NR > 1 && $1 != "" { print $1 }' "$PORTAL_LIST")
 
+set -o pipefail
+
 N_EXTRACTED=0
 N_SKIPPED=0
 FAILED=()
@@ -56,7 +58,7 @@ for PORTAL in $PORTALS; do
         continue
     fi
     # Decompress to a .part file first, so an interrupted run never leaves a truncated proteome
-    if gzip -dc "$PROTEOME" > "$OUT.part"; then
+    if gzip -dc "$PROTEOME" | sed '/^;/d' > "$OUT.part"; then
         mv "$OUT.part" "$OUT"
         N_EXTRACTED=$(( N_EXTRACTED + 1 ))
     else
