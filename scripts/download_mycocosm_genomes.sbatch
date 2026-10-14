@@ -6,7 +6,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=2G
-#SBATCH --output=01_genomes/download_%j.log
+#SBATCH --output=/scratch/project_2015320/phylogenetics_project/01_genomes/download_%j.log
 # download_mycocosm_genomes.sbatch
 # Description: Slurm job that downloads the genomes in the portal list with
 #              download_mycocosm_genomes.sh and then decompresses the proteomes
