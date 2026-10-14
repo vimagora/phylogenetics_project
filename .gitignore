@@ -6,3 +6,6 @@
 
 # Windows download metadata
 *:Zone.Identifier
+
+# Decompressed proteomes (re-create with scripts/extract_proteomes.sh)
+02_BUSCO/proteomes/

@@ -63,7 +63,7 @@ download() {
 }
 
 # Convert Windows line endings in place, otherwise every portal ID ends in a hidden \r
-dos2unix --quiet "$PORTAL_LIST"
+sed -i 's/\r$//' "$PORTAL_LIST"
 
 # Portal IDs: column 1, skipping the header row
 PORTALS=$(awk -F '\t' 'NR > 1 && $1 != "" { print $1 }' "$PORTAL_LIST")
