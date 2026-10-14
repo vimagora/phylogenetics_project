@@ -1,0 +1,80 @@
+portal_id	name	ncbi_tax_id
+Agabi_varbisH97_2	Agaricus bisporus var. bisporus (H97) v2.0	936046
+Altbr1	Alternaria brassicicola	622360
+Amamu1	Amanita muscaria Koide v1.0	946122
+Anasp1	Anaeromyces robustus v1.0	1754192
+Aspac1	Aspergillus aculeatus ATCC16872 v1.1	690307
+Aspni_NRRL3_1	Aspergillus niger NRRL3	1451139
+Aspnid1	Aspergillus nidulans	227321
+Aspor1	Aspergillus oryzae RIB40	510516
+AurpulNBB1	Aureobasidium pullulans NBB 7.2.1 v1.0	5580
+Bcine1	Botrytis cinerea B05.10	332648
+Cersu1	Ceriporiopsis (Gelatoporia) subvermispora B	914234
+Chagl1	Chaetomium tenue MPI-SDFR-AT-0079 v1.0	1854479
+Clafu1	Cladosporium fulvum v1.0	1156157
+Cocsa1	Cochliobolus sativus ND90Pr v1.0	665912
+Conpu1	Coniophora puteana v1.0	741705
+Copci1	Coprinopsis cinerea	240176
+Cryne_JEC21_1	Cryptococcus neoformans var. neoformans JEC21	214684
+DalEC12_1	Daldinia eschscholtzii EC12 v1.0	292717
+Dicsqu464_2	Dichomitus squalens CBS 464.89 v2.0	114155
+Exoxe1	Exophiala xenobiotica CBS118157	348802
+Fomfom1	Fomes fomentarius CIRM-BRFM 1821 v1.0	40442
+Fomme1	Fomitiporia mediterranea v1.0	694068
+Fompi3	Fomitopsis schrenkii FP-58527 SS1 v3.0	2126942
+Fusgr1	Fusarium graminearum v1.0	229533
+Ganluc1	Ganoderma lucidum G.260125-1 v1.0	1077286
+Glotr1_1	Gloeophyllum trabeum v1.0	670483
+Gyman1	Gymnopus androsaceus JB14 v1.0	1447944
+Hetan2	Heterobasidion annosum v2.0	747525
+Hyspu1_1	Hysterium pulicare	1136866
+Kluma1	Kluyveromyces marxianus DMKU3 1042	1003335
+Lacbi2	Laccaria bicolor v2.0	486041
+Lacind1	Lactarius indigo 2018DUKE089 v1.0	222702
+Lenedo1	Lentinula edodes Le(Bin) 0899 ss11 v1.0	5353
+Macpha1	Macrophomina phaseolina MPI-SDFR-AT-0080 v1.0	35725
+Magor1	Pyricularia oryzae 70-15 v3.0	242507
+Mellp2_3	Melampsora larici-populina v2.0	747676
+Zymtr1	Zymoseptoria tritici IP0323 v2.0	336722
+Neosp1	Neocallimastix californiae G1 v1.0	1754190
+Neucr2	Neurospora crassa OR74A v2.0	367110
+Obbri1	Obba rivulosa 3A-2 v1.0	1052685
+Penox1	Penicillium oxalicum 114-2	933388
+Pensub1	Penicillium subrubescens FBCC1632 / CBS132785	1316194
+Phaca1	Phanerochaete carnosa HHB-10118-Sp v1.0	650164
+Phchr2	Phanerochaete chrysosporium RP-78 v2.2	273507
+Phlgi1	Phlebiopsis gigantea v1.0	745531
+Phlrad1	"Phlebia radiata Fr. (isolate 79, FBCC0043)"	1095763
+Picst3	Scheffersomyces stipitis NRRL Y-11545 v2.0	322104
+Pipbet1_1	Fomitopsis betulina CIRM-BRFM 1772 v1.1	40450
+Pirfi3	Piromyces finnis v3.0	1754191
+Pirin1	Piriformospora indica DSM 11827 from MPI	1109443
+Pisti2	Pisolithus tinctorius Marx 270 v2.0	870435
+PleosPC15_2	Pleurotus ostreatus PC15 v2.0	1137138
+Podan3	Podospora anserina S mat+	515849
+PosplRSB12_1	Postia placenta MAD-698-R-SB12 v1.0	670580
+Pycci1	Pycnoporus cinnabarinus CIRM-BRFM 137 v1.0	1445587
+RhiirDAOM197198_2	Rhizophagus irregularis DAOM197198 v2.0	588596
+Rhimi59_2	Rhizopus microsporus ATCC11559 v2.0	58291
+Rhoto_IFO0880_4	Rhodosporidium toruloides IFO0880 v4.0	5286
+Sacce1	Saccharomyces cerevisiae S288C	559292
+Schco3	Schizophyllum commune H4-8 v3.0	578458
+Schpo1	Schizosaccharomyces pombe	284812
+Sclsc1	Sclerotinia sclerotiorum v1.0	665079
+SerlaS7_3_2	Serpula lacrymans S7.3 v2.0	936435
+Spipu1	Spizellomyces punctatus DAOM BR117	645134
+Spoth2	Myceliophthora thermophila (Sporotrichum thermophile) v2.0	573729
+Stano2	Stagonospora nodorum SN15 v2.0	321614
+Stehi1	Stereum hirsutum FP-91666 SS1 v1.0	721885
+Suilu4	Suillus luteus UH-Slu-Lm8-n1 v3.0	930992
+Suiplo1	Suillus plorans S12 v1.0	116603
+Theau2	Thermoascus aurantiacus ATCC26904 v2.0	1133049
+Thite2	Thielavia terrestris v2.0	578455
+Trave1	Trametes versicolor v1.0	717944
+Triat2	Trichoderma atroviride v2.0	452589
+Trire_Chr	Trichoderma reesei QM6a	431241
+Tubme1v2	Tuber melanosporum Mel28 v1.2	656061
+Ustma2_2	Ustilago maydis 521 v2.0	5270
+Wolco1	Wolfiporia cocos MD-104 SS10 v1.0	742152
+Xylhel2	Xylaria cf. heliscus FL0509 v2.0	1803070
+Xylni1	Xylaria nigripes YMJ 653 v1.0	490159

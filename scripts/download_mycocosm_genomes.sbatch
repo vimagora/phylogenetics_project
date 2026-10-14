@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=mycocosm_download
-#SBATCH --account=project_XXXXXXX
-#SBATCH --partition=XXXXX
+#SBATCH --account=project_2015320
+#SBATCH --partition=small
 #SBATCH --time=04:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
@@ -20,6 +20,8 @@
 #
 # Fill in --account and --partition above before submitting. The log is written to
 # 01_genomes/download_<jobid>.log. Re-submitting skips files that were already downloaded.
+
+cd /scratch/project_2015320/phylogenetics_project/
 
 echo "Job $SLURM_JOB_ID on $(hostname), started $(date)"
 
