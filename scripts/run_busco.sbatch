@@ -4,11 +4,11 @@
 #SBATCH --output=/scratch/project_2015320/phylogenetics_project/02_BUSCO/logs/busco_%j.out
 #SBATCH --error=/scratch/project_2015320/phylogenetics_project/02_BUSCO/logs/busco_%j.err
 #SBATCH --partition=small
-#SBATCH --time=24:00:00
+#SBATCH --time=08:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=16
-#SBATCH --mem-per-cpu=2G
+#SBATCH --mem=8G
 # run_busco.sbatch
 # Description: Slurm job that runs BUSCO in batch mode (protein mode, fungi_odb12) on all the
 #              decompressed proteomes in a folder, one after the other.
