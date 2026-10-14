@@ -7,7 +7,8 @@
 # Version: 1.0
 #
 # Usage (from the project folder): scripts/extract_proteomes.sh [portal_list] [genomes_dir] [output_dir]
-#   portal_list  File with a list of portal IDs (default: 00_inputs/mycocosm_datasets.tsv).
+#   portal_list  TSV with a header row and portal IDs in column 1
+#                (default: 00_inputs/mycocosm_datasets.tsv).
 #   genomes_dir  Folder with one subdirectory per portal (default: 01_genomes).
 #   output_dir   Where the decompressed proteomes are saved (default: 02_BUSCO/proteomes).
 #
