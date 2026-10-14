@@ -58,7 +58,7 @@ for PORTAL in $PORTALS; do
         continue
     fi
     # Decompress to a .part file first, so an interrupted run never leaves a truncated proteome
-    if gzip -dc "$PROTEOME" | sed '/^;/d' > "$OUT.part"; then
+    if gzip -dc "$PROTEOME" | sed '/^;/d; /^>/ s#/#_#g' > "$OUT.part"; then
         mv "$OUT.part" "$OUT"
         N_EXTRACTED=$(( N_EXTRACTED + 1 ))
     else
