@@ -21,9 +21,14 @@ Rules:
 - The longest protein of each locus is kept. Ties are broken by the gene name (alphabetically, so
   the Broad T0 transcript is kept), then by the lowest proteinId.
 - Proteins that are in the proteome but not in the GFF are kept as they are.
+- GFF models whose protein is not in the proteome are left out before grouping, since there is no
+  protein to keep for them. JGI leaves some models out of its protein sets, e.g. partial models at
+  scaffold ends. They are listed in no_protein.txt. If more than MAX_NO_PROTEIN_PCT of the models
+  have no protein, the GFF and the proteome probably do not belong together and the run stops.
 
-Writes to --work-dir: loci.tsv, pairs.tsv, removed.tsv, unmerged.tsv and summary_row.tsv, and the
-collapsed proteome to --out-fasta. The proteome is only written once all checks pass.
+Writes to --work-dir: loci.tsv, pairs.tsv, removed.tsv, unmerged.tsv, no_protein.txt and
+summary_row.tsv, and the collapsed proteome to --out-fasta. The proteome is only written once all
+checks pass.
 """
 
 import argparse
@@ -36,8 +41,14 @@ import numpy as np
 import pandas as pd
 
 
+MAX_NO_PROTEIN_PCT = 10
+
+# Set in main(), so every error message says which genome it is about
+PORTAL = "?"
+
+
 def fail(message):
-    sys.exit(f"ERROR: {message}")
+    sys.exit(f"ERROR ({PORTAL}): {message}")
 
 
 def parse_attributes(column9):
@@ -149,16 +160,24 @@ def main():
     parser.add_argument("--out-fasta", required=True)
     parser.add_argument("--min-shared-pct", type=float, default=50)
     args = parser.parse_args()
+    global PORTAL
+    PORTAL = args.portal
     os.makedirs(args.work_dir, exist_ok=True)
     os.makedirs(os.path.dirname(args.out_fasta) or ".", exist_ok=True)
 
     cds, names = read_gff(args.gff)
     proteome = read_proteome(args.proteome)
 
-    models = sorted(set(cds["protein_id"]), key=int)
-    missing = [p for p in models if p not in proteome]
-    if missing:
-        fail(f"{len(missing)} proteinIds are in the GFF but not in the proteome, e.g. {missing[:3]}")
+    # GFF models without a protein in the proteome are left out before grouping (see Rules)
+    gff_models = sorted(set(cds["protein_id"]), key=int)
+    no_protein = [p for p in gff_models if p not in proteome]
+    if 100 * len(no_protein) / len(gff_models) > MAX_NO_PROTEIN_PCT:
+        fail(f"{len(no_protein)} of {len(gff_models)} GFF models have no protein in the proteome "
+             f"(more than {MAX_NO_PROTEIN_PCT}%), e.g. {no_protein[:3]}; do the GFF and proteome match?")
+    with open(f"{args.work_dir}/no_protein.txt", "w") as out:
+        out.writelines(f"{p}\n" for p in no_protein)
+    cds = cds[cds["protein_id"].isin(set(proteome))]
+    models = [p for p in gff_models if p in proteome]
 
     # Pairs of models with overlapping CDS, and loci = connected groups of pairs above the threshold
     pairs = overlapping_pairs(cds)
@@ -208,10 +227,11 @@ def main():
         os.remove(part)
         fail(f"counts do not add up (in {len(proteome)}, out {n_out}, kept {len(keep)}, removed {len(removed)})")
 
-    # summary row: portal, proteins in, GFF models, loci, removed, % removed, not in GFF, proteins out,
+    # summary row: portal, proteins in, GFF models, GFF models without a protein, loci, removed,
+    # % removed (of the models with a protein), proteins not in the GFF, proteins out,
     # overlapping pairs left unmerged, and the largest % of CDS shared by an unmerged pair
     max_unmerged = unmerged["pct_of_shorter_cds"].max() if len(unmerged) else 0
-    summary = [args.portal, len(proteome), len(models), len(kept), len(removed),
+    summary = [args.portal, len(proteome), len(gff_models), len(no_protein), len(kept), len(removed),
                f"{100 * len(removed) / len(models):.2f}", len(not_in_gff), n_out, len(unmerged), f"{max_unmerged:.1f}"]
     with open(f"{args.work_dir}/summary_row.tsv", "w") as out:
         out.write("\t".join(map(str, summary)) + "\n")
@@ -219,7 +239,7 @@ def main():
 
     print(f"  {args.portal}: {len(models)} models -> {len(kept)} loci ({len(removed)} removed, "
           f"{len(unmerged)} overlapping pairs below {args.min_shared_pct:g}% left unmerged, "
-          f"{len(not_in_gff)} proteins not in the GFF)")
+          f"{len(no_protein)} GFF models without a protein, {len(not_in_gff)} proteins not in the GFF)")
 
 
 if __name__ == "__main__":

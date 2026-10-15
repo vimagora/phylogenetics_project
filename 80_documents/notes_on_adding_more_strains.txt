@@ -1,7 +1,7 @@
 
-mkdir 02_BUSCO/extended2/
-cp 02_BUSCO/proteomes/{SerlaS7_9_2,Conol1,PleosPC9_1,Hydru2,Cenge3,Glost2}_proteins.faa 02_BUSCO/extended2/
-sbatch scripts/run_busco.sbatch 02_BUSCO/extended2
+mkdir 02_BUSCO/extended3/
+cp 02_BUSCO/proteomes/{Macfu1,Hyacur1}_proteins.faa 02_BUSCO/extended3/
+sbatch scripts/run_busco.sbatch 02_BUSCO/extended3
 scripts/assembly_stats.sh
 cd 02_BUSCO/results
-{ head -n 1 proteomes/batch_summary.txt; tail -n +2 -q proteomes/batch_summary.txt rerun/batch_summary.txt extended/batch_summary.txt extended2/batch_summary.txt | grep -v '^$'; } > batch_summary_extended2.txt
+{ head -n 1 proteomes/batch_summary.txt; tail -n +2 -q proteomes/batch_summary.txt rerun/batch_summary.txt extended/batch_summary.txt extended2/batch_summary.txt extended3/batch_summary.txt | grep -v '^$'; } > batch_summary_extended3.txt

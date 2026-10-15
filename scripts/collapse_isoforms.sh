@@ -79,7 +79,9 @@ for PORTAL in $PORTALS; do
         MISSING+=("$PORTAL")
         continue
     fi
-    if [[ -s "$OUT" && -s "$OUT_DIR/work/$PORTAL/summary_row.tsv" ]]; then
+    # Skip portals already collapsed with this version of the script (summary row with 11 columns)
+    if [[ -s "$OUT" ]] && awk -F '\t' 'NF == 11 { ok = 1 } END { exit !ok }' \
+        "$OUT_DIR/work/$PORTAL/summary_row.tsv" 2> /dev/null; then
         N_SKIPPED=$(( N_SKIPPED + 1 ))
         continue
     fi
@@ -93,7 +95,7 @@ done
 
 # Combined tables for every portal on the list that has been collapsed, rebuilt on every run
 {
-    printf 'portal\tproteins_in\tgff_models\tloci\tremoved\tpct_removed\tnot_in_gff\tproteins_out'
+    printf 'portal\tproteins_in\tgff_models\tgff_without_protein\tloci\tremoved\tpct_removed\tnot_in_gff\tproteins_out'
     printf '\tunmerged_pairs\tmax_unmerged_pct\n'
     for PORTAL in $PORTALS; do
         [[ -f "$OUT_DIR/work/$PORTAL/summary_row.tsv" ]] && cat "$OUT_DIR/work/$PORTAL/summary_row.tsv"
