@@ -14,3 +14,10 @@
 02_BUSCO/results/
 02_BUSCO/logs/*
 !02_BUSCO/logs/.gitkeep
+
+# Collapsed proteomes and intermediate files (re-create with scripts/collapse_isoforms.sh)
+04_isoforms/collapsed_proteomes/
+04_isoforms/work/
+
+# Python bytecode
+__pycache__/
