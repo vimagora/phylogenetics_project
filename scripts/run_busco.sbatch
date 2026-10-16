@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=busco
-#SBATCH --output=03_BUSCO/logs/busco_%j.out
-#SBATCH --error=03_BUSCO/logs/busco_%j.err
+#SBATCH --output=04_BUSCO/logs/busco_%j.out
+#SBATCH --error=04_BUSCO/logs/busco_%j.err
 #SBATCH --partition=small
 #SBATCH --time=08:00:00
 #SBATCH --nodes=1
@@ -16,9 +16,9 @@
 # Version: 1.0
 #
 # Usage (from the project folder): sbatch scripts/run_busco.sbatch [proteomes_dir]
-#   proteomes_dir  Folder with the decompressed proteomes (default: 03_BUSCO/proteomes).
+#   proteomes_dir  Folder with the decompressed proteomes (default: 04_BUSCO/proteomes).
 #
-# Results go to 03_BUSCO/results/<proteomes_dir name>/, with one subfolder per proteome and a
+# Results go to 04_BUSCO/results/<proteomes_dir name>/, with one subfolder per proteome and a
 # batch_summary.txt. BUSCO refuses to start if that results folder already exists.
 #
 # The Slurm account and the BUSCO datasets folder come from config.sh: run 'source config.sh'
@@ -38,8 +38,8 @@ if [[ -z "$BUSCO_DOWNLOADS" ]]; then
     exit 1
 fi
 
-PROTEOMES_DIR=${1:-03_BUSCO/proteomes}
-RESULTS_DIR=03_BUSCO/results
+PROTEOMES_DIR=${1:-04_BUSCO/proteomes}
+RESULTS_DIR=04_BUSCO/results
 
 if [[ ! -d "$PROTEOMES_DIR" ]]; then
     echo "Proteomes folder '$PROTEOMES_DIR' not found, run scripts/extract_proteomes.sh first" >&2

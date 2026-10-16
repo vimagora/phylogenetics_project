@@ -15,8 +15,8 @@
 #                  (default: 00_inputs/mycocosm_datasets.tsv).
 #   genomes_dir    Folder with one subdirectory per portal, with <portal>_genes.gff3.gz
 #                  (default: 01_genomes).
-#   proteomes_dir  Decompressed proteomes from extract_proteomes.sh (default: 03_BUSCO/proteomes).
-#   output_dir     Where the results are saved (default: 04_isoforms).
+#   proteomes_dir  Decompressed proteomes from extract_proteomes.sh (default: 04_BUSCO/proteomes).
+#   output_dir     Where the results are saved (default: 03_isoforms).
 #
 # Output, inside output_dir:
 #   collapsed_proteomes/<portal>_proteins.faa  one protein per locus
@@ -30,8 +30,8 @@
 
 PORTAL_LIST=${1:-00_inputs/mycocosm_datasets.tsv}
 GENOMES_DIR=${2:-01_genomes}
-PROTEOMES_DIR=${3:-03_BUSCO/proteomes}
-OUT_DIR=${4:-04_isoforms}
+PROTEOMES_DIR=${3:-04_BUSCO/proteomes}
+OUT_DIR=${4:-03_isoforms}
 COLLAPSE_PY="$(dirname "$0")/collapse_isoforms.py"
 
 # Minimum shared CDS, as % of the shorter model's CDS, for two models to be merged. On Neucr2,
