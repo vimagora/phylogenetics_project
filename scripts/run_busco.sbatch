@@ -2,6 +2,7 @@
 #SBATCH --job-name=busco
 #SBATCH --output=04_BUSCO/logs/busco_%j.out
 #SBATCH --error=04_BUSCO/logs/busco_%j.err
+#SBATCH --open-mode=append
 #SBATCH --partition=small
 #SBATCH --time=08:00:00
 #SBATCH --nodes=1
@@ -19,7 +20,8 @@
 #   proteomes_dir  Folder with the decompressed proteomes (default: 04_BUSCO/proteomes).
 #
 # Results go to 04_BUSCO/results/<proteomes_dir name>/, with one subfolder per proteome and a
-# batch_summary.txt. BUSCO refuses to start if that results folder already exists.
+# batch_summary.txt. If that results folder already exists (e.g. Slurm requeued the job after a
+# node failure), BUSCO resumes it with --restart instead of refusing to start.
 #
 # The Slurm account and the BUSCO datasets folder come from config.sh: run 'source config.sh'
 # before sbatch.
@@ -58,9 +60,16 @@ echo "Running BUSCO on $(find "$PROTEOMES_DIR" -maxdepth 1 -type f | wc -l) file
 module load bio-apps/v202603
 module load busco/6.1.0
 
+RUN_NAME=$(basename "$PROTEOMES_DIR")
+RESTART=()
+if [[ -d "$RESULTS_DIR/$RUN_NAME" ]]; then
+    echo "Results folder $RESULTS_DIR/$RUN_NAME already exists, resuming it"
+    RESTART=(--restart)
+fi
+
 mkdir -p "$RESULTS_DIR"
 busco -i "$PROTEOMES_DIR" -m proteins -l fungi_odb12 --download_path "$BUSCO_DOWNLOADS" \
-    --out_path "$RESULTS_DIR" -o "$(basename "$PROTEOMES_DIR")" -c "$SLURM_CPUS_PER_TASK"
+    --out_path "$RESULTS_DIR" -o "$RUN_NAME" -c "$SLURM_CPUS_PER_TASK" "${RESTART[@]}"
 BUSCO_STATUS=$?
 
 echo "Finished $(date) with exit code $BUSCO_STATUS"
