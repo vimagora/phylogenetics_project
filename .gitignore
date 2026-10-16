@@ -8,12 +8,12 @@
 *:Zone.Identifier
 
 # Decompressed proteomes (re-create with scripts/extract_proteomes.sh)
-02_BUSCO/proteomes/
+03_BUSCO/proteomes/
 
 # BUSCO results and Slurm logs (re-create with scripts/run_busco.sbatch)
-02_BUSCO/results/
-02_BUSCO/logs/*
-!02_BUSCO/logs/.gitkeep
+03_BUSCO/results/
+03_BUSCO/logs/*
+!03_BUSCO/logs/.gitkeep
 
 # Collapsed proteomes and intermediate files (re-create with scripts/collapse_isoforms.sh)
 04_isoforms/collapsed_proteomes/
@@ -21,3 +21,6 @@
 
 # Python bytecode
 __pycache__/
+
+# Local settings (copy config.example.sh to config.sh)
+config.sh

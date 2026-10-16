@@ -1,8 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=busco
-#SBATCH --account=project_2015320
-#SBATCH --output=/scratch/project_2015320/phylogenetics_project/02_BUSCO/logs/busco_%j.out
-#SBATCH --error=/scratch/project_2015320/phylogenetics_project/02_BUSCO/logs/busco_%j.err
+#SBATCH --output=03_BUSCO/logs/busco_%j.out
+#SBATCH --error=03_BUSCO/logs/busco_%j.err
 #SBATCH --partition=small
 #SBATCH --time=08:00:00
 #SBATCH --nodes=1
@@ -17,16 +16,30 @@
 # Version: 1.0
 #
 # Usage (from the project folder): sbatch scripts/run_busco.sbatch [proteomes_dir]
-#   proteomes_dir  Folder with the decompressed proteomes (default: 02_BUSCO/proteomes).
+#   proteomes_dir  Folder with the decompressed proteomes (default: 03_BUSCO/proteomes).
 #
-# Results go to 02_BUSCO/results/<proteomes_dir name>/, with one subfolder per proteome and a
+# Results go to 03_BUSCO/results/<proteomes_dir name>/, with one subfolder per proteome and a
 # batch_summary.txt. BUSCO refuses to start if that results folder already exists.
+#
+# The Slurm account and the BUSCO datasets folder come from config.sh: run 'source config.sh'
+# before sbatch.
 
-cd /scratch/project_2015320/phylogenetics_project/ || exit 1
+# Slurm starts the job in the folder it was submitted from, which must be the project folder
+if [[ ! -d scripts || ! -d 00_inputs ]]; then
+    echo "Submit this job from the project folder" >&2
+    exit 1
+fi
 
-PROTEOMES_DIR=${1:-02_BUSCO/proteomes}
-RESULTS_DIR=02_BUSCO/results
-BUSCO_DOWNLOADS=/projappl/project_2015320/busco_downloads/
+# Local settings: BUSCO_DOWNLOADS, the folder with the BUSCO datasets (lineages/fungi_odb12)
+# shellcheck source=config.example.sh
+source config.sh || exit 1
+if [[ -z "$BUSCO_DOWNLOADS" ]]; then
+    echo "BUSCO_DOWNLOADS is not set in config.sh" >&2
+    exit 1
+fi
+
+PROTEOMES_DIR=${1:-03_BUSCO/proteomes}
+RESULTS_DIR=03_BUSCO/results
 
 if [[ ! -d "$PROTEOMES_DIR" ]]; then
     echo "Proteomes folder '$PROTEOMES_DIR' not found, run scripts/extract_proteomes.sh first" >&2

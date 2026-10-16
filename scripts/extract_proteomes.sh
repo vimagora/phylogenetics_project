@@ -10,14 +10,14 @@
 #   portal_list  TSV with a header row and portal IDs in column 1
 #                (default: 00_inputs/mycocosm_datasets.tsv).
 #   genomes_dir  Folder with one subdirectory per portal (default: 01_genomes).
-#   output_dir   Where the decompressed proteomes are saved (default: 02_BUSCO/proteomes).
+#   output_dir   Where the decompressed proteomes are saved (default: 03_BUSCO/proteomes).
 #
 # Proteomes that were already decompressed are skipped, so it is safe to re-run
 # after downloading more genomes.
 
 PORTAL_LIST=${1:-00_inputs/mycocosm_datasets.tsv}
 GENOMES_DIR=${2:-01_genomes}
-OUT_DIR=${3:-02_BUSCO/proteomes}
+OUT_DIR=${3:-03_BUSCO/proteomes}
 
 if [[ ! -f "$PORTAL_LIST" ]]; then
     echo "Portal list file '$PORTAL_LIST' not found" >&2

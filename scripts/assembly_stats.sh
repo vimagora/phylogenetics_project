@@ -11,14 +11,14 @@
 #   portal_list  TSV with a header row and portal IDs in column 1
 #                (default: 00_inputs/mycocosm_datasets.tsv).
 #   genomes_dir  Folder with one subdirectory per portal (default: 01_genomes).
-#   output_file  Where the report is saved (default: 03_assembly_stats/assembly_stats.tsv).
+#   output_file  Where the report is saved (default: 02_assembly_stats/assembly_stats.tsv).
 #
 # Uses SeqKit from the Roihu bio-apps modules. The ';' comment lines at the top of MycoCosm
 # files are removed on the fly, since seqkit rejects them; the files themselves are not changed.
 
 PORTAL_LIST=${1:-00_inputs/mycocosm_datasets.tsv}
 GENOMES_DIR=${2:-01_genomes}
-OUT_FILE=${3:-03_assembly_stats/assembly_stats.tsv}
+OUT_FILE=${3:-02_assembly_stats/assembly_stats.tsv}
 
 if [[ ! -f "$PORTAL_LIST" ]]; then
     echo "Portal list file '$PORTAL_LIST' not found" >&2
