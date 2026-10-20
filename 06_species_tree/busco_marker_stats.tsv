@@ -1,0 +1,1123 @@
+busco_id	n_single	n_duplicated	n_fragmented	n_missing	pct_single	pct_dup_low_dup_genomes	selected	description
+101996at4751	150	0	0	0	100.0	0.0	True	Co-chaperone
+3500568at4751	150	0	0	0	100.0	0.0	True	U3 small nucleolar RNA-associated protein
+49222at4751	150	0	0	0	100.0	0.0	True	Imidazole glycerol phosphate synthase
+100763at4751	149	0	0	1	99.3	0.0	True	rrb1
+102137at4751	149	1	0	0	99.3	0.0	True	phenylalanyl-tRNA synthetase
+103293at4751	149	1	0	0	99.3	0.0	True	phosphatidylinositol 3-kinase
+3323237at4751	149	1	0	0	99.3	0.7	True	Sulfite reductase
+3465326at4751	149	0	1	0	99.3	0.0	True	DNA polymerase
+3473906at4751	149	1	0	0	99.3	0.0	True	elongator complex
+3483416at4751	149	1	0	0	99.3	0.0	True	regulatory subunit of 26S proteasome
+96817at4751	149	0	0	1	99.3	0.0	True	dna replication licensing factor
+100533at4751	148	0	0	2	98.7	0.0	True	mitochondrial import inner membrane translocase, subunit
+101258at4751	148	1	1	0	98.7	0.7	True	Noc2
+103191at4751	148	1	1	0	98.7	0.0	True	Elongation factor
+1172110at4751	148	0	1	1	98.7	0.0	True	SDA1
+161810at4751	148	2	0	0	98.7	0.0	True	adenosylmethionine decarboxylase
+3253197at4751	148	1	1	0	98.7	0.0	True	proteasome
+3317172at4751	148	0	1	1	98.7	0.0	True	DNA replication licensing factor
+3452134at4751	148	1	0	1	98.7	0.0	True	60s Acidic ribosomal protein
+3459611at4751	148	0	2	0	98.7	0.0	True	U3 small nucleolar RNA-associated protein
+3470444at4751	148	1	1	0	98.7	0.0	True	Vac14
+3477629at4751	148	1	0	1	98.7	0.7	True	spindle pole body
+3480423at4751	148	2	0	0	98.7	0.7	True	RNA 3'-terminal phosphate cyclase
+3495973at4751	148	0	1	1	98.7	0.0	True	Ubiquitin conjugation factor E4 A
+3500935at4751	148	2	0	0	98.7	0.0	True	Eukaryotic translation initiation factor 3 subunit
+3505284at4751	148	0	0	2	98.7	0.0	True	ribosome biogenesis protein
+442600at4751	148	1	1	0	98.7	0.7	True	exocyst complex component
+46536at4751	148	1	0	1	98.7	0.7	True	translocase of the inner membrane
+8559at4751	148	1	1	0	98.7	0.7	True	mitochondrial processing peptidase beta subunit
+95078at4751	148	2	0	0	98.7	0.0	True	nucleoporin
+95599at4751	148	0	2	0	98.7	0.0	True	Periodic tryptophan protein
+99007at4751	148	1	1	0	98.7	0.7	True	Sof1
+100051at4751	147	1	0	2	98.0	0.0	True	Transcription initiation factor TFIID subunit
+100378at4751	147	0	0	3	98.0	0.0	True	dna polymerase
+100768at4751	147	1	1	1	98.0	0.7	True	Rrp40
+100805at4751	147	3	0	0	98.0	0.7	True	Sly1 protein
+100964at4751	147	1	2	0	98.0	0.0	True	proteasome regulatory
+101411at4751	147	2	1	0	98.0	0.7	True	DNA primase
+1268916at4751	147	1	2	0	98.0	0.0	True	Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit
+164920at4751	147	3	0	0	98.0	0.7	True	Dynamin
+260149at4751	147	2	1	0	98.0	0.7	True	V-type proton ATpase subunit
+3180526at4751	147	1	0	2	98.0	0.0	True	1-(5-phosphoribosyl)-5-((5- phosphoribosylamino)methylideneamino) imidazole-4-carboxamide isomerase
+3293092at4751	147	2	0	1	98.0	0.0	True	Phosphoribosylformylglycinamidine synthase
+3429366at4751	147	0	3	0	98.0	0.0	True	KAE1
+3438314at4751	147	2	0	1	98.0	0.7	True	mRNA turnover protein
+3439897at4751	147	0	2	1	98.0	0.0	True	Cdc73
+3449663at4751	147	0	1	2	98.0	0.0	True	Pseudouridine synthase
+3450996at4751	147	3	0	0	98.0	2.1	True	Dehydrogenase
+3469538at4751	147	1	1	1	98.0	0.7	True	wd repeat protein
+3477334at4751	147	3	0	0	98.0	2.1	True	protein kinase
+3478684at4751	147	2	1	0	98.0	0.7	True	GTPase activating protein
+3488449at4751	147	2	0	1	98.0	0.0	True	coatomer gamma subunit
+3488946at4751	147	2	0	1	98.0	0.7	True	Tryptophanyl-tRNA synthetase
+3489767at4751	147	2	0	1	98.0	0.0	True	Phosphoglucomutase
+3493789at4751	147	2	1	0	98.0	0.7	True	Cytoplasmic tRNA 2-thiolation protein
+3499067at4751	147	0	1	2	98.0	0.0	True	protein
+3503144at4751	147	0	0	3	98.0	0.0	True	Topoisomerase
+35796at4751	147	1	1	1	98.0	0.0	True	gamma-glutamyl phosphate reductase
+407231at4751	147	1	0	2	98.0	0.0	True	VID27
+487848at4751	147	2	0	1	98.0	0.7	True	ATP synthase
+65678at4751	147	3	0	0	98.0	0.7	True	IRE1
+703385at4751	147	2	0	1	98.0	1.4	True	Ribosomal RNA small subunit methyltransferase
+93354at4751	147	1	2	0	98.0	0.0	True	Proteasome subunit
+93432at4751	147	1	2	0	98.0	0.0	True	Ribosome biogenesis protein
+94035at4751	147	1	2	0	98.0	0.7	True	Oligosaccharyl transferase subunit STT3
+94760at4751	147	2	1	0	98.0	0.7	True	tyrosyl-tRNA synthetase
+94835at4751	147	3	0	0	98.0	2.1	True	isoleucyl-trna synthetase
+96260at4751	147	2	0	1	98.0	0.0	True	CBF5
+96321at4751	147	3	0	0	98.0	0.0	True	coatomer, beta subunit
+97226at4751	147	2	0	1	98.0	0.0	True	translocation protein
+97989at4751	147	1	1	1	98.0	0.0	True	small nucleolar ribonucleoprotein U3
+99157at4751	147	3	0	0	98.0	0.0	True	N-acetyltransferase
+100036at4751	146	2	2	0	97.3	0.0	True	eukaryotic translation initiation factor 3
+100615at4751	146	3	0	1	97.3	0.0	True	proteasome regulatory subunit
+100726at4751	146	3	1	0	97.3	0.0	True	leucyl-tRNA synthetase
+101742at4751	146	1	2	1	97.3	0.0	True	U3 small nucleolar ribonucleoprotein
+10895at4751	146	0	2	2	97.3	0.0	True	mitochondrial distribution and morphology protein 10
+1132616at4751	146	1	2	1	97.3	0.0	True	Glutamate synthase 
+1133255at4751	146	1	0	3	97.3	0.0	True	Pre-mRNA-splicing factor
+1152967at4751	146	2	2	0	97.3	0.0	True	kinase
+1171168at4751	146	2	1	1	97.3	0.7	True	chromodomain helicase
+1260483at4751	146	2	2	0	97.3	0.7	True	autophagy-related protein 3
+14267at4751	146	2	1	1	97.3	0.0	True	Phosphoglycerate kinase
+1576396at4751	146	1	2	1	97.3	0.0	True	Glutamine-dependent NAD(+) synthetase
+272843at4751	146	0	3	1	97.3	0.0	True	Get4
+3253955at4751	146	0	3	1	97.3	0.0	True	DNA replication licensing factor
+3264560at4751	146	3	0	1	97.3	0.0	True	subunit alpha of translation initiation factor 2
+3298196at4751	146	2	1	1	97.3	0.7	True	proteolipid subunit
+3395at4751	146	1	0	3	97.3	0.7	True	Riboflavin synthase
+340314at4751	146	2	1	1	97.3	0.7	True	Mot1
+3421374at4751	146	1	0	3	97.3	0.0	True	GTP-binding protein
+3422812at4751	146	1	0	3	97.3	0.0	True	F actin capping protein beta subunit
+3427739at4751	146	1	1	2	97.3	0.0	True	ARP2/3 complex
+3427966at4751	146	0	2	2	97.3	0.0	True	Conidiophore development protein hymA
+3436108at4751	146	2	2	0	97.3	0.7	True	Npl4
+3446158at4751	146	2	1	1	97.3	0.7	True	ubiquitin-like modifier-activating enzyme
+3460273at4751	146	2	1	1	97.3	0.0	True	Proteasome regulatory subunit
+3460748at4751	146	1	0	3	97.3	0.0	True	rRNA processing protein
+3468918at4751	146	1	0	3	97.3	0.0	True	Mitochondrial processing peptidase alpha subunit
+3471806at4751	146	0	1	3	97.3	0.0	True	Ubiquitin fusion degradation protein
+3472861at4751	146	0	2	2	97.3	0.0	True	vacuolar protein sorting-associated protein
+3474790at4751	146	2	2	0	97.3	0.7	True	protein
+3479320at4751	146	4	0	0	97.3	2.1	True	Glutaminyl-tRNA synthetase
+3479683at4751	146	2	2	0	97.3	0.7	True	DNA repair protein
+3485823at4751	146	1	2	1	97.3	0.7	True	rna polymerase ii elongator
+3489725at4751	146	1	3	0	97.3	0.0	True	Subunit of the origin recognition complex
+349071at4751	146	4	0	0	97.3	1.4	True	TRIOSEphosphate isomerase
+3491756at4751	146	2	2	0	97.3	0.0	True	oligomeric golgi complex subunit 6
+3494718at4751	146	0	3	1	97.3	0.0	True	SHNi-TPR domain-containing protein
+3495263at4751	146	3	0	1	97.3	0.0	True	WD repeat-containing protein
+3495337at4751	146	4	0	0	97.3	2.1	True	RNA polymerase A
+3496401at4751	146	3	0	1	97.3	0.0	True	ribosomal protein
+3497432at4751	146	2	1	1	97.3	0.0	True	PAT1
+3500369at4751	146	0	3	1	97.3	0.0	True	methyltransferase
+39397at4751	146	0	3	1	97.3	0.0	True	kri1
+406590at4751	146	2	0	2	97.3	0.0	True	proteasome regulatory subunit
+44704at4751	146	3	0	1	97.3	0.7	True	Phenylalanyl-tRNA synthetase
+453021at4751	146	2	2	0	97.3	0.0	True	cystathionine beta-lyase
+47832at4751	146	4	0	0	97.3	0.7	True	membrane protein
+52828at4751	146	3	0	1	97.3	0.7	True	importin
+59206at4751	146	2	2	0	97.3	0.7	True	nucleolar protein
+93237at4751	146	3	0	1	97.3	0.7	True	elongin C
+93506at4751	146	2	1	1	97.3	0.0	True	acetyltransferase
+94016at4751	146	3	1	0	97.3	0.7	True	translation initiation factor
+97428at4751	146	3	0	1	97.3	0.7	True	Signal recognition particle
+97448at4751	146	2	1	1	97.3	0.0	True	WD repeat protein
+97612at4751	146	2	1	1	97.3	0.7	True	Transcription initiation factor TFIID subunit
+100851at4751	145	2	0	3	96.7	0.7	True	Ribosome biogenesis protein
+100952at4751	145	1	2	2	96.7	0.0	True	Ribulose-phosphate 3-epimerase
+103013at4751	145	3	0	2	96.7	0.7	True	transport protein
+103485at4751	145	1	2	2	96.7	0.7	True	Transferase
+1119526at4751	145	4	0	1	96.7	1.4	True	Glucose-6-phosphate isomerase
+1169007at4751	145	1	1	3	96.7	0.0	True	Splicing factor
+12489at4751	145	3	2	0	96.7	1.4	True	GTPase
+15871at4751	145	3	2	0	96.7	0.7	True	initiation factor
+16188at4751	145	1	4	0	96.7	0.7	True	peptidase
+189355at4751	145	2	0	3	96.7	0.0	True	
+24371at4751	145	3	2	0	96.7	1.4	True	aminopeptidase
+297047at4751	145	2	0	3	96.7	0.0	True	actin
+321694at4751	145	3	1	1	96.7	1.4	True	SEC22
+3243217at4751	145	2	1	2	96.7	0.0	True	mitochondrial import inner membrane translocase subunit
+3259047at4751	145	3	2	0	96.7	0.0	True	clathrin, heavy chain
+326283at4751	145	2	3	0	96.7	0.0	True	phosphatase
+328321at4751	145	5	0	0	96.7	2.1	True	BAR protein
+3316917at4751	145	3	1	1	96.7	1.4	True	Helicase
+3331732at4751	145	3	0	2	96.7	0.7	True	
+3418189at4751	145	3	1	1	96.7	1.4	True	Succinate dehydrogenase 
+3422635at4751	145	3	2	0	96.7	0.7	True	trafficking protein particle complex subunit
+3423694at4751	145	3	2	0	96.7	2.1	True	chorismate synthase
+3448007at4751	145	3	2	0	96.7	0.0	True	gtpase activating protein
+3449993at4751	145	4	1	0	96.7	2.1	True	ribosome biogenesis protein
+3451209at4751	145	1	3	1	96.7	0.7	True	abc transporter
+3456310at4751	145	5	0	0	96.7	2.1	True	DNA-directed RNA polymerase
+3463185at4751	145	5	0	0	96.7	2.9	True	transporter
+3466538at4751	145	3	1	1	96.7	0.7	True	GPI transamidase
+3473385at4751	145	1	2	2	96.7	0.0	True	Ribosome biogenesis protein
+3475403at4751	145	1	1	3	96.7	0.0	True	BRO1
+3476409at4751	145	1	0	4	96.7	0.0	True	proteasome regulatory subunit
+3480381at4751	145	1	0	4	96.7	0.0	True	RNA polymerase
+3480490at4751	145	5	0	0	96.7	2.9	True	kinase
+3483326at4751	145	3	1	1	96.7	0.7	True	Ferrochelatase
+3486526at4751	145	1	2	2	96.7	0.7	True	pre-mRNA-splicing factor
+3486904at4751	145	1	1	3	96.7	0.0	True	RNA recognition motif
+3488325at4751	145	2	3	0	96.7	0.0	True	ENTH domain-containing protein
+3490082at4751	145	1	2	2	96.7	0.7	True	Subunit of the tRNA splicing endonuclease
+3492936at4751	145	2	2	1	96.7	0.0	True	replication
+3494913at4751	145	1	0	4	96.7	0.0	True	26s proteasome regulatory subunit
+3495142at4751	145	2	2	1	96.7	0.7	True	topoisomerase 1-associated factor 1
+3495370at4751	145	2	1	2	96.7	0.0	True	RING finger protein
+3495654at4751	145	1	2	2	96.7	0.0	True	Pre-rRNA-processing protein
+3498649at4751	145	3	1	1	96.7	0.7	True	ATPase
+3499566at4751	145	1	0	4	96.7	0.0	True	Methyltransferase
+3500106at4751	145	2	2	1	96.7	0.0	True	cysteine desulfurase
+35012at4751	145	1	0	4	96.7	0.0	True	DNA polymerase
+3503942at4751	145	3	0	2	96.7	0.7	True	transcription elongation factor
+3504244at4751	145	2	1	2	96.7	0.7	True	anaphase-promoting complex subunit
+442624at4751	145	3	1	1	96.7	0.7	True	GTP-binding protein
+520361at4751	145	3	2	0	96.7	1.4	True	splicing factor 3b, subunit 1
+534622at4751	145	1	0	4	96.7	0.0	True	actin-related protein 2/3 complex subunit 3
+60684at4751	145	2	0	3	96.7	0.7	True	translation machinery-associated protein
+61350at4751	145	2	3	0	96.7	0.7	True	Eukaryotic translation initiation factor 3
+63536at4751	145	3	1	1	96.7	1.4	True	maf-like protein
+67225at4751	145	2	3	0	96.7	0.7	True	pre-mRNA-splicing factor cwc2
+93174at4751	145	0	0	5	96.7	0.0	True	methyltransferase
+94744at4751	145	2	0	3	96.7	0.0	True	atp-dependent rrna helicase
+94795at4751	145	2	3	0	96.7	0.0	True	CDC37
+94833at4751	145	5	0	0	96.7	2.1	True	endonuclease
+95497at4751	145	2	0	3	96.7	0.0	True	pre-rrna-processing protein pno1
+98448at4751	145	2	0	3	96.7	0.7	True	Asparaginyl-tRNA synthetase
+100207at4751	144	2	0	4	96.0	0.0	True	Krr1
+10025at4751	144	0	4	2	96.0	0.0	True	transcription factor
+100402at4751	144	3	1	2	96.0	0.7	True	DNA-directed RNA polymerase
+100624at4751	144	2	0	4	96.0	1.4	True	Deoxyhypusine hydroxylase
+100968at4751	144	5	1	0	96.0	2.9	True	phosphatidylserine decarboxylase
+101010at4751	144	1	4	1	96.0	0.0	True	V-type ATPase subunit E
+101857at4751	144	3	3	0	96.0	0.0	True	proteasome regulatory
+1164712at4751	144	1	3	2	96.0	0.0	True	tRNA methyltransferase
+1264454at4751	144	2	3	1	96.0	0.7	True	Vacuolar protein sorting-associated protein
+1269412at4751	144	6	0	0	96.0	2.9	True	Heat shock protein
+231478at4751	144	1	1	4	96.0	0.0	True	mitochondrial import receptor subunit
+2934341at4751	144	0	4	2	96.0	0.0	True	lysophospholipase
+3031289at4751	144	0	0	6	96.0	0.0	True	pantothenate kinase
+3060192at4751	144	5	0	1	96.0	0.0	True	GTP-binding protein
+315349at4751	144	1	1	4	96.0	0.0	True	MRNA transport regulator
+3324068at4751	144	2	4	0	96.0	1.4	True	Homoaconitase
+3329036at4751	144	1	0	5	96.0	0.0	True	cyclase-associated protein
+3419196at4751	144	3	1	2	96.0	0.7	True	UPF0160 protein
+3424733at4751	144	2	2	2	96.0	0.0	True	Rho GDP dissociation inhibitor
+3433607at4751	144	1	2	3	96.0	0.0	True	ER membrane
+3436829at4751	144	3	1	2	96.0	0.0	True	ChAPs (Chs5p-Arf1p-binding proteins)
+3436906at4751	144	0	0	6	96.0	0.0	True	lipoyl synthase
+3445447at4751	144	1	2	3	96.0	0.0	True	Oligosaccharyl transferase subunit
+3445454at4751	144	2	0	4	96.0	0.7	True	methyltransferase
+3448036at4751	144	1	5	0	96.0	0.7	True	Folic acid synthesis protein
+3453803at4751	144	5	1	0	96.0	3.6	True	Smc2
+3453897at4751	144	5	1	0	96.0	1.4	True	Bifunctional purine biosynthesis protein
+3456658at4751	144	1	2	3	96.0	0.7	True	6, 7-dimethyl-8-ribityllumazine synthase
+3464805at4751	144	2	0	4	96.0	0.0	True	electron transfer flavoprotein-ubiquinone oxidoreductase
+3465142at4751	144	1	3	2	96.0	0.7	True	Ribosome biogenesis protein
+3466340at4751	144	2	0	4	96.0	0.0	True	subunit F of V-type ATPase
+3467582at4751	144	1	1	4	96.0	0.7	True	Elongation factor
+3470025at4751	144	2	4	0	96.0	1.4	True	ribosome biogenesis protein
+3470484at4751	144	2	0	4	96.0	0.7	True	Histidinol-phosphate aminotransferase
+3471928at4751	144	2	4	0	96.0	0.7	True	20S-pre-rRNA D-site endonuclease
+3476271at4751	144	3	2	1	96.0	0.7	True	rapamycin-insensitive companion of mTOR
+3479467at4751	144	1	3	2	96.0	0.0	True	Prefoldin
+3484061at4751	144	1	3	2	96.0	0.0	True	sister chromatid cohesion
+3487130at4751	144	3	1	2	96.0	1.4	True	Threonine synthase
+3489538at4751	144	2	4	0	96.0	0.7	True	separase
+3493420at4751	144	1	4	1	96.0	0.0	True	ribosomal RNA-processing protein
+3495122at4751	144	1	3	2	96.0	0.7	True	nuclear pore
+3495990at4751	144	2	1	3	96.0	0.0	True	glycogen debranching enzyme
+3499811at4751	144	1	0	5	96.0	0.7	True	Mitotic check point protein (Bub2)
+3501625at4751	144	2	4	0	96.0	0.7	True	Mannosyltransferase
+3502638at4751	144	2	4	0	96.0	0.7	True	vacuolar membrane-associated protein
+3505510at4751	144	4	2	0	96.0	0.7	True	Chitin biosynthesis protein
+3505740at4751	144	0	3	3	96.0	0.0	True	Vacuolar protein
+3506462at4751	144	4	0	2	96.0	1.4	True	gtpase activating protein
+444859at4751	144	1	2	3	96.0	0.7	True	Ribosomal RNA-processing protein
+876at4751	144	4	0	2	96.0	1.4	True	vacuolar protein
+913506at4751	144	5	0	1	96.0	2.1	True	Ketol-acid reductoisomerase
+916at4751	144	6	0	0	96.0	1.4	True	mitochondrial protein
+918933at4751	144	0	5	1	96.0	0.0	True	Geranylgeranyltransferase
+93102at4751	144	2	1	3	96.0	1.4	True	
+93154at4751	144	4	2	0	96.0	1.4	True	thymidylate synthase
+93804at4751	144	1	4	1	96.0	0.7	True	Geranylgeranyl transferase type-2 subunit alpha
+93888at4751	144	5	0	1	96.0	2.1	True	UDP-N-acetylglucosamine pyrophosphorylase
+94086at4751	144	0	2	4	96.0	0.0	True	cell cycle control protein
+94330at4751	144	5	1	0	96.0	1.4	True	60s ribosomal protein l5
+94533at4751	144	1	2	3	96.0	0.0	True	SSU72
+94628at4751	144	3	0	3	96.0	0.7	True	importin beta-1 subunit
+94866at4751	144	2	3	1	96.0	0.7	True	Rrp4
+95609at4751	144	0	4	2	96.0	0.0	True	Protein AF-9
+95689at4751	144	5	1	0	96.0	3.6	True	Very-long-chain 3-oxoacyl-CoA reductase
+95969at4751	144	1	2	3	96.0	0.0	True	Transcriptional adapter
+96208at4751	144	0	3	3	96.0	0.0	True	Vacuolar protein sorting-associated protein
+96457at4751	144	2	1	3	96.0	0.7	True	ribosome maturation protein
+96853at4751	144	4	1	1	96.0	1.4	True	proteasome
+97101at4751	144	1	4	1	96.0	0.7	True	transcription initiation factor TFIID subunit
+97532at4751	144	3	2	1	96.0	1.4	True	phosphoacetylglucosamine Mutase
+97690at4751	144	1	0	5	96.0	0.0	True	translation machinery-associated protein
+97882at4751	144	5	0	1	96.0	2.9	True	translation initiation factor
+98360at4751	144	1	5	0	96.0	0.7	True	ATP-dependent(S)-NAD(P)H-hydrate dehydratase
+98999at4751	144	0	6	0	96.0	0.0	True	Pre-mRNA-processing protein
+99525at4751	144	1	1	4	96.0	0.0	True	abc1 family protein
+99773at4751	144	0	5	1	96.0	0.0	True	protein kti12
+99964at4751	144	3	3	0	96.0	1.4	True	GINS complex
+99992at4751	144	3	0	3	96.0	0.0	True	Heat shock protein
+100341at4751	143	0	3	4	95.3	0.0	True	Diphthamide biosynthesis protein
+100702at4751	143	2	3	2	95.3	0.0	True	ribosome biogenesis protein
+101005at4751	143	0	0	7	95.3	0.0	True	DNA polymerase
+10105at4751	143	4	1	2	95.3	0.0	True	multiprotein bridging factor
+102296at4751	143	0	5	2	95.3	0.0	True	Multiple RNA-binding domain-containing protein 1
+102613at4751	143	1	5	1	95.3	0.0	True	Pescadillo
+103371at4751	143	3	4	0	95.3	0.7	True	acetyl-CoA carboxylase
+103409at4751	143	1	2	4	95.3	0.0	True	pab1 binding protein
+1143282at4751	143	2	1	4	95.3	0.0	True	nonsense-mediated mRNA decay
+1163812at4751	143	4	2	1	95.3	2.1	True	
+12028at4751	143	2	0	5	95.3	1.4	True	fructose-1,6-bisphosphatase I
+1262438at4751	143	4	2	1	95.3	1.4	True	Tetratricopeptide
+1267959at4751	143	2	1	4	95.3	1.4	True	Chorismate mutase
+148787at4751	143	4	0	3	95.3	0.7	True	phosphatidate cytidylyltransferase
+158207at4751	143	5	0	2	95.3	2.1	True	kinase
+16070at4751	143	2	4	1	95.3	0.0	True	Acyltransferase
+163740at4751	143	2	3	2	95.3	0.0	True	phosphatase
+1959048at4751	143	3	3	1	95.3	1.4	True	mitochondrial distribution and morphology protein
+22306at4751	143	5	2	0	95.3	2.1	True	inosine-5 -monophosphate dehydrogenase
+29111at4751	143	2	1	4	95.3	1.4	True	mitochondrial import inner membrane translocase subunit
+3055655at4751	143	3	3	1	95.3	0.0	True	autophagy protein
+3230058at4751	143	4	1	2	95.3	1.4	True	nonsense-mediated mrna decay protein
+3418883at4751	143	1	0	6	95.3	0.7	True	cytochrome c oxidase assembly protein
+3422015at4751	143	3	2	2	95.3	0.0	True	Guanine nucleotide-binding subunit beta protein
+3427916at4751	143	4	0	3	95.3	0.7	True	FeS_assembly_P domain-containing protein
+3434435at4751	143	4	1	2	95.3	1.4	True	nucleoporin
+3436356at4751	143	2	0	5	95.3	1.4	True	Delta-aminolevulinic acid dehydratase
+3440182at4751	143	2	0	5	95.3	0.7	True	Mitochondrial carrier
+3446654at4751	143	4	0	3	95.3	0.0	True	Transcriptional corepressor
+3451918at4751	143	1	1	5	95.3	0.0	True	
+3458354at4751	143	1	5	1	95.3	0.0	True	UDP-glucose,glycoprotein glucosyltransferase
+3461916at4751	143	3	4	0	95.3	0.7	True	ribosomal RNA-processing protein
+3464756at4751	143	0	4	3	95.3	0.0	True	TPR domain-containing protein
+3466272at4751	143	4	1	2	95.3	1.4	True	Eukaryotic translation initiation factor
+3466615at4751	143	3	1	3	95.3	1.4	True	diphthamide biosynthesis protein
+3472996at4751	143	4	3	0	95.3	1.4	True	transcription factor
+3473290at4751	143	6	1	0	95.3	2.9	True	Methylthioadenosine phosphorylase
+3474018at4751	143	1	5	1	95.3	0.0	True	histone transcription regulator
+3476375at4751	143	3	3	1	95.3	1.4	True	exportin
+3476525at4751	143	0	5	2	95.3	0.0	True	Protein arginine n-methyltransferase
+3479511at4751	143	5	0	2	95.3	1.4	True	Adenylosuccinate lyase
+3480460at4751	143	3	4	0	95.3	2.1	True	dihydroorotase
+3480760at4751	143	7	0	0	95.3	1.4	True	ribosomal protein
+3482177at4751	143	6	0	1	95.3	3.6	True	phosphoribosylglycinamide formyltransferase
+3491959at4751	143	2	0	5	95.3	0.0	True	Membrane protein
+3492583at4751	143	2	5	0	95.3	0.0	True	ADP-ribosylation factor GTPase activating protein
+3495833at4751	143	1	0	6	95.3	0.0	True	RNA polymerase-associated protein
+3496043at4751	143	4	1	2	95.3	0.7	True	Protein transport protein
+3499965at4751	143	4	1	2	95.3	2.1	True	adenylate kinase
+3500081at4751	143	1	0	6	95.3	0.7	True	Vacuolar sorting protein
+3500572at4751	143	3	4	0	95.3	0.7	True	co-chaperone
+3502273at4751	143	1	1	5	95.3	0.7	True	pre-rRNA-processing protein
+3502504at4751	143	1	3	3	95.3	0.0	True	Pan3
+3502763at4751	143	5	1	1	95.3	2.1	True	branching enzyme
+3505407at4751	143	0	3	4	95.3	0.0	True	Mitochondrial import inner membrane translocase subunit
+353560at4751	143	3	0	4	95.3	0.0	True	eukaryotic translation initiation factor 3 subunit
+414307at4751	143	2	4	1	95.3	1.4	True	mpe1
+4181at4751	143	5	1	1	95.3	2.9	True	alpha glucosidase alpha
+431987at4751	143	6	1	0	95.3	2.1	True	homoserine dehydrogenase
+47292at4751	143	5	0	2	95.3	2.9	True	
+496172at4751	143	2	4	1	95.3	1.4	True	mediator of rna polymerase II transcription
+498872at4751	143	4	1	2	95.3	2.1	True	Vacuolar protein
+51884at4751	143	0	4	3	95.3	0.0	True	protein OPI10
+57719at4751	143	2	0	5	95.3	0.7	True	Ubiquinone biosynthesis
+59534at4751	143	1	0	6	95.3	0.0	True	FACT complex subunit
+60002at4751	143	2	2	3	95.3	0.0	True	mitochondrial import inner membrane translocase subunit
+64866at4751	143	0	5	2	95.3	0.0	True	rna polymerase ii transcription factor
+65536at4751	143	6	0	1	95.3	3.6	True	tRNA methyltransferase
+751442at4751	143	3	4	0	95.3	0.7	True	Vacuolar protein
+93881at4751	143	4	3	0	95.3	0.7	True	Csl4
+94310at4751	143	4	3	0	95.3	1.4	True	Adenosylhomocysteinase
+94405at4751	143	0	6	1	95.3	0.0	True	Transcription factor
+94695at4751	143	3	0	4	95.3	0.0	True	T-complex protein 1 subunit theta
+94750at4751	143	2	5	0	95.3	0.0	True	Cytosolic Fe-S cluster assembly factor
+94908at4751	143	0	5	2	95.3	0.0	True	ribonuclease P/MRP protein subunit
+95193at4751	143	2	1	4	95.3	0.7	True	40S ribosomal protein
+953269at4751	143	3	0	4	95.3	0.7	True	RNA polymerase III transcription factor
+95898at4751	143	6	1	0	95.3	1.4	True	dimethyladenosine transferase
+96178at4751	143	2	1	4	95.3	0.0	True	Yip1
+96545at4751	143	3	0	4	95.3	0.7	True	SPT3
+96622at4751	143	0	6	1	95.3	0.0	True	SUA5
+98082at4751	143	4	1	2	95.3	0.7	True	U6 snRNA-associated Sm-like protein
+98863at4751	143	1	1	5	95.3	0.7	True	YjeF
+98899at4751	143	3	0	4	95.3	0.7	True	proteasome regulatory subunit
+99515at4751	143	1	3	3	95.3	0.0	True	Anaphase-promoting complex subunit 1
+101055at4751	142	3	0	5	94.7	0.0	True	transporter
+101381at4751	142	3	1	4	94.7	1.4	True	nascent polypeptide-associated complex
+101697at4751	142	3	4	1	94.7	0.7	True	ATP binding protein
+102142at4751	142	1	0	7	94.7	0.0	True	Transcription factor
+102623at4751	142	3	0	5	94.7	0.7	True	DNA replication licensing factor
+103504at4751	142	3	3	2	94.7	1.4	True	actin
+1269531at4751	142	2	5	1	94.7	0.7	True	DNA-directed RNA polymerase III subunit
+1269780at4751	142	1	0	7	94.7	0.7	True	ap-3 complex subunit sigma
+1357856at4751	142	3	5	0	94.7	0.7	True	Histone acetyltransferase
+139368at4751	142	2	0	6	94.7	0.0	True	adenine phosphoribosyltransferase
+1469914at4751	142	3	4	1	94.7	0.7	True	rRNA-processing protein
+150157at4751	142	3	0	5	94.7	0.0	True	Acetolactate synthase
+171050at4751	142	2	0	6	94.7	0.7	True	WD repeat containing protein
+248548at4751	142	3	1	4	94.7	2.1	True	exosome complex
+298966at4751	142	8	0	0	94.7	2.1	True	ribosomal protein
+30903at4751	142	1	1	6	94.7	0.7	True	racemase
+317046at4751	142	4	0	4	94.7	2.1	True	p-type atpase
+320939at4751	142	2	2	4	94.7	1.4	True	Aminomethyltransferase
+3278604at4751	142	2	3	3	94.7	0.0	True	Ribosomal RNA-processing protein 8
+3287824at4751	142	3	0	5	94.7	1.4	True	ribosome biogenesis protein
+331349at4751	142	4	3	1	94.7	1.4	True	ATP synthase
+33613at4751	142	3	2	3	94.7	0.7	True	surfeit locus protein
+3427121at4751	142	5	0	3	94.7	0.7	True	semialdehyde dehydrogenase
+3434331at4751	142	3	2	3	94.7	0.7	True	SNARE protein
+3435197at4751	142	1	0	7	94.7	0.7	True	transport protein particle
+3436264at4751	142	3	2	3	94.7	1.4	True	Pom152
+3445003at4751	142	1	2	5	94.7	0.0	True	histone acetyltransferase type b catalytic subunit
+3453377at4751	142	2	5	1	94.7	0.7	True	oligomeric golgi complex subunit 3
+3456055at4751	142	3	3	2	94.7	0.7	True	GMP synthase 
+3459525at4751	142	2	3	3	94.7	0.0	True	RNA polymerase A
+3459834at4751	142	3	0	5	94.7	0.7	True	histone chaperone
+3467445at4751	142	1	7	0	94.7	0.0	True	Transport protein
+3468362at4751	142	1	0	7	94.7	0.0	True	Cell division cycle protein
+3468662at4751	142	1	3	4	94.7	0.0	True	U4/U6.U5 tri-snRNP-associated protein
+3470174at4751	142	1	6	1	94.7	0.0	True	ATPase
+3470561at4751	142	5	1	2	94.7	0.7	True	Eukaryotic release factor 1
+3471485at4751	142	5	2	1	94.7	0.7	True	ubiquitin
+3473728at4751	142	3	5	0	94.7	0.0	True	nuclear elongation and deformation 1 protein
+3476863at4751	142	4	0	4	94.7	1.4	True	GTP cyclohydrolase
+3477896at4751	142	3	4	1	94.7	0.0	True	rna polymerase iii subunit
+3478401at4751	142	0	7	1	94.7	0.0	True	Exocyst complex component
+3478907at4751	142	1	7	0	94.7	0.0	True	pheromone-dependent cell cycle arrest protein Far11
+3479070at4751	142	6	0	2	94.7	0.7	True	60S ribosomal protein
+3481859at4751	142	3	0	5	94.7	1.4	True	kinase
+3486676at4751	142	3	0	5	94.7	1.4	True	kinase
+3493367at4751	142	1	2	5	94.7	0.7	True	elongator complex protein
+3495123at4751	142	2	1	5	94.7	1.4	True	transcription initiation factor tfiid subunit
+3496677at4751	142	2	4	2	94.7	0.7	True	vacuolar sorting-associated protein
+3496935at4751	142	3	0	5	94.7	0.7	True	transmembrane emp24 domain-containing protein
+3501417at4751	142	0	8	0	94.7	0.0	True	Exocyst complex component
+3501609at4751	142	0	0	8	94.7	0.0	True	vacuolar sorting-associated protein
+3502554at4751	142	5	2	1	94.7	1.4	True	Glutamate 5-kinase
+3502568at4751	142	0	0	8	94.7	0.0	True	ribosomal protein
+3505141at4751	142	2	2	4	94.7	0.7	True	pre-mRNA-splicing factor
+3506078at4751	142	3	0	5	94.7	0.7	True	ATP-dependent RNA helicase
+353091at4751	142	1	0	7	94.7	0.7	True	cleavage factor
+406100at4751	142	3	0	5	94.7	0.7	True	Phosphoserine aminotransferase
+47770at4751	142	4	0	4	94.7	0.7	True	ATP synthase
+481151at4751	142	0	2	6	94.7	0.0	True	electron transfer flavoprotein, beta subunit
+49019at4751	142	2	0	6	94.7	0.7	True	Peroxisomal membrane protein
+55498at4751	142	3	3	2	94.7	1.4	True	Mitochondrial protein
+62914at4751	142	0	3	5	94.7	0.0	True	glycine dehydrogenase 
+68744at4751	142	2	2	4	94.7	0.0	True	Peroxisome biogenesis factor 2
+93943at4751	142	5	1	2	94.7	2.9	True	checkpoint protein
+93993at4751	142	3	3	2	94.7	0.7	True	UDP-N-acetylglucosamine transferase subunit alg13
+94241at4751	142	3	4	1	94.7	0.0	True	26s proteasome regulatory subunit
+96451at4751	142	2	3	3	94.7	0.0	True	CAAX prenyl protease
+97070at4751	142	4	1	3	94.7	1.4	True	ribosomal protein
+97987at4751	142	7	0	1	94.7	1.4	True	60S ribosomal protein
+98098at4751	142	6	0	2	94.7	1.4	True	Translation initiation factor
+100536at4751	141	0	5	4	94.0	0.0	True	u3 small nucleolar ribonucleoprotein
+100644at4751	141	8	0	1	94.0	3.6	True	polyadenylate-binding protein
+100833at4751	141	7	0	2	94.0	3.6	True	histidine--tRNA
+101409at4751	141	5	1	3	94.0	2.1	True	Translocation protein
+103106at4751	141	7	0	2	94.0	2.1	True	lunapark
+1235at4751	141	0	2	7	94.0	0.0	True	Ubiquinone biosynthesis protein
+12412at4751	141	2	2	5	94.0	0.0	True	ribosomal protein
+1269268at4751	141	0	0	9	94.0	0.0	True	transcription factor
+157325at4751	141	4	3	2	94.0	1.4	True	condensin
+1767704at4751	141	2	5	2	94.0	0.7	True	anaphase promoting complex subunit
+1851816at4751	141	1	7	1	94.0	0.0	True	signal recognition particle
+2307142at4751	141	4	0	5	94.0	0.7	True	Proteasome
+2384917at4751	141	4	5	0	94.0	2.1	True	phosphopantothenate--cysteine ligase
+307815at4751	141	0	7	2	94.0	0.0	True	splicing factor
+3214015at4751	141	3	1	5	94.0	1.4	True	anthranilate synthase
+333279at4751	141	6	0	3	94.0	2.9	True	
+3337834at4751	141	5	4	0	94.0	2.1	True	Inositol hexakisphosphate
+3426020at4751	141	4	0	5	94.0	1.4	True	proteasome
+3433055at4751	141	2	6	1	94.0	0.0	True	CDP diacylglycerol glycerol 3 phosphate 3 phosphatidyltransferase
+3434483at4751	141	5	3	1	94.0	2.9	True	histidinol phosphatase
+3449341at4751	141	0	3	6	94.0	0.0	True	mitochondrial ribosomal protein
+3452739at4751	141	4	0	5	94.0	1.4	True	DNA repair protein
+3456028at4751	141	3	1	5	94.0	1.4	True	Imidazoleglycerol-phosphate deHydratase
+3458254at4751	141	1	2	6	94.0	0.7	True	Homoserine O-acetyltransferase
+3458829at4751	141	6	2	1	94.0	2.1	True	ATP phosphoribosyltransferase
+3458896at4751	141	1	3	5	94.0	0.0	True	Beta subunit
+3459546at4751	141	2	2	5	94.0	0.7	True	Protein BCP1
+3459668at4751	141	1	5	3	94.0	0.0	True	u3 small nucleolar RNA-associated protein
+3459818at4751	141	2	1	6	94.0	0.0	True	PYRUVATE DEHYDROGENASE E1 COMPONENT BETA SUBUNIT
+3460362at4751	141	1	4	4	94.0	0.0	True	dopey
+3460578at4751	141	8	0	1	94.0	4.3	True	Phosphoribosyltransferase
+3460852at4751	141	1	1	7	94.0	0.7	True	ATPase
+3461242at4751	141	1	4	4	94.0	0.0	True	F-box
+3466372at4751	141	1	2	6	94.0	0.0	True	mitochondrial ribosomal protein
+3467587at4751	141	2	0	7	94.0	0.0	True	acetyltransferase
+3468692at4751	141	6	0	3	94.0	2.1	True	GDT1
+3470904at4751	141	2	2	5	94.0	0.7	True	ubiquitin-protein ligase E3
+3471217at4751	141	1	1	7	94.0	0.0	True	u3 small nucleolar rna-associated protein
+3471660at4751	141	3	1	5	94.0	0.0	True	Ubiquitin carboxyl-terminal hydrolase
+3475024at4751	141	7	1	1	94.0	1.4	True	ribosomal protein
+3475246at4751	141	4	4	1	94.0	0.7	True	transporter
+3475862at4751	141	1	0	8	94.0	0.0	True	protein MEMO1
+3476115at4751	141	1	7	1	94.0	0.0	True	Pig-U
+3477299at4751	141	4	4	1	94.0	0.0	True	Histone acetyltransferase
+3477552at4751	141	2	7	0	94.0	0.7	True	transporter
+3478881at4751	141	1	4	4	94.0	0.0	True	tRNA (adenine-n -)-methyltransferase non-catalytic subunit
+3480636at4751	141	6	2	1	94.0	3.6	True	trna ligase
+3480833at4751	141	2	6	1	94.0	0.0	True	Protein hgh1
+3480968at4751	141	1	5	3	94.0	0.0	True	nucleolar complex protein
+3483269at4751	141	5	0	4	94.0	0.0	True	ribosomal protein
+3483811at4751	141	2	0	7	94.0	0.7	True	ABC1
+3484127at4751	141	1	8	0	94.0	0.7	True	transcription initiation factor TFIID subunit
+3486446at4751	141	3	3	3	94.0	0.7	True	bystin
+3487871at4751	141	2	3	4	94.0	1.4	True	methyltransferase
+3488361at4751	141	6	2	1	94.0	0.7	True	endoplasmic reticulum
+3490480at4751	141	4	3	2	94.0	1.4	True	
+3491922at4751	141	5	1	3	94.0	2.1	True	methyltransferase
+3493161at4751	141	5	3	1	94.0	2.1	True	3-oxo-5-alpha-steroid 4-dehydrogenase
+3493480at4751	141	1	3	5	94.0	0.0	True	Splicing factor U2AF-associated protein 2
+3493659at4751	141	0	8	1	94.0	0.0	True	Transcription factor
+3497069at4751	141	3	3	3	94.0	0.0	True	eukaryotic translation initiation factor 3
+3498832at4751	141	2	0	7	94.0	1.4	True	Prefoldin
+3500205at4751	141	3	4	2	94.0	0.7	True	Phosducin
+3500645at4751	141	2	3	4	94.0	0.0	True	kinase
+3504170at4751	141	1	7	1	94.0	0.7	True	GAA1
+35315at4751	141	0	2	7	94.0	0.0	True	RWD domain-containing protein
+35915at4751	141	2	1	6	94.0	0.7	True	ribosomal protein L14
+39851at4751	141	0	3	6	94.0	0.0	True	SHY1
+407726at4751	141	0	2	7	94.0	0.0	True	actin
+431989at4751	141	2	0	7	94.0	0.0	True	transporter
+441458at4751	141	5	2	2	94.0	2.1	True	Mitotic spindle checkpoint protein
+497341at4751	141	5	0	4	94.0	3.6	True	SVF1
+502374at4751	141	0	0	9	94.0	0.0	True	fcf2
+5586at4751	141	2	1	6	94.0	0.7	True	methionine sulfoxide reductase
+573219at4751	141	1	7	1	94.0	0.0	True	transcription elongation factor
+93185at4751	141	4	3	2	94.0	2.9	True	acetyltransferase
+93740at4751	141	6	0	3	94.0	0.7	True	ribosomal protein
+93867at4751	141	8	0	1	94.0	2.1	True	ribosomal protein
+98048at4751	141	0	0	9	94.0	0.0	True	transcription initiation factor
+99816at4751	141	8	1	0	94.0	2.9	True	ribosomal protein
+100177at4751	140	5	3	2	93.3	0.7	True	E3 ubiquitin-protein ligase
+100836at4751	140	1	5	4	93.3	0.0	True	GINS complex
+101388at4751	140	1	1	8	93.3	0.0	True	ribosomal protein
+101429at4751	140	3	0	7	93.3	0.7	True	RAN-specific GTPase-activating protein
+1130672at4751	140	5	3	2	93.3	0.7	True	Nuclear pore
+1168888at4751	140	2	6	2	93.3	0.0	True	SMK-1 domain-containing protein
+1177164at4751	140	0	3	7	93.3	0.0	True	chromatin assembly factor
+124445at4751	140	4	0	6	93.3	0.7	True	mitochondrial outer membrane protein porin
+169550at4751	140	2	0	8	93.3	0.0	True	GTPase activating protein
+3269138at4751	140	5	4	1	93.3	0.7	True	v-type atpase
+335360at4751	140	3	5	2	93.3	0.0	True	exonuclease I
+3423848at4751	140	1	1	8	93.3	0.7	True	NADH:ubiquinone oxidoreductase
+3427053at4751	140	2	0	8	93.3	0.7	True	mitochondrial genome maintenance protein
+3430381at4751	140	8	1	1	93.3	0.7	True	Ribosomal protein
+3431880at4751	140	2	3	5	93.3	0.7	True	ribosomal
+3441678at4751	140	8	1	1	93.3	4.3	True	Argininosuccinate
+3447036at4751	140	4	1	5	93.3	1.4	True	Ubiquinol-cytochrome c reductase, iron-sulfur subunit
+3454496at4751	140	2	0	8	93.3	1.4	True	transcription initiation factor TFIID
+3458008at4751	140	3	2	5	93.3	0.7	True	ATPase
+3459837at4751	140	4	6	0	93.3	1.4	True	Structural maintenance of
+3464813at4751	140	1	8	1	93.3	0.0	True	SKI3
+3466637at4751	140	3	0	7	93.3	0.7	True	DNA-directed RNA polymerase I
+3467626at4751	140	0	10	0	93.3	0.0	True	AP-3 complex subunit delta
+3467923at4751	140	0	0	10	93.3	0.0	True	ribosomal protein
+3469091at4751	140	0	3	7	93.3	0.0	True	membrane protein
+3472301at4751	140	0	5	5	93.3	0.0	True	
+3477244at4751	140	3	3	4	93.3	1.4	True	Yju2
+3478817at4751	140	0	9	1	93.3	0.0	True	transferase
+3479210at4751	140	3	4	3	93.3	0.0	True	Actin-related protein
+3479777at4751	140	2	0	8	93.3	1.4	True	Septum-promoting GTP-binding protein
+3481518at4751	140	1	8	1	93.3	0.0	True	Prp31
+3487743at4751	140	6	0	4	93.3	2.9	True	phosphatase
+3489309at4751	140	1	1	8	93.3	0.0	True	Importin
+3489554at4751	140	4	5	1	93.3	0.7	True	ccr4-Not transcription complex
+3495765at4751	140	2	0	8	93.3	0.7	True	DNA polymerase
+3497176at4751	140	1	8	1	93.3	0.0	True	MMS19 nucleotide excision repair protein
+3498732at4751	140	1	0	9	93.3	0.0	True	u3 small nucleolar RNA-associated protein
+3498802at4751	140	2	8	0	93.3	0.7	True	translational activator
+3498907at4751	140	8	2	0	93.3	3.6	True	importin subunit beta-2
+3501928at4751	140	4	6	0	93.3	2.1	True	U3 small nucleolar RNA-associated protein
+3503060at4751	140	1	1	8	93.3	0.7	True	atp-dependent rna helicase
+3503086at4751	140	3	5	2	93.3	2.1	True	dihydrofolate synthetase
+3503500at4751	140	1	3	6	93.3	0.0	True	transporter
+3503696at4751	140	3	3	4	93.3	1.4	True	dihydrolipoyllysine-residue succinyltransferase
+3505793at4751	140	1	6	3	93.3	0.7	True	Mannosyltransferase
+351421at4751	140	3	2	5	93.3	1.4	True	adenylyltransferase
+355762at4751	140	0	8	2	93.3	0.0	True	Zinc finger protein
+36731at4751	140	3	7	0	93.3	0.7	True	s import receptor
+433171at4751	140	3	0	7	93.3	1.4	True	endoplasmic reticulum membrane
+436840at4751	140	0	8	2	93.3	0.0	True	vacuolar fusion protein
+440150at4751	140	5	3	2	93.3	0.7	True	S-adenosylmethionine
+502208at4751	140	2	6	2	93.3	1.4	True	Mannosyltransferase
+61355at4751	140	3	0	7	93.3	0.0	True	Mitochondrial import receptor subunit
+62481at4751	140	0	2	8	93.3	0.0	True	ribosomal protein
+67177at4751	140	3	0	7	93.3	1.4	True	mRNA export factor
+898954at4751	140	4	6	0	93.3	1.4	True	ATP synthase
+93350at4751	140	7	1	2	93.3	1.4	True	ribosomal protein
+93938at4751	140	4	2	4	93.3	2.1	True	Farnesyltransferase beta subunit
+94226at4751	140	5	3	2	93.3	2.1	True	Protein rer1
+95982at4751	140	5	2	3	93.3	2.1	True	transporter
+96616at4751	140	5	2	3	93.3	1.4	True	vacuolar sorting protein
+96632at4751	140	5	4	1	93.3	0.7	True	Transcription initiation factor
+99281at4751	140	4	1	5	93.3	2.9	True	YKT6
+100149at4751	139	3	7	1	92.7	2.1	True	dephospho-CoA kinase
+100166at4751	139	3	7	1	92.7	1.4	True	Ccr4-Not transcription complex subunit
+100832at4751	139	0	1	10	92.7	0.0	True	U3 small nucleolar RNA-associated protein
+101165at4751	139	9	1	1	92.7	4.3	True	Pseudouridine synthase
+1099829at4751	139	7	2	2	92.7	4.3	True	Dehydrogenase
+1129104at4751	139	6	0	5	92.7	1.4	True	serine palmitoyltransferase
+1247677at4751	139	9	0	2	92.7	4.3	True	protein
+1250659at4751	139	1	4	6	92.7	0.7	True	UPF0061 protein
+1254235at4751	139	6	3	2	92.7	3.6	True	diphthine synthase
+1263883at4751	139	2	2	7	92.7	0.7	True	37S ribosomal protein
+1265983at4751	139	4	7	0	92.7	1.4	True	transcription initiation factor
+1269018at4751	139	4	5	2	92.7	1.4	True	nucleotide exchange factor
+17285at4751	139	1	0	10	92.7	0.0	True	cytochrome C oxidase
+185029at4751	139	4	5	2	92.7	0.7	True	Vacuolar membrane protein
+187606at4751	139	5	0	6	92.7	0.7	True	Ribosome biogenesis protein
+193792at4751	139	1	4	6	92.7	0.7	True	SNF7
+19843at4751	139	11	0	0	92.7	4.3	True	60S ribosomal protein
+2188879at4751	139	2	6	3	92.7	1.4	True	sphingosine-1-phosphate lyase
+2340282at4751	139	2	0	9	92.7	1.4	True	kynurenine 3-monooxygenase
+271859at4751	139	4	2	5	92.7	1.4	True	Ubiquitin-conjugating enzyme, E2
+286697at4751	139	4	0	7	92.7	2.1	True	ribosomal protein
+309626at4751	139	1	4	6	92.7	0.7	True	cytochrome oxidase assembly
+31074at4751	139	3	5	3	92.7	1.4	True	Mediator of RNA polymerase II transcription
+3263165at4751	139	1	0	10	92.7	0.0	True	Dolichyl-phosphate beta-glucosyltransferase
+3290613at4751	139	2	0	9	92.7	0.7	True	Mitochondrial escape protein 2
+3322527at4751	139	1	2	8	92.7	0.0	True	Glucosidase I
+337912at4751	139	5	5	1	92.7	1.4	True	vesicle-associated membrane protein-associated protein
+341078at4751	139	2	0	9	92.7	0.7	True	Translation initiation factor
+3421455at4751	139	1	5	5	92.7	0.0	True	methyltransferase
+3439946at4751	139	1	1	9	92.7	0.0	True	methyltransferase
+3440381at4751	139	0	2	9	92.7	0.0	True	ribosomal protein
+3443183at4751	139	4	5	2	92.7	2.1	True	nitrogen permease regulator
+3443896at4751	139	4	5	2	92.7	0.7	True	dihydrouridine synthase
+3444009at4751	139	3	7	1	92.7	1.4	True	FAD synthase
+3448058at4751	139	5	4	2	92.7	1.4	True	Pantoate-beta-alanine ligase
+3449337at4751	139	2	8	1	92.7	0.0	True	GPI transamidase
+3456610at4751	139	7	3	1	92.7	2.9	True	HAM1
+3458650at4751	139	1	1	9	92.7	0.0	True	Vacuolar protein
+3460874at4751	139	4	1	6	92.7	1.4	True	RNA polymerases I
+3464052at4751	139	1	9	1	92.7	0.0	True	Trafficking protein particle complex subunit
+3468841at4751	139	4	0	7	92.7	0.7	True	atp synthase
+3474276at4751	139	3	7	1	92.7	0.7	True	UBX domain-containing protein
+3476081at4751	139	3	1	7	92.7	1.4	True	tryptophanyl-trna synthetase
+3477501at4751	139	8	0	3	92.7	2.9	True	60S ribosomal protein
+3479086at4751	139	4	0	7	92.7	0.7	True	
+3479875at4751	139	4	6	1	92.7	0.0	True	Vid24
+3483030at4751	139	1	4	6	92.7	0.7	True	vacuolar protein
+3484492at4751	139	6	1	4	92.7	2.1	True	ubiquitin carboxyl-terminal hydrolase
+3487715at4751	139	3	0	8	92.7	1.4	True	RNA-binding protein
+3487796at4751	139	2	1	8	92.7	0.0	True	ceramide glucosyltransferase
+3487821at4751	139	2	0	9	92.7	0.7	True	coiled-coil domain-containing protein
+3488874at4751	139	8	0	3	92.7	3.6	True	d-lactate dehydrogenase
+3489288at4751	139	0	4	7	92.7	0.0	True	nuclease
+3490018at4751	139	5	2	4	92.7	1.4	True	5-methyltetrahydropteroyltriglutamate- homocysteine methyltransferase
+3494394at4751	139	4	0	7	92.7	2.1	True	Transcription factor
+3496297at4751	139	2	0	9	92.7	0.7	True	Glucosyltransferase
+3499598at4751	139	4	4	3	92.7	2.1	True	Sulfite reductase
+3501267at4751	139	0	1	10	92.7	0.0	True	GTPase
+3501350at4751	139	0	3	8	92.7	0.0	True	ribosomal protein
+3502608at4751	139	0	1	10	92.7	0.0	True	Sensitive to high expression protein
+3504510at4751	139	0	0	11	92.7	0.0	True	Nucleolar complex-associated protein
+3504516at4751	139	0	4	7	92.7	0.0	True	ribosomal protein
+3506745at4751	139	0	0	11	92.7	0.0	True	Vacuolar protein sorting-associated protein
+3507701at4751	139	2	4	5	92.7	0.7	True	Cullin-associated NEDD8-dissociated protein
+40677at4751	139	0	4	7	92.7	0.0	True	dna polymerase
+409811at4751	139	3	6	2	92.7	1.4	True	Vacuolar-sorting protein
+45872at4751	139	3	2	6	92.7	0.7	True	Ribosomal protein S8
+53861at4751	139	3	2	6	92.7	0.7	True	protein
+61363at4751	139	0	9	2	92.7	0.0	True	Nca2
+68958at4751	139	1	0	10	92.7	0.0	True	Protein sum2
+93210at4751	139	3	0	8	92.7	2.1	True	isopentenyl-diphosphate Delta-isomerase
+93865at4751	139	1	4	6	92.7	0.7	True	Anaphase-promoting complex subunit
+94367at4751	139	2	5	4	92.7	0.0	True	DNA-directed RNA polymerase
+95035at4751	139	6	4	1	92.7	2.9	True	Condensin complex subunit
+95130at4751	139	3	6	2	92.7	0.7	True	translation initiation factor
+96522at4751	139	3	6	2	92.7	0.0	True	V-ATPase subunit H
+98856at4751	139	3	5	3	92.7	1.4	True	rRNA processing protein
+100673at4751	138	1	0	11	92.0	0.0	True	pelota
+102558at4751	138	0	2	10	92.0	0.0	True	rRNA biogenesis protein
+10282at4751	138	3	1	8	92.0	1.4	True	Phosphoadenosine phosphosulfate reductase
+1253034at4751	138	3	4	5	92.0	0.0	True	Orm1
+1259573at4751	138	1	6	5	92.0	0.0	True	transport protein
+1266672at4751	138	4	2	6	92.0	2.9	True	ATP-dependent RNA helicase
+1267085at4751	138	3	3	6	92.0	2.1	True	Gle1
+1269344at4751	138	1	4	7	92.0	0.0	True	RNA polymerase
+1272216at4751	138	5	1	6	92.0	2.1	True	
+159616at4751	138	9	0	3	92.0	3.6	True	40S ribosomal protein S
+2186098at4751	138	6	0	6	92.0	2.1	True	ribosomal protein
+227470at4751	138	0	0	12	92.0	0.0	True	ribosomal protein
+230516at4751	138	5	3	4	92.0	2.1	True	GINS complex
+2396193at4751	138	7	0	5	92.0	3.6	True	10 kDa heat shock protein: mitochondrial
+262474at4751	138	1	4	7	92.0	0.0	True	Glutamyl-tRNA(Gln) amidotransferase subunit B
+2669412at4751	138	6	1	5	92.0	1.4	True	eukaryotic translation initiation factor
+27395at4751	138	6	0	6	92.0	2.1	True	Mitochondrial pyruvate carrier
+3217053at4751	138	4	4	4	92.0	1.4	True	Protohem IX farnesyltransferase
+3264080at4751	138	0	5	7	92.0	0.0	True	vacuolar protein sorting-associated protein
+3277635at4751	138	1	0	11	92.0	0.7	True	nadh-ubiquinone oxidoreductase
+3310525at4751	138	1	2	9	92.0	0.7	True	inhibitor Bax
+336364at4751	138	2	0	10	92.0	0.7	True	dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit
+3435729at4751	138	2	4	6	92.0	0.7	True	Phenylalanyl-tRNA synthetase
+3461633at4751	138	2	1	9	92.0	0.7	True	Methyltransferase
+3462240at4751	138	2	2	8	92.0	1.4	True	Nuclease
+3465147at4751	138	3	8	1	92.0	0.7	True	SART-1 protein
+3466765at4751	138	3	0	9	92.0	0.7	True	protein phosphatase methylesterase
+3468493at4751	138	2	6	4	92.0	0.7	True	Exocyst complex EXO70
+3471771at4751	138	4	8	0	92.0	1.4	True	Guanine nucleotide exchange factor
+3472789at4751	138	6	0	6	92.0	1.4	True	ribosomal protein
+3473875at4751	138	4	5	3	92.0	1.4	True	UBX domain-containing protein
+3474889at4751	138	2	2	8	92.0	0.7	True	iron sulfur assembly protein
+347670at4751	138	4	0	8	92.0	1.4	True	charged multivesicular body protein 2a
+3478836at4751	138	3	0	9	92.0	1.4	True	Charged multivesicular body protein
+3480392at4751	138	1	2	9	92.0	0.0	True	sas10
+3481680at4751	138	2	2	8	92.0	0.0	True	DnaJ
+3485422at4751	138	3	0	9	92.0	0.7	True	ribosomal protein
+3487241at4751	138	3	5	4	92.0	1.4	True	RRP45
+3487559at4751	138	3	5	4	92.0	2.1	True	Diphosphomevalonate decarboxylase
+3489365at4751	138	4	6	2	92.0	1.4	True	mRNA stability protein
+3490578at4751	138	9	2	1	92.0	5.0	True	polymerase
+3493583at4751	138	2	6	4	92.0	0.0	True	mitochondrial inner membrane protein
+3494389at4751	138	2	7	3	92.0	0.0	True	Cell morphogenesis protein
+3495753at4751	138	2	2	8	92.0	0.0	True	Presequence translocated-associated motor subunit
+3497207at4751	138	3	5	4	92.0	1.4	True	DNA damage-responsive transcriptional repressor
+3499376at4751	138	5	3	4	92.0	1.4	True	palmitoyl protein
+3499514at4751	138	3	9	0	92.0	1.4	True	Mitochondrial import inner membrane translocase subunit
+3500492at4751	138	1	3	8	92.0	0.0	True	methyltransferase
+3501198at4751	138	2	10	0	92.0	0.0	True	Rrp5
+3501738at4751	138	4	2	6	92.0	1.4	True	GPI transamidase
+3505613at4751	138	0	0	12	92.0	0.0	True	RING finger
+3505882at4751	138	2	5	5	92.0	0.0	True	ribosomal RNA-processing protein
+436263at4751	138	0	3	9	92.0	0.0	True	
+50885at4751	138	3	7	2	92.0	0.0	True	Pre-mRNA-processing factor
+56132at4751	138	1	0	11	92.0	0.0	True	Mitochondrial carrier
+58845at4751	138	0	7	5	92.0	0.0	True	ribosomal protein
+93194at4751	138	6	3	3	92.0	2.1	True	ribosomal protein
+93213at4751	138	8	0	4	92.0	2.9	True	thioredoxin-like protein
+95315at4751	138	4	4	4	92.0	0.0	True	Cyclin
+95397at4751	138	10	1	1	92.0	5.0	True	Enhancer of polycomb-like protein
+97160at4751	138	9	0	3	92.0	3.6	True	ribosomal protein
+98312at4751	138	12	0	0	92.0	5.0	True	ribosomal protein
+99840at4751	138	1	4	7	92.0	0.0	True	GINS complex
+101728at4751	137	9	1	3	91.3	5.0	True	phosphatidyltransferase
+101812at4751	137	7	3	3	91.3	2.1	True	Ribosomal protein
+101969at4751	137	3	10	0	91.3	1.4	True	DNA cross-link repair protein
+102400at4751	137	4	4	5	91.3	1.4	True	prolyl 3,4-dihydroxylase
+115495at4751	137	6	5	2	91.3	1.4	True	ribosomal protein
+1240058at4751	137	1	4	8	91.3	0.7	True	ESCRT-II complex
+1266389at4751	137	1	1	11	91.3	0.7	True	acetyltransferase
+1268837at4751	137	2	10	1	91.3	1.4	True	trafficking protein particle complex subunit
+1877613at4751	137	6	0	7	91.3	3.6	True	Aminotransferase
+2065606at4751	137	1	5	7	91.3	0.7	True	GYF
+21370at4751	137	2	1	10	91.3	0.0	True	Prefoldin
+28883at4751	137	6	1	6	91.3	2.1	True	carrier protein
+304803at4751	137	0	5	8	91.3	0.0	True	Mitochondrial ribosomal protein
+318834at4751	137	10	3	0	91.3	4.3	True	cTP synthase
+3223301at4751	137	3	3	7	91.3	2.1	True	rna polymerase ii-associated
+3333647at4751	137	1	0	12	91.3	0.0	True	splicing factor 3b, subunit 4
+3334094at4751	137	2	6	5	91.3	0.7	True	exoribonuclease
+3444654at4751	137	1	8	4	91.3	0.0	True	Rav1p_C domain-containing protein
+3450478at4751	137	0	0	13	91.3	0.0	True	Nuclear cap-binding protein subunit 2
+3458406at4751	137	1	4	8	91.3	0.0	True	ribosomal protein
+3458954at4751	137	7	1	5	91.3	5.0	True	Anthranilate phosphoribosyltransferase
+3460547at4751	137	1	2	10	91.3	0.7	True	RIC1
+3461567at4751	137	2	2	9	91.3	0.7	True	tyrosine---tRNA ligase
+3461750at4751	137	4	3	6	91.3	0.7	True	mitochondrial
+3464484at4751	137	1	3	9	91.3	0.0	True	exonuclease
+3468795at4751	137	4	6	3	91.3	1.4	True	vacuolar protein sorting-associated protein
+3470295at4751	137	5	8	0	91.3	2.9	True	cut9 interacting protein
+3474582at4751	137	3	0	10	91.3	0.7	True	WD repeat-containing protein
+3474703at4751	137	3	4	6	91.3	0.7	True	Autophagy protein
+3476380at4751	137	2	1	10	91.3	0.7	True	Nucleolar protein
+3476456at4751	137	0	4	9	91.3	0.0	True	tubulin-specific chaperone e
+3476513at4751	137	2	8	3	91.3	1.4	True	dna polymerase
+3480240at4751	137	2	3	8	91.3	0.7	True	twinfilin A
+3480730at4751	137	0	11	2	91.3	0.0	True	Translation Initiation Factor
+3482757at4751	137	2	0	11	91.3	0.7	True	RNA-binding protein s
+3485782at4751	137	2	3	8	91.3	0.7	True	synthase
+3491918at4751	137	1	3	9	91.3	0.0	True	signal peptide peptidase
+3494268at4751	137	2	0	11	91.3	0.7	True	GPI-anchored wall protein transfer
+3504901at4751	137	3	2	8	91.3	0.7	True	NSP1
+3506178at4751	137	0	12	1	91.3	0.0	True	UBA domain-containing protein
+3506510at4751	137	2	10	1	91.3	0.0	True	mRNA cleavage and polyadenylation specificity factor complex subunit
+364at4751	137	4	2	7	91.3	0.7	True	ribosomal protein
+39895at4751	137	1	7	5	91.3	0.0	True	Mediator of RNA polymerase II transcription subunit
+444173at4751	137	3	0	10	91.3	0.7	True	nop16
+466700at4751	137	1	1	11	91.3	0.0	True	Vacuolar protein
+53662at4751	137	2	4	7	91.3	0.0	True	cytochrome C oxidase
+68569at4751	137	0	4	9	91.3	0.0	True	Dynactin subunit
+893739at4751	137	2	9	2	91.3	0.7	True	Rai1
+922728at4751	137	1	2	10	91.3	0.0	True	eukaryotic translation initiation factor 3
+94528at4751	137	4	6	3	91.3	0.0	True	CCR4-NOT transcription complex subunit
+95287at4751	137	7	0	6	91.3	0.7	True	endoplasmic reticulum vesicle protein
+95581at4751	137	2	9	2	91.3	0.7	True	chromosome transmission fidelity protein 18
+96471at4751	137	7	0	6	91.3	2.1	True	2Fe-2S iron-sulfur cluster binding protein domain protein
+972763at4751	137	9	3	1	91.3	4.3	True	myo-inositol-1-phosphate synthase
+98581at4751	137	7	5	1	91.3	3.6	True	Ribonuclease P
+102095at4751	136	10	0	4	90.7	5.0	True	cofilin
+103358at4751	136	1	0	13	90.7	0.0	True	asparagine synthetase
+1344104at4751	136	2	0	12	90.7	0.7	True	SWR1-complex protein
+31812at4751	136	6	0	8	90.7	1.4	True	Peroxisomal biogenesis factor
+341645at4751	136	1	8	5	90.7	0.0	True	ATPase
+3428153at4751	136	7	2	5	90.7	2.9	True	60S ribosomal protein
+3438588at4751	136	4	3	7	90.7	1.4	True	arginine-tRNA-protein transferase
+3442488at4751	136	4	6	4	90.7	2.1	True	Kinase
+3442714at4751	136	3	0	11	90.7	1.4	True	pre-mRNA-splicing factor
+344406at4751	136	2	8	4	90.7	0.0	True	ph domain-containing protein
+3446109at4751	136	4	1	9	90.7	2.1	True	Phosphomevalonate kinase
+3451477at4751	136	1	1	12	90.7	0.0	True	MICOS complex subunit
+3453453at4751	136	2	3	9	90.7	0.0	True	NADH-ubiquinone oxidoreductase
+3458075at4751	136	2	0	12	90.7	0.7	True	initiation factor
+3459418at4751	136	2	3	9	90.7	0.0	True	WD repeat protein
+3460564at4751	136	8	0	6	90.7	1.4	True	60s ribosomal protein
+3463964at4751	136	3	0	11	90.7	0.7	True	grpE
+346437at4751	136	0	0	14	90.7	0.0	True	pre-mRNA-splicing ATP-dependent RNA helicase
+3470094at4751	136	2	3	9	90.7	0.0	True	Coatomer subunit delta
+3479709at4751	136	6	1	7	90.7	1.4	True	Mitochondrial distribution and morphology 34 protein
+3479765at4751	136	0	1	13	90.7	0.0	True	minichromosome loss protein
+3480722at4751	136	7	2	5	90.7	3.6	True	Glutamate dehydrogenase
+3484401at4751	136	9	4	1	90.7	4.3	True	Coronin
+3488032at4751	136	1	3	10	90.7	0.7	True	NADH-ubiquinone oxidoreductase 23 kda subunit
+3492060at4751	136	6	1	7	90.7	1.4	True	peroxin
+3493796at4751	136	7	0	7	90.7	5.0	True	syntaxin
+3501512at4751	136	8	0	6	90.7	5.0	True	kinase
+3501610at4751	136	1	2	11	90.7	0.0	True	Mon2
+441952at4751	136	5	4	5	90.7	2.9	True	methyltransferase
+59596at4751	136	4	0	10	90.7	1.4	True	U3 small nucleolar RNA-associated protein
+598541at4751	136	2	5	7	90.7	0.7	True	WD repeat protein
+62393at4751	136	5	2	7	90.7	1.4	True	GTPase activating protein
+66731at4751	136	3	1	10	90.7	1.4	True	Patatin-like phospholipase domain-containing protein -like protein
+93256at4751	136	6	0	8	90.7	2.9	True	DOLICHOL-PHOSPHATE MANNOSYLTRANSFERASE
+93468at4751	136	0	0	14	90.7	0.0	True	spindle pole body component
+93854at4751	136	1	5	8	90.7	0.0	True	RNA polymerase
+95013at4751	136	3	2	9	90.7	0.0	True	RNA polymerase
+96168at4751	136	3	0	11	90.7	0.7	True	Ribosomal protein S3
+102743at4751	135	5	0	10	90.0	2.1	True	sad1 unc
+1174443at4751	135	2	0	13	90.0	0.0	True	Phospho-2-dehydro-3-deoxyheptonate aldolase
+14010at4751	135	10	2	3	90.0	2.9	True	60s ribosomal protein
+21625at4751	135	0	0	15	90.0	0.0	True	histone-lysine N-methyltransferase, H3 lysine-79 specific
+234965at4751	135	0	1	14	90.0	0.0	True	ER membrane protein complex subunit 2-A
+239481at4751	135	4	1	10	90.0	1.4	True	Mitochondrial ribosomal protein
+28580at4751	135	3	1	11	90.0	0.7	True	Maf1
+32154at4751	135	0	2	13	90.0	0.0	True	Coiled-coil domain-containing protein
+3283754at4751	135	1	1	13	90.0	0.0	True	Ubiquitin-protein ligase
+3431125at4751	135	3	1	11	90.0	0.7	True	Leucine carboxyl methyltransferase
+3433125at4751	135	9	4	2	90.0	5.0	True	PER1
+3449898at4751	135	9	0	6	90.0	2.9	True	phosphatase 2a
+3452589at4751	135	4	1	10	90.0	1.4	True	Translation initiation factor
+3457927at4751	135	3	8	4	90.0	0.7	True	V-type ATPase, G subunit
+3460986at4751	135	2	7	6	90.0	0.0	True	Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit
+3480167at4751	135	8	0	7	90.0	2.9	True	AMP deaminase
+3481039at4751	135	3	0	12	90.0	0.0	True	Sorting nexin
+3481928at4751	135	2	5	8	90.0	0.0	True	SWIB/MDM2 domain protein
+3484576at4751	135	1	3	11	90.0	0.0	True	Oligosaccharyltransferase subunit Ribophorin II
+3490695at4751	135	7	5	3	90.0	3.6	True	proteasome
+3495706at4751	135	0	8	7	90.0	0.0	True	RNA polymerase-associated protein
+3497073at4751	135	4	1	10	90.0	2.1	True	Helicase
+3499443at4751	135	1	13	1	90.0	0.7	True	transcription factor
+3502621at4751	135	2	1	12	90.0	0.0	True	Splicing factor
+3502909at4751	135	0	1	14	90.0	0.0	True	pab-dependent poly -specific ribonuclease subunit
+356743at4751	135	1	4	10	90.0	0.0	True	tRNA-splicing endonuclease subunit
+37447at4751	135	2	4	9	90.0	0.0	True	rna binding effector protein
+42512at4751	135	4	0	11	90.0	1.4	True	ribosomal protein
+443745at4751	135	0	9	6	90.0	0.0	True	Pre-rRNA-processing protein
+53333at4751	135	1	13	1	90.0	0.7	True	N-alpha-acetyltransferase,35 NatC auxiliary subunit
+11825at4751	136	10	2	2	90.7	5.7	False	Pyridoxal kinase
+237470at4751	136	13	0	1	90.7	5.7	False	exportin
+3250959at4751	136	8	5	1	90.7	5.7	False	transcription initiation factor IIA
+3436212at4751	136	12	0	2	90.7	6.4	False	ornithine carbamoyltransferase
+4585at4751	136	9	0	5	90.7	5.7	False	transporter
+2355374at4751	135	15	0	0	90.0	10.0	False	tryptophan synthase
+3480195at4751	135	10	1	4	90.0	6.4	False	nifU-like protein
+100557at4751	134	7	0	9	89.3	2.9	False	translation initiation factor
+1271323at4751	134	0	2	14	89.3	0.0	False	ribosomal protein
+172560at4751	134	2	0	14	89.3	0.7	False	Peroxisome membrane protein, Pex16
+221883at4751	134	2	8	6	89.3	1.4	False	Transcription factor
+2370670at4751	134	1	1	14	89.3	0.7	False	U3 small nucleolar ribonucleoprotein
+282650at4751	134	3	1	12	89.3	0.0	False	syntaxin
+3217553at4751	134	4	5	7	89.3	2.1	False	hexaprenyl pyrophosphate synthetase
+3427601at4751	134	2	5	9	89.3	0.7	False	Ribosomal protein
+3444909at4751	134	14	1	1	89.3	9.3	False	carrier protein
+3448749at4751	134	0	1	15	89.3	0.0	False	protein
+3448888at4751	134	5	1	10	89.3	1.4	False	copii-coated vesicle
+3452679at4751	134	3	2	11	89.3	1.4	False	cytochrome c oxidase
+3454704at4751	134	1	14	1	89.3	0.0	False	u3 small nucleolar rna-associated protein
+3458275at4751	134	1	1	14	89.3	0.0	False	eukaryotic translation initiation factor 3
+3458458at4751	134	2	7	7	89.3	0.7	False	kinase
+3463135at4751	134	12	3	1	89.3	5.7	False	translation initiation factor
+3472520at4751	134	2	0	14	89.3	0.7	False	Prp4
+3473148at4751	134	9	7	0	89.3	5.7	False	AP-3 complex subunit mu
+3473690at4751	134	5	0	11	89.3	2.1	False	iron-sulfur cluster assembly protein
+3474378at4751	134	1	9	6	89.3	0.0	False	tubulin-specific chaperone a
+3479918at4751	134	2	12	2	89.3	0.7	False	RGP1
+3483942at4751	134	9	0	7	89.3	5.0	False	Peptidyl-prolyl cis-trans isomerase
+3484129at4751	134	1	9	6	89.3	0.0	False	GTP-binding protein
+3484897at4751	134	0	0	16	89.3	0.0	False	SNARE
+3491623at4751	134	6	10	0	89.3	2.1	False	lectin
+3491700at4751	134	1	6	9	89.3	0.7	False	
+3492265at4751	134	2	5	9	89.3	0.7	False	Transcription factor
+3501639at4751	134	1	1	14	89.3	0.0	False	DNA glycosylase
+3505631at4751	134	8	3	5	89.3	2.9	False	MINDY_DUB domain-containing protein
+3506575at4751	134	1	14	1	89.3	0.0	False	Spt20
+37776at4751	134	1	1	14	89.3	0.7	False	cell cycle control protein
+50140at4751	134	2	5	9	89.3	0.7	False	ribosomal protein
+60826at4751	134	2	6	8	89.3	0.0	False	UPF0662 protein
+96424at4751	134	4	5	7	89.3	1.4	False	signal peptidase
+98366at4751	134	0	14	2	89.3	0.0	False	Origin recognition complex subunit
+12345at4751	133	7	2	8	88.7	2.9	False	sphingolipid
+1268219at4751	133	1	1	15	88.7	0.7	False	Vacuolar protein
+1271631at4751	133	3	3	11	88.7	0.7	False	trafficking protein particle complex subunit
+12915at4751	133	5	12	0	88.7	2.1	False	methyltransferase
+192267at4751	133	4	11	2	88.7	1.4	False	Peroxisomal membrane protein
+313431at4751	133	0	0	17	88.7	0.0	False	DnaJ
+3257351at4751	133	1	1	15	88.7	0.7	False	XAP5 protein
+326183at4751	133	1	0	16	88.7	0.7	False	kinase
+3299670at4751	133	2	1	14	88.7	0.7	False	SAC3/GANP domain protein
+3446473at4751	133	1	3	13	88.7	0.0	False	FRG1
+3448533at4751	133	8	0	9	88.7	5.7	False	lariat debranching enzyme
+3449423at4751	133	0	0	17	88.7	0.0	False	WD repeat-containing protein
+3452526at4751	133	5	2	10	88.7	2.1	False	succinate dehydrogenase assembly factor
+3454445at4751	133	8	3	6	88.7	1.4	False	60s ribosomal protein
+3459831at4751	133	1	13	3	88.7	0.7	False	n-acetyl-gamma-glutamyl-phosphate reductase
+3466060at4751	133	2	1	14	88.7	0.0	False	MesA protein
+3470397at4751	133	0	0	17	88.7	0.0	False	sister chromatid cohesion
+3472827at4751	133	1	14	2	88.7	0.0	False	G-patch domain-containing protein
+3473837at4751	133	0	2	15	88.7	0.0	False	splicing factor U2AF
+3475447at4751	133	1	13	3	88.7	0.7	False	ctd kinase subunit gamma
+3476442at4751	133	1	2	14	88.7	0.0	False	importin
+3482729at4751	133	2	14	1	88.7	0.0	False	U3 small nucleolar RNA-associated protein
+3484501at4751	133	2	2	13	88.7	0.7	False	Splicing factor
+3486889at4751	133	1	1	15	88.7	0.7	False	heat shock protein
+3489407at4751	133	1	0	16	88.7	0.7	False	Electron transfer flavoprotein alpha subunit
+3492826at4751	133	0	12	5	88.7	0.0	False	zinc finger matrin-type protein 2-like protein
+3493623at4751	133	11	0	6	88.7	5.7	False	succinate dehydrogenase 
+3497650at4751	133	2	7	8	88.7	0.7	False	Mitochondrial inner membrane protease
+3500954at4751	133	1	0	16	88.7	0.7	False	outer membrane
+3505850at4751	133	0	0	17	88.7	0.0	False	Sorting NeXin
+3506361at4751	133	1	10	6	88.7	0.0	False	H/ACA ribonucleoprotein complex non-core subunit
+405441at4751	133	2	0	15	88.7	1.4	False	diphthamide biosynthesis protein
+408156at4751	133	0	0	17	88.7	0.0	False	nadh-ubiquinone oxidoreductase
+413314at4751	133	0	5	12	88.7	0.0	False	Fyv4 protein
+48151at4751	133	2	4	11	88.7	0.7	False	Cytochrome B-c1 complex subunit 7
+55375at4751	133	17	0	0	88.7	10.7	False	condensin
+789403at4751	133	2	2	13	88.7	0.7	False	Gamma tubulin
+93183at4751	133	10	0	7	88.7	5.7	False	E1 component alpha subunit of pyruvate dehydrogenase
+95394at4751	133	0	1	16	88.7	0.0	False	syntaxin
+98471at4751	133	5	0	12	88.7	1.4	False	ribosomal protein
+103087at4751	132	1	3	14	88.0	0.7	False	MRNA capping
+1159075at4751	132	1	0	17	88.0	0.7	False	peptidyl-prolyl cis-trans isomerase
+1264007at4751	132	5	1	12	88.0	2.9	False	mitochondrial distribution and morphology protein
+138857at4751	132	2	0	16	88.0	0.0	False	importin
+155561at4751	132	4	14	0	88.0	0.7	False	inositol phosphatase
+15592at4751	132	3	15	0	88.0	0.7	False	ap-1 accessory protein
+1596671at4751	132	2	1	15	88.0	1.4	False	Yae1_N domain-containing protein
+178524at4751	132	2	1	15	88.0	1.4	False	NUF2
+190952at4751	132	9	2	7	88.0	5.0	False	Fmp27
+191347at4751	132	2	12	4	88.0	0.0	False	splicing factor
+259316at4751	132	4	14	0	88.0	0.7	False	vacuolar sorting-associated protein
+2601396at4751	132	0	1	17	88.0	0.0	False	Cyclin
+306250at4751	132	2	2	14	88.0	0.7	False	MICOS complex subunit
+3324678at4751	132	3	0	15	88.0	0.7	False	Vacuolar protein sorting-associated
+3419473at4751	132	3	3	12	88.0	1.4	False	MOB kinase activator-like
+3425713at4751	132	2	1	15	88.0	0.0	False	splicing factor 3a, subunit 2
+3438522at4751	132	2	7	9	88.0	0.7	False	pre rRNA processing protein
+3461612at4751	132	0	17	1	88.0	0.0	False	ER membrane protein complex subunit 1
+3462595at4751	132	4	0	14	88.0	1.4	False	spindle pole body component
+3465794at4751	132	0	2	16	88.0	0.0	False	RNA-binding
+3471362at4751	132	0	7	11	88.0	0.0	False	RNA polymerase II transcription factor B subunit
+3481556at4751	132	3	7	8	88.0	1.4	False	splicing factor
+3482040at4751	132	0	4	14	88.0	0.0	False	G patch domain-containing protein
+3483123at4751	132	1	1	16	88.0	0.0	False	nucleoporin
+3492698at4751	132	1	3	14	88.0	0.0	False	Histone acetyltransferase
+3493048at4751	132	1	0	17	88.0	0.0	False	cactin
+3495530at4751	132	6	5	7	88.0	2.1	False	Prefoldin
+3496622at4751	132	1	12	5	88.0	0.7	False	MAK11 protein
+3499139at4751	132	3	0	15	88.0	0.7	False	Ubiquitin-conjugating enzyme
+3500291at4751	132	4	9	5	88.0	0.7	False	gpi inositol-deacylase
+3504080at4751	132	4	0	14	88.0	1.4	False	small nuclear ribonucleoprotein
+35231at4751	132	2	0	16	88.0	1.4	False	ubiquinol cytochrome c reductase
+36190at4751	132	2	13	3	88.0	0.0	False	DNA-directed RNA polymerase III subunit
+411361at4751	132	2	11	5	88.0	0.0	False	protein cut8
+49102at4751	132	0	1	17	88.0	0.0	False	Non-structural maintenance of chromosomes element 4 A
+593658at4751	132	2	0	16	88.0	0.0	False	ubx domain-containing protein
+94518at4751	132	12	3	3	88.0	4.3	False	ribosomal protein
+94591at4751	132	0	0	18	88.0	0.0	False	DNA repair protein
+98953at4751	132	4	8	6	88.0	2.9	False	thymidylate kinase
+99500at4751	132	8	5	5	88.0	3.6	False	
+99503at4751	132	3	7	8	88.0	0.7	False	tRNA methyltransferase
+102215at4751	131	1	5	13	87.3	0.0	False	nuclear segregation protein
+1103887at4751	131	2	9	8	87.3	0.7	False	SDS3
+114799at4751	131	8	0	11	87.3	2.9	False	Vacuolar Protein
+1158371at4751	131	3	1	15	87.3	1.4	False	Pre-mRNA-splicing factor
+1266968at4751	131	1	17	1	87.3	0.0	False	U3 small nucleolar RNA-associated protein
+1897791at4751	131	2	2	15	87.3	0.7	False	Signalosome subunit 6
+303465at4751	131	2	9	8	87.3	0.7	False	transcriptional coactivator
+3243858at4751	131	3	12	4	87.3	1.4	False	thump domain-containing protein
+3258289at4751	131	3	9	7	87.3	1.4	False	stress activated MAP kinase interacting
+3433562at4751	131	2	1	16	87.3	0.7	False	Pre-mRNA-splicing factor
+3442306at4751	131	3	0	16	87.3	1.4	False	acyl-CoA dehydrogenase
+3445007at4751	131	7	0	12	87.3	1.4	False	ribosomal protein
+3447994at4751	131	2	17	0	87.3	0.7	False	cap binding
+3455610at4751	131	1	0	18	87.3	0.0	False	V-ATPase subunit C
+3462735at4751	131	2	0	17	87.3	0.7	False	Beta-catenin-like protein
+3467231at4751	131	16	1	2	87.3	9.3	False	tetrahydrofolate synthase
+3469547at4751	131	10	4	5	87.3	5.7	False	3-methyl-2-oxobutanoate hydroxymethyltransferase
+3472390at4751	131	2	1	16	87.3	0.7	False	Mog1
+3481237at4751	131	3	1	15	87.3	2.1	False	clathrin light chain
+3482403at4751	131	5	12	2	87.3	2.1	False	origin recognition complex subunit
+3483628at4751	131	3	15	1	87.3	0.7	False	Replication termination factor
+3486891at4751	131	1	4	14	87.3	0.0	False	sec66
+3489410at4751	131	2	0	17	87.3	0.7	False	pyridoxal 5'-phosphate synthase
+3489670at4751	131	3	1	15	87.3	0.0	False	pre-mRNA-splicing factor
+3494745at4751	131	2	1	16	87.3	0.7	False	peptidyl-prolyl cis-trans isomerase
+3495462at4751	131	1	1	17	87.3	0.0	False	splicing factor
+3497547at4751	131	2	2	15	87.3	0.7	False	mRNA splicing factor
+3500795at4751	131	1	2	16	87.3	0.0	False	ribosomal protein
+3503495at4751	131	4	0	15	87.3	2.9	False	mRNA 3'-end-processing protein
+449711at4751	131	19	0	0	87.3	11.4	False	Transaldolase
+482390at4751	131	3	0	16	87.3	0.7	False	Atp11
+60859at4751	131	1	3	15	87.3	0.0	False	RNA-binding protein
+70278at4751	131	0	10	9	87.3	0.0	False	sgt1
+93030at4751	131	2	0	17	87.3	0.7	False	Pre-mRNA-splicing factor
+98577at4751	131	5	1	13	87.3	3.6	False	Pre-mRNA-splicing factor
+101548at4751	130	19	1	0	86.7	10.7	False	phosphofructokinase
+102705at4751	130	2	7	11	86.7	0.0	False	tRNA
+1831536at4751	130	1	0	19	86.7	0.0	False	Peroxisomal adenine nucleotide transporter
+20548at4751	130	0	3	17	86.7	0.0	False	ribosomal protein
+227016at4751	130	1	4	15	86.7	0.7	False	nuclear transport factor 2
+2708734at4751	130	15	0	5	86.7	8.6	False	cys-Gly metallodipeptidase
+3224024at4751	130	4	4	12	86.7	1.4	False	Inositol-pentakisphosphate 2-kinase
+3285959at4751	130	3	1	16	86.7	0.0	False	wd repeat protein
+3424971at4751	130	7	0	13	86.7	3.6	False	5'-AMP-activated protein kinase subunit beta
+3432715at4751	130	1	3	16	86.7	0.7	False	COP9 signalosome
+3456420at4751	130	2	0	18	86.7	0.0	False	RNA-binding protein
+3458505at4751	130	3	0	17	86.7	0.7	False	exocyst complex component
+3466011at4751	130	5	14	1	86.7	0.7	False	u3 small nucleolar rna-associated protein
+3467243at4751	130	4	0	16	86.7	0.7	False	exocyst complex component
+3475190at4751	130	0	18	2	86.7	0.0	False	cohesin
+3478826at4751	130	5	7	8	86.7	1.4	False	Iron sulfur cluster assembly protein
+3480586at4751	130	4	10	6	86.7	2.9	False	Dre2
+3488283at4751	130	3	8	9	86.7	2.1	False	Anaphase-promoting complex subunit
+3493070at4751	130	4	3	13	86.7	0.7	False	Amino-acid acetyltransferase
+3493351at4751	130	1	2	17	86.7	0.0	False	tpr repeat-containing protein
+3494367at4751	130	3	11	6	86.7	1.4	False	SAC3
+3497571at4751	130	0	0	20	86.7	0.0	False	SNARE
+3505640at4751	130	6	7	7	86.7	3.6	False	gluconokinase
+3507195at4751	130	2	2	16	86.7	1.4	False	Peptidyl-prolyl cis-trans isomerase
+411442at4751	130	2	0	18	86.7	0.0	False	exoribonuclease
+41323at4751	130	1	6	13	86.7	0.7	False	tRNA dimethylallyltransferase
+493069at4751	130	1	11	8	86.7	0.0	False	Engulfment and cell motility protein
+57410at4751	130	7	0	13	86.7	3.6	False	cytochrome c oxidase
+702861at4751	130	5	0	15	86.7	2.1	False	arginine n-methyltransferase
+97437at4751	130	9	0	11	86.7	5.7	False	Small nuclear ribonucleoprotein
+99468at4751	130	19	1	0	86.7	10.7	False	ribosomal protein
+99660at4751	130	1	6	13	86.7	0.0	False	OTU-like cysteine protease
+102599at4751	129	2	1	18	86.0	0.7	False	Rio1
+1153609at4751	129	4	14	3	86.0	2.1	False	Sgf29
+194092at4751	129	1	4	16	86.0	0.0	False	ankyrin
+1962405at4751	129	12	4	5	86.0	5.0	False	malate synthase A
+3429162at4751	129	1	0	20	86.0	0.0	False	NADH:ubiquinone oxidoreductase
+3462868at4751	129	0	15	6	86.0	0.0	False	Nuclear pore
+3466280at4751	129	2	1	18	86.0	0.0	False	Signalosome subunit 2
+3466916at4751	129	2	12	7	86.0	0.7	False	casp
+3481452at4751	129	3	2	16	86.0	0.0	False	Eukaryotic translation initiation factor 3 subunit M
+3487433at4751	129	1	3	17	86.0	0.0	False	DUF2013 domain-containing protein
+3490807at4751	129	0	4	17	86.0	0.0	False	PRKR-interacting protein
+3491142at4751	129	2	4	15	86.0	0.7	False	Damaged DNA binding protein
+3499431at4751	129	0	3	18	86.0	0.0	False	Vacuolar segregation protein (Pep7)
+3505791at4751	129	1	5	15	86.0	0.0	False	G patch domain-containing protein
+469464at4751	129	2	1	18	86.0	0.7	False	COP9 signalosome subunit 1
+1261320at4751	128	1	18	3	85.3	0.0	False	ATP-dependent DNA helicase
+1261761at4751	128	1	7	14	85.3	0.7	False	Signalosome subunit 3
+25050at4751	128	4	6	12	85.3	1.4	False	WD repeat protein
+3239693at4751	128	3	2	17	85.3	0.7	False	protein phosphatase inhibitor 2
+3442373at4751	128	1	2	19	85.3	0.0	False	actin
+3449928at4751	128	0	5	17	85.3	0.0	False	wd repeat protein
+3451854at4751	128	3	0	19	85.3	1.4	False	Vacuolar protein
+3465039at4751	128	1	7	14	85.3	0.7	False	Coiled-coil domain-containing protein
+3467514at4751	128	6	10	6	85.3	2.9	False	Dihydrosphingosine 1-phosphate phosphatase
+3477111at4751	128	1	1	20	85.3	0.0	False	hormone-sensitive lipase
+3480641at4751	128	3	5	14	85.3	0.0	False	60S ribosomal protein
+3483333at4751	128	2	1	19	85.3	0.7	False	complex I
+3485658at4751	128	3	1	18	85.3	0.0	False	cleavage and polyadenylation specificity factor
+3501433at4751	128	1	4	17	85.3	0.7	False	Cop9 signalosome
+3503881at4751	128	4	0	18	85.3	0.7	False	Ubiquitin carboxyl-terminal hydrolase
+3506841at4751	128	0	6	16	85.3	0.0	False	Pre-mRNA-splicing factor
+38017at4751	128	4	15	3	85.3	2.1	False	ribonuclease
+97451at4751	128	0	4	18	85.3	0.0	False	exoribonuclease
+100249at4751	127	1	0	22	84.7	0.0	False	Small nuclear ribonucleoprotein
+1263198at4751	127	2	1	20	84.7	0.0	False	Signalosome subunit 4
+1273107at4751	127	2	4	17	84.7	0.7	False	Sec20
+137057at4751	127	2	0	21	84.7	1.4	False	glycine cleavage system protein H
+15567at4751	127	15	3	5	84.7	10.0	False	6 phosphogluconolactonase
+3224462at4751	127	2	5	16	84.7	0.0	False	Striatin
+3442291at4751	127	16	3	4	84.7	10.0	False	porphobilinogen deaminase
+3467459at4751	127	0	20	3	84.7	0.0	False	DNA-directed RNA polymerase III
+3504621at4751	127	1	4	18	84.7	0.0	False	pre-mRNA-splicing factor
+3506447at4751	127	4	3	16	84.7	0.7	False	KH domain
+354972at4751	127	14	0	9	84.7	8.6	False	coproporphyrinogen III oxidase
+44701at4751	127	3	5	15	84.7	1.4	False	Cargo-transport protein
+945448at4751	127	8	0	15	84.7	2.9	False	t SNARE
+99310at4751	127	4	4	15	84.7	1.4	False	40S ribosomal protein S
+284647at4751	126	2	1	21	84.0	0.0	False	mitochondrial acidic protein
+3257697at4751	126	5	4	15	84.0	0.7	False	Retinoic acid induced 16-like protein
+3288086at4751	126	4	1	19	84.0	1.4	False	RRP46
+3475694at4751	126	4	0	20	84.0	1.4	False	programmed cell death protein
+3483742at4751	126	4	19	1	84.0	2.1	False	DnaJ
+3493366at4751	126	1	0	23	84.0	0.0	False	Ribosomal protein
+56715at4751	126	2	2	20	84.0	0.0	False	translation initiation factor
+93915at4751	126	11	0	13	84.0	5.0	False	Oxidoreductin
+2311317at4751	125	24	1	0	83.3	15.0	False	Farnesyl pyrophosphate
+3337487at4751	125	1	12	12	83.3	0.0	False	Upf3
+3479150at4751	125	6	9	10	83.3	3.6	False	acyl carrier protein
+3484075at4751	125	1	18	6	83.3	0.7	False	WD repeat protein
+3484124at4751	125	0	9	16	83.3	0.0	False	GPALPP motifs-containing protein
+3487068at4751	125	15	0	10	83.3	10.0	False	Delta
+3495298at4751	125	2	18	5	83.3	0.0	False	lipoate-protein ligase
+3502536at4751	125	1	6	18	83.3	0.0	False	coiled-coil domain-containing 55 protein
+3472063at4751	124	2	2	22	82.7	0.7	False	RSM22
+3482369at4751	124	1	7	18	82.7	0.7	False	Trs85
+3496557at4751	124	5	2	19	82.7	1.4	False	PWI
+3505840at4751	124	1	1	24	82.7	0.0	False	protein
+441366at4751	124	1	10	15	82.7	0.0	False	calcineurin A
+500018at4751	124	0	10	16	82.7	0.0	False	uv radiation resistance protein
+35882at4751	123	25	1	1	82.0	15.0	False	ATPase
+46450at4751	123	20	0	7	82.0	12.1	False	transporter
+1241248at4751	122	1	4	23	81.3	0.0	False	ribosomal protein
+193235at4751	122	2	6	20	81.3	0.0	False	Dynein light intermediate chain
+3151657at4751	122	1	4	23	81.3	0.7	False	U2 snRNP-associated SURP motif-containing protein
+3492390at4751	122	0	23	5	81.3	0.0	False	cue domain-containing protein
+64743at4751	122	5	3	20	81.3	1.4	False	Sec7
+3466794at4751	121	6	6	17	80.7	0.7	False	Hypothetical Protein
+3469778at4751	121	5	18	6	80.7	3.6	False	mitochondrial K+-H+ exchange-related-domain-containing
+43491at4751	121	2	6	21	80.7	0.0	False	mis12 protein
+322151at4751	120	26	4	0	80.0	13.6	False	60S ribosomal protein
+3423845at4751	120	9	0	21	80.0	5.0	False	Sulfate
+3506748at4751	120	2	22	6	80.0	0.0	False	srp40
+56070at4751	120	2	13	15	80.0	0.7	False	Pre-mRNA-splicing factor
+3425867at4751	119	1	5	25	79.3	0.7	False	non-structural maintenance of chromosome element 1
+3467000at4751	119	2	6	23	79.3	0.0	False	Armadillo
+3472378at4751	119	2	28	1	79.3	1.4	False	Mitochondrial intermembrane space import and assembly protein
+3500119at4751	119	1	11	19	79.3	0.7	False	protein phosphatase T
+459586at4751	119	2	12	17	79.3	0.0	False	Inner membrane protein
+3497552at4751	118	0	18	14	78.7	0.0	False	Protein SDE2
+3503424at4751	118	3	14	15	78.7	0.7	False	u1 small nuclear ribonucleoprotein
+1911984at4751	117	20	2	11	78.0	11.4	False	GLUTATHION PEROXIDASE
+3465065at4751	117	1	24	8	78.0	0.7	False	Pantetheine-phosphate adenylyltransferase
+3468237at4751	117	2	16	15	78.0	0.0	False	eukaryotic translation initiation factor 3
+3468770at4751	117	3	22	8	78.0	0.7	False	WD repeat-containing protein
+3441858at4751	116	17	2	15	77.3	10.0	False	Serine-threonine kinase receptor-associated protein
+3454592at4751	115	3	16	16	76.7	2.1	False	DUF833 domain-containing protein
+3255389at4751	114	1	15	20	76.0	0.0	False	U3 small nucleolar RNA-associated protein
+3499362at4751	112	0	36	2	74.7	0.0	False	La
+3491618at4751	111	2	8	29	74.0	0.7	False	zinc finger protein
+3423259at4751	110	21	5	14	73.3	12.9	False	WD repeat protein
+93745at4751	109	3	25	13	72.7	1.4	False	transcription initiation factor
+3271347at4751	106	2	26	16	70.7	0.0	False	Chromatin modification-related protein
+3507320at4751	96	0	16	38	64.0	0.0	False	Nuclear pore

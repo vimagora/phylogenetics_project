@@ -73,7 +73,8 @@ with ≤ 6% duplicated markers overall (so whole-genome duplications do not reje
 genome only a complete single-copy hit is used. `06_species_tree/genome_coverage.tsv` lists the
 selected markers found per genome.
 
-Each marker is aligned with MAFFT L-INS-i and trimmed with ClipKIT (smart-gap). Sequences are named
+Each marker is aligned with MAFFT L-INS-i and trimmed with ClipKIT in gappy mode
+(columns with > 50% gaps removed; the smart-gap mode kept most columns of these kingdom-wide alignments). Sequences are named
 by portal. Markers with ≥ 100 columns after trimming and sequences from ≥ 90% of the cohort are
 concatenated into `06_species_tree/concatenated/supermatrix.faa`, with one partition per marker
 (`partitions.nex`); `marker_summary.tsv` and `taxon_occupancy.tsv` report what was kept.
