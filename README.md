@@ -16,8 +16,9 @@ How the cohort was chosen is described in `00_inputs/cohort_selection.md`.
 - A Slurm cluster with BUSCO 6.1.0 (`fungi_odb12`), SeqKit 2.13.0, MAFFT 7.525, ClipKIT 2.12.1,
   IQ-TREE 3.1.4, ASTER 1.25 (ASTRAL-IV) and Python 3.12 with pandas, numpy and networkx. Module names (CSC Roihu) and Slurm settings are
   set in the scripts.
+- OrthoFinder 3.1.5, installed from `envs/of3_env.yaml` (see [OrthoFinder](#orthofinder)).
 - A JGI API key in `~/.jgi_api_key` for downloads.
-- Local settings (Slurm account, BUSCO datasets folder): `cp config.example.sh config.sh`, edit it,
+- Local settings (Slurm account, BUSCO datasets folder, OrthoFinder container): `cp config.example.sh config.sh`, edit it,
   and run `source config.sh` before `sbatch`.
 
 Run all scripts from the project folder. Each script's header describes its arguments and outputs.
@@ -42,8 +43,10 @@ Run all scripts from the project folder. Each script's header describes its argu
 | 14. Marker trees | `sbatch scripts/marker_trees.sbatch` | `06_species_tree/marker_trees/` |
 | 15. Collect trees and models | `python3 scripts/collect_marker_trees.py` | `06_species_tree/marker_trees.nwk`, `marker_models.tsv`, `concatenated/partitions_models.nex` |
 | 16. Species trees | `sbatch scripts/species_trees.sbatch` | `06_species_tree/astral/`, `concatenated/iqtree/` |
+| 17. Species tree for OrthoFinder | `python3 scripts/prepare_species_tree.py` | `07_orthofinder/species_tree_rooted.nwk` |
+| 18. OrthoFinder | `sbatch scripts/run_orthofinder.sbatch` | `07_orthofinder/run/Results_cohort/` |
 
-Steps 8–11, 13 and 15 use Python from `module load python-data`. Step 10 reads the combined table of
+Steps 8–11, 13, 15 and 17 use Python from `module load python-data`. Step 10 reads the combined table of
 the collapsed proteomes from step 7.
 
 The download, extraction, collapse, BUSCO and alignment steps skip finished work, so new genomes can
@@ -93,6 +96,27 @@ Each kept marker gets a maximum-likelihood tree (IQ-TREE 3, ModelFinder among nu
 
 Both are rooted on *Spizellomyces punctatus* (`Spipu1`); ASTRAL needs the root to estimate branch
 lengths accurately.
+
+## OrthoFinder
+
+OrthoFinder 3 runs on the 150 cohort proteomes in one standard run (all-vs-all DIAMOND search, MSA
+gene trees with FAMSA and FastTree), with the rooted ASTRAL species tree (`-s`) so that the
+hierarchical orthogroups follow our species tree. `-X` keeps the `<portal>-<proteinId>` gene IDs.
+`Orthogroups/Orthogroups.tsv` holds the hierarchical orthogroups (the former `N0.tsv`), and
+`Orthogroups.GeneCount.tsv` the copy numbers. After the run, the folders with one file per
+orthogroup or species pair are packed into `.tar.gz` archives (CSC scratch has a file-count quota).
+
+Installation on Roihu as a Tykky container, once:
+```bash
+module load tykky
+conda-containerize new --prefix /projappl/<project>/orthofinder envs/of3_env.yaml
+```
+Then set `ORTHOFINDER_DIR=/projappl/<project>/orthofinder` in `config.sh`. DIAMOND is pinned below
+2.2, as OrthoFinder 3.1.5 requires.
+
+OrthoFinder refuses an existing output folder and cannot resume. If a run stops after the DIAMOND
+search, restart from its search results with `orthofinder -b <Results>/WorkingDirectory` (to rerun
+a finished run with another species tree, unpack `WorkingDirectory.tar.gz` first).
 
 ## MycoCosm notes
 

@@ -1,0 +1,10 @@
+# OrthoFinder 3 environment, installed on Roihu as a Tykky container (see README).
+# DIAMOND is pinned because OrthoFinder 3.1.5 requires >=2.1.7,<2.2 and conda otherwise picks 2.2.x.
+name: orthofinder
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  - orthofinder=3.1.5
+  - diamond>=2.1.7,<2.2

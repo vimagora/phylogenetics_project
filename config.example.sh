@@ -7,3 +7,6 @@ export SBATCH_ACCOUNT=project_XXXXXXX
 
 # Folder with the BUSCO datasets, i.e. the folder that contains lineages/fungi_odb12
 BUSCO_DOWNLOADS=/path/to/busco_downloads/
+
+# Tykky container with OrthoFinder 3 (envs/of3_env.yaml), i.e. the folder that contains bin/orthofinder
+ORTHOFINDER_DIR=/path/to/orthofinder/

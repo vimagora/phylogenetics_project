@@ -27,6 +27,11 @@
 06_species_tree/logs/*
 !06_species_tree/logs/.gitkeep
 
+# 07: OrthoFinder results and Slurm logs (re-create with scripts/run_orthofinder.sbatch)
+07_orthofinder/run/
+07_orthofinder/logs/*
+!07_orthofinder/logs/.gitkeep
+
 # IQ-TREE checkpoints and intermediate files (trees and .iqtree reports are kept)
 *.ckp.gz
 *.mldist
