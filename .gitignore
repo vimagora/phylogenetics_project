@@ -19,10 +19,11 @@
 # 05: proteomes with clean IDs and their ID maps (re-create with scripts/clean_proteomes.py)
 05_clean_proteomes/
 
-# 06: marker FASTAs, alignments, supermatrix and Slurm logs (re-create with steps 10-13)
+# 06: marker FASTAs, alignments, supermatrix and Slurm logs (re-create with steps 10-14)
 06_species_tree/marker_sequences.tsv
 06_species_tree/markers/
 06_species_tree/concatenated/supermatrix.faa
+06_species_tree/marker_trees/
 06_species_tree/logs/*
 !06_species_tree/logs/.gitkeep
 
@@ -32,6 +33,7 @@
 *.bionj
 *.uniqueseq.phy
 *.model.gz
+*.ufboot
 
 # Unfinished downloads and outputs, and logs
 *.part

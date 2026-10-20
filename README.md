@@ -14,7 +14,7 @@ How the cohort was chosen is described in `00_inputs/cohort_selection.md`.
 ## Requirements
 
 - A Slurm cluster with BUSCO 6.1.0 (`fungi_odb12`), SeqKit 2.13.0, MAFFT 7.525, ClipKIT 2.12.1,
-  and Python 3.12 with pandas, numpy and networkx. Module names (CSC Roihu) and Slurm settings are
+  IQ-TREE 3.1.4, ASTER 1.25 (ASTRAL-IV) and Python 3.12 with pandas, numpy and networkx. Module names (CSC Roihu) and Slurm settings are
   set in the scripts.
 - A JGI API key in `~/.jgi_api_key` for downloads.
 - Local settings (Slurm account, BUSCO datasets folder): `cp config.example.sh config.sh`, edit it,
@@ -39,13 +39,16 @@ Run all scripts from the project folder. Each script's header describes its argu
 | 11. Marker FASTAs | `python3 scripts/extract_marker_sequences.py` | `06_species_tree/markers/raw/` |
 | 12. Align and trim markers | `sbatch scripts/align_markers.sbatch` | `06_species_tree/markers/aligned/`, `trimmed/` |
 | 13. Supermatrix | `python3 scripts/concatenate_markers.py` | `06_species_tree/concatenated/` |
+| 14. Marker trees | `sbatch scripts/marker_trees.sbatch` | `06_species_tree/marker_trees/` |
+| 15. Collect trees and models | `python3 scripts/collect_marker_trees.py` | `06_species_tree/marker_trees.nwk`, `marker_models.tsv`, `concatenated/partitions_models.nex` |
+| 16. Species trees | `sbatch scripts/species_trees.sbatch` | `06_species_tree/astral/`, `concatenated/iqtree/` |
 
-Steps 8–11 and 13 use Python from `module load python-data`. Step 10 reads the combined table of
+Steps 8–11, 13 and 15 use Python from `module load python-data`. Step 10 reads the combined table of
 the collapsed proteomes from step 7.
 
 The download, extraction, collapse, BUSCO and alignment steps skip finished work, so new genomes can
-be added and the steps re-run; BUSCO needs a new batch folder for new proteomes. Steps 8–11 and 13
-are fast and rewrite their outputs on every run.
+be added and the steps re-run; BUSCO needs a new batch folder for new proteomes. Steps 8–11, 13 and 15
+are fast and rewrite their outputs on every run. The tree jobs (14, 16) resume when resubmitted.
 
 ## Isoform collapse
 
@@ -78,6 +81,18 @@ Each marker is aligned with MAFFT L-INS-i and trimmed with ClipKIT in gappy mode
 by portal. Markers with ≥ 100 columns after trimming and sequences from ≥ 90% of the cohort are
 concatenated into `06_species_tree/concatenated/supermatrix.faa`, with one partition per marker
 (`partitions.nex`); `marker_summary.tsv` and `taxon_occupancy.tsv` report what was kept.
+
+## Species trees
+
+Each kept marker gets a maximum-likelihood tree (IQ-TREE 3, ModelFinder among nuclear models,
+1000 ultrafast bootstraps with NNI refinement). Two species trees are inferred:
+- **coalescent:** ASTRAL-IV on the marker trees (`06_species_tree/astral/species_tree_astral.nwk`);
+- **concatenated:** IQ-TREE 3 on the supermatrix, one partition per marker with that marker's best-fit
+  model and edge-linked proportional branch lengths, with SH-aLRT and ultrafast bootstrap support
+  (`06_species_tree/concatenated/iqtree/supermatrix.treefile`).
+
+Both are rooted on *Spizellomyces punctatus* (`Spipu1`); ASTRAL needs the root to estimate branch
+lengths accurately.
 
 ## MycoCosm notes
 
