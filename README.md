@@ -28,8 +28,11 @@ Run all scripts from the project folder. Each script's header describes its argu
 | 8. Clean protein IDs (cohort) | `python3 scripts/clean_proteomes.py` | `05_clean_proteomes/cohort/` |
 | 9. Clean protein IDs (shadows) | `python3 scripts/clean_proteomes.py 00_inputs/shadows_datasets.tsv 03_isoforms/collapsed_proteomes 05_clean_proteomes/shadows` | `05_clean_proteomes/shadows/` |
 | 10. Species-tree markers | `python3 scripts/select_busco_markers.py` | `06_species_tree/` |
+| 11. Marker FASTAs | `python3 scripts/extract_marker_sequences.py` | `06_species_tree/markers/raw/` |
+| 12. Align and trim markers | `sbatch scripts/align_markers.sbatch` | `06_species_tree/markers/aligned/`, `trimmed/` |
+| 13. Supermatrix | `python3 scripts/concatenate_markers.py` | `06_species_tree/concatenated/` |
 
-Steps 8–10 use Python from `module load python-data`. The cohort (`00_inputs/cohort_datasets.tsv`) enters
+Steps 8–11 and 13 use Python from `module load python-data`. The cohort (`00_inputs/cohort_datasets.tsv`) enters
 OrthoFinder and the species tree; the shadows (`00_inputs/shadows_datasets.tsv`) are only searched for
 presence. Cohort selection is described in `00_inputs/cohort_selection.md`.
 
@@ -61,6 +64,11 @@ BUSCO markers complete and single-copy in ≥ 90% of the cohort, and duplicated 
 with ≤ 6% duplicated markers overall (so whole-genome duplications do not reject markers). In each
 genome only a complete single-copy hit is used. `06_species_tree/genome_coverage.tsv` lists the
 selected markers found per genome.
+
+Each marker is aligned with MAFFT L-INS-i and trimmed with ClipKIT (smart-gap). Sequences are named
+by portal. Markers with ≥ 100 columns after trimming and sequences from ≥ 90% of the cohort are
+concatenated into `06_species_tree/concatenated/supermatrix.faa`, with one partition per marker
+(`partitions.nex`); `marker_summary.tsv` and `taxon_occupancy.tsv` report what was kept.
 
 ## MycoCosm notes
 
