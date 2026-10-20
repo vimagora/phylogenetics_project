@@ -19,6 +19,9 @@
 03_isoforms/collapsed_proteomes/
 03_isoforms/work/
 
+# Proteomes with clean IDs and their ID maps (re-create with scripts/clean_proteomes.py)
+05_clean_proteomes/
+
 # Python bytecode
 __pycache__/
 
