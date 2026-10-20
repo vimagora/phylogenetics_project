@@ -1,36 +1,52 @@
-# Downloaded genome data (large, re-download with scripts/download_mycocosm_genomes.sh)
+# Large or re-creatable outputs are ignored; small summary tables are tracked.
+# Folders that must exist before sbatch (Slurm log folders) keep a .gitkeep.
+
+# 01: downloaded genome data (re-download with scripts/download_mycocosm_genomes.sbatch)
 01_genomes/*
 !01_genomes/.gitkeep
-*.part
-*.log
 
-# Windows download metadata
-*:Zone.Identifier
+# 03: collapsed proteomes and intermediate files (re-create with scripts/collapse_isoforms.sh)
+03_isoforms/collapsed_proteomes/
+03_isoforms/work/
 
-# Decompressed proteomes (re-create with scripts/extract_proteomes.sh)
+# 04: decompressed proteomes, BUSCO results and Slurm logs
+#     (re-create with scripts/extract_proteomes.sh and scripts/run_busco.sbatch)
 04_BUSCO/proteomes/
-
-# BUSCO results and Slurm logs (re-create with scripts/run_busco.sbatch)
 04_BUSCO/results/
 04_BUSCO/logs/*
 !04_BUSCO/logs/.gitkeep
 
-# Collapsed proteomes and intermediate files (re-create with scripts/collapse_isoforms.sh)
-03_isoforms/collapsed_proteomes/
-03_isoforms/work/
-
-# Proteomes with clean IDs and their ID maps (re-create with scripts/clean_proteomes.py)
+# 05: proteomes with clean IDs and their ID maps (re-create with scripts/clean_proteomes.py)
 05_clean_proteomes/
 
-# Species-tree marker FASTAs, alignments, supermatrix and Slurm logs (re-create with steps 10-13)
+# 06: marker FASTAs, alignments, supermatrix and Slurm logs (re-create with steps 10-13)
 06_species_tree/marker_sequences.tsv
 06_species_tree/markers/
 06_species_tree/concatenated/supermatrix.faa
 06_species_tree/logs/*
 !06_species_tree/logs/.gitkeep
 
+# IQ-TREE checkpoints and intermediate files (trees and .iqtree reports are kept)
+*.ckp.gz
+*.mldist
+*.bionj
+*.uniqueseq.phy
+*.model.gz
+
+# Unfinished downloads and outputs, and logs
+*.part
+*.log
+
+# Windows download metadata
+*:Zone.Identifier
+
 # Python bytecode
 __pycache__/
+
+# Nextflow run folders
+/.nextflow/
+.nextflow.log*
+/work/
 
 # Local settings (copy config.example.sh to config.sh)
 config.sh

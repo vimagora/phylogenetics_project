@@ -1,13 +1,21 @@
 # phylogenetics_project
 
 Downloads fungal genomes from [JGI MycoCosm](https://mycocosm.jgi.doe.gov), checks assembly and
-annotation quality, and builds one clean proteome per genome (one protein per gene) for phylogenomic
-analyses. The cohort is listed in `00_inputs/mycocosm_datasets.tsv` (portal IDs in column 1).
+annotation quality, builds one clean proteome per genome (one protein per gene) and prepares the
+BUSCO markers for the species tree.
+
+Genome lists (TSV, header row, portal IDs in column 1) in `00_inputs/`:
+- `mycocosm_datasets.tsv`: all 186 candidates, used by steps 2–7;
+- `cohort_datasets.tsv`: the 150 selected genomes, which enter the species tree and OrthoFinder;
+- `shadows_datasets.tsv`: 16 second strains, haplotypes or older annotations, only searched for presence.
+
+How the cohort was chosen is described in `00_inputs/cohort_selection.md`.
 
 ## Requirements
 
-- A Slurm cluster with BUSCO 6.1.0 (`fungi_odb12`), SeqKit 2.13.0, and Python 3.12 with pandas,
-  numpy and networkx. Module names and Slurm settings are set in the scripts.
+- A Slurm cluster with BUSCO 6.1.0 (`fungi_odb12`), SeqKit 2.13.0, MAFFT 7.525, ClipKIT 2.12.1,
+  and Python 3.12 with pandas, numpy and networkx. Module names (CSC Roihu) and Slurm settings are
+  set in the scripts.
 - A JGI API key in `~/.jgi_api_key` for downloads.
 - Local settings (Slurm account, BUSCO datasets folder): `cp config.example.sh config.sh`, edit it,
   and run `source config.sh` before `sbatch`.
@@ -24,7 +32,7 @@ Run all scripts from the project folder. Each script's header describes its argu
 | 4. BUSCO | `sbatch scripts/run_busco.sbatch` | `04_BUSCO/results/proteomes/` |
 | 5. Collapse isoforms | `scripts/collapse_isoforms.sh` | `03_isoforms/` |
 | 6. BUSCO on collapsed proteomes | `sbatch scripts/run_busco.sbatch 03_isoforms/collapsed_proteomes` | `04_BUSCO/results/collapsed_proteomes/` |
-| 7. Combine BUSCO tables | `scripts/combine_busco_tables.sh <batch,batch,...>` | `04_BUSCO/busco_full_table_<batches>.tsv` |
+| 7. Combine BUSCO tables | `scripts/combine_busco_tables.sh collapsed_proteomes` (any `<batch,batch,...>`) | `04_BUSCO/busco_full_table_collapsed_proteomes.tsv` |
 | 8. Clean protein IDs (cohort) | `python3 scripts/clean_proteomes.py` | `05_clean_proteomes/cohort/` |
 | 9. Clean protein IDs (shadows) | `python3 scripts/clean_proteomes.py 00_inputs/shadows_datasets.tsv 03_isoforms/collapsed_proteomes 05_clean_proteomes/shadows` | `05_clean_proteomes/shadows/` |
 | 10. Species-tree markers | `python3 scripts/select_busco_markers.py` | `06_species_tree/` |
@@ -32,12 +40,12 @@ Run all scripts from the project folder. Each script's header describes its argu
 | 12. Align and trim markers | `sbatch scripts/align_markers.sbatch` | `06_species_tree/markers/aligned/`, `trimmed/` |
 | 13. Supermatrix | `python3 scripts/concatenate_markers.py` | `06_species_tree/concatenated/` |
 
-Steps 8–11 and 13 use Python from `module load python-data`. The cohort (`00_inputs/cohort_datasets.tsv`) enters
-OrthoFinder and the species tree; the shadows (`00_inputs/shadows_datasets.tsv`) are only searched for
-presence. Cohort selection is described in `00_inputs/cohort_selection.md`.
+Steps 8–11 and 13 use Python from `module load python-data`. Step 10 reads the combined table of
+the collapsed proteomes from step 7.
 
-Scripts skip finished work, so new genomes can be added to the cohort and the steps re-run. BUSCO
-needs a new batch folder for new proteomes.
+The download, extraction, collapse, BUSCO and alignment steps skip finished work, so new genomes can
+be added and the steps re-run; BUSCO needs a new batch folder for new proteomes. Steps 8–11 and 13
+are fast and rewrite their outputs on every run.
 
 ## Isoform collapse
 
