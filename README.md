@@ -113,6 +113,9 @@ conda-containerize new --prefix /projappl/<project>/orthofinder envs/of3_env.yam
 ```
 Then set `ORTHOFINDER_DIR=/projappl/<project>/orthofinder` in `config.sh`. DIAMOND is pinned below
 2.2, as OrthoFinder 3.1.5 requires.
+The bioconda launcher loads its code from a `src/` folder next to itself, which the Tykky wrapper
+hides; `run_orthofinder.sbatch` therefore sets `PYTHONPATH` to that folder inside the container
+(mount point read from the container's `common.sh`).
 
 OrthoFinder refuses an existing output folder and cannot resume. If a run stops after the DIAMOND
 search, restart from its search results with `orthofinder -b <Results>/WorkingDirectory` (to rerun

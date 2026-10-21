@@ -50,6 +50,20 @@ if [[ -z "$ORTHOFINDER_DIR" || ! -x "$ORTHOFINDER_DIR/bin/orthofinder" ]]; then
 fi
 export PATH="$ORTHOFINDER_DIR/bin:$PATH"
 
+# The bioconda launcher imports its code from a 'src' folder next to itself, but the Tykky wrapper
+# runs it under the wrapper's path, where there is none. Point Python to the folder inside the
+# container instead; Tykky's mount point (with a random suffix) is in common.sh.
+TYKKY_ROOT=$(sed -n 's/^INSTALLATION_PATH=//p' "$ORTHOFINDER_DIR/common.sh" 2> /dev/null)
+if [[ -z "$TYKKY_ROOT" ]]; then
+    echo "No INSTALLATION_PATH in $ORTHOFINDER_DIR/common.sh; is ORTHOFINDER_DIR a Tykky container?" >&2
+    exit 1
+fi
+export PYTHONPATH="$TYKKY_ROOT/miniforge/envs/env1/bin/src"
+if ! orthofinder -v > /dev/null 2>&1; then
+    echo "orthofinder does not start (PYTHONPATH=$PYTHONPATH); test it with 'orthofinder -v'" >&2
+    exit 1
+fi
+
 PROTEOMES_DIR=${1:-05_clean_proteomes/cohort/proteomes}
 SPECIES_TREE=${2:-07_orthofinder/species_tree_rooted.nwk}
 RUN_DIR=07_orthofinder/run
