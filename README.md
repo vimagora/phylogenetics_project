@@ -7,6 +7,7 @@ BUSCO markers for the species tree.
 Genome lists (TSV, header row, portal IDs in column 1) in `00_inputs/`:
 - `mycocosm_datasets.tsv`: all 186 candidates, used by steps 2–7;
 - `cohort_datasets.tsv`: the 150 selected genomes, which enter the species tree and OrthoFinder;
+- `cohort_taxonomy.tsv`: phylum, subphylum, class and order of each cohort genome (from `cohort_selection.md`);
 - `shadows_datasets.tsv`: 16 second strains, haplotypes or older annotations, only searched for presence.
 
 How the cohort was chosen is described in `00_inputs/cohort_selection.md`.
@@ -43,6 +44,7 @@ Run all scripts from the project folder. Each script's header describes its argu
 | 14. Marker trees | `sbatch scripts/marker_trees.sbatch` | `06_species_tree/marker_trees/` |
 | 15. Collect trees and models | `python3 scripts/collect_marker_trees.py` | `06_species_tree/marker_trees.nwk`, `marker_models.tsv`, `concatenated/partitions_models.nex` |
 | 16. Species trees | `sbatch scripts/species_trees.sbatch` | `06_species_tree/astral/`, `concatenated/iqtree/` |
+| 16b. iTOL taxonomy annotation | `python3 scripts/make_itol_taxonomy.py [tree]` | `06_species_tree/itol/` |
 | 17. Species tree for OrthoFinder | `python3 scripts/prepare_species_tree.py` | `07_orthofinder/species_tree_rooted.nwk` |
 | 18. OrthoFinder | `sbatch scripts/run_orthofinder.sbatch` | `07_orthofinder/run/Results_cohort/` |
 

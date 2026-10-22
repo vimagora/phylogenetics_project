@@ -95,9 +95,11 @@ orthofinder -f "$PROTEOMES_DIR" -s "$SPECIES_TREE" -X -t "$SLURM_CPUS_PER_TASK" 
     -o "$RUN_DIR" -n "$RUN_NAME"
 OF_STATUS=$?
 echo "OrthoFinder finished $(date) with exit code $OF_STATUS"
-# OrthoFinder can exit with 0 after an error, so success is judged by its main output
-if (( OF_STATUS != 0 )) || [[ ! -s "$RESULTS/Orthogroups/Orthogroups.tsv" ]]; then
-    echo "OrthoFinder failed, see the log above and $RESULTS/Log.txt" >&2
+# OrthoFinder can exit with 0 after an error (e.g. disk quota exceeded), and Orthogroups.tsv is
+# written early, so success is judged by the last line OrthoFinder writes to its Log.txt
+if (( OF_STATUS != 0 )) || ! grep -q "OrthoFinder run completed" "$RESULTS/Log.txt" 2> /dev/null; then
+    echo "OrthoFinder did not complete, see the log above and $RESULTS/Log.txt;" \
+        "the results are incomplete and nothing was packed" >&2
     exit 1
 fi
 
