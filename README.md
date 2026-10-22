@@ -47,6 +47,8 @@ Run all scripts from the project folder. Each script's header describes its argu
 | 16b. iTOL taxonomy annotation | `python3 scripts/make_itol_taxonomy.py [tree]` | `06_species_tree/itol/` |
 | 17. Species tree for OrthoFinder | `python3 scripts/prepare_species_tree.py` | `07_orthofinder/species_tree_rooted.nwk` |
 | 18. OrthoFinder | `sbatch scripts/run_orthofinder.sbatch` | `07_orthofinder/run/Results_cohort/` |
+| 19. AlphaFold3 inputs | `python3 scripts/make_af3_inputs.py` | `08_structures/af3_inputs/`, `structure_ids.tsv` |
+| 20. AlphaFold3 structures | `sbatch [--partition=… --time=…] scripts/run_af3.sbatch` | `08_structures/af3_outputs/` |
 
 Steps 8–11, 13, 15 and 17 use Python from `module load python-data`. Step 10 reads the combined table of
 the collapsed proteomes from step 7.
@@ -122,6 +124,16 @@ hides; `run_orthofinder.sbatch` therefore sets `PYTHONPATH` to that folder insid
 OrthoFinder refuses an existing output folder and cannot resume. If a run stops after the DIAMOND
 search, restart from its search results with `orthofinder -b <Results>/WorkingDirectory` (to rerun
 a finished run with another species tree, unpack `WorkingDirectory.tar.gz` first).
+
+## Sugar transporter structures
+
+`00_inputs/characterized_sugar_transporters.tsv` lists characterized fungal sugar transporters (from
+Xu et al. 2023, Table S1, plus later literature and TCDB family 2.A.1.1), with substrates, references,
+a `role` column (transporter or sensor) and `use_in_structure_analysis` (FALSE for non-MFS proteins and
+partial sequences). `00_inputs/dicsqu_sugar_transporters.tsv` adds the *D. squalens* transporters with
+predicted specificities. AlphaFold3 runs in CSC's container on a GH200 GPU node, with your own model
+parameters (`AF3_MODEL_DIR` in `config.sh`; the licence forbids sharing them). `run_af3.sbatch` skips
+proteins that already have a model, so it can be resubmitted until all are done.
 
 ## MycoCosm notes
 

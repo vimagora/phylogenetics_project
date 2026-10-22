@@ -32,6 +32,14 @@
 07_orthofinder/logs/*
 !07_orthofinder/logs/.gitkeep
 
+# 08: AlphaFold3 inputs (re-create with scripts/make_af3_inputs.py), outputs and Slurm logs
+08_structures/af3_inputs/
+08_structures/af3_test_*/
+08_structures/af3_outputs/
+08_structures/af3_queue_*/
+08_structures/logs/*
+!08_structures/logs/.gitkeep
+
 # IQ-TREE checkpoints and intermediate files (trees and .iqtree reports are kept)
 *.ckp.gz
 *.mldist

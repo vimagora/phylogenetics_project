@@ -1,0 +1,216 @@
+structure_id	source	species	protein_name	role	substrates	length	use_in_structure_analysis
+ambmo_lat1	characterized	Ambrosiozyma monospora	LAT1	transporter	L-arabinose	518	TRUE
+ambmo_lat2	characterized	Ambrosiozyma monospora	LAT2	transporter	L-arabinose	552	TRUE
+aspnid_clta	characterized	Aspergillus nidulans	CltA	transporter	cellobiose	470	TRUE
+aspnid_cltb_lacpb	characterized	Aspergillus nidulans	CltB/LacpB	transporter	cellobiose;lactose	553	TRUE
+aspnid_hxta	characterized	Aspergillus nidulans	HxtA	transporter	hexose	473	TRUE
+aspnid_hxtb_mstc	characterized	Aspergillus nidulans	HxtB/MstC	transporter	D-glucose;D-xylose	534	TRUE
+aspnid_hxtc	characterized	Aspergillus nidulans	HxtC	transporter	D-glucose	535	TRUE
+aspnid_hxtd_msta	characterized	Aspergillus nidulans	HxtD/MstA	transporter	D-glucose	527	TRUE
+aspnid_hxte	characterized	Aspergillus nidulans	HxtE	transporter	D-glucose	512	TRUE
+aspnid_lacpa	characterized	Aspergillus nidulans	LacpA	transporter	lactose	576	TRUE
+aspnid_mste	characterized	Aspergillus nidulans	MstE	transporter	D-glucose	562	TRUE
+aspnid_qut_d	characterized	Aspergillus nidulans	Qut-D	transporter	quinic acid	533	TRUE
+aspnid_xtrd	characterized	Aspergillus nidulans	XtrD	transporter	D-xylose	547	TRUE
+aspnig_cta	characterized	Aspergillus niger	CtA	transporter	cellodextrin	535	TRUE
+aspnig_fsy1_yeast_like	characterized	Aspergillus niger	Fsy1 (yeast-like)	transporter	D-fructose	563	TRUE
+aspnig_fsy1	characterized	Aspergillus niger	Fsy1	transporter	D-fructose	554	TRUE
+aspnig_gata	characterized	Aspergillus niger	GatA	transporter	D-galacturonic acid	518	TRUE
+aspnig_lata	characterized	Aspergillus niger	LatA	transporter	L-arabitol	541	TRUE
+aspnig_msta	characterized	Aspergillus niger	MstA	transporter	D-fructose;D-glucose;D-mannose;D-xylose	530	TRUE
+aspnig_mstg	characterized	Aspergillus niger	MstG	transporter	D-glucose	542	TRUE
+aspnig_msth	characterized	Aspergillus niger	MstH	transporter	D-glucose	527	TRUE
+aspnig_xlta	characterized	Aspergillus niger	XltA	transporter	D-glucose;D-xylose	568	TRUE
+aspnig_xltb	characterized	Aspergillus niger	XltB	transporter	D-xylose	553	TRUE
+aspnig_xltc	characterized	Aspergillus niger	XltC	transporter	D-glucose;D-xylose	540	TRUE
+aspor_malp	characterized	Aspergillus oryzae	MalP	transporter	maltose	565	TRUE
+astcr_aha12287_1	characterized	Asteromyces cruciatus	AHA12287.1	transporter	alginate;mannitol	536	TRUE
+bcine_frt1	characterized	Botrytis cinerea	Frt1	transporter	D-fructose	615	TRUE
+bcine_gala	characterized	Botrytis cinerea	GalA	transporter	D-galacturonic acid	527	TRUE
+dekbr_bht1	characterized	Brettanomyces bruxellensis (anamorph Dekkera bruxellensis)	BHT1	transporter	hexose	554	TRUE
+dekbr_bht2	characterized	Brettanomyces bruxellensis (anamorph Dekkera bruxellensis)	BHT2	transporter	hexose	539	TRUE
+dekbr_bht3	characterized	Brettanomyces bruxellensis (anamorph Dekkera bruxellensis)	BHT3	transporter	hexose	558	TRUE
+canalb_itr1	characterized	Candida albicans	ITR1	transporter	myo-inositol	554	TRUE
+cangly_cghxt1	characterized	Candida glycerinogenes	CgHxt1	transporter	hexose	545	TRUE
+cangly_cghxt2	characterized	Candida glycerinogenes	CgHxt2	transporter	hexose	545	TRUE
+cangly_cghxt4	characterized	Candida glycerinogenes	CgHxt4	transporter	hexose	546	TRUE
+cangly_cghxt5	characterized	Candida glycerinogenes	CgHxt5	transporter	hexose	550	TRUE
+cangly_cghxt6	characterized	Candida glycerinogenes	CgHxt6	transporter	hexose	549	TRUE
+canint_gxf1	characterized	Candida intermedia	Gxf1	transporter	D-xylose;hexose	547	TRUE
+canint_gxs1	characterized	Candida intermedia	Gxs1	transporter	D-xylose;hexose	522	TRUE
+canmag_cmfsy1	characterized	Candida magnoliae (synonym Starmerella magnoliae)	CmFsy1	transporter	D-fructose	582	TRUE
+colgr_hxt1	characterized	Colletotrichum graminicola (anamorph Glomerella graminicola)	Hxt1	transporter	hexose	531	TRUE
+colgr_hxt2	characterized	Colletotrichum graminicola (anamorph Glomerella graminicola)	Hxt2	transporter	hexose	551	TRUE
+colgr_hxt3	characterized	Colletotrichum graminicola (anamorph Glomerella graminicola)	Hxt3	transporter	hexose	559	TRUE
+colgr_hxt5	characterized	Colletotrichum graminicola (anamorph Glomerella graminicola)	Hxt5	transporter	hexose	532	TRUE
+colgr_mbt1	characterized	Colletotrichum graminicola (anamorph Glomerella graminicola)	Mbt1	transporter	maltose	611	TRUE
+debfa_xylh	characterized	Debaryomyces fabryi	Xylh	transporter	D-xylose	542	TRUE
+debha_dhsgl1	characterized	Debaryomyces hansenii	DhSgl1	transporter	galactitol	626	TRUE
+debha_dhstl1	characterized	Debaryomyces hansenii	DhStl1	transporter	glycerol	549	TRUE
+debha_dhsyi1	characterized	Debaryomyces hansenii	DhSyi1	transporter	D-chiro-inositol	536	TRUE
+debha_dhsyl1	characterized	Debaryomyces hansenii	DhSyl1	transporter	D-arabitol;galactitol;D-mannitol;D-sorbitol	649	TRUE
+debha_dhsyl2	characterized	Debaryomyces hansenii	DhSyl2	transporter	D-arabitol;D-mannitol;D-sorbitol;ribitol	649	TRUE
+debha_xylh	characterized	Debaryomyces hansenii	Xylh	transporter	D-xylose	557	TRUE
+fusox_st3	characterized	Fusarium oxysporum	ST3	transporter	xylobiose	532	TRUE
+fusve_fst1	characterized	Fusarium verticillioides	FST1	transporter	myo-inositol	574	TRUE
+hanpo_hpgcr1	characterized	Hansenula polymorpha (synonym Ogataea polymorpha)	HpGCR1	transporter	hexose	541	TRUE
+hanpo_hpmal2	characterized	Hansenula polymorpha (synonym Ogataea polymorpha)	HpMAL2	transporter	alpha-glucoside	582	TRUE
+klula_frt1	characterized	Kluyveromyces lactis	FRT1	transporter	D-fructose	566	TRUE
+klula_hgt1	characterized	Kluyveromyces lactis	HGT1	transporter	hexose	551	TRUE
+klula_lac12	characterized	Kluyveromyces lactis	LAC12	transporter	galactose;lactose	587	TRUE
+klula_rag1	characterized	Kluyveromyces lactis	RAG1	transporter	D-fructose;D-glucose	567	TRUE
+klula_rag4	characterized	Kluyveromyces lactis	RAG4	sensor	D-glucose	716	TRUE
+klumag_hgt1	characterized	Kluyveromyces marxianus	HGT1	transporter	pentose	545	TRUE
+metan_mrt	characterized	Metarhizium anisopliae (synonym Metarhizium robertsii)	Mrt	transporter	galactoside;sucrose	556	TRUE
+mycth_mtlat_1	characterized	Myceliophthora thermophila	MtLAT-1	transporter	L-arabinose	524	TRUE
+neucr_cbt_1	characterized	Neurospora crassa	CBT-1	transporter	cellobionic acid	541	TRUE
+neucr_an25	characterized	Neurospora crassa	An25	transporter	D-xylose	562	TRUE
+neucr_cdt_1	characterized	Neurospora crassa	CDT-1	transporter	cellobiose	579	TRUE
+neucr_cdt_2	characterized	Neurospora crassa	CDT-2	transporter	cellobiose	525	TRUE
+neucr_gat_1	characterized	Neurospora crassa	Gat-1	transporter	D-galacturonic acid	537	TRUE
+neucr_glt1	characterized	Neurospora crassa	Glt1	transporter	D-glucose	532	TRUE
+neucr_hgt_1	characterized	Neurospora crassa	HGT-1	transporter	D-glucose	553	TRUE
+neucr_hgt2	characterized	Neurospora crassa	HGT2	transporter	D-glucose	527	TRUE
+neucr_lat_1	characterized	Neurospora crassa	LAT-1	transporter	hexose;L-arabinose	518	TRUE
+neucr_qa_y	characterized	Neurospora crassa	qa-y	transporter	quinic acid	537	TRUE
+neucr_rco_3	characterized	Neurospora crassa	RCO-3	sensor	D-glucose	594	TRUE
+neucr_xat1	characterized	Neurospora crassa	XAT1	transporter	pentose	553	TRUE
+neucr_xyt1	characterized	Neurospora crassa	XYT1	transporter	pentose	548	TRUE
+penox_cdtc	characterized	Penicillium oxalicum	CdtC	transporter	cellobiose	550	TRUE
+penox_cdtd	characterized	Penicillium oxalicum	CdtD	transporter	cellobiose	526	TRUE
+penox_cdtg	characterized	Penicillium oxalicum	CdtG	transporter	cellobiose	538	TRUE
+pench_pcarat	characterized	Penicillium chrysogenum	PcAraT	transporter	L-arabinose	511	TRUE
+pench_pc_st	characterized	Penicillium chrysogenum	Pc_ST	transporter	cellobiose	547	TRUE
+sacba_sacpa_sbfsy1_spafsy1	characterized	Saccharomyces bayanus / Saccharomyces pastorianus (synonym Saccharomyces carlsbergensis)	SbFsy1/SpaFsy1	transporter	D-fructose	570	TRUE
+sacce_agt1_mal11	characterized	Saccharomyces cerevisiae	Agt1/Mal11	transporter	D-glucose;maltose	616	TRUE
+sacce_gal2	characterized	Saccharomyces cerevisiae	Gal2	transporter	D-xylose;hexose	574	TRUE
+sacce_hxt1	characterized	Saccharomyces cerevisiae	Hxt1	transporter	hexose	570	TRUE
+sacce_hxt2	characterized	Saccharomyces cerevisiae	Hxt2	transporter	D-xylose;hexose	541	TRUE
+sacce_hxt3	characterized	Saccharomyces cerevisiae	Hxt3	transporter	hexose	567	TRUE
+sacce_hxt4	characterized	Saccharomyces cerevisiae	Hxt4	transporter	D-xylose;hexose	576	TRUE
+sacce_hxt5	characterized	Saccharomyces cerevisiae	Hxt5	transporter	D-xylose;hexose	592	TRUE
+sacce_hxt6	characterized	Saccharomyces cerevisiae	Hxt6	transporter	hexose	570	TRUE
+sacce_hxt7	characterized	Saccharomyces cerevisiae	Hxt7	transporter	D-xylose;hexose	570	TRUE
+sacce_hxt8	characterized	Saccharomyces cerevisiae	Hxt8	transporter	D-fructose;D-glucose;D-mannose	569	TRUE
+sacce_hxt9	characterized	Saccharomyces cerevisiae	Hxt9	transporter	hexose	567	TRUE
+sacce_hxt10	characterized	Saccharomyces cerevisiae	Hxt10	transporter	hexose	546	TRUE
+sacce_hxt11	characterized	Saccharomyces cerevisiae	Hxt11	transporter	hexose	567	TRUE
+sacce_hxt13	characterized	Saccharomyces cerevisiae	Hxt13	transporter	D-mannitol;D-sorbitol	564	TRUE
+sacce_hxt14	characterized	Saccharomyces cerevisiae	Hxt14	transporter	D-galactose	540	TRUE
+sacce_hxt15	characterized	Saccharomyces cerevisiae	Hxt15	transporter	hexose;polyol	567	TRUE
+sacce_hxt16	characterized	Saccharomyces cerevisiae	Hxt16	transporter	hexose;polyol	567	TRUE
+sacce_hxt17	characterized	Saccharomyces cerevisiae	Hxt17	transporter	hexose;polyol	564	TRUE
+sacce_itr1	characterized	Saccharomyces cerevisiae	ITR1	transporter	myo-inositol	584	TRUE
+sacce_itr2	characterized	Saccharomyces cerevisiae	ITR2	transporter	myo-inositol	611	TRUE
+sacce_mal31	characterized	Saccharomyces cerevisiae	Mal31	transporter	D-glucose;maltose	614	TRUE
+sacce_mal61	characterized	Saccharomyces cerevisiae	Mal61	transporter	maltose	614	TRUE
+sacce_mph2	characterized	Saccharomyces cerevisiae	Mph2	transporter	D-glucose;maltose	609	TRUE
+sacce_mph3	characterized	Saccharomyces cerevisiae	Mph3	transporter	D-glucose;maltose	602	TRUE
+sacce_rgt2	characterized	Saccharomyces cerevisiae	Rgt2	sensor	D-glucose	763	TRUE
+sacce_snf3	characterized	Saccharomyces cerevisiae	Snf3	sensor	D-glucose	884	TRUE
+sacce_stl1	characterized	Saccharomyces cerevisiae	Stl1	transporter	glycerol	569	TRUE
+saceu_sefsy1	characterized	Saccharomyces eubayanus	SeFsy1	transporter	D-fructose	570	TRUE
+sacuv_sufsy1	characterized	Saccharomyces uvarum	SuFsy1	transporter	D-fructose	570	TRUE
+picst_arat	characterized	Scheffersomyces stipitis (synonym Pichia stipitis)	AraT	transporter	L-arabinose	542	TRUE
+picst_st6	characterized	Scheffersomyces stipitis (synonym Pichia stipitis)	ST6	transporter	cellobiose	547	TRUE
+picst_sut1	characterized	Scheffersomyces stipitis (synonym Pichia stipitis)	Sut1	transporter	D-fructose;D-galactose;D-glucose;D-xylose	553	TRUE
+picst_sut3	characterized	Scheffersomyces stipitis (synonym Pichia stipitis)	Sut3	transporter	D-fructose;D-galactose;D-glucose;D-xylose	550	TRUE
+picst_xut1	characterized	Scheffersomyces stipitis (synonym Pichia stipitis)	Xut1	transporter	D-xylose;hexose	566	TRUE
+picst_xut3	characterized	Scheffersomyces stipitis (synonym Pichia stipitis)	Xut3	transporter	D-xylose;hexose	551	TRUE
+picst_xyp29	characterized	Scheffersomyces stipitis (synonym Pichia stipitis)	Xyp29	transporter	D-xylose	544	TRUE
+schpo_ght1	characterized	Schizosaccharomyces pombe	Ght1	transporter	hexose	557	TRUE
+schpo_ght2	characterized	Schizosaccharomyces pombe	Ght2	transporter	hexose	519	TRUE
+schpo_ght3	characterized	Schizosaccharomyces pombe	Ght3	transporter	hexose	555	TRUE
+schpo_ght4	characterized	Schizosaccharomyces pombe	Ght4	transporter	hexose	557	TRUE
+schpo_ght5	characterized	Schizosaccharomyces pombe	Ght5	transporter	hexose	546	TRUE
+schpo_ght6	characterized	Schizosaccharomyces pombe	Ght6	transporter	hexose	535	TRUE
+schpo_itr2	characterized	Schizosaccharomyces pombe	itr2	transporter	myo-inositol	557	TRUE
+triha_gtt1	characterized	Trichoderma harzianum	Gtt1	transporter	D-glucose	543	TRUE
+trire_crt1_t_reesei_rut_c30_strain	characterized	Trichoderma reesei	CRT1 (T. reesei RUT-C30 strain)	transporter	cellobiose;D-glucose;lactose	542	TRUE
+trire_crt1_t_reesei_qm6a	characterized	Trichoderma reesei	Crt1 (T. reesei QM6a)	transporter	cellobiose	509	TRUE
+trire_frt1	characterized	Trichoderma reesei	Frt1	transporter	D-fructose	641	TRUE
+trire_gat1	characterized	Trichoderma reesei	Gat1	transporter	D-galacturonic acid;D-glucuronic acid	531	TRUE
+trire_gat2	characterized	Trichoderma reesei	Gat2	transporter	D-galacturonic acid;D-glucuronic acid	512	TRUE
+trire_glt1	characterized	Trichoderma reesei	Glt1	transporter	D-glucose	539	TRUE
+trire_mlt1	characterized	Trichoderma reesei	Mlt1	transporter	maltose	567	TRUE
+trire_stp1	characterized	Trichoderma reesei	Stp1	transporter	D-glucose;cellobiose	554	TRUE
+trire_str1	characterized	Trichoderma reesei	Str1	transporter	D-glucose;D-xylose;L-arabinose	567	TRUE
+trire_str2	characterized	Trichoderma reesei	Str2	transporter	D-xylose;hexose	569	TRUE
+trire_str3	characterized	Trichoderma reesei	Str3	transporter	D-xylose;hexose	567	TRUE
+trire_strc	characterized	Trichoderma reesei	StrC	transporter	cellobiose	538	TRUE
+trire_tr69957	characterized	Trichoderma reesei	Tr69957	transporter	cellobiose;D-fructose;D-mannose;D-xylose;lactose	540	TRUE
+trire_trhxt1	characterized	Trichoderma reesei	Trhxt1	transporter	D-glucose	548	TRUE
+trire_trxlt1_trire_104072	characterized	Trichoderma reesei	TrXlt1/Trire_104072	transporter	pentose	459	TRUE
+trire_xltr1p	characterized	Trichoderma reesei	Xltr1p	transporter	D-fructose;D-glucose;D-mannose;D-xylose	543	TRUE
+trivi_st16	characterized	Trichoderma virens	ST16	transporter	xylobiose	528	TRUE
+tubme_tmel2281	characterized	Tuber melanosporum	Tmel2281	transporter	hexose	525	TRUE
+tubme_tmelhxt1	characterized	Tuber melanosporum	TmelHXT1	transporter	hexose	524	TRUE
+yarli_yht1	characterized	Yarrowia lipolytica	YHT1	transporter	hexose	515	TRUE
+yarli_yht2	characterized	Yarrowia lipolytica	YHT2	transporter	hexose	494	TRUE
+yarli_yht3	characterized	Yarrowia lipolytica	YHT3	transporter	hexose	533	TRUE
+yarli_yht4	characterized	Yarrowia lipolytica	YHT4	transporter	hexose	602	TRUE
+yarli_yht5	characterized	Yarrowia lipolytica	YHT5	transporter	hexose	554	TRUE
+yarli_yht6	characterized	Yarrowia lipolytica	YHT6	transporter	hexose	545	TRUE
+zygrou_zrfsy1	characterized	Zygosaccharomyces rouxii	ZrFsy1	transporter	D-fructose	564	TRUE
+amamu_ammst1	characterized	Amanita muscaria	AmMST1	transporter	D-glucose	520	TRUE
+cryne_xp_012052055_1	characterized	Cryptococcus neoformans	XP_012052055.1	transporter	myo-inositol	554	TRUE
+cryne_xp_012053726_1	characterized	Cryptococcus neoformans	XP_012053726.1	transporter	myo-inositol	590	TRUE
+lacbi_mst1_2	characterized	Laccaria bicolor	MST1.2	transporter	hexose	529	TRUE
+lacbi_mst1_3	characterized	Laccaria bicolor	MST1.3	transporter	hexose	532	TRUE
+lacbi_mst3_1	characterized	Laccaria bicolor	MST3.1	transporter	hexose	517	TRUE
+phaso_pshxt1	characterized	Phanerochaete sordida	Pshxt1	transporter	D-xylose;hexose	533	TRUE
+pirin_pihxt5	characterized	Piriformospora indica	PiHXT5	transporter	hexose	525	TRUE
+pospl_st7	characterized	Postia placenta	ST7	transporter	cellobiose	517	TRUE
+pucst_hxt1	characterized	Puccinia striiformis	HXT1	transporter	hexose	530	TRUE
+urofa_hxt1	characterized	Uromyces fabae	HXT1	transporter	hexose	522	TRUE
+ustma_umsrt1	characterized	Ustilago maydis	UmSrt1	transporter	sucrose	555	TRUE
+ustma_umhxt1	characterized	Ustilago maydis	UmHxt1	transporter	hexose	534	TRUE
+geopyr_gpmst1	characterized	Geosiphon pyriformis	GpMst1	transporter	hexose	540	TRUE
+aspnig_rhta	characterized	Aspergillus niger	RhtA	transporter	L-rhamnose	468	FALSE
+schpo_sut1p	characterized	Schizosaccharomyces pombe	Sut1p	transporter	alpha-glucoside;maltose	553	FALSE
+trivi_tvsut	characterized	Trichoderma virens	TvSut	transporter	sucrose	683	FALSE
+trire_tr44175	characterized	Trichoderma reesei	Tr44175	transporter	cellobiose;cellotriose;cellotetraose;sophorose	494	TRUE
+aspnig_glpa	characterized	Aspergillus niger	GlpA	transporter	glycerol;D-mannitol;D-sorbitol;xylitol	527	TRUE
+aspnig_glpb	characterized	Aspergillus niger	GlpB	transporter	glycerol;D-mannitol;D-sorbitol;xylitol	535	TRUE
+aspnig_glpc	characterized	Aspergillus niger	GlpC	transporter	glycerol;D-mannitol;D-sorbitol;xylitol;D-fructose;D-glucose;D-mannose	532	TRUE
+aspnig_xltd	characterized	Aspergillus niger	XltD	transporter	D-xylose	540	TRUE
+hanpo_hxs1	characterized	Hansenula polymorpha (synonym Ogataea polymorpha)	Hxs1	sensor	D-glucose	638	TRUE
+canalb_stl1_hgt10	characterized	Candida albicans	Stl1 (Hgt10)	transporter	glycerol	546	TRUE
+kompha_gt1	characterized	Komagataella phaffii (synonym Pichia pastoris)	GT1	transporter	glycerol	530	TRUE
+pnecar_itr1	characterized	Pneumocystis carinii	ITR1	transporter	myo-inositol	507	FALSE
+wicano_wastl1	characterized	Wickerhamomyces anomalus	WaStl1	transporter	glycerol	561	TRUE
+colgl_cgmfs1	characterized	Colletotrichum gloeosporioides	CgMfs1	transporter	sugar (unspecified)	550	TRUE
+aspnig_mstc	characterized	Aspergillus niger	MstC	transporter	D-glucose	583	TRUE
+zygbai_ffz1	characterized	Zygosaccharomyces bailii	Ffz1	transporter	D-fructose	616	TRUE
+sacce_fps1	characterized	Saccharomyces cerevisiae	Fps1	transporter	glycerol	669	FALSE
+magor_most1_morco3	characterized	Pyricularia oryzae (synonym Magnaporthe oryzae)	MoST1 (MoRco3)	sensor	hexose	547	TRUE
+magor_mohxt1_mosnf3	characterized	Pyricularia oryzae (synonym Magnaporthe oryzae)	MoHXT1 (MoSnf3)	sensor	hexose	550	TRUE
+magor_mohxt2	characterized	Pyricularia oryzae (synonym Magnaporthe oryzae)	MoHXT2	transporter	hexose	570	TRUE
+magor_mohxt3	characterized	Pyricularia oryzae (synonym Magnaporthe oryzae)	MoHXT3	transporter	hexose	535	TRUE
+aspnig_fsyx	characterized	Aspergillus niger	FsyX	transporter	D-fructose	504	TRUE
+rhoto_rto4_9841	characterized	Rhodotorula toruloides (synonym Rhodosporidium toruloides)	RTO4_9841	transporter	D-galacturonic acid	532	TRUE
+dicsqu_dsst1	dicsqu	Dichomitus squalens	DsST1	transporter	predicted: lactose, cellodextrin, xylobiose	528	TRUE
+dicsqu_dsst2	dicsqu	Dichomitus squalens	DsST2	transporter	predicted: lactose, cellodextrin, xylobiose	547	TRUE
+dicsqu_dsst3	dicsqu	Dichomitus squalens	DsST3	transporter	predicted: lactose, cellodextrin, xylobiose	528	TRUE
+dicsqu_dsst4	dicsqu	Dichomitus squalens	DsST4	transporter	predicted: lactose, cellodextrin, xylobiose	563	TRUE
+dicsqu_dsst5	dicsqu	Dichomitus squalens	DsST5	transporter	predicted: lactose, cellodextrin, xylobiose	520	TRUE
+dicsqu_dsst6	dicsqu	Dichomitus squalens	DsST6	transporter	predicted: lactose, cellodextrin, xylobiose	535	TRUE
+dicsqu_dsst7	dicsqu	Dichomitus squalens	DsST7	transporter	predicted: inositol, hexose	546	TRUE
+dicsqu_dsst8	dicsqu	Dichomitus squalens	DsST8	transporter	predicted: inositol, hexose	620	TRUE
+dicsqu_dsst9	dicsqu	Dichomitus squalens	DsST9	transporter	predicted: inositol, hexose	652	TRUE
+dicsqu_dsst10	dicsqu	Dichomitus squalens	DsST10	transporter	predicted: hexose, xylose, polyol	517	TRUE
+dicsqu_dsst11	dicsqu	Dichomitus squalens	DsST11	transporter	predicted: hexose, xylose, polyol	531	TRUE
+dicsqu_dsst12	dicsqu	Dichomitus squalens	DsST12	transporter	predicted: hexose, xylose, polyol	528	TRUE
+dicsqu_dsst13	dicsqu	Dichomitus squalens	DsST13	transporter	predicted: hexose, xylose, polyol	563	TRUE
+dicsqu_dsst14	dicsqu	Dichomitus squalens	DsST14	transporter	predicted: uronic, quinic acid	518	TRUE
+dicsqu_dsst15	dicsqu	Dichomitus squalens	DsST15	transporter	predicted: uronic, quinic acid	519	TRUE
+dicsqu_dsst16	dicsqu	Dichomitus squalens	DsST16	transporter	predicted: pentose, hexose	567	TRUE
+dicsqu_dsst17	dicsqu	Dichomitus squalens	DsST17	transporter	predicted: pentose, hexose	562	TRUE
+dicsqu_dsst18	dicsqu	Dichomitus squalens	DsST18	transporter	predicted: pentose, hexose	514	TRUE
+dicsqu_dsst19	dicsqu	Dichomitus squalens	DsST19	transporter	predicted: unknown	490	TRUE
+dicsqu_dsst20	dicsqu	Dichomitus squalens	DsST20	transporter	predicted: unknown	513	TRUE
+dicsqu_dsst21	dicsqu	Dichomitus squalens	DsST21	transporter	predicted: glycerol, arabitol, pentose	547	TRUE
+dicsqu_dsst22	dicsqu	Dichomitus squalens	DsST22	transporter	predicted: glycerol, arabitol, pentose	523	TRUE
+dicsqu_dsst23	dicsqu	Dichomitus squalens	DsST23	transporter	predicted: glycerol, arabitol, pentose	548	TRUE
+dicsqu_dsst24	dicsqu	Dichomitus squalens	DsST24	transporter	predicted: glycerol, arabitol, pentose	470	TRUE
+dicsqu_dsst25	dicsqu	Dichomitus squalens	DsST25	transporter	predicted: glycerol, arabitol, pentose	528	TRUE
