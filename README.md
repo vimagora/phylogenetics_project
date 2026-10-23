@@ -55,6 +55,8 @@ Run all scripts from the project folder. Each script's header describes its argu
 | 24. Substrate clustering scores | `python3 scripts/evaluate_substrate_clustering.py` | `08_structures/evaluation/` |
 | 25. Pocket mapping (concept test) | `python3 scripts/map_pockets.py` | `08_structures/pockets/` |
 | 26. Pocket scores | `python3 scripts/evaluate_pockets.py` | `08_structures/pockets/evaluation/`, `trees/` |
+| 27. Sugar transporter searches | `sbatch scripts/search_sugar_transporters.sbatch` | `09_sugar_transporters/search/` |
+| 28. Sugar transporters and orthogroups | `python3 scripts/summarize_sugar_transporters.py` | `09_sugar_transporters/` |
 
 Steps 8–11, 13, 15 and 17 use Python from `module load python-data`. Step 10 reads the combined table of
 the collapsed proteomes from step 7.
@@ -162,6 +164,21 @@ references; columns are kept where both mappings agree for ≥ 80% of the models
 are compared by BLOSUM62 distance and scored by (a), by (a') the nearest neighbour among transporters
 < 40% identical, and by (c) the most common substrate of the 3 nearest, against the sequence tree
 (paired sign-flip test) and random sets of well-aligned columns of the pocket's size.
+
+## Cohort sugar transporters
+
+Step 27 runs on Roihu (DIAMOND 2.2.5 and HMMER 3.4 modules); step 28 needs only the search results
+and the OrthoFinder `Orthogroups/` folder.
+- **Anchors:** the reference transporters (`structure_ids.tsv`) are searched against all cohort
+  proteins with DIAMOND (`--ultra-sensitive`). A hit with ≥ 98% identity over ≥ 90% of both proteins,
+  in the reference's own genome (`cohort_portal` in `structure_ids.tsv`, else the cohort genome of
+  its species), is its anchor. A listed clean ID (`cohort_id`) needs only ≥ 90% query coverage, since
+  the reference may be a trimmed gene model. Other references keep their best hit and its orthogroup.
+- **Sugar porters:** cohort proteins with Pfam PF00083 (Sugar_tr) at the gathering threshold
+  (`hmmsearch --cut_ga`); those whose domains cover < 50% of the HMM are flagged as partial and left
+  out of `st_proteins.tsv`.
+- **Orthogroups:** each orthogroup (`Orthogroups.tsv`) with a sugar porter or an anchor, with its size,
+  species, sugar porters and anchored references (`orthogroup_summary.tsv`).
 
 ## MycoCosm notes
 

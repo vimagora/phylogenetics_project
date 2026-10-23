@@ -16,7 +16,8 @@
 #   --only             Write only these structure IDs (e.g. for a one-protein test).
 #
 # Output: <out_dir>/<structure_id>.json, and 08_structures/structure_ids.tsv (all proteins, with
-# source table, species, name, role, substrates, length, whether they are used, and sequence).
+# source table, species, name, role, substrates, length, whether they are used, sequence, and the
+# cohort portal and clean ID listed for the protein, where the input tables give them).
 
 import argparse
 import csv
@@ -53,16 +54,19 @@ for path in (CHARACTERIZED, DICSQU):
 proteins = []
 with open(CHARACTERIZED) as f:
     for row in csv.DictReader(f, delimiter="\t"):
+        listed = re.search(r"clean ID (\S+?)[;,)]?(\s|$)", row["notes"])
         proteins.append(dict(base=slug(f"{row['short_name']}_{row['protein_name']}"), source="characterized",
                              species=row["species"], name=row["protein_name"], role=row["role"],
                              substrates=row["group_a"], sequence=row["sequence"],
-                             use=row["use_in_structure_analysis"]))
+                             use=row["use_in_structure_analysis"], portal=row["portal_id"].strip(),
+                             clean_id=listed.group(1) if listed else ""))
 with open(DICSQU) as f:
     for row in csv.DictReader(f, delimiter="\t"):
         proteins.append(dict(base=slug(f"dicsqu_{row['gene']}"), source="dicsqu",
                              species="Dichomitus squalens", name=row["gene"], role="transporter",
                              substrates=f"predicted: {row['predicted_specificity']}",
-                             sequence=row["sequence"], use=row["use_in_structure_analysis"]))
+                             sequence=row["sequence"], use=row["use_in_structure_analysis"],
+                             portal=row["clean_id"].rsplit("-", 1)[0], clean_id=row["clean_id"]))
 
 # Unique structure IDs: a numbered suffix only where two proteins would get the same ID
 counts = {}
@@ -100,10 +104,10 @@ for protein in proteins:
 with open(IDS_TABLE, "w", newline="") as f:
     writer = csv.writer(f, delimiter="\t", lineterminator="\n")
     writer.writerow(["structure_id", "source", "species", "protein_name", "role", "substrates",
-                     "length", "use_in_structure_analysis", "sequence"])
+                     "length", "use_in_structure_analysis", "sequence", "cohort_portal", "cohort_id"])
     for p in proteins:
         writer.writerow([p["id"], p["source"], p["species"], p["name"], p["role"], p["substrates"],
-                         len(p["sequence"]), p["use"], p["sequence"]])
+                         len(p["sequence"]), p["use"], p["sequence"], p["portal"], p["clean_id"]])
 
 mode = "single-sequence (test only)" if args.single_sequence else "with MSA search"
 print(f"Wrote {n_written} AlphaFold3 inputs ({mode}) to {args.out_dir}; IDs in {IDS_TABLE}")
