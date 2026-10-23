@@ -1,0 +1,4 @@
+tree	transporters_scored	nn_share	nn_share_shuffled	nn_p_value	substrates_scored	mean_purity
+pocket_core	170	0.812	0.473	0.001	15	0.319
+pocket_extended	170	0.782	0.417	0.001	15	0.296
+sequence_ml	170	0.794	0.396	0.001	15	0.34

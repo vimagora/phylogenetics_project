@@ -40,6 +40,8 @@
 08_structures/afdb_models/
 08_structures/models_trimmed/
 08_structures/trees/foldseek_allvsall.tsv
+08_structures/pockets/references/
+08_structures/pockets/foldseek_references.tsv
 08_structures/logs/*
 !08_structures/logs/.gitkeep
 

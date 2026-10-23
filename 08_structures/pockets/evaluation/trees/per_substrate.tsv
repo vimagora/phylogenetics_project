@@ -1,0 +1,46 @@
+tree	substrate	transporters	clade_transporters	purity	clade_support
+pocket_core	cellobiose	14	170	0.088	
+pocket_core	d-fructose	20	170	0.465	
+pocket_core	d-galactose	4	170	0.371	
+pocket_core	d-galacturonic acid	6	127	0.047	
+pocket_core	d-glucose	31	170	0.529	
+pocket_core	d-mannitol	7	170	0.059	
+pocket_core	d-mannose	5	170	0.376	
+pocket_core	d-sorbitol	6	170	0.053	
+pocket_core	d-xylose	28	170	0.182	
+pocket_core	glycerol	8	9	0.889	
+pocket_core	l-arabinose	7	126	0.079	
+pocket_core	lactose	4	32	0.125	
+pocket_core	maltose	8	11	0.727	
+pocket_core	myo-inositol	6	131	0.046	
+pocket_core	xylitol	3	4	0.75	
+pocket_extended	cellobiose	14	170	0.088	
+pocket_extended	d-fructose	20	170	0.465	
+pocket_extended	d-galactose	4	170	0.371	
+pocket_extended	d-galacturonic acid	6	102	0.059	
+pocket_extended	d-glucose	31	170	0.529	
+pocket_extended	d-mannitol	7	170	0.059	
+pocket_extended	d-mannose	5	170	0.376	
+pocket_extended	d-sorbitol	6	170	0.053	
+pocket_extended	d-xylose	28	170	0.182	
+pocket_extended	glycerol	8	15	0.533	
+pocket_extended	l-arabinose	7	122	0.082	
+pocket_extended	lactose	4	32	0.125	
+pocket_extended	maltose	8	11	0.727	
+pocket_extended	myo-inositol	6	132	0.045	
+pocket_extended	xylitol	3	4	0.75	
+sequence_ml	cellobiose	14	170	0.088	
+sequence_ml	d-fructose	20	170	0.465	
+sequence_ml	d-galactose	4	155	0.406	56
+sequence_ml	d-galacturonic acid	6	66	0.091	84
+sequence_ml	d-glucose	31	168	0.536	34
+sequence_ml	d-mannitol	7	155	0.065	56
+sequence_ml	d-mannose	5	168	0.381	34
+sequence_ml	d-sorbitol	6	155	0.058	56
+sequence_ml	d-xylose	28	168	0.185	34
+sequence_ml	glycerol	8	13	0.615	95
+sequence_ml	l-arabinose	7	59	0.153	81
+sequence_ml	lactose	4	168	0.024	34
+sequence_ml	maltose	8	11	0.727	100
+sequence_ml	myo-inositol	6	20	0.3	99
+sequence_ml	xylitol	3	3	1.0	73

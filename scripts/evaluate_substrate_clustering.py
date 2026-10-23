@@ -120,16 +120,6 @@ def nearest_neighbour_share(tips, labels, distances):
     return hits / len(tips), details
 
 
-parser = argparse.ArgumentParser(description="Score substrate clustering on transporter trees")
-parser.add_argument("trees", nargs="*", default=DEFAULT_TREES)
-parser.add_argument("--out-dir", default="08_structures/evaluation")
-parser.add_argument("--permutations", type=int, default=1000)
-args = parser.parse_args()
-
-with open(IDS_TABLE) as f:
-    proteins = {row["structure_id"]: row for row in csv.DictReader(f, delimiter="\t")}
-
-
 def category(row):
     if row["source"] == "dicsqu":
         return "D. squalens (predicted)"
@@ -140,91 +130,105 @@ def category(row):
     return "characterized transporter"
 
 
-os.makedirs(args.out_dir, exist_ok=True)
-summary, per_substrate, neighbours = [], [], []
-random.seed(1)
-for tree_path in args.trees:
-    if not os.path.isfile(tree_path):
-        sys.exit(f"ERROR: tree '{tree_path}' not found")
-    tree_name = os.path.basename(tree_path).rsplit(".", 1)[0]
-    tree = Phylo.read(tree_path, "newick")
-    tree.root_at_midpoint()
-    unknown = [t.name for t in tree.get_terminals() if t.name not in proteins]
-    if unknown:
-        sys.exit(f"ERROR: {tree_name} has tips not in {IDS_TABLE}: {', '.join(unknown[:5])}")
-    tips = [t for t in tree.get_terminals() if category(proteins[t.name]) == "characterized transporter"]
-    named = {t: tokens(proteins[t.name]["substrates"]) for t in tips}
-    labels = {t: expanded(named[t]) for t in tips}
-    distances = path_lengths(tree, tips)
+def main():
+    parser = argparse.ArgumentParser(description="Score substrate clustering on transporter trees")
+    parser.add_argument("trees", nargs="*", default=DEFAULT_TREES)
+    parser.add_argument("--out-dir", default="08_structures/evaluation")
+    parser.add_argument("--permutations", type=int, default=1000)
+    args = parser.parse_args()
 
-    # (a) nearest neighbour, against shuffled labels
-    share, details = nearest_neighbour_share(tips, labels, distances)
-    values = list(labels.values())
-    shuffled = []
-    for _ in range(args.permutations):
-        random.shuffle(values)
-        shuffled.append(nearest_neighbour_share(tips, dict(zip(tips, values)), distances)[0])
-    p_value = (sum(x >= share for x in shuffled) + 1) / (args.permutations + 1)
-    chance = sum(shuffled) / len(shuffled)
-    for a, nearest, shared in details:
-        neighbours.append((tree_name, a.name, ",".join(b.name for b in nearest), shared))
+    with open(IDS_TABLE) as f:
+        proteins = {row["structure_id"]: row for row in csv.DictReader(f, delimiter="\t")}
 
-    # (b) purity of the smallest clade holding all transporters named for a substrate
-    purities = []
-    for substrate in sorted({s for names in named.values() for s in names} - set(GENERIC)):
-        carriers = [t for t in tips if substrate in named[t]]
-        if len(carriers) < 3:
-            continue
-        clade = tree.common_ancestor(carriers)
-        members = [t for t in clade.get_terminals() if t in labels]
-        purity = sum(substrate in labels[t] for t in members) / len(members)
-        support = clade.confidence if clade.confidence is not None and clade is not tree.root else ""
-        purities.append(purity)
-        per_substrate.append((tree_name, substrate, len(carriers), len(members), round(purity, 3), support))
+    os.makedirs(args.out_dir, exist_ok=True)
+    summary, per_substrate, neighbours = [], [], []
+    random.seed(1)
+    for tree_path in args.trees:
+        if not os.path.isfile(tree_path):
+            sys.exit(f"ERROR: tree '{tree_path}' not found")
+        tree_name = os.path.basename(tree_path).rsplit(".", 1)[0]
+        tree = Phylo.read(tree_path, "newick")
+        tree.root_at_midpoint()
+        unknown = [t.name for t in tree.get_terminals() if t.name not in proteins]
+        if unknown:
+            sys.exit(f"ERROR: {tree_name} has tips not in {IDS_TABLE}: {', '.join(unknown[:5])}")
+        tips = [t for t in tree.get_terminals() if category(proteins[t.name]) == "characterized transporter"]
+        named = {t: tokens(proteins[t.name]["substrates"]) for t in tips}
+        labels = {t: expanded(named[t]) for t in tips}
+        distances = path_lengths(tree, tips)
 
-    mean_purity = sum(purities) / len(purities)
-    summary.append((tree_name, len(tips), round(share, 3), round(chance, 3), round(p_value, 4), len(purities),
-                    round(mean_purity, 3)))
-    print(f"  {tree_name}: (a) nearest neighbour shares a substrate for {share:.1%} of {len(tips)} "
-          f"transporters ({chance:.1%} with shuffled labels, p = {p_value:.4f}); "
-          f"(b) mean purity {mean_purity:.2f} over {len(purities)} substrates")
+        # (a) nearest neighbour, against shuffled labels
+        share, details = nearest_neighbour_share(tips, labels, distances)
+        values = list(labels.values())
+        shuffled = []
+        for _ in range(args.permutations):
+            random.shuffle(values)
+            shuffled.append(nearest_neighbour_share(tips, dict(zip(tips, values)), distances)[0])
+        p_value = (sum(x >= share for x in shuffled) + 1) / (args.permutations + 1)
+        chance = sum(shuffled) / len(shuffled)
+        for a, nearest, shared in details:
+            neighbours.append((tree_name, a.name, ",".join(b.name for b in nearest), shared))
+
+        # (b) purity of the smallest clade holding all transporters named for a substrate
+        purities = []
+        for substrate in sorted({s for names in named.values() for s in names} - set(GENERIC)):
+            carriers = [t for t in tips if substrate in named[t]]
+            if len(carriers) < 3:
+                continue
+            clade = tree.common_ancestor(carriers)
+            members = [t for t in clade.get_terminals() if t in labels]
+            purity = sum(substrate in labels[t] for t in members) / len(members)
+            support = clade.confidence if clade.confidence is not None and clade is not tree.root else ""
+            purities.append(purity)
+            per_substrate.append((tree_name, substrate, len(carriers), len(members), round(purity, 3), support))
+
+        mean_purity = sum(purities) / len(purities)
+        summary.append((tree_name, len(tips), round(share, 3), round(chance, 3), round(p_value, 4), len(purities),
+                        round(mean_purity, 3)))
+        print(f"  {tree_name}: (a) nearest neighbour shares a substrate for {share:.1%} of {len(tips)} "
+              f"transporters ({chance:.1%} with shuffled labels, p = {p_value:.4f}); "
+              f"(b) mean purity {mean_purity:.2f} over {len(purities)} substrates")
 
 
-def write(name, header, rows):
-    with open(os.path.join(args.out_dir, name), "w", newline="") as f:
-        writer = csv.writer(f, delimiter="\t", lineterminator="\n")
-        writer.writerow(header)
-        writer.writerows(rows)
+    def write(name, header, rows):
+        with open(os.path.join(args.out_dir, name), "w", newline="") as f:
+            writer = csv.writer(f, delimiter="\t", lineterminator="\n")
+            writer.writerow(header)
+            writer.writerows(rows)
 
 
-write("summary.tsv", ["tree", "transporters_scored", "nn_share", "nn_share_shuffled", "nn_p_value", "substrates_scored", "mean_purity"],
-      summary)
-write("per_substrate.tsv", ["tree", "substrate", "transporters", "clade_transporters", "purity", "clade_support"],
-      per_substrate)
-write("nearest_neighbours.tsv", ["tree", "structure_id", "nearest", "shares_substrate"], neighbours)
+    write("summary.tsv", ["tree", "transporters_scored", "nn_share", "nn_share_shuffled", "nn_p_value", "substrates_scored", "mean_purity"],
+          summary)
+    write("per_substrate.tsv", ["tree", "substrate", "transporters", "clade_transporters", "purity", "clade_support"],
+          per_substrate)
+    write("nearest_neighbours.tsv", ["tree", "structure_id", "nearest", "shares_substrate"], neighbours)
 
-# iTOL files for all proteins in the trees
-in_trees = sorted({t.name for path in args.trees for t in Phylo.read(path, "newick").get_terminals()})
-lines = ["DATASET_BINARY", "SEPARATOR TAB", "DATASET_LABEL\tSubstrates", "COLOR\t#000000",
-         "FIELD_SHAPES\t" + "\t".join("1" for _ in ITOL_COLUMNS),
-         "FIELD_LABELS\t" + "\t".join(c[0] for c in ITOL_COLUMNS),
-         "FIELD_COLORS\t" + "\t".join(c[2] for c in ITOL_COLUMNS), "SHOW_LABELS\t1", "DATA"]
-for sid in in_trees:
-    names = expanded(tokens(proteins[sid]["substrates"].removeprefix("predicted: ")))
-    lines.append(sid + "\t" + "\t".join("1" if names & c[1] else "-1" for c in ITOL_COLUMNS))
-with open(os.path.join(args.out_dir, "itol_substrates.txt"), "w") as f:
-    f.write("\n".join(lines) + "\n")
-colours = {"characterized transporter": "#4daf4a", "sensor": "#e41a1c", "D. squalens (predicted)": "#377eb8",
-           "substrate unspecified": "#999999"}
-lines = ["DATASET_COLORSTRIP", "SEPARATOR TAB", "DATASET_LABEL\tCategory", "COLOR\t#000000",
-         "LEGEND_TITLE\tCategory", "LEGEND_SHAPES\t" + "\t".join("1" for _ in colours),
-         "LEGEND_COLORS\t" + "\t".join(colours.values()), "LEGEND_LABELS\t" + "\t".join(colours), "DATA"]
-lines += [f"{sid}\t{colours[category(proteins[sid])]}\t{category(proteins[sid])}" for sid in in_trees]
-with open(os.path.join(args.out_dir, "itol_category.txt"), "w") as f:
-    f.write("\n".join(lines) + "\n")
-with open(os.path.join(args.out_dir, "itol_labels.txt"), "w") as f:
-    f.write("LABELS\nSEPARATOR TAB\nDATA\n")
+    # iTOL files for all proteins in the trees
+    in_trees = sorted({t.name for path in args.trees for t in Phylo.read(path, "newick").get_terminals()})
+    lines = ["DATASET_BINARY", "SEPARATOR TAB", "DATASET_LABEL\tSubstrates", "COLOR\t#000000",
+             "FIELD_SHAPES\t" + "\t".join("1" for _ in ITOL_COLUMNS),
+             "FIELD_LABELS\t" + "\t".join(c[0] for c in ITOL_COLUMNS),
+             "FIELD_COLORS\t" + "\t".join(c[2] for c in ITOL_COLUMNS), "SHOW_LABELS\t1", "DATA"]
     for sid in in_trees:
-        species = proteins[sid]["species"].split(" (")[0]
-        f.write(f"{sid}\t{proteins[sid]['protein_name']} ({species})\n")
-print(f"Results in {args.out_dir}/")
+        names = expanded(tokens(proteins[sid]["substrates"].removeprefix("predicted: ")))
+        lines.append(sid + "\t" + "\t".join("1" if names & c[1] else "-1" for c in ITOL_COLUMNS))
+    with open(os.path.join(args.out_dir, "itol_substrates.txt"), "w") as f:
+        f.write("\n".join(lines) + "\n")
+    colours = {"characterized transporter": "#4daf4a", "sensor": "#e41a1c", "D. squalens (predicted)": "#377eb8",
+               "substrate unspecified": "#999999"}
+    lines = ["DATASET_COLORSTRIP", "SEPARATOR TAB", "DATASET_LABEL\tCategory", "COLOR\t#000000",
+             "LEGEND_TITLE\tCategory", "LEGEND_SHAPES\t" + "\t".join("1" for _ in colours),
+             "LEGEND_COLORS\t" + "\t".join(colours.values()), "LEGEND_LABELS\t" + "\t".join(colours), "DATA"]
+    lines += [f"{sid}\t{colours[category(proteins[sid])]}\t{category(proteins[sid])}" for sid in in_trees]
+    with open(os.path.join(args.out_dir, "itol_category.txt"), "w") as f:
+        f.write("\n".join(lines) + "\n")
+    with open(os.path.join(args.out_dir, "itol_labels.txt"), "w") as f:
+        f.write("LABELS\nSEPARATOR TAB\nDATA\n")
+        for sid in in_trees:
+            species = proteins[sid]["species"].split(" (")[0]
+            f.write(f"{sid}\t{proteins[sid]['protein_name']} ({species})\n")
+    print(f"Results in {args.out_dir}/")
+
+
+if __name__ == "__main__":
+    main()

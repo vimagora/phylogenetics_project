@@ -53,6 +53,8 @@ Run all scripts from the project folder. Each script's header describes its argu
 | 22. Structure trees (Foldtree-style) | `python3 scripts/structure_trees.py` | `08_structures/trees/structure_*.nwk` |
 | 23. Sequence tree (baseline) | `scripts/sequence_tree.sh` | `08_structures/trees/sequence_ml.treefile` |
 | 24. Substrate clustering scores | `python3 scripts/evaluate_substrate_clustering.py` | `08_structures/evaluation/` |
+| 25. Pocket mapping (concept test) | `python3 scripts/map_pockets.py` | `08_structures/pockets/` |
+| 26. Pocket scores | `python3 scripts/evaluate_pockets.py` | `08_structures/pockets/evaluation/`, `trees/` |
 
 Steps 8–11, 13, 15 and 17 use Python from `module load python-data`. Step 10 reads the combined table of
 the collapsed proteomes from step 7.
@@ -152,11 +154,14 @@ alntmscore, lddt), next to a sequence ML tree of the same proteins. Characterize
 scored by (a) whether the nearest neighbour shares a substrate (p-value from shuffled labels) and
 (b) the purity of the smallest clade holding all transporters of a substrate.
 
-Result (199 models, 170 characterized transporters scored): the structure trees did no better than
-the sequence tree. Nearest neighbours shared a substrate for 78.8–81.2% of transporters in the
-structure trees and 79.4% in the sequence tree (about 39% with shuffled labels); mean clade purity
-was 0.24–0.34 and 0.34. Global structure similarity is therefore not pursued for the cohort sugar
-transporters, and the 11 proteins without an AlphaFold DB model were not predicted.
+Pocket test (steps 25–26, same environment): the sugar-binding pocket of three sugar-porter crystal
+structures with a bound sugar (XylE, PDB 4GBY and 4GBZ; GLUT3, 4ZW9; STP10, 6H7D), i.e. residues within
+5 Å (core) or 8 Å (extended) of the sugar, is mapped onto every protein through a MAFFT alignment with
+the reference sequences and, as a check, through Foldseek alignments of the models to the
+references; columns are kept where both mappings agree for ≥ 80% of the models. Pocket signatures
+are compared by BLOSUM62 distance and scored by (a), by (a') the nearest neighbour among transporters
+< 40% identical, and by (c) the most common substrate of the 3 nearest, against the sequence tree
+(paired sign-flip test) and random sets of well-aligned columns of the pocket's size.
 
 ## MycoCosm notes
 
