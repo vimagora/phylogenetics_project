@@ -1,5 +1,5 @@
 outgroup_id	group	organism	protein	uniprot	root	notes
-Escco-XylE	bacteria	Escherichia coli K-12	D-xylose:H+ symporter XylE	P0AGF4	TRUE	crystal structures with D-xylose and D-glucose (PDB 4GBY and 4GBZ)
+Escco-XylE	bacteria	Escherichia coli K-12	D-xylose:H+ symporter XylE	P0AGF4	FALSE	crystal structures with D-xylose and D-glucose (PDB 4GBY and 4GBZ); not used for rooting: sister to four anaerobic gut fungal proteins in the FastTree tree (see review_fasttree.md)
 Escco-GalP	bacteria	Escherichia coli K-12	galactose:H+ symporter GalP	P0AEP1	TRUE	
 Escco-AraE	bacteria	Escherichia coli K-12	arabinose:H+ symporter AraE	P0AE24	TRUE	
 Homsa-GLUT1	animals	Homo sapiens	GLUT1 (SLC2A1)	P11166	FALSE	class I GLUT
