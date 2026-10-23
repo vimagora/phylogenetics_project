@@ -68,3 +68,6 @@ __pycache__/
 
 # Local settings (copy config.example.sh to config.sh)
 config.sh
+
+# Notes, reports and reference documents (kept local)
+/80_documents/

@@ -10,7 +10,7 @@ Genome lists (TSV, header row, portal IDs in column 1) in `00_inputs/`:
 - `cohort_taxonomy.tsv`: phylum, subphylum, class and order of each cohort genome (from `cohort_selection.md`);
 - `shadows_datasets.tsv`: 16 second strains, haplotypes or older annotations, only searched for presence.
 
-How the cohort was chosen is described in `00_inputs/cohort_selection.md`.
+How the cohort was chosen is described in a separate report (not part of the repository).
 
 ## Requirements
 
@@ -132,7 +132,7 @@ a finished run with another species tree, unpack `WorkingDirectory.tar.gz` first
 ## Sugar transporter structures
 
 `00_inputs/characterized_sugar_transporters.tsv` lists characterized fungal sugar transporters (from
-Xu et al. 2023, Table S1, plus later literature and TCDB family 2.A.1.1), with substrates, references,
+Xu et al. 2024, Table S1, plus later literature and TCDB family 2.A.1.1), with substrates, references,
 a `role` column (transporter or sensor) and `use_in_structure_analysis` (FALSE for non-MFS proteins and
 partial sequences). `00_inputs/dicsqu_sugar_transporters.tsv` adds the *D. squalens* transporters with
 predicted specificities. AlphaFold3 runs in CSC's container on a GH200 GPU node, with your own model
