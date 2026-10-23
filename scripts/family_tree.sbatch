@@ -7,7 +7,7 @@
 #SBATCH --time=3-00:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=64
+#SBATCH --cpus-per-task=32
 #SBATCH --mem=192G
 # family_tree.sbatch
 # Description: Slurm job that infers a gene family's tree from the trimmed alignment
@@ -18,6 +18,8 @@
 #              tree         IQ-TREE 3 with the ModelFinder model, 1000 ultrafast bootstraps with NNI
 #                           refinement and 1000 SH-aLRT replicates, drawn rooted on the outgroups
 #                           marked root = TRUE in outgroups.tsv.
+#              IQ-TREE picks its number of threads (-T AUTO, at most the CPUs of the job): family
+#              alignments are short after trimming, and more threads than columns can use only add cost.
 #              The IQ-TREE modes resume from their checkpoint when resubmitted (e.g. after the time
 #              limit); a finished run is not repeated.
 # Author: Victor M. Gonzalez Ramos
@@ -100,7 +102,7 @@ if [[ $MODE == modelfinder ]]; then
         echo "ModelFinder already finished: $(grep -m1 'Best-fit model' "$PREFIX.iqtree")"
         exit 0
     fi
-    iqtree3 -s "$ALIGNMENT" -m MF -T "$THREADS" --prefix "$PREFIX" --quiet
+    iqtree3 -s "$ALIGNMENT" -m MF -T AUTO --threads-max "$THREADS" --prefix "$PREFIX" --quiet
     STATUS=$?
     (( STATUS == 0 )) && echo "Done $(date): $(grep -m1 'Best-fit model' "$PREFIX.iqtree")"
     exit $STATUS
@@ -120,7 +122,7 @@ if [[ -s "$PREFIX.iqtree" && -s "$PREFIX.treefile" ]]; then
     exit 0
 fi
 echo "Model $MODEL; rooted on $ROOT"
-iqtree3 -s "$ALIGNMENT" -m "$MODEL" -B 1000 -bnni -alrt 1000 ${ROOT:+-o "$ROOT"} -T "$THREADS" \
+iqtree3 -s "$ALIGNMENT" -m "$MODEL" -B 1000 -bnni -alrt 1000 ${ROOT:+-o "$ROOT"} -T AUTO --threads-max "$THREADS" \
     --prefix "$PREFIX" --quiet
 STATUS=$?
 echo "Finished $(date) with exit code $STATUS"
