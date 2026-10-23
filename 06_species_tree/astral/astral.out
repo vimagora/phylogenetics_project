@@ -1,0 +1,229 @@
+Accurate Species TRee ALgorithm IV (ASTRAL-IV)
+*** NOW with integrated CASTLES-2 ***
+Version: v1.25.4.8
+#Genetrees: 827
+#Species: 150
+#Rounds: 4
+#Samples: 4
+#Threads: 64
+Use two-step algorithm!
+Guide Tree 0/22
+#NNI moves:0/197
+Guide Tree 1/22
+#NNI moves:0/197
+Guide Tree 2/22
+#NNI moves:0/197
+Guide Tree 3/22
+#NNI moves:0/197
+Guide Tree 4/22
+#NNI moves:0/197
+Guide Tree 5/22
+#NNI moves:0/197
+Guide Tree 6/22
+#NNI moves:0/197
+Guide Tree 7/22
+#NNI moves:0/197
+Guide Tree 8/22
+#NNI moves:0/197
+Guide Tree 9/22
+#NNI moves:0/197
+Guide Tree 10/22
+#NNI moves:0/197
+Guide Tree 11/22
+#NNI moves:0/197
+Guide Tree 12/22
+#NNI moves:0/197
+Guide Tree 13/22
+#NNI moves:0/197
+Guide Tree 14/22
+#NNI moves:0/197
+Guide Tree 15/22
+#NNI moves:0/197
+Guide Tree 16/22
+#NNI moves:0/197
+Guide Tree 17/22
+#NNI moves:0/197
+Guide Tree 18/22
+#NNI moves:0/197
+Guide Tree 19/22
+#NNI moves:0/197
+Guide Tree 20/22
+#NNI moves:0/197
+Guide Tree 21/22
+#NNI moves:0/197
+Remaining: 0
+#NNI moves:6/197
+#NNI moves:6/197
+(((((((((((((((((((((((Amath1,Amamu1),(((((Hypsu1,Hebcy2),Agrped1),Lacbi2),Copcin2),Agabi_varbisH97_2)),(((Cylto1,Armmel1),(Lenedo1,Gyman1)),(Schco3,Fishe1))),(Pleery1,PleosPC15_2)),((Pilcr1,Plicr1),(((Suilu4,((Hydpi2,(Paxru2,Paxin1)),Pisti2)),Conol1),SerlaS7_9_2))),(((((((Obbri1,Cersu1),((Fompi3,Pipbet1_1),(PosplRSB12_1,Wolco1))),((Fomfom1,(Dicsqu464_2,Ganluc1)),(Trave1,(Pyccin1,Pycco1)))),(((((Phchr2,Phaca1),Phlgi1),Bjead1_1),Phlrad1),Panru1)),Theter1),((Jaaar1,(Glotr1_1,Neole1)),Punst1)),((Stehi1,Hetan2),(Lacind1,Glocon1)))),(Fomme1,Schpa1)),Sissu1),Sphst1),(Aurde3_1,Exigl1)),Pirin1),((Botbo1,Hydru2),Tulca1)),(Dacsp1,Calco1)),((Cryne_H99_1,Treme1),Triol1)),Ustma2_2),((Rhoto_IFO0880_4,Rhomi1),(Pgt_201_A1,Mellp3_H0))),((((((((((((Penox1,Pench1),(Aspfu1,((Aspor1,(Aspni_NRRL3_1,Aspac1)),Aspnid1))),Theau2),Penoc1),Cocim1),(Capcor1,Claps1)),((((Cenge3,Glost2),(Stano2,Cocsa1)),Macpha1),((Clafu1,Zymtr1),AurpulNBB1))),(((Sclsc1,Bcine1),(Oidma1,(Blugr2,(Lepor2,Rhier1)))),(((((Fusgr1,Fusox3_1),((Triat2,Trire_Chr),(Corco1,Metro1))),(Colgr2,Verda1)),(((Podan3,((Spoth2,Chagl_1),Thite2)),Neucr2),(Valma1,(Grocl1,Magor1)))),((Dales1,HypEC38_3),(Xylhel2,Kredeu1))))),((Ascim1,(Morco1,Tubme1v2)),Artol1)),((((((((Canpa1,Canalb1),Picst3),Debha1),Canint_NRRLY981_1),((Hanpo2,Ambmon_NRRLY1484_1),Dekbr2)),((Zygrou1,Sacce1),Klula1)),((Arxad1,Stamag_NRRLY2024_1),Yarli1)),Lipst1_1)),Saico1),Schpo1)),(Rhimi59_2,(Morel2,RhiirDAOM197198_2))),Conco1),Catan2),Hyacur1),((Pirfi3,Caecom1),(Anasp1,Neosp1))),Spipu1);
+Guide Tree 0/22
+#NNI moves:0/197
+Guide Tree 1/22
+#NNI moves:0/197
+Guide Tree 2/22
+#NNI moves:0/197
+Guide Tree 3/22
+#NNI moves:0/197
+Guide Tree 4/22
+#NNI moves:0/197
+Guide Tree 5/22
+#NNI moves:0/197
+Guide Tree 6/22
+#NNI moves:0/197
+Guide Tree 7/22
+#NNI moves:0/197
+Guide Tree 8/22
+#NNI moves:0/197
+Guide Tree 9/22
+#NNI moves:0/197
+Guide Tree 10/22
+#NNI moves:0/197
+Guide Tree 11/22
+#NNI moves:0/197
+Guide Tree 12/22
+#NNI moves:0/197
+Guide Tree 13/22
+#NNI moves:0/197
+Guide Tree 14/22
+#NNI moves:0/197
+Guide Tree 15/22
+#NNI moves:0/197
+Guide Tree 16/22
+#NNI moves:0/197
+Guide Tree 17/22
+#NNI moves:0/197
+Guide Tree 18/22
+#NNI moves:0/197
+Guide Tree 19/22
+#NNI moves:0/197
+Guide Tree 20/22
+#NNI moves:0/197
+Guide Tree 21/22
+#NNI moves:0/197
+Remaining: 0
+#NNI moves:12/197
+#NNI moves:18/197
+(((((((((((((((((((((((((Lacbi2,(Agrped1,(Hebcy2,Hypsu1))),Copcin2),Agabi_varbisH97_2),(Amamu1,Amath1)),(((Lenedo1,Gyman1),(Armmel1,Cylto1)),(Fishe1,Schco3))),(PleosPC15_2,Pleery1)),((Pilcr1,Plicr1),(((((Hydpi2,(Paxin1,Paxru2)),Pisti2),Suilu4),Conol1),SerlaS7_9_2))),(((Stehi1,Hetan2),(Glocon1,Lacind1)),(((((((Dicsqu464_2,Ganluc1),Fomfom1),((Pycco1,Pyccin1),Trave1)),(((Wolco1,PosplRSB12_1),(Pipbet1_1,Fompi3)),(Obbri1,Cersu1))),(((((Phaca1,Phchr2),Phlgi1),Bjead1_1),Phlrad1),Panru1)),Theter1),(((Neole1,Glotr1_1),Jaaar1),Punst1)))),(Fomme1,Schpa1)),Sissu1),Sphst1),(Aurde3_1,Exigl1)),Pirin1),((Botbo1,Hydru2),Tulca1)),(Calco1,Dacsp1)),((Treme1,Cryne_H99_1),Triol1)),Ustma2_2),((Rhomi1,Rhoto_IFO0880_4),(Mellp3_H0,Pgt_201_A1))),((((((((((((Metro1,Corco1),(Triat2,Trire_Chr)),(Fusox3_1,Fusgr1)),(Colgr2,Verda1)),(((Magor1,Grocl1),Valma1),((Podan3,((Chagl_1,Spoth2),Thite2)),Neucr2))),((Xylhel2,Kredeu1),(Dales1,HypEC38_3))),((((Lepor2,Rhier1),Blugr2),Oidma1),(Bcine1,Sclsc1))),(((((((Aspfu1,((Aspor1,(Aspac1,Aspni_NRRL3_1)),Aspnid1)),(Penox1,Pench1)),Theau2),Penoc1),Cocim1),(Claps1,Capcor1)),((((Stano2,Cocsa1),(Cenge3,Glost2)),Macpha1),((Zymtr1,Clafu1),AurpulNBB1)))),(Artol1,(Ascim1,(Morco1,Tubme1v2)))),(((((Zygrou1,Sacce1),Klula1),(((Debha1,(Picst3,(Canpa1,Canalb1))),Canint_NRRLY981_1),(Dekbr2,(Hanpo2,Ambmon_NRRLY1484_1)))),((Arxad1,Stamag_NRRLY2024_1),Yarli1)),Lipst1_1)),Saico1),Schpo1)),((Morel2,RhiirDAOM197198_2),Rhimi59_2)),Conco1),Catan2),Hyacur1),((Caecom1,Pirfi3),(Anasp1,Neosp1))),Spipu1);
+Guide Tree 0/22
+#NNI moves:0/197
+Guide Tree 1/22
+#NNI moves:0/197
+Guide Tree 2/22
+#NNI moves:0/197
+Guide Tree 3/22
+#NNI moves:0/197
+Guide Tree 4/22
+#NNI moves:0/197
+Guide Tree 5/22
+#NNI moves:0/197
+Guide Tree 6/22
+#NNI moves:0/197
+Guide Tree 7/22
+#NNI moves:0/197
+Guide Tree 8/22
+#NNI moves:0/197
+Guide Tree 9/22
+#NNI moves:0/197
+Guide Tree 10/22
+#NNI moves:0/197
+Guide Tree 11/22
+#NNI moves:0/197
+Guide Tree 12/22
+#NNI moves:0/197
+Guide Tree 13/22
+#NNI moves:0/197
+Guide Tree 14/22
+#NNI moves:0/197
+Guide Tree 15/22
+#NNI moves:0/197
+Guide Tree 16/22
+#NNI moves:0/197
+Guide Tree 17/22
+#NNI moves:0/197
+Guide Tree 18/22
+#NNI moves:0/197
+Guide Tree 19/22
+#NNI moves:0/197
+Guide Tree 20/22
+#NNI moves:0/197
+Guide Tree 21/22
+#NNI moves:0/197
+Remaining: 1
+#NNI moves:4/197
+#NNI moves:4/197
+(((((((((((((((((((((((((((Phchr2,Phaca1),Phlgi1),Bjead1_1),Phlrad1),Panru1),(((Trave1,(Pycco1,Pyccin1)),((Ganluc1,Dicsqu464_2),Fomfom1)),(((Fompi3,Pipbet1_1),(PosplRSB12_1,Wolco1)),(Cersu1,Obbri1)))),Theter1),(((Glotr1_1,Neole1),Jaaar1),Punst1)),((Stehi1,Hetan2),(Glocon1,Lacind1))),((((((Armmel1,Cylto1),(Lenedo1,Gyman1)),(Schco3,Fishe1)),((((((Hypsu1,Hebcy2),Agrped1),Lacbi2),Copcin2),Agabi_varbisH97_2),(Amamu1,Amath1))),(PleosPC15_2,Pleery1)),(((((Pisti2,((Paxin1,Paxru2),Hydpi2)),Suilu4),Conol1),SerlaS7_9_2),(Plicr1,Pilcr1)))),(Fomme1,Schpa1)),Sissu1),Sphst1),(Aurde3_1,Exigl1)),Pirin1),((Botbo1,Hydru2),Tulca1)),(Dacsp1,Calco1)),(Triol1,(Treme1,Cryne_H99_1))),Ustma2_2),((Mellp3_H0,Pgt_201_A1),(Rhoto_IFO0880_4,Rhomi1))),(((((((((Kredeu1,Xylhel2),(Dales1,HypEC38_3)),(((((Triat2,Trire_Chr),(Corco1,Metro1)),(Fusgr1,Fusox3_1)),(Colgr2,Verda1)),(((Podan3,((Chagl_1,Spoth2),Thite2)),Neucr2),((Magor1,Grocl1),Valma1)))),(((Blugr2,(Rhier1,Lepor2)),Oidma1),(Bcine1,Sclsc1))),((((Zymtr1,Clafu1),AurpulNBB1),(((Cocsa1,Stano2),(Cenge3,Glost2)),Macpha1)),((((((Aspfu1,(((Aspni_NRRL3_1,Aspac1),Aspor1),Aspnid1)),(Pench1,Penox1)),Theau2),Penoc1),Cocim1),(Capcor1,Claps1)))),(((Morco1,Tubme1v2),Ascim1),Artol1)),(((((Zygrou1,Sacce1),Klula1),(((((Canpa1,Canalb1),Picst3),Debha1),Canint_NRRLY981_1),((Hanpo2,Ambmon_NRRLY1484_1),Dekbr2))),((Stamag_NRRLY2024_1,Arxad1),Yarli1)),Lipst1_1)),Saico1),Schpo1)),(Rhimi59_2,(RhiirDAOM197198_2,Morel2))),Conco1),Catan2),Hyacur1),((Anasp1,Neosp1),(Caecom1,Pirfi3))),Spipu1);
+Guide Tree 0/22
+#NNI moves:0/197
+Guide Tree 1/22
+#NNI moves:0/197
+Guide Tree 2/22
+#NNI moves:0/197
+Guide Tree 3/22
+#NNI moves:0/197
+Guide Tree 4/22
+#NNI moves:0/197
+Guide Tree 5/22
+#NNI moves:0/197
+Guide Tree 6/22
+#NNI moves:0/197
+Guide Tree 7/22
+#NNI moves:0/197
+Guide Tree 8/22
+#NNI moves:0/197
+Guide Tree 9/22
+#NNI moves:0/197
+Guide Tree 10/22
+#NNI moves:0/197
+Guide Tree 11/22
+#NNI moves:0/197
+Guide Tree 12/22
+#NNI moves:0/197
+Guide Tree 13/22
+#NNI moves:0/197
+Guide Tree 14/22
+#NNI moves:0/197
+Guide Tree 15/22
+#NNI moves:0/197
+Guide Tree 16/22
+#NNI moves:0/197
+Guide Tree 17/22
+#NNI moves:0/197
+Guide Tree 18/22
+#NNI moves:0/197
+Guide Tree 19/22
+#NNI moves:0/197
+Guide Tree 20/22
+#NNI moves:0/197
+Guide Tree 21/22
+#NNI moves:0/197
+Remaining: 0
+#NNI moves:8/197
+#NNI moves:8/197
+(((((((((((((((((Colgr2,Verda1),(((Metro1,Corco1),(Trire_Chr,Triat2)),(Fusox3_1,Fusgr1))),(((((Chagl_1,Spoth2),Thite2),Podan3),Neucr2),((Grocl1,Magor1),Valma1))),((HypEC38_3,Dales1),(Kredeu1,Xylhel2))),((Oidma1,((Lepor2,Rhier1),Blugr2)),(Sclsc1,Bcine1))),(((((((((Aspor1,(Aspac1,Aspni_NRRL3_1)),Aspnid1),Aspfu1),(Pench1,Penox1)),Theau2),Penoc1),Cocim1),(Capcor1,Claps1)),((((Cocsa1,Stano2),(Cenge3,Glost2)),Macpha1),((Clafu1,Zymtr1),AurpulNBB1)))),(((Tubme1v2,Morco1),Ascim1),Artol1)),(((((Sacce1,Zygrou1),Klula1),(((Hanpo2,Ambmon_NRRLY1484_1),Dekbr2),(Canint_NRRLY981_1,(((Canalb1,Canpa1),Picst3),Debha1)))),(Yarli1,(Stamag_NRRLY2024_1,Arxad1))),Lipst1_1)),Saico1),Schpo1),((((((((((((((((Neole1,Glotr1_1),Jaaar1),Punst1),((((((Dicsqu464_2,Ganluc1),Fomfom1),(Trave1,(Pycco1,Pyccin1))),((Cersu1,Obbri1),((Fompi3,Pipbet1_1),(Wolco1,PosplRSB12_1)))),(((((Phchr2,Phaca1),Phlgi1),Bjead1_1),Phlrad1),Panru1)),Theter1)),((Stehi1,Hetan2),(Glocon1,Lacind1))),(((((Schco3,Fishe1),((Cylto1,Armmel1),(Lenedo1,Gyman1))),(((((Agrped1,(Hypsu1,Hebcy2)),Lacbi2),Copcin2),Agabi_varbisH97_2),(Amath1,Amamu1))),(Pleery1,PleosPC15_2)),((Plicr1,Pilcr1),(((((Hydpi2,(Paxin1,Paxru2)),Pisti2),Suilu4),Conol1),SerlaS7_9_2)))),(Schpa1,Fomme1)),Sissu1),Sphst1),(Exigl1,Aurde3_1)),Pirin1),(Tulca1,(Hydru2,Botbo1))),(Dacsp1,Calco1)),((Treme1,Cryne_H99_1),Triol1)),Ustma2_2),((Mellp3_H0,Pgt_201_A1),(Rhomi1,Rhoto_IFO0880_4)))),(Rhimi59_2,(Morel2,RhiirDAOM197198_2))),Conco1),Catan2),Hyacur1),((Pirfi3,Caecom1),(Anasp1,Neosp1))),Spipu1);
+Initial score: 1.23669e+10
+Initial tree: (((((((((((((((((Colgr2,Verda1),(((Metro1,Corco1),(Trire_Chr,Triat2)),(Fusox3_1,Fusgr1))),(((((Chagl_1,Spoth2),Thite2),Podan3),Neucr2),((Grocl1,Magor1),Valma1))),((HypEC38_3,Dales1),(Kredeu1,Xylhel2))),((Oidma1,((Lepor2,Rhier1),Blugr2)),(Sclsc1,Bcine1))),(((((((((Aspor1,(Aspac1,Aspni_NRRL3_1)),Aspnid1),Aspfu1),(Pench1,Penox1)),Theau2),Penoc1),Cocim1),(Capcor1,Claps1)),((((Cocsa1,Stano2),(Cenge3,Glost2)),Macpha1),((Clafu1,Zymtr1),AurpulNBB1)))),(((Tubme1v2,Morco1),Ascim1),Artol1)),(((((Sacce1,Zygrou1),Klula1),(((Hanpo2,Ambmon_NRRLY1484_1),Dekbr2),(Canint_NRRLY981_1,(((Canalb1,Canpa1),Picst3),Debha1)))),(Yarli1,(Stamag_NRRLY2024_1,Arxad1))),Lipst1_1)),Saico1),Schpo1),((((((((((((((((Neole1,Glotr1_1),Jaaar1),Punst1),((((((Dicsqu464_2,Ganluc1),Fomfom1),(Trave1,(Pycco1,Pyccin1))),((Cersu1,Obbri1),((Fompi3,Pipbet1_1),(Wolco1,PosplRSB12_1)))),(((((Phchr2,Phaca1),Phlgi1),Bjead1_1),Phlrad1),Panru1)),Theter1)),((Stehi1,Hetan2),(Glocon1,Lacind1))),(((((Schco3,Fishe1),((Cylto1,Armmel1),(Lenedo1,Gyman1))),(((((Agrped1,(Hypsu1,Hebcy2)),Lacbi2),Copcin2),Agabi_varbisH97_2),(Amath1,Amamu1))),(Pleery1,PleosPC15_2)),((Plicr1,Pilcr1),(((((Hydpi2,(Paxin1,Paxru2)),Pisti2),Suilu4),Conol1),SerlaS7_9_2)))),(Schpa1,Fomme1)),Sissu1),Sphst1),(Exigl1,Aurde3_1)),Pirin1),(Tulca1,(Hydru2,Botbo1))),(Dacsp1,Calco1)),((Treme1,Cryne_H99_1),Triol1)),Ustma2_2),((Mellp3_H0,Pgt_201_A1),(Rhomi1,Rhoto_IFO0880_4)))),(Rhimi59_2,(Morel2,RhiirDAOM197198_2))),Conco1),Catan2),Hyacur1),((Pirfi3,Caecom1),(Anasp1,Neosp1))),Spipu1);
+*** Subsample Process ***
+Use two-step algorithm!
+#NNI moves:0/197
+Remaining: 0
+#NNI moves:6/197
+#NNI moves:6/197
+(((((((((((((((((((((((((((((((((((Phchr2,Phaca1),Phlgi1),Bjead1_1),Phlrad1),Panru1),((((PosplRSB12_1,Wolco1),(Fompi3,Pipbet1_1)),(Obbri1,Cersu1)),(((Pycco1,Pyccin1),Trave1),(Fomfom1,(Dicsqu464_2,Ganluc1))))),Theter1),(((Neole1,Glotr1_1),Jaaar1),Punst1)),((Lacind1,Glocon1),(Stehi1,Hetan2))),((((((((Agrped1,(Hypsu1,Hebcy2)),Lacbi2),Copcin2),Agabi_varbisH97_2),(Amath1,Amamu1)),(((Lenedo1,Gyman1),(Cylto1,Armmel1)),(Fishe1,Schco3))),(Pleery1,PleosPC15_2)),(((Conol1,((((Paxru2,Paxin1),Hydpi2),Pisti2),Suilu4)),SerlaS7_9_2),(Pilcr1,Plicr1)))),(Schpa1,Fomme1)),Sissu1),Sphst1),(Exigl1,Aurde3_1)),Pirin1),((Hydru2,Botbo1),Tulca1)),(Calco1,Dacsp1)),((Cryne_H99_1,Treme1),Triol1)),Ustma2_2),((Pgt_201_A1,Mellp3_H0),(Rhoto_IFO0880_4,Rhomi1))),((((Hyacur1,(Spipu1,((Neosp1,Anasp1),(Caecom1,Pirfi3)))),Catan2),Conco1),((RhiirDAOM197198_2,Morel2),Rhimi59_2))),Schpo1),Saico1),(((((Canint_NRRLY981_1,((Picst3,(Canalb1,Canpa1)),Debha1)),(Dekbr2,(Hanpo2,Ambmon_NRRLY1484_1))),((Sacce1,Zygrou1),Klula1)),(Yarli1,(Stamag_NRRLY2024_1,Arxad1))),Lipst1_1)),(((Tubme1v2,Morco1),Ascim1),Artol1)),((((((((((Aspac1,Aspni_NRRL3_1),Aspor1),Aspnid1),Aspfu1),(Pench1,Penox1)),Theau2),Penoc1),Cocim1),(Claps1,Capcor1)),((((Stano2,Cocsa1),(Cenge3,Glost2)),Macpha1),(AurpulNBB1,(Zymtr1,Clafu1))))),((((Lepor2,Rhier1),Blugr2),Oidma1),(Sclsc1,Bcine1))),((Kredeu1,Xylhel2),(HypEC38_3,Dales1))),((((Trire_Chr,Triat2),(Corco1,Metro1)),(Fusox3_1,Fusgr1)),(Colgr2,Verda1))),((Magor1,Grocl1),Valma1)),Neucr2),Podan3),Thite2),Spoth2),Chagl_1);
+#NNI moves:0/197
+Remaining: 1
+#NNI moves:6/197
+#NNI moves:6/197
+(((((((((((((((((((((((((Agrped1,(Hypsu1,Hebcy2)),Lacbi2),Copcin2),Agabi_varbisH97_2),(Amamu1,Amath1)),(((Cylto1,Armmel1),(Gyman1,Lenedo1)),(Fishe1,Schco3))),(Pleery1,PleosPC15_2)),(((Conol1,((((Paxin1,Paxru2),Hydpi2),Pisti2),Suilu4)),SerlaS7_9_2),(Plicr1,Pilcr1))),(((((((((Phaca1,Phchr2),Phlgi1),Bjead1_1),Phlrad1),Panru1),((((Dicsqu464_2,Ganluc1),Fomfom1),((Pyccin1,Pycco1),Trave1)),(((Pipbet1_1,Fompi3),(PosplRSB12_1,Wolco1)),(Cersu1,Obbri1)))),Theter1),(((Glotr1_1,Neole1),Jaaar1),Punst1)),((Hetan2,Stehi1),(Glocon1,Lacind1)))),(Fomme1,Schpa1)),Sissu1),Sphst1),(Aurde3_1,Exigl1)),Pirin1),((Botbo1,Hydru2),Tulca1)),(Calco1,Dacsp1)),((Cryne_H99_1,Treme1),Triol1)),Ustma2_2),((Mellp3_H0,Pgt_201_A1),(Rhoto_IFO0880_4,Rhomi1))),((((((((((((Triat2,Trire_Chr),(Corco1,Metro1)),(Fusox3_1,Fusgr1)),(Colgr2,Verda1)),(((Magor1,Grocl1),Valma1),((((Chagl_1,Spoth2),Thite2),Podan3),Neucr2))),((HypEC38_3,Dales1),(Xylhel2,Kredeu1))),((((Lepor2,Rhier1),Blugr2),Oidma1),(Bcine1,Sclsc1))),(((((Stano2,Cocsa1),(Glost2,Cenge3)),Macpha1),(AurpulNBB1,(Zymtr1,Clafu1))),((Capcor1,Claps1),(((((Aspfu1,(((Aspac1,Aspni_NRRL3_1),Aspor1),Aspnid1)),(Pench1,Penox1)),Theau2),Penoc1),Cocim1)))),(Artol1,((Tubme1v2,Morco1),Ascim1))),((((Klula1,(Zygrou1,Sacce1)),(((Hanpo2,Ambmon_NRRLY1484_1),Dekbr2),((((Canalb1,Canpa1),Picst3),Debha1),Canint_NRRLY981_1))),(Yarli1,(Stamag_NRRLY2024_1,Arxad1))),Lipst1_1)),Saico1),Schpo1)),((RhiirDAOM197198_2,Morel2),Rhimi59_2)),Conco1),Catan2),(((Anasp1,Neosp1),(Pirfi3,Caecom1)),Spipu1)),Hyacur1);
+#NNI moves:0/197
+Remaining: 0
+#NNI moves:12/197
+#NNI moves:12/197
+(((((((((((((((((((((((((((((((((((Aspni_NRRL3_1,Aspac1),Aspor1),Aspnid1),Aspfu1),(Penox1,Pench1)),Theau2),Penoc1),Cocim1),(Claps1,Capcor1)),((((Stano2,Cocsa1),(Cenge3,Glost2)),Macpha1),((Clafu1,Zymtr1),AurpulNBB1))),(((((((Triat2,Trire_Chr),(Metro1,Corco1)),(Fusgr1,Fusox3_1)),(Verda1,Colgr2)),((Valma1,(Grocl1,Magor1)),((Podan3,((Chagl_1,Spoth2),Thite2)),Neucr2))),((HypEC38_3,Dales1),(Kredeu1,Xylhel2))),((((Lepor2,Rhier1),Blugr2),Oidma1),(Bcine1,Sclsc1)))),(((Tubme1v2,Morco1),Ascim1),Artol1)),((((((Hanpo2,Ambmon_NRRLY1484_1),Dekbr2),(((Picst3,(Canalb1,Canpa1)),Debha1),Canint_NRRLY981_1)),(Klula1,(Sacce1,Zygrou1))),((Arxad1,Stamag_NRRLY2024_1),Yarli1)),Lipst1_1)),Saico1),Schpo1),((Rhimi59_2,(Morel2,RhiirDAOM197198_2)),((Catan2,((((Neosp1,Anasp1),(Pirfi3,Caecom1)),Spipu1),Hyacur1)),Conco1))),((Rhomi1,Rhoto_IFO0880_4),(Pgt_201_A1,Mellp3_H0))),Ustma2_2),((Treme1,Cryne_H99_1),Triol1)),(Dacsp1,Calco1)),((Botbo1,Hydru2),Tulca1)),Pirin1),(Aurde3_1,Exigl1)),Sphst1),Sissu1),(Fomme1,Schpa1)),(((Theter1,((((((Phchr2,Phaca1),Phlgi1),Bjead1_1),Phlrad1),Panru1),(((Cersu1,Obbri1),((Fompi3,Pipbet1_1),(Wolco1,PosplRSB12_1))),(((Pycco1,Pyccin1),Trave1),((Dicsqu464_2,Ganluc1),Fomfom1))))),((Jaaar1,(Neole1,Glotr1_1)),Punst1)),((Hetan2,Stehi1),(Lacind1,Glocon1)))),((Pleery1,PleosPC15_2),(((((((Hebcy2,Hypsu1),Agrped1),Lacbi2),Copcin2),Agabi_varbisH97_2),(Amamu1,Amath1)),(((Cylto1,Armmel1),(Lenedo1,Gyman1)),(Fishe1,Schco3))))),(Pilcr1,Plicr1)),SerlaS7_9_2),Conol1),Suilu4),Pisti2),(Paxin1,Paxru2)),Hydpi2);
+#NNI moves:0/197
+Remaining: 0
+#NNI moves:4/197
+#NNI moves:4/197
+(((((((((((((((((((((((((((((Phaca1,Phchr2),Phlgi1),Bjead1_1),Phlrad1),Panru1),(((Trave1,(Pycco1,Pyccin1)),((Dicsqu464_2,Ganluc1),Fomfom1)),(((Wolco1,PosplRSB12_1),(Pipbet1_1,Fompi3)),(Cersu1,Obbri1)))),Theter1),(((Glotr1_1,Neole1),Jaaar1),Punst1)),((Lacind1,Glocon1),(Hetan2,Stehi1))),((((((Lenedo1,Gyman1),(Cylto1,Armmel1)),(Schco3,Fishe1)),(((((Agrped1,(Hebcy2,Hypsu1)),Lacbi2),Copcin2),Agabi_varbisH97_2),(Amath1,Amamu1))),(Pleery1,PleosPC15_2)),(((((((Paxru2,Paxin1),Hydpi2),Pisti2),Suilu4),Conol1),SerlaS7_9_2),(Plicr1,Pilcr1)))),(Fomme1,Schpa1)),Sissu1),Sphst1),(Exigl1,Aurde3_1)),Pirin1),(Tulca1,(Hydru2,Botbo1))),(Calco1,Dacsp1)),(Triol1,(Treme1,Cryne_H99_1))),Ustma2_2),((Pgt_201_A1,Mellp3_H0),(Rhoto_IFO0880_4,Rhomi1))),(((((((((((Fusgr1,Fusox3_1),((Trire_Chr,Triat2),(Metro1,Corco1))),(Colgr2,Verda1)),(((((Chagl_1,Spoth2),Thite2),Podan3),Neucr2),(Valma1,(Magor1,Grocl1)))),((HypEC38_3,Dales1),(Xylhel2,Kredeu1))),(((Blugr2,(Lepor2,Rhier1)),Oidma1),(Sclsc1,Bcine1))),((((((((Aspnid1,((Aspni_NRRL3_1,Aspac1),Aspor1)),Aspfu1),(Penox1,Pench1)),Theau2),Penoc1),Cocim1),(Capcor1,Claps1)),((((Stano2,Cocsa1),(Glost2,Cenge3)),Macpha1),((Zymtr1,Clafu1),AurpulNBB1)))),(((Tubme1v2,Morco1),Ascim1),Artol1)),((((((((Canpa1,Canalb1),Picst3),Debha1),Canint_NRRLY981_1),(Dekbr2,(Hanpo2,Ambmon_NRRLY1484_1))),((Zygrou1,Sacce1),Klula1)),((Stamag_NRRLY2024_1,Arxad1),Yarli1)),Lipst1_1)),Saico1),Schpo1)),(Rhimi59_2,(Morel2,RhiirDAOM197198_2))),Conco1),Catan2),Hyacur1),Spipu1),(Neosp1,Anasp1)),Pirfi3),Caecom1);
+Current score: 1.23669e+10
+Current tree: (((((((((((((((((((((((((((Phaca1,Phchr2),Phlgi1),Bjead1_1),Phlrad1),Panru1),(((Trave1,(Pycco1,Pyccin1)),((Dicsqu464_2,Ganluc1),Fomfom1)),(((Wolco1,PosplRSB12_1),(Pipbet1_1,Fompi3)),(Cersu1,Obbri1)))),Theter1),(((Glotr1_1,Neole1),Jaaar1),Punst1)),((Lacind1,Glocon1),(Hetan2,Stehi1))),((((((Lenedo1,Gyman1),(Cylto1,Armmel1)),(Schco3,Fishe1)),(((((Agrped1,(Hebcy2,Hypsu1)),Lacbi2),Copcin2),Agabi_varbisH97_2),(Amath1,Amamu1))),(Pleery1,PleosPC15_2)),(((((((Paxru2,Paxin1),Hydpi2),Pisti2),Suilu4),Conol1),SerlaS7_9_2),(Plicr1,Pilcr1)))),(Fomme1,Schpa1)),Sissu1),Sphst1),(Exigl1,Aurde3_1)),Pirin1),(Tulca1,(Hydru2,Botbo1))),(Calco1,Dacsp1)),(Triol1,(Treme1,Cryne_H99_1))),Ustma2_2),((Pgt_201_A1,Mellp3_H0),(Rhoto_IFO0880_4,Rhomi1))),(((((((((((Fusgr1,Fusox3_1),((Trire_Chr,Triat2),(Metro1,Corco1))),(Colgr2,Verda1)),(((((Chagl_1,Spoth2),Thite2),Podan3),Neucr2),(Valma1,(Magor1,Grocl1)))),((HypEC38_3,Dales1),(Xylhel2,Kredeu1))),(((Blugr2,(Lepor2,Rhier1)),Oidma1),(Sclsc1,Bcine1))),((((((((Aspnid1,((Aspni_NRRL3_1,Aspac1),Aspor1)),Aspfu1),(Penox1,Pench1)),Theau2),Penoc1),Cocim1),(Capcor1,Claps1)),((((Stano2,Cocsa1),(Glost2,Cenge3)),Macpha1),((Zymtr1,Clafu1),AurpulNBB1)))),(((Tubme1v2,Morco1),Ascim1),Artol1)),((((((((Canpa1,Canalb1),Picst3),Debha1),Canint_NRRLY981_1),(Dekbr2,(Hanpo2,Ambmon_NRRLY1484_1))),((Zygrou1,Sacce1),Klula1)),((Stamag_NRRLY2024_1,Arxad1),Yarli1)),Lipst1_1)),Saico1),Schpo1)),(Rhimi59_2,(Morel2,RhiirDAOM197198_2))),Conco1),Catan2),Hyacur1),((Neosp1,Anasp1),(Pirfi3,Caecom1))),Spipu1);
+Final Tree: (((((((((((((((((((((((((((Phaca1,Phchr2),Phlgi1),Bjead1_1),Phlrad1),Panru1),(((Trave1,(Pycco1,Pyccin1)),((Dicsqu464_2,Ganluc1),Fomfom1)),(((Wolco1,PosplRSB12_1),(Pipbet1_1,Fompi3)),(Cersu1,Obbri1)))),Theter1),(((Glotr1_1,Neole1),Jaaar1),Punst1)),((Lacind1,Glocon1),(Hetan2,Stehi1))),((((((Lenedo1,Gyman1),(Cylto1,Armmel1)),(Schco3,Fishe1)),(((((Agrped1,(Hebcy2,Hypsu1)),Lacbi2),Copcin2),Agabi_varbisH97_2),(Amath1,Amamu1))),(Pleery1,PleosPC15_2)),(((((((Paxru2,Paxin1),Hydpi2),Pisti2),Suilu4),Conol1),SerlaS7_9_2),(Plicr1,Pilcr1)))),(Fomme1,Schpa1)),Sissu1),Sphst1),(Exigl1,Aurde3_1)),Pirin1),(Tulca1,(Hydru2,Botbo1))),(Calco1,Dacsp1)),(Triol1,(Treme1,Cryne_H99_1))),Ustma2_2),((Pgt_201_A1,Mellp3_H0),(Rhoto_IFO0880_4,Rhomi1))),(((((((((((Fusgr1,Fusox3_1),((Trire_Chr,Triat2),(Metro1,Corco1))),(Colgr2,Verda1)),(((((Chagl_1,Spoth2),Thite2),Podan3),Neucr2),(Valma1,(Magor1,Grocl1)))),((HypEC38_3,Dales1),(Xylhel2,Kredeu1))),(((Blugr2,(Lepor2,Rhier1)),Oidma1),(Sclsc1,Bcine1))),((((((((Aspnid1,((Aspni_NRRL3_1,Aspac1),Aspor1)),Aspfu1),(Penox1,Pench1)),Theau2),Penoc1),Cocim1),(Capcor1,Claps1)),((((Stano2,Cocsa1),(Glost2,Cenge3)),Macpha1),((Zymtr1,Clafu1),AurpulNBB1)))),(((Tubme1v2,Morco1),Ascim1),Artol1)),((((((((Canpa1,Canalb1),Picst3),Debha1),Canint_NRRLY981_1),(Dekbr2,(Hanpo2,Ambmon_NRRLY1484_1))),((Zygrou1,Sacce1),Klula1)),((Stamag_NRRLY2024_1,Arxad1),Yarli1)),Lipst1_1)),Saico1),Schpo1)),(Rhimi59_2,(Morel2,RhiirDAOM197198_2))),Conco1),Catan2),Hyacur1),((Neosp1,Anasp1),(Pirfi3,Caecom1))),Spipu1);
+Score: 12366931410

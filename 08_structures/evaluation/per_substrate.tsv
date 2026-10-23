@@ -1,0 +1,61 @@
+tree	substrate	transporters	clade_transporters	purity	clade_support
+structure_fident	cellobiose	14	170	0.088	
+structure_fident	d-fructose	20	170	0.465	
+structure_fident	d-galactose	4	155	0.406	
+structure_fident	d-galacturonic acid	6	101	0.059	
+structure_fident	d-glucose	31	168	0.536	
+structure_fident	d-mannitol	7	136	0.074	
+structure_fident	d-mannose	5	168	0.381	
+structure_fident	d-sorbitol	6	136	0.066	
+structure_fident	d-xylose	28	168	0.185	
+structure_fident	glycerol	8	13	0.615	
+structure_fident	l-arabinose	7	116	0.086	
+structure_fident	lactose	4	168	0.024	
+structure_fident	maltose	8	11	0.727	
+structure_fident	myo-inositol	6	15	0.4	
+structure_fident	xylitol	3	3	1.0	
+structure_alntmscore	cellobiose	14	170	0.088	
+structure_alntmscore	d-fructose	20	170	0.465	
+structure_alntmscore	d-galactose	4	90	0.567	
+structure_alntmscore	d-galacturonic acid	6	148	0.041	
+structure_alntmscore	d-glucose	31	148	0.601	
+structure_alntmscore	d-mannitol	7	157	0.064	
+structure_alntmscore	d-mannose	5	148	0.426	
+structure_alntmscore	d-sorbitol	6	157	0.057	
+structure_alntmscore	d-xylose	28	148	0.209	
+structure_alntmscore	glycerol	8	148	0.074	
+structure_alntmscore	l-arabinose	7	133	0.068	
+structure_alntmscore	lactose	4	117	0.034	
+structure_alntmscore	maltose	8	58	0.138	
+structure_alntmscore	myo-inositol	6	167	0.036	
+structure_alntmscore	xylitol	3	4	0.75	
+structure_lddt	cellobiose	14	170	0.088	
+structure_lddt	d-fructose	20	170	0.465	
+structure_lddt	d-galactose	4	148	0.419	
+structure_lddt	d-galacturonic acid	6	66	0.091	
+structure_lddt	d-glucose	31	148	0.601	
+structure_lddt	d-mannitol	7	158	0.063	
+structure_lddt	d-mannose	5	148	0.426	
+structure_lddt	d-sorbitol	6	158	0.057	
+structure_lddt	d-xylose	28	148	0.209	
+structure_lddt	glycerol	8	13	0.615	
+structure_lddt	l-arabinose	7	66	0.136	
+structure_lddt	lactose	4	148	0.027	
+structure_lddt	maltose	8	11	0.727	
+structure_lddt	myo-inositol	6	168	0.036	
+structure_lddt	xylitol	3	4	0.75	
+sequence_ml	cellobiose	14	170	0.088	
+sequence_ml	d-fructose	20	170	0.465	
+sequence_ml	d-galactose	4	155	0.406	56
+sequence_ml	d-galacturonic acid	6	66	0.091	84
+sequence_ml	d-glucose	31	168	0.536	34
+sequence_ml	d-mannitol	7	155	0.065	56
+sequence_ml	d-mannose	5	168	0.381	34
+sequence_ml	d-sorbitol	6	155	0.058	56
+sequence_ml	d-xylose	28	168	0.185	34
+sequence_ml	glycerol	8	13	0.615	95
+sequence_ml	l-arabinose	7	59	0.153	81
+sequence_ml	lactose	4	168	0.024	34
+sequence_ml	maltose	8	11	0.727	100
+sequence_ml	myo-inositol	6	20	0.3	99
+sequence_ml	xylitol	3	3	1.0	73

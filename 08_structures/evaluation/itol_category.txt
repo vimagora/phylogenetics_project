@@ -1,0 +1,208 @@
+DATASET_COLORSTRIP
+SEPARATOR TAB
+DATASET_LABEL	Category
+COLOR	#000000
+LEGEND_TITLE	Category
+LEGEND_SHAPES	1	1	1	1
+LEGEND_COLORS	#4daf4a	#e41a1c	#377eb8	#999999
+LEGEND_LABELS	characterized transporter	sensor	D. squalens (predicted)	substrate unspecified
+DATA
+amamu_ammst1	#4daf4a	characterized transporter
+ambmo_lat1	#4daf4a	characterized transporter
+ambmo_lat2	#4daf4a	characterized transporter
+aspnid_clta	#4daf4a	characterized transporter
+aspnid_hxtb_mstc	#4daf4a	characterized transporter
+aspnid_hxtc	#4daf4a	characterized transporter
+aspnid_hxtd_msta	#4daf4a	characterized transporter
+aspnid_hxte	#4daf4a	characterized transporter
+aspnid_lacpa	#4daf4a	characterized transporter
+aspnid_mste	#4daf4a	characterized transporter
+aspnid_xtrd	#4daf4a	characterized transporter
+aspnig_cta	#4daf4a	characterized transporter
+aspnig_fsy1	#4daf4a	characterized transporter
+aspnig_fsy1_yeast_like	#4daf4a	characterized transporter
+aspnig_fsyx	#4daf4a	characterized transporter
+aspnig_gata	#4daf4a	characterized transporter
+aspnig_glpa	#4daf4a	characterized transporter
+aspnig_glpb	#4daf4a	characterized transporter
+aspnig_glpc	#4daf4a	characterized transporter
+aspnig_lata	#4daf4a	characterized transporter
+aspnig_msta	#4daf4a	characterized transporter
+aspnig_mstc	#4daf4a	characterized transporter
+aspnig_mstg	#4daf4a	characterized transporter
+aspnig_msth	#4daf4a	characterized transporter
+aspnig_xlta	#4daf4a	characterized transporter
+aspnig_xltb	#4daf4a	characterized transporter
+aspnig_xltc	#4daf4a	characterized transporter
+aspnig_xltd	#4daf4a	characterized transporter
+aspor_malp	#4daf4a	characterized transporter
+astcr_aha12287_1	#4daf4a	characterized transporter
+bcine_frt1	#4daf4a	characterized transporter
+bcine_gala	#4daf4a	characterized transporter
+canalb_itr1	#4daf4a	characterized transporter
+canalb_stl1_hgt10	#4daf4a	characterized transporter
+cangly_cghxt1	#4daf4a	characterized transporter
+cangly_cghxt2	#4daf4a	characterized transporter
+cangly_cghxt4	#4daf4a	characterized transporter
+cangly_cghxt5	#4daf4a	characterized transporter
+cangly_cghxt6	#4daf4a	characterized transporter
+canint_gxf1	#4daf4a	characterized transporter
+canint_gxs1	#4daf4a	characterized transporter
+canmag_cmfsy1	#4daf4a	characterized transporter
+colgl_cgmfs1	#999999	substrate unspecified
+colgr_hxt1	#4daf4a	characterized transporter
+colgr_hxt2	#4daf4a	characterized transporter
+colgr_hxt3	#4daf4a	characterized transporter
+colgr_hxt5	#4daf4a	characterized transporter
+colgr_mbt1	#4daf4a	characterized transporter
+cryne_xp_012053726_1	#4daf4a	characterized transporter
+debfa_xylh	#4daf4a	characterized transporter
+debha_dhsgl1	#4daf4a	characterized transporter
+debha_dhstl1	#4daf4a	characterized transporter
+debha_dhsyi1	#4daf4a	characterized transporter
+debha_dhsyl1	#4daf4a	characterized transporter
+debha_dhsyl2	#4daf4a	characterized transporter
+debha_xylh	#4daf4a	characterized transporter
+dekbr_bht1	#4daf4a	characterized transporter
+dekbr_bht2	#4daf4a	characterized transporter
+dekbr_bht3	#4daf4a	characterized transporter
+dicsqu_dsst1	#377eb8	D. squalens (predicted)
+dicsqu_dsst10	#377eb8	D. squalens (predicted)
+dicsqu_dsst11	#377eb8	D. squalens (predicted)
+dicsqu_dsst12	#377eb8	D. squalens (predicted)
+dicsqu_dsst13	#377eb8	D. squalens (predicted)
+dicsqu_dsst14	#377eb8	D. squalens (predicted)
+dicsqu_dsst15	#377eb8	D. squalens (predicted)
+dicsqu_dsst17	#377eb8	D. squalens (predicted)
+dicsqu_dsst18	#377eb8	D. squalens (predicted)
+dicsqu_dsst19	#377eb8	D. squalens (predicted)
+dicsqu_dsst2	#377eb8	D. squalens (predicted)
+dicsqu_dsst20	#377eb8	D. squalens (predicted)
+dicsqu_dsst21	#377eb8	D. squalens (predicted)
+dicsqu_dsst22	#377eb8	D. squalens (predicted)
+dicsqu_dsst23	#377eb8	D. squalens (predicted)
+dicsqu_dsst3	#377eb8	D. squalens (predicted)
+dicsqu_dsst4	#377eb8	D. squalens (predicted)
+dicsqu_dsst5	#377eb8	D. squalens (predicted)
+dicsqu_dsst6	#377eb8	D. squalens (predicted)
+dicsqu_dsst7	#377eb8	D. squalens (predicted)
+dicsqu_dsst8	#377eb8	D. squalens (predicted)
+fusox_st3	#4daf4a	characterized transporter
+fusve_fst1	#4daf4a	characterized transporter
+geopyr_gpmst1	#4daf4a	characterized transporter
+hanpo_hpgcr1	#4daf4a	characterized transporter
+hanpo_hpmal2	#4daf4a	characterized transporter
+hanpo_hxs1	#e41a1c	sensor
+klula_frt1	#4daf4a	characterized transporter
+klula_hgt1	#4daf4a	characterized transporter
+klula_lac12	#4daf4a	characterized transporter
+klula_rag1	#4daf4a	characterized transporter
+klula_rag4	#e41a1c	sensor
+kompha_gt1	#4daf4a	characterized transporter
+lacbi_mst1_2	#4daf4a	characterized transporter
+lacbi_mst1_3	#4daf4a	characterized transporter
+lacbi_mst3_1	#4daf4a	characterized transporter
+magor_mohxt1_mosnf3	#e41a1c	sensor
+magor_mohxt2	#4daf4a	characterized transporter
+magor_mohxt3	#4daf4a	characterized transporter
+magor_most1_morco3	#e41a1c	sensor
+metan_mrt	#4daf4a	characterized transporter
+mycth_mtlat_1	#4daf4a	characterized transporter
+neucr_an25	#4daf4a	characterized transporter
+neucr_cbt_1	#4daf4a	characterized transporter
+neucr_cdt_1	#4daf4a	characterized transporter
+neucr_cdt_2	#4daf4a	characterized transporter
+neucr_gat_1	#4daf4a	characterized transporter
+neucr_glt1	#4daf4a	characterized transporter
+neucr_hgt2	#4daf4a	characterized transporter
+neucr_hgt_1	#4daf4a	characterized transporter
+neucr_lat_1	#4daf4a	characterized transporter
+neucr_qa_y	#4daf4a	characterized transporter
+neucr_rco_3	#e41a1c	sensor
+neucr_xat1	#4daf4a	characterized transporter
+neucr_xyt1	#4daf4a	characterized transporter
+pench_pc_st	#4daf4a	characterized transporter
+pench_pcarat	#4daf4a	characterized transporter
+penox_cdtc	#4daf4a	characterized transporter
+penox_cdtd	#4daf4a	characterized transporter
+penox_cdtg	#4daf4a	characterized transporter
+phaso_pshxt1	#4daf4a	characterized transporter
+picst_arat	#4daf4a	characterized transporter
+picst_st6	#4daf4a	characterized transporter
+picst_sut1	#4daf4a	characterized transporter
+picst_sut3	#4daf4a	characterized transporter
+picst_xut1	#4daf4a	characterized transporter
+picst_xut3	#4daf4a	characterized transporter
+picst_xyp29	#4daf4a	characterized transporter
+pirin_pihxt5	#4daf4a	characterized transporter
+pucst_hxt1	#4daf4a	characterized transporter
+rhoto_rto4_9841	#4daf4a	characterized transporter
+sacba_sacpa_sbfsy1_spafsy1	#4daf4a	characterized transporter
+sacce_agt1_mal11	#4daf4a	characterized transporter
+sacce_gal2	#4daf4a	characterized transporter
+sacce_hxt1	#4daf4a	characterized transporter
+sacce_hxt10	#4daf4a	characterized transporter
+sacce_hxt11	#4daf4a	characterized transporter
+sacce_hxt13	#4daf4a	characterized transporter
+sacce_hxt14	#4daf4a	characterized transporter
+sacce_hxt15	#4daf4a	characterized transporter
+sacce_hxt16	#4daf4a	characterized transporter
+sacce_hxt17	#4daf4a	characterized transporter
+sacce_hxt2	#4daf4a	characterized transporter
+sacce_hxt3	#4daf4a	characterized transporter
+sacce_hxt4	#4daf4a	characterized transporter
+sacce_hxt5	#4daf4a	characterized transporter
+sacce_hxt6	#4daf4a	characterized transporter
+sacce_hxt7	#4daf4a	characterized transporter
+sacce_hxt8	#4daf4a	characterized transporter
+sacce_hxt9	#4daf4a	characterized transporter
+sacce_itr1	#4daf4a	characterized transporter
+sacce_itr2	#4daf4a	characterized transporter
+sacce_mal31	#4daf4a	characterized transporter
+sacce_mal61	#4daf4a	characterized transporter
+sacce_mph2	#4daf4a	characterized transporter
+sacce_mph3	#4daf4a	characterized transporter
+sacce_rgt2	#e41a1c	sensor
+sacce_snf3	#e41a1c	sensor
+sacce_stl1	#4daf4a	characterized transporter
+saceu_sefsy1	#4daf4a	characterized transporter
+sacuv_sufsy1	#4daf4a	characterized transporter
+schpo_ght1	#4daf4a	characterized transporter
+schpo_ght3	#4daf4a	characterized transporter
+schpo_ght4	#4daf4a	characterized transporter
+schpo_ght5	#4daf4a	characterized transporter
+schpo_ght6	#4daf4a	characterized transporter
+schpo_itr2	#4daf4a	characterized transporter
+triha_gtt1	#4daf4a	characterized transporter
+trire_crt1_t_reesei_qm6a	#4daf4a	characterized transporter
+trire_crt1_t_reesei_rut_c30_strain	#4daf4a	characterized transporter
+trire_frt1	#4daf4a	characterized transporter
+trire_gat1	#4daf4a	characterized transporter
+trire_gat2	#4daf4a	characterized transporter
+trire_glt1	#4daf4a	characterized transporter
+trire_mlt1	#4daf4a	characterized transporter
+trire_stp1	#4daf4a	characterized transporter
+trire_str1	#4daf4a	characterized transporter
+trire_str2	#4daf4a	characterized transporter
+trire_str3	#4daf4a	characterized transporter
+trire_strc	#4daf4a	characterized transporter
+trire_tr44175	#4daf4a	characterized transporter
+trire_tr69957	#4daf4a	characterized transporter
+trire_trhxt1	#4daf4a	characterized transporter
+trire_trxlt1_trire_104072	#4daf4a	characterized transporter
+trire_xltr1p	#4daf4a	characterized transporter
+trivi_st16	#4daf4a	characterized transporter
+tubme_tmel2281	#4daf4a	characterized transporter
+tubme_tmelhxt1	#4daf4a	characterized transporter
+urofa_hxt1	#4daf4a	characterized transporter
+ustma_umhxt1	#4daf4a	characterized transporter
+ustma_umsrt1	#4daf4a	characterized transporter
+wicano_wastl1	#4daf4a	characterized transporter
+yarli_yht1	#4daf4a	characterized transporter
+yarli_yht2	#4daf4a	characterized transporter
+yarli_yht3	#4daf4a	characterized transporter
+yarli_yht4	#4daf4a	characterized transporter
+yarli_yht5	#4daf4a	characterized transporter
+yarli_yht6	#4daf4a	characterized transporter
+zygbai_ffz1	#4daf4a	characterized transporter
+zygrou_zrfsy1	#4daf4a	characterized transporter

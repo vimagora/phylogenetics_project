@@ -49,6 +49,10 @@ Run all scripts from the project folder. Each script's header describes its argu
 | 18. OrthoFinder | `sbatch scripts/run_orthofinder.sbatch` | `07_orthofinder/run/Results_cohort/` |
 | 19. AlphaFold3 inputs | `python3 scripts/make_af3_inputs.py` | `08_structures/af3_inputs/`, `structure_ids.tsv` |
 | 20. AlphaFold3 structures | `sbatch [--partition=… --time=…] scripts/run_af3.sbatch` | `08_structures/af3_outputs/` |
+| 21. AlphaFold DB models (concept test) | `python3 scripts/fetch_afdb_models.py` | `08_structures/models_trimmed/`, `models.tsv` |
+| 22. Structure trees (Foldtree-style) | `python3 scripts/structure_trees.py` | `08_structures/trees/structure_*.nwk` |
+| 23. Sequence tree (baseline) | `scripts/sequence_tree.sh` | `08_structures/trees/sequence_ml.treefile` |
+| 24. Substrate clustering scores | `python3 scripts/evaluate_substrate_clustering.py` | `08_structures/evaluation/` |
 
 Steps 8–11, 13, 15 and 17 use Python from `module load python-data`. Step 10 reads the combined table of
 the collapsed proteomes from step 7.
@@ -134,6 +138,19 @@ partial sequences). `00_inputs/dicsqu_sugar_transporters.tsv` adds the *D. squal
 predicted specificities. AlphaFold3 runs in CSC's container on a GH200 GPU node, with your own model
 parameters (`AF3_MODEL_DIR` in `config.sh`; the licence forbids sharing them). `run_af3.sbatch` skips
 proteins that already have a model, so it can be resubmitted until all are done.
+
+Concept test (steps 21–24, environment `envs/structure_test.yaml`, runs on a laptop): AlphaFold DB
+models (identical sequence, or ≥ 98% identity in the same species) are trimmed of termini with
+pLDDT < 70, compared all-vs-all with Foldseek, and turned into neighbour-joining trees (fident,
+alntmscore, lddt), next to a sequence ML tree of the same proteins. Characterized transporters are
+scored by (a) whether the nearest neighbour shares a substrate (p-value from shuffled labels) and
+(b) the purity of the smallest clade holding all transporters of a substrate.
+
+Result (199 models, 170 characterized transporters scored): the structure trees did no better than
+the sequence tree. Nearest neighbours shared a substrate for 78.8–81.2% of transporters in the
+structure trees and 79.4% in the sequence tree (about 39% with shuffled labels); mean clade purity
+was 0.24–0.34 and 0.34. Global structure similarity is therefore not pursued for the cohort sugar
+transporters, and the 11 proteins without an AlphaFold DB model were not predicted.
 
 ## MycoCosm notes
 

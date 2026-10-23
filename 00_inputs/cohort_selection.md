@@ -205,7 +205,7 @@ Higher ranks follow Li et al. [@li2021genomescalephylogenykingdom, journal p. 16
   
   Four antrodia-clade brown rots complete the order (§2.2).
 - **Hymenochaetales, Russulales, Gloeophyllales and Jaapiales.**
-  - Hymenochaetales: two white rots, *Fomitiporia mediterranea* (C+) and *Schizopora paradoxa*.
+  - Hymenochaetales: two white rots, *Fomitiporia mediterranea* (C+) and *Xylodon paradoxus* (*Schizopora paradoxa* in MycoCosm).
   - Russulales: *Stereum hirsutum* (VibMO1 proxy; ShGE1) and *Heterobasidion irregulare*, both white rots; the ECM *Lactarius indigo* (L); and the saprotroph *Gloeopeniophorella convolvens*.
   - Gloeophyllales: two brown rots, *Gloeophyllum trabeum* and *Neolentinus lepideus* (NlePAD).
   - Jaapiales: *Jaapia argillacea*, with intermediate decay.
@@ -491,7 +491,7 @@ Higher ranks follow Li et al. [@li2021genomescalephylogenykingdom, journal p. 16
 | `Glotr1_1` | *Gloeophyllum trabeum* | Basidiomycota · Agaricomycetes · Gloeophyllales | brown rot | **C** | 98.2 | 0.4 | 1.5 | 0.3 | 1102 | Gloeophyllales brown rot |
 | `Neole1` | *Neolentinus lepideus* | Basidiomycota · Agaricomycetes · Gloeophyllales | brown rot | **C** | 98.7 | 1.1 | 0.9 | 0.4 | 1107 | NlePAD sinapate decarboxylase anchor |
 | `Fomme1` | *Fomitiporia mediterranea* | Basidiomycota · Agaricomycetes · Hymenochaetales | white rot; plant pathogen | **C+** | 95.0 | 0.8 | 1.1 | 3.9 | 1066 | Hymenochaetales white rot |
-| `Schpa1` | *Xylodon paradoxus? [EK]* | Basidiomycota · Agaricomycetes · Hymenochaetales | white rot | **C** | 98.0 | 1.5 | 1.0 | 1.0 | 1100 | Hymenochaetales white rot |
+| `Schpa1` | *Xylodon paradoxus KUC8140* | Basidiomycota · Agaricomycetes · Hymenochaetales | white rot | **C** | 98.0 | 1.5 | 1.0 | 1.0 | 1100 | Hymenochaetales white rot |
 | `Jaaar1` | *Jaapia argillacea* | Basidiomycota · Agaricomycetes · Jaapiales | wood decay, no or 1 POD | **C** | 98.8 | 1.3 | 0.6 | 0.6 | 1108 | Intermediate decay |
 | `Bjead1_1` | *Bjerkandera adusta* | Basidiomycota · Agaricomycetes · Polyporales | white rot | **C** | 98.1 | 0.5 | 1.0 | 0.9 | 1101 | Only Polyporales VP anchors |
 | `Cersu1` | *Gelatoporia subvermispora* | Basidiomycota · Agaricomycetes · Polyporales | white rot (selective) | **P** | 89.9 | 1.2 | 1.1 | 9.0 | 1009 | Selective delignifier |

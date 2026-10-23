@@ -16,7 +16,7 @@
 #   --only             Write only these structure IDs (e.g. for a one-protein test).
 #
 # Output: <out_dir>/<structure_id>.json, and 08_structures/structure_ids.tsv (all proteins, with
-# source table, species, name, role, substrates and whether they are used).
+# source table, species, name, role, substrates, length, whether they are used, and sequence).
 
 import argparse
 import csv
@@ -100,10 +100,10 @@ for protein in proteins:
 with open(IDS_TABLE, "w", newline="") as f:
     writer = csv.writer(f, delimiter="\t", lineterminator="\n")
     writer.writerow(["structure_id", "source", "species", "protein_name", "role", "substrates",
-                     "length", "use_in_structure_analysis"])
+                     "length", "use_in_structure_analysis", "sequence"])
     for p in proteins:
         writer.writerow([p["id"], p["source"], p["species"], p["name"], p["role"], p["substrates"],
-                         len(p["sequence"]), p["use"]])
+                         len(p["sequence"]), p["use"], p["sequence"]])
 
 mode = "single-sequence (test only)" if args.single_sequence else "with MSA search"
 print(f"Wrote {n_written} AlphaFold3 inputs ({mode}) to {args.out_dir}; IDs in {IDS_TABLE}")

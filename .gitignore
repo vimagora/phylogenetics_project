@@ -37,6 +37,9 @@
 08_structures/af3_test_*/
 08_structures/af3_outputs/
 08_structures/af3_queue_*/
+08_structures/afdb_models/
+08_structures/models_trimmed/
+08_structures/trees/foldseek_allvsall.tsv
 08_structures/logs/*
 !08_structures/logs/.gitkeep
 

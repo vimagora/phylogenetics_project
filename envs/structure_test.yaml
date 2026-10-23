@@ -1,0 +1,13 @@
+# Environment for the sugar transporter structure concept test (runs on a laptop or a CPU node)
+name: structure_test
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  - biopython
+  - numpy
+  - foldseek
+  - mafft
+  - iqtree
+  - clipkit
