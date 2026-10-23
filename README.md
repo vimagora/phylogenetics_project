@@ -45,7 +45,7 @@ Run all scripts from the project folder. Each script's header describes its argu
 | 15. Collect trees and models | `python3 scripts/collect_marker_trees.py` | `06_species_tree/marker_trees.nwk`, `marker_models.tsv`, `concatenated/partitions_models.nex` |
 | 16. Species trees | `sbatch scripts/species_trees.sbatch` | `06_species_tree/astral/`, `concatenated/iqtree/` |
 | 16b. iTOL taxonomy annotation | `python3 scripts/make_itol_taxonomy.py [tree]` | `06_species_tree/itol/` |
-| 17. Species tree for OrthoFinder | `python3 scripts/prepare_species_tree.py` | `07_orthofinder/species_tree_rooted.nwk` |
+| 17. Species tree for OrthoFinder | `python3 scripts/prepare_species_tree.py --outgroup Catan2` | `07_orthofinder/species_tree_rooted.nwk` |
 | 18. OrthoFinder | `sbatch scripts/run_orthofinder.sbatch` | `07_orthofinder/run/Results_cohort/` |
 | 19. AlphaFold3 inputs | `python3 scripts/make_af3_inputs.py` | `08_structures/af3_inputs/`, `structure_ids.tsv` |
 | 20. AlphaFold3 structures | `sbatch [--partition=… --time=…] scripts/run_af3.sbatch` | `08_structures/af3_outputs/` |
@@ -108,8 +108,10 @@ lengths accurately.
 ## OrthoFinder
 
 OrthoFinder 3 runs on the 150 cohort proteomes in one standard run (all-vs-all DIAMOND search, MSA
-gene trees with FAMSA and FastTree), with the rooted ASTRAL species tree (`-s`) so that the
-hierarchical orthogroups follow our species tree. `-X` keeps the `<portal>-<proteinId>` gene IDs.
+gene trees with FAMSA and FastTree), with the ASTRAL species tree (`-s`) so that the
+hierarchical orthogroups follow our species tree. For OrthoFinder, the tree is rerooted on
+*Catenaria anguillulae* (`Catan2`), so that Blastocladiomycota diverges first, as in the
+concatenated tree of Li et al. (2021); the `Spipu1` root falls inside Chytridiomyceta. `-X` keeps the `<portal>-<proteinId>` gene IDs.
 `Orthogroups/Orthogroups.tsv` holds the hierarchical orthogroups (the former `N0.tsv`), and
 `Orthogroups.GeneCount.tsv` the copy numbers. After the run, the folders with one file per
 orthogroup or species pair are packed into `.tar.gz` archives (CSC scratch has a file-count quota).
