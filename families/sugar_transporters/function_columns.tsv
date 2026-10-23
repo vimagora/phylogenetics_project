@@ -1,0 +1,17 @@
+label	colour	terms
+D-glucose	#1f77b4	d-glucose,glucose,hexose
+D-fructose	#aec7e8	d-fructose,fructose,hexose
+D-mannose	#17becf	d-mannose,mannose,hexose
+D-galactose	#9edae5	d-galactose,galactose,hexose
+D-xylose	#2ca02c	d-xylose,xylose,pentose
+L-arabinose	#98df8a	l-arabinose,arabinose,pentose
+L-rhamnose	#bcbd22	l-rhamnose
+cello-/xylo-oligosaccharides	#ff7f0e	cellobiose,cellotriose,cellotetraose,cellodextrin,sophorose,cellobionic acid,xylobiose
+lactose/galactosides	#ffbb78	lactose,galactoside
+maltose/alpha-glucosides	#d62728	maltose,alpha-glucoside
+sucrose	#ff9896	sucrose
+inositols	#9467bd	myo-inositol,inositol,d-chiro-inositol
+glycerol	#c5b0d5	glycerol,polyol
+other polyols	#8c564b	d-sorbitol,sorbitol,d-mannitol,mannitol,d-arabitol,l-arabitol,arabitol,galactitol,xylitol,ribitol,polyol
+uronic acids	#e377c2	d-galacturonic acid,d-glucuronic acid,alginate,uronic
+quinic acid	#7f7f7f	quinic acid

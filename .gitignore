@@ -44,10 +44,10 @@
 08_structures/pockets/foldseek_references.tsv
 08_structures/logs/*
 !08_structures/logs/.gitkeep
-09_sugar_transporters/search/cohort_proteins.*
-09_sugar_transporters/search/*.part
-09_sugar_transporters/logs/*
-!09_sugar_transporters/logs/.gitkeep
+09_families/*/search/cohort_proteins.*
+09_families/*/search/*.part
+09_families/logs/*
+!09_families/logs/.gitkeep
 
 # IQ-TREE checkpoints and intermediate files (trees and .iqtree reports are kept)
 *.ckp.gz

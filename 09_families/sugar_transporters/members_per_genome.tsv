@@ -1,0 +1,151 @@
+portal	species	phylum	order	members	below_coverage
+Agabi_varbisH97_2	Agaricus bisporus var bisporus (H97)	Basidiomycota	Agaricales	35	32
+Agrped1	Agrocybe pediades AH 40210	Basidiomycota	Agaricales	48	23
+Amamu1	Amanita muscaria Koide	Basidiomycota	Agaricales	30	30
+Amath1	Saproamanita thiersii	Basidiomycota	Agaricales	28	30
+Ambmon_NRRLY1484_1	Ambrosiozyma monospora NRRL Y-1484	Ascomycota	Pichiales	72	51
+Anasp1	Anaeromyces robustus	Neocallimastigomycota	Neocallimastigales	24	22
+Armmel1	Armillaria mellea ELDO17	Basidiomycota	Agaricales	55	40
+Artol1	Arthrobotrys oligospora ATCC 24927	Ascomycota	Orbiliales	41	27
+Arxad1	Blastobotrys adeninivorans LS3	Ascomycota	Dipodascales	75	26
+Ascim1	Ascobolus immersus RN42	Ascomycota	Pezizales	23	22
+Aspac1	Aspergillus aculeatus ATCC16872	Ascomycota	Eurotiales	114	89
+Aspfu1	Aspergillus fumigatus Af293 from AspGD	Ascomycota	Eurotiales	101	65
+Aspni_NRRL3_1	Aspergillus niger NRRL3	Ascomycota	Eurotiales	132	119
+Aspnid1	Aspergillus nidulans	Ascomycota	Eurotiales	123	72
+Aspor1	Aspergillus oryzae RIB40	Ascomycota	Eurotiales	135	107
+Aurde3_1	Auricularia subglabra	Basidiomycota	Auriculariales	48	50
+AurpulNBB1	Aureobasidium pullulans NBB 7.2.1	Ascomycota	Dothideales	109	68
+Bcine1	Botrytis cinerea B05.10	Ascomycota	Helotiales	87	69
+Bjead1_1	Bjerkandera adusta	Basidiomycota	Polyporales	44	40
+Blugr2	Blumeria hordei	Ascomycota	Helotiales	22	15
+Botbo1	Botryobasidium botryosum	Basidiomycota	Cantharellales	27	50
+Caecom1	Caecomyces churrovis A	Neocallimastigomycota	Neocallimastigales	18	16
+Calco1	Calocera cornea	Basidiomycota	Dacrymycetales	86	45
+Canalb1	Candida albicans SC5314	Ascomycota	Serinales	35	20
+Canint_NRRLY981_1	Candida intermedia NRRL Y-981	Ascomycota	Serinales	54	17
+Canpa1	Candida parapsilosis CDC317	Ascomycota	Serinales	46	21
+Capcor1	Capronia coronata CBS 617.96	Ascomycota	Chaetothyriales	63	58
+Catan2	Catenaria anguillulae PL171	Blastocladiomycota	Blastocladiales	8	9
+Cenge3	Cenococcum geophilum 1.58	Ascomycota	Mytilinidiales	64	76
+Cersu1	Gelatoporia subvermispora	Basidiomycota	Polyporales	38	48
+Chagl_1	Chaetomium globosum	Ascomycota	Sordariales	53	48
+Clafu1	Fulvia fulva	Ascomycota	Mycosphaerellales	86	74
+Claps1	Cladophialophora psammophila CBS 110553	Ascomycota	Chaetothyriales	191	111
+Cocim1	Coccidioides immitis RS	Ascomycota	Onygenales	34	39
+Cocsa1	Bipolaris sorokiniana	Ascomycota	Pleosporales	78	57
+Colgr2	Colletotrichum graminicola M1.001	Ascomycota	Glomerellales	101	77
+Conco1	Conidiobolus coronatus NRRL28638	Zoopagomycota	Entomophthorales	14	46
+Conol1	Coniophora olivacea MUCL 20566	Basidiomycota	Boletales	58	40
+Copcin2	Coprinopsis cinerea AmutBmut	Basidiomycota	Agaricales	31	21
+Corco1	Akanthomyces lecanii RCEF 1005 (MycoCosm: Lecanicillium)	Ascomycota	Hypocreales	80	69
+Cryne_H99_1	Cryptococcus neoformans var. grubii H99	Basidiomycota	Tremellales	69	21
+Cylto1	Cylindrobasidium torrendii FP15055	Basidiomycota	Agaricales	65	37
+Dacsp1	Dacryopinax primogenitus DJM 731 SSP1	Basidiomycota	Dacrymycetales	78	50
+Dales1	Daldinia eschscholtzii FL0578	Ascomycota	Xylariales	74	69
+Debha1	Debaryomyces hansenii CBS 767	Ascomycota	Serinales	69	16
+Dekbr2	Brettanomyces bruxellensis CBS 2499 (MycoCosm: Dekkera)	Ascomycota	Pichiales	35	24
+Dicsqu464_2	Dichomitus squalens CBS 464.89	Basidiomycota	Polyporales	42	32
+Exigl1	Exidia glandulosa	Basidiomycota	Auriculariales	43	49
+Fishe1	Fistulina hepatica	Basidiomycota	Agaricales	51	24
+Fomfom1	Fomes fomentarius CIRM-BRFM 1821	Basidiomycota	Polyporales	43	38
+Fomme1	Fomitiporia mediterranea	Basidiomycota	Hymenochaetales	43	25
+Fompi3	Fomitopsis schrenkii	Basidiomycota	Polyporales	40	35
+Fusgr1	Fusarium graminearum	Ascomycota	Hypocreales	119	68
+Fusox3_1	Fusarium oxysporum f. sp. lycopersici 4287	Ascomycota	Hypocreales	216	113
+Ganluc1	Ganoderma lucidum G.260125-1	Basidiomycota	Polyporales	41	30
+Glocon1	Gloeopeniophorella convolvens OM19405	Basidiomycota	Russulales	33	27
+Glost2	Glonium stellatum CBS 207.34	Ascomycota	Mytilinidiales	103	93
+Glotr1_1	Gloeophyllum trabeum	Basidiomycota	Gloeophyllales	53	32
+Grocl1	Grosmannia clavigera kw1407	Ascomycota	Ophiostomatales	54	53
+Gyman1	Gymnopus androsaceus JB14	Basidiomycota	Agaricales	82	63
+Hanpo2	Ogataea polymorpha NCYC 495 leu1.1	Ascomycota	Pichiales	43	17
+Hebcy2	Hebeloma cylindrosporum h7	Basidiomycota	Agaricales	33	18
+Hetan2	Heterobasidion irregulare	Basidiomycota	Russulales	39	20
+Hyacur1	Hyaloraphidium curvatum SAG235-1	Monoblepharidomycota	Hyaloraphidiales	9	37
+Hydpi2	Hydnomerulius pinastri	Basidiomycota	Boletales	51	38
+Hydru2	Hydnum rufescens s.l.	Basidiomycota	Cantharellales	16	15
+HypEC38_3	Hypoxylon sp. EC38	Ascomycota	Xylariales	85	80
+Hypsu1	Hypholoma sublateritium	Basidiomycota	Agaricales	44	29
+Jaaar1	Jaapia argillacea	Basidiomycota	Jaapiales	45	26
+Klula1	Kluyveromyces lactis	Ascomycota	Saccharomycetales	25	11
+Kredeu1	Kretzschmaria deusta IL1129	Ascomycota	Xylariales	70	74
+Lacbi2	Laccaria bicolor	Basidiomycota	Agaricales	40	25
+Lacind1	Lactarius indigo 2018DUKE089	Basidiomycota	Russulales	32	48
+Lenedo1	Lentinula edodes Le(Bin) 0899 ss11	Basidiomycota	Agaricales	52	33
+Lepor2	Leptodontidium sp. MPI-SDFR-AT-0119	Ascomycota	Helotiales	227	115
+Lipst1_1	Lipomyces starkeyi NRRL Y-11557	Ascomycota	Lipomycetales	104	37
+Macpha1	Macrophomina phaseolina MPI-SDFR-AT-0080	Ascomycota	Botryosphaeriales	106	107
+Magor1	Pyricularia oryzae 70-15	Ascomycota	Magnaporthales	77	47
+Mellp3_H0	Melampsora larici-populina 98AG31 haplotype 0	Basidiomycota	Pucciniales	30	14
+Metro1	Metarhizium robertsii ARSEF 23	Ascomycota	Hypocreales	69	65
+Morco1	Morchella importuna CCBAS932	Ascomycota	Pezizales	46	31
+Morel2	Linnemannia elongata AG-77	Mucoromycota	Mortierellales	17	22
+Neole1	Neolentinus lepideus	Basidiomycota	Gloeophyllales	44	30
+Neosp1	Neocallimastix californiae G1	Neocallimastigomycota	Neocallimastigales	114	37
+Neucr2	Neurospora crassa OR74A	Ascomycota	Sordariales	45	35
+Obbri1	Obba rivulosa 3A-2	Basidiomycota	Polyporales	39	42
+Oidma1	Oidiodendron maius Zn	Ascomycota	Leotiomycetes incertae sedis	175	123
+Panru1	Panus rudis PR-1116 ss-1	Basidiomycota	Polyporales	35	27
+Paxin1	Paxillus involutus ATCC 200175	Basidiomycota	Boletales	37	72
+Paxru2	Paxillus adelphus Ve08.2h10	Basidiomycota	Boletales	31	37
+Pench1	Penicillium chrysogenum	Ascomycota	Eurotiales	133	92
+Penoc1	Penicillium occitanis CL100	Ascomycota	Eurotiales	184	120
+Penox1	Penicillium oxalicum 114-2	Ascomycota	Eurotiales	80	57
+Pgt_201_A1	Puccinia graminis f. sp. tritici 21-0 haplotype A	Basidiomycota	Pucciniales	19	14
+Phaca1	Phanerochaete carnosa HHB-10118-Sp	Basidiomycota	Polyporales	39	36
+Phchr2	Phanerochaete chrysosporium RP-78	Basidiomycota	Polyporales	40	30
+Phlgi1	Phlebiopsis gigantea	Basidiomycota	Polyporales	38	33
+Phlrad1	Phlebia radiata Fr. (isolate 79, FBCC0043)	Basidiomycota	Polyporales	48	34
+Picst3	Scheffersomyces stipitis NRRL Y-11545	Ascomycota	Serinales	57	29
+Pilcr1	Piloderma olivaceum F 1598	Basidiomycota	Atheliales	60	44
+Pipbet1_1	Fomitopsis betulina CIRM-BRFM 1772	Basidiomycota	Polyporales	43	29
+Pirfi3	Piromyces finnis	Neocallimastigomycota	Neocallimastigales	16	23
+Pirin1	Serendipita indica	Basidiomycota	Sebacinales	25	31
+Pisti2	Pisolithus tinctorius Marx 270	Basidiomycota	Boletales	41	26
+Pleery1	Pleurotus eryngii ATCC 90797	Basidiomycota	Agaricales	36	25
+PleosPC15_2	Pleurotus ostreatus PC15	Basidiomycota	Agaricales	43	23
+Plicr1	Plicaturopsis crispa	Basidiomycota	Amylocorticiales	51	36
+Podan3	Podospora anserina S mat+	Ascomycota	Sordariales	44	49
+PosplRSB12_1	Rhodonia placenta	Basidiomycota	Polyporales	38	30
+Punst1	Punctularia strigosozonata	Basidiomycota	Corticiales	38	34
+Pyccin1	Trametes cinnabarina	Basidiomycota	Polyporales	41	34
+Pycco1	Trametes coccinea	Basidiomycota	Polyporales	42	33
+Rhier1	Hyaloscypha hepaticicola	Ascomycota	Helotiales	121	90
+RhiirDAOM197198_2	Rhizophagus irregularis DAOM197198	Mucoromycota	Glomerales	11	19
+Rhimi59_2	Rhizopus microsporus ATCC11559	Mucoromycota	Mucorales	34	22
+Rhomi1	Cystobasidium minutum MCA 4210	Basidiomycota	Cystobasidiales	32	27
+Rhoto_IFO0880_4	Rhodotorula toruloides	Basidiomycota	Sporidiobolales	43	38
+Sacce1	Saccharomyces cerevisiae S288C	Ascomycota	Saccharomycetales	37	11
+Saico1	Saitoella complicata NRRL Y-17804	Ascomycota	Taphrinales	43	24
+Schco3	Schizophyllum commune H4-8	Basidiomycota	Agaricales	54	35
+Schpa1	Xylodon paradoxus KUC8140	Basidiomycota	Hymenochaetales	44	23
+Schpo1	Schizosaccharomyces pombe	Ascomycota	Schizosaccharomycetales	22	16
+Sclsc1	Sclerotinia sclerotiorum	Ascomycota	Helotiales	63	46
+SerlaS7_9_2	Serpula lacrymans S7.9	Basidiomycota	Boletales	42	22
+Sissu1	Sistotremastrum suecicum	Basidiomycota	Trechisporales	32	34
+Sphst1	Sphaerobolus stellatus	Basidiomycota	Geastrales	69	71
+Spipu1	Spizellomyces punctatus DAOM BR117	Chytridiomycota	Spizellomycetales	9	10
+Spoth2	Thermothelomyces thermophilus	Ascomycota	Sordariales	49	39
+Stamag_NRRLY2024_1	Starmerella magnoliae NRRL Y-2024	Ascomycota	Trigonopsidales	22	13
+Stano2	Parastagonospora nodorum	Ascomycota	Pleosporales	91	61
+Stehi1	Stereum hirsutum FP-91666 SS1	Basidiomycota	Russulales	56	47
+Suilu4	Suillus luteus UH-Slu-Lm8-n1	Basidiomycota	Boletales	47	40
+Theau2	Thermoascus aurantiacus ATCC26904	Ascomycota	Eurotiales	61	52
+Theter1	Thelephora terrestris UH-Tt-Lm1	Basidiomycota	Thelephorales	18	14
+Thite2	Thermothielavioides terrestris	Ascomycota	Sordariales	53	61
+Trave1	Trametes versicolor	Basidiomycota	Polyporales	45	43
+Treme1	Tremella mesenterica Fries	Basidiomycota	Tremellales	25	23
+Triat2	Trichoderma atroviride	Ascomycota	Hypocreales	89	70
+Triol1	Cutaneotrichosporon oleaginosum IBC0246 (MycoCosm: Trichosporon)	Basidiomycota	Trichosporonales	49	30
+Trire_Chr	Trichoderma reesei QM6a	Ascomycota	Hypocreales	72	41
+Tubme1v2	Tuber melanosporum Mel28	Ascomycota	Pezizales	21	25
+Tulca1	Tulasnella calospora AL13/4D	Basidiomycota	Cantharellales	35	55
+Ustma2_2	Ustilago maydis 521	Basidiomycota	Ustilaginales	27	23
+Valma1	Valsa mali str. 03-8	Ascomycota	Diaporthales	73	82
+Verda1	Verticillium dahliae VdLs.17	Ascomycota	Glomerellales	97	45
+Wolco1	Wolfiporia cocos MD-104 SS10	Basidiomycota	Polyporales	43	27
+Xylhel2	Xylaria cf. heliscus FL0509	Ascomycota	Xylariales	74	72
+Yarli1	Yarrowia lipolytica (strain CLIB122)	Ascomycota	Dipodascales	41	29
+Zygrou1	Zygosaccharomyces rouxii NRRL Y-64007	Ascomycota	Saccharomycetales	20	13
+Zymtr1	Zymoseptoria tritici IP0323	Ascomycota	Mycosphaerellales	76	63

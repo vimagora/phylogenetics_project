@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # structure_trees.py
+# Family-specific: sugar transporters (structure concept test; see README, "Sugar transporter structures").
 # Description: Foldtree-style structure trees: an all-vs-all Foldseek comparison of the trimmed
 #              models, then one neighbour-joining tree per structural similarity score:
 #              fident (sequence identity of the structural alignment), alntmscore (TM-score of the

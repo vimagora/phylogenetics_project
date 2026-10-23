@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # make_af3_inputs.py
+# Family-specific: sugar transporters (structure concept test; see README, "Sugar transporter structures").
 # Description: Writes one AlphaFold3 input JSON per sugar transporter flagged for structure analysis
 #              in the characterized and D. squalens tables, and a table linking each structure ID to
 #              its protein. Structure IDs are lowercase letters, digits and '_', because AlphaFold3

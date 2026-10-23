@@ -1,5 +1,6 @@
 #!/bin/bash
 # sequence_tree.sh
+# Family-specific: sugar transporters (structure concept test; see README, "Sugar transporter structures").
 # Description: Sequence-only baseline for the structure trees: a maximum-likelihood tree of the same
 #              sugar transporters (those with a trimmed model), from their full sequences in
 #              08_structures/structure_ids.tsv. MAFFT L-INS-i alignment, ClipKIT gappy trimming

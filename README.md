@@ -15,8 +15,9 @@ How the cohort was chosen is described in a separate report (not part of the rep
 ## Requirements
 
 - A Slurm cluster with BUSCO 6.1.0 (`fungi_odb12`), SeqKit 2.13.0, MAFFT 7.525, ClipKIT 2.12.1,
-  IQ-TREE 3.1.4, ASTER 1.25 (ASTRAL-IV) and Python 3.12 with pandas, numpy and networkx. Module names (CSC Roihu) and Slurm settings are
-  set in the scripts.
+  IQ-TREE 3.1.4, ASTER 1.25 (ASTRAL-IV), DIAMOND 2.2.5, HMMER 3.4, FastTree (a module, or the copy in
+  the OrthoFinder container) and Python 3.12 with pandas, numpy and networkx. Module names (CSC Roihu)
+  and Slurm settings are set in the scripts.
 - OrthoFinder 3.1.5, installed from `envs/of3_env.yaml` (see [OrthoFinder](#orthofinder)).
 - A JGI API key in `~/.jgi_api_key` for downloads.
 - Local settings (Slurm account, BUSCO datasets folder, OrthoFinder container): `cp config.example.sh config.sh`, edit it,
@@ -55,8 +56,25 @@ Run all scripts from the project folder. Each script's header describes its argu
 | 24. Substrate clustering scores | `python3 scripts/evaluate_substrate_clustering.py` | `08_structures/evaluation/` |
 | 25. Pocket mapping (concept test) | `python3 scripts/map_pockets.py` | `08_structures/pockets/` |
 | 26. Pocket scores | `python3 scripts/evaluate_pockets.py` | `08_structures/pockets/evaluation/`, `trees/` |
-| 27. Sugar transporter searches | `sbatch scripts/search_sugar_transporters.sbatch` | `09_sugar_transporters/search/` |
-| 28. Sugar transporters and orthogroups | `python3 scripts/summarize_sugar_transporters.py` | `09_sugar_transporters/` |
+
+Gene families (generic; `<family>` is a folder in `families/`, see [Gene families](#gene-families)):
+
+| Step | Command | Output (in the family's `OUT_DIR`, e.g. `09_families/<family>/`) |
+|---|---|---|
+| F1. Searches (Roihu) | `sbatch scripts/search_family.sbatch <family>` | `search/` |
+| F2. Anchors, orphans, members, orthogroups | `python3 scripts/summarize_family.py <family>` | `anchors.tsv`, `members.tsv`, `orthogroup_summary.tsv`, … |
+| F3. Outgroup sequences | `python3 scripts/fetch_outgroups.py <family>` | `outgroups.faa` |
+| F4. Tree sequences (Roihu) | `python3 scripts/build_family_fasta.py <family>` | `tree/sequences.faa`, `tree/tips.tsv` |
+| F5. Alignment (Roihu) | `sbatch scripts/align_family.sbatch <family>` | `tree/aligned.faa`, `tree/trimmed.faa` |
+| F6. Quick tree (Roihu) | `sbatch --time=04:00:00 scripts/family_tree.sbatch <family> fasttree` | `tree/fasttree.nwk` |
+| F7. iTOL files | `python3 scripts/make_family_itol.py <family>` | `itol/` |
+| ⏸ | Review of the quick tree against `families/<family>/expectations.md` | |
+| F8. Model selection (Roihu) | `sbatch scripts/family_tree.sbatch <family> modelfinder` | `tree/modelfinder.*` |
+| F9. Tree (Roihu) | `sbatch scripts/family_tree.sbatch <family> tree` | `tree/ml.*` |
+| ⏸ | Review of the tree (F7 again for the iTOL files) | |
+
+Family-specific step for the sugar transporters: `python3 families/sugar_transporters/make_references.py`
+converts the two curated tables in `00_inputs` into `families/sugar_transporters/references.tsv`.
 
 Steps 8–11, 13, 15 and 17 use Python from `module load python-data`. Step 10 reads the combined table of
 the collapsed proteomes from step 7.
@@ -165,20 +183,54 @@ are compared by BLOSUM62 distance and scored by (a), by (a') the nearest neighbo
 < 40% identical, and by (c) the most common substrate of the 3 nearest, against the sequence tree
 (paired sign-flip test) and random sets of well-aligned columns of the pocket's size.
 
-## Cohort sugar transporters
+## Gene families
 
-Step 27 runs on Roihu (DIAMOND 2.2.5 and HMMER 3.4 modules); step 28 needs only the search results
-and the OrthoFinder `Orthogroups/` folder.
-- **Anchors:** the reference transporters (`structure_ids.tsv`) are searched against all cohort
-  proteins with DIAMOND (`--ultra-sensitive`). A hit with ≥ 98% identity over ≥ 90% of both proteins,
-  in the reference's own genome (`cohort_portal` in `structure_ids.tsv`, else the cohort genome of
-  its species), is its anchor. A listed clean ID (`cohort_id`) needs only ≥ 90% query coverage, since
-  the reference may be a trimmed gene model. Other references keep their best hit and its orthogroup.
-- **Sugar porters:** cohort proteins with Pfam PF00083 (Sugar_tr) at the gathering threshold
-  (`hmmsearch --cut_ga`); those whose domains cover < 50% of the HMM are flagged as partial and left
-  out of `st_proteins.tsv`.
-- **Orthogroups:** each orthogroup (`Orthogroups.tsv`) with a sugar porter or an anchor, with its size,
-  species, sugar porters and anchored references (`orthogroup_summary.tsv`).
+Steps F1–F9 work on any gene family described by a folder `families/<family>/`. The scripts never
+transfer a function to an uncharacterized protein; they stop at alignments, trees and annotation
+files, and the reviews between them are done by a person.
+
+**Files of a family**
+- `family.conf`: `NAME`, `HMMS` (Pfam accessions defining the family, space-separated),
+  `MIN_HMM_COVERAGE` and `OUT_DIR` (results folder).
+- `references.tsv`: the reference proteins, one row each: `reference_id` (lowercase letters, digits,
+  `_`), `evidence` (`characterized` or `predicted`), `species`, `short_name` (species abbreviation,
+  e.g. `Dekbr`; used as the pseudo-portal of orphans), `protein_name`, `role`, `function`
+  (`;`-separated), `cohort_portal` (the protein's own cohort genome, if known), `cohort_id` (its clean
+  ID, if known), `use` (`TRUE`/`FALSE`), `references`, `notes`, `sequence`.
+- `orphans.tsv`: one row per orphan pseudo-portal: `pseudo_portal`, `species`, `phylum`, `subphylum`,
+  `class`, `order`, `nearest_cohort_portal`, `notes`. F2 lists pseudo-portals still missing here.
+- `outgroups.tsv`: `outgroup_id` (`<Abbrev>-<protein>`), `group`, `organism`, `protein`, `uniprot`,
+  `root` (`TRUE` for the outgroups the tree is rooted on), `notes`.
+- `expectations.md`: what the outgroup and the characterized subfamilies should look like in the tree,
+  written before any tree is built and checked by eye at the reviews.
+- `function_columns.tsv` (optional): `label`, `colour`, `terms`: the iTOL function columns, each ticked
+  by any of its terms (lowercase, comma-separated) in a characterized reference's `function`.
+
+**Anchors and orphans (F2).** The references are searched against all cohort proteins with DIAMOND
+(`--ultra-sensitive`). The first rule that applies gives each reference its status:
+- `anchor_listed_id`: its `cohort_id`, at ≥ 98% identity over ≥ 90% of the reference;
+- `anchor`: in its own genome (`cohort_portal` if that is a cohort genome, else the cohort genome of its
+  species), ≥ 98% identity over ≥ 90% of both proteins;
+- `anchor_gene_model_differs`: the same over ≥ 90% of the shorter protein only;
+- `probable_anchor`: in its own genome, 95–98% identity over ≥ 90% of the shorter protein, and the
+  cohort protein's closest reference is this one;
+- orphan (`orphan_species_not_in_cohort`, `orphan_no_copy_in_genome`): enters the tree with its own
+  sequence as `<short_name>-<protein_name>`. The species-only pseudo-portal (`Dekbr`) cannot clash with
+  MycoCosm portals, which carry a version or strain (`Dekbr2`), and `^Dekbr` finds both. Orphans are
+  labels only: they have no tip in the species tree and are left out of counts and reconciliation.
+
+**Members (F2).** Cohort proteins whose domains of one family HMM cover ≥ `MIN_HMM_COVERAGE` of the HMM,
+at Pfam's gathering threshold (`hmmsearch --cut_ga`). There is deliberately no score filter beyond
+that (e.g. the lowest score of the characterized proteins), so that unusual members are kept; hits
+below the coverage are listed in `hmm_hits.tsv`. Orthogroups are OrthoFinder's `Orthogroups.tsv`.
+
+**Trees (F4–F9).** Members (full sequences from the clean proteomes; shadows never enter), orphans
+that pass the membership rule themselves, and outgroups are aligned with MAFFT `--auto` and trimmed
+with ClipKIT gappy 0.5, as for the species tree. Extra domains (e.g. from fusions or misannotations)
+are not removed beforehand; their columns are mostly gaps and are trimmed. FastTree gives a quick
+tree for the first review; the final tree is IQ-TREE 3 with ModelFinder on the full alignment, then
+1000 ultrafast bootstraps and 1000 SH-aLRT replicates, rooted on the outgroups marked `root`.
+`make_family_itol.py` shows function only for characterized references.
 
 ## MycoCosm notes
 

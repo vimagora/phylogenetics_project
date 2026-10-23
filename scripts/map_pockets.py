@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # map_pockets.py
+# Family-specific: sugar transporters (structure concept test; see README, "Sugar transporter structures").
 # Description: Maps the sugar-binding pocket of three sugar-porter crystal structures onto every
 #              sugar transporter in 08_structures/structure_ids.tsv, for the pocket concept test.
 #              1. Pocket residues: residues of the reference with any heavy atom within 5 A (core)

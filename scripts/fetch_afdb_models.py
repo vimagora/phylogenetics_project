@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # fetch_afdb_models.py
+# Family-specific: sugar transporters (structure concept test; see README, "Sugar transporter structures").
 # Description: Finds an AlphaFold Database (AFDB) model for each sugar transporter in
 #              08_structures/structure_ids.tsv, downloads it, and trims its low-confidence termini.
 #              A model is accepted when its sequence is identical to ours (found through UniParc by

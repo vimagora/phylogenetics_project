@@ -1,0 +1,23 @@
+pseudo_portal	species	phylum	subphylum	class	order	nearest_cohort_portal	notes
+Aspnid	Aspergillus nidulans	Ascomycota	Pezizomycotina	Eurotiomycetes	Eurotiales	Aspnid1	species in the cohort; no copy of the reference in Aspnid1
+Astcr	Asteromyces cruciatus	Ascomycota	Pezizomycotina	[check]	[check]		marine hyphomycete; placement to check
+Cangly	Candida glycerinogenes	Ascomycota	Saccharomycotina	[check]	[check]		placement to check
+Colgl	Colletotrichum gloeosporioides	Ascomycota	Pezizomycotina	Sordariomycetes	Glomerellales	Colgr2	
+Debfa	Debaryomyces fabryi	Ascomycota	Saccharomycotina	Pichiomycetes	Serinales	Debha1	
+Dekbr	Brettanomyces bruxellensis	Ascomycota	Saccharomycotina	Pichiomycetes	Pichiales	Dekbr2	species in the cohort; no copy of the references in Dekbr2 (different strain)
+Fusve	Fusarium verticillioides	Ascomycota	Pezizomycotina	Sordariomycetes	Hypocreales	Fusox3_1	
+Geopyr	Geosiphon pyriformis	Mucoromycota	Glomeromycotina	Glomeromycetes	Archaeosporales	RhiirDAOM197198_2	order to check
+Klumag	Kluyveromyces marxianus	Ascomycota	Saccharomycotina	Saccharomycetes	Saccharomycetales	Klula1	
+Kompha	Komagataella phaffii	Ascomycota	Saccharomycotina	Pichiomycetes	[check]		order to check (Phaffomycetaceae)
+Phaso	Phanerochaete sordida	Basidiomycota	Agaricomycotina	Agaricomycetes	Polyporales	Phchr2	
+Pucst	Puccinia striiformis	Basidiomycota	Pucciniomycotina	Pucciniomycetes	Pucciniales	Pgt_201_A1	
+Sacba_Sacpa	Saccharomyces bayanus / Saccharomyces pastorianus	Ascomycota	Saccharomycotina	Saccharomycetes	Saccharomycetales	Sacce1	
+Saceu	Saccharomyces eubayanus	Ascomycota	Saccharomycotina	Saccharomycetes	Saccharomycetales	Sacce1	
+Sacuv	Saccharomyces uvarum	Ascomycota	Saccharomycotina	Saccharomycetes	Saccharomycetales	Sacce1	
+Triha	Trichoderma harzianum	Ascomycota	Pezizomycotina	Sordariomycetes	Hypocreales	Trire_Chr	
+Trire	Trichoderma reesei	Ascomycota	Pezizomycotina	Sordariomycetes	Hypocreales	Trire_Chr	species in the cohort; no copy of the reference in Trire_Chr
+Trivi	Trichoderma virens	Ascomycota	Pezizomycotina	Sordariomycetes	Hypocreales	Trire_Chr	
+Urofa	Uromyces fabae	Basidiomycota	Pucciniomycotina	Pucciniomycetes	Pucciniales	Pgt_201_A1	
+Ustma	Ustilago maydis	Basidiomycota	Ustilaginomycotina	Ustilaginomycetes	Ustilaginales	Ustma2_2	species in the cohort; best hit in Ustma2_2 only 82% identical (reference sequence to check)
+Wicano	Wickerhamomyces anomalus	Ascomycota	Saccharomycotina	Pichiomycetes	[check]		order to check (Wickerhamomycetaceae)
+Zygbai	Zygosaccharomyces bailii	Ascomycota	Saccharomycotina	Saccharomycetes	Saccharomycetales	Zygrou1	not a sugar porter (PF00083 below threshold); not used in the tree

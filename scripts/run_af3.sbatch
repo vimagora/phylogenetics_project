@@ -11,6 +11,7 @@
 #SBATCH --mem=217086
 #SBATCH --gres=gpu:gh200:1
 # run_af3.sbatch
+# Family-specific: sugar transporters (structure concept test; see README, "Sugar transporter structures").
 # Description: Slurm job that predicts structures with AlphaFold3 (CSC container, GH200 GPU node)
 #              for every input JSON in a folder that has no finished model yet, in one AlphaFold3
 #              run (database search and prediction). Based on CSC's template

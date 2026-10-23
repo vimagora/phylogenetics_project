@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # evaluate_pockets.py
+# Family-specific: sugar transporters (structure concept test; see README, "Sugar transporter structures").
 # Description: Scores whether sugar-binding pocket residues (map_pockets.py) group characterized
 #              sugar transporters by substrate better than the whole protein does. Each method gives
 #              a distance between every two transporters:

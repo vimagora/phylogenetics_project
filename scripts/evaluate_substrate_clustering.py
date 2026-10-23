@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # evaluate_substrate_clustering.py
+# Family-specific: sugar transporters (structure concept test; see README, "Sugar transporter structures").
 # Description: Scores how well trees of sugar transporters group proteins with the same substrates,
 #              using only characterized transporters (sensors, D. squalens and transporters without
 #              a specific substrate are left out of the scores):

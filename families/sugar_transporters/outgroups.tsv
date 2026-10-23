@@ -1,0 +1,15 @@
+outgroup_id	group	organism	protein	uniprot	root	notes
+Escco-XylE	bacteria	Escherichia coli K-12	D-xylose:H+ symporter XylE	P0AGF4	TRUE	crystal structures with D-xylose and D-glucose (PDB 4GBY and 4GBZ)
+Escco-GalP	bacteria	Escherichia coli K-12	galactose:H+ symporter GalP	P0AEP1	TRUE	
+Escco-AraE	bacteria	Escherichia coli K-12	arabinose:H+ symporter AraE	P0AE24	TRUE	
+Homsa-GLUT1	animals	Homo sapiens	GLUT1 (SLC2A1)	P11166	FALSE	class I GLUT
+Homsa-GLUT2	animals	Homo sapiens	GLUT2 (SLC2A2)	P11168	FALSE	class I GLUT
+Homsa-GLUT3	animals	Homo sapiens	GLUT3 (SLC2A3)	P11169	FALSE	class I GLUT; crystal structure with D-glucose (PDB 4ZW9)
+Homsa-GLUT4	animals	Homo sapiens	GLUT4 (SLC2A4)	P14672	FALSE	class I GLUT
+Arath-STP1	plants	Arabidopsis thaliana	sugar transport protein 1	P23586	FALSE	STP family
+Arath-STP3	plants	Arabidopsis thaliana	sugar transport protein 3	Q8L7R8	FALSE	STP family
+Arath-STP4	plants	Arabidopsis thaliana	sugar transport protein 4	Q39228	FALSE	STP family
+Arath-STP7	plants	Arabidopsis thaliana	sugar transport protein 7	O04249	FALSE	STP family
+Arath-STP10	plants	Arabidopsis thaliana	sugar transport protein 10	Q9LT15	FALSE	STP family; crystal structure with D-glucose (PDB 6H7D)
+Arath-STP13	plants	Arabidopsis thaliana	sugar transport protein 13	Q94AZ2	FALSE	STP family
+Arath-STP14	plants	Arabidopsis thaliana	sugar transport protein 14	Q8GW61	FALSE	STP family
