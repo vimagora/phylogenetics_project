@@ -102,8 +102,12 @@ Each kept marker gets a maximum-likelihood tree (IQ-TREE 3, ModelFinder among nu
   model and edge-linked proportional branch lengths, with SH-aLRT and ultrafast bootstrap support
   (`06_species_tree/concatenated/iqtree/supermatrix.treefile`).
 
-Both are rooted on *Spizellomyces punctatus* (`Spipu1`); ASTRAL needs the root to estimate branch
-lengths accurately.
+Both are rooted on *Catenaria anguillulae* (`Catan2`; `--outgroup` to change it), so that
+Blastocladiomycota diverges first, as in the concatenated tree of Li et al. (2021); ASTRAL needs the
+root to estimate branch lengths accurately. The first runs used `Spipu1`, which falls inside
+Chytridiomyceta. A finished ASTRAL tree and IQ-TREE run are not repeated, so to rerun only ASTRAL,
+move `06_species_tree/astral/` away and resubmit with a short time limit
+(`sbatch --time=01:00:00 scripts/species_trees.sbatch`).
 
 ## OrthoFinder
 
