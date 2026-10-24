@@ -16,7 +16,7 @@
 #                  scripts/combine_busco_tables.sh proteomes,rerun        (before collapsing isoforms)
 #                  scripts/combine_busco_tables.sh collapsed_proteomes    (after collapsing isoforms)
 #   portal_list  TSV with a header row and portal IDs in column 1
-#                (default: 00_inputs/mycocosm_datasets.tsv).
+#                (default: 00_inputs/candidates.tsv).
 #   results_dir  BUSCO results folder (default: 04_BUSCO/results).
 #   output_file  Where the combined table is saved
 #                (default: 04_BUSCO/busco_full_table_<batches>.tsv, e.g. busco_full_table_proteomes_rerun.tsv).
@@ -25,7 +25,7 @@
 # Each portal must be found in exactly one of the chosen batches.
 
 BATCHES=${1:-all}
-PORTAL_LIST=${2:-00_inputs/mycocosm_datasets.tsv}
+PORTAL_LIST=${2:-00_inputs/candidates.tsv}
 RESULTS_DIR=${3:-04_BUSCO/results}
 OUT_FILE=${4:-04_BUSCO/busco_full_table_${BATCHES//,/_}.tsv}
 

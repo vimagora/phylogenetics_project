@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # make_itol_taxonomy.py
 # Description: Writes iTOL colour-strip annotation files (one per rank: phylum, subphylum, class,
-#              order) for a species tree, from the cohort taxonomy table. Drag the files onto the
+#              order) for a species tree, from the genome table's taxonomy. Drag the files onto the
 #              tree in iTOL. Colours follow the order of the tips in the tree, so neighbouring
 #              groups get different colours; each group keeps one colour even if it is split.
 # Author: Victor M. Gonzalez Ramos
@@ -13,7 +13,7 @@
 #   tree        Newick tree whose tips are portal IDs
 #               (default: 06_species_tree/astral/species_tree_astral.nwk).
 #   taxonomy    TSV with portal, species, phylum, subphylum, class and order columns
-#               (default: 00_inputs/cohort_taxonomy.tsv).
+#               (default: 00_inputs/genomes.tsv, whose cohort genomes have them).
 #   output_dir  Where the files are saved (default: 06_species_tree/itol).
 #
 # Output: itol_<rank>.txt for each rank, and itol_labels.txt, which shows species names instead
@@ -26,7 +26,7 @@ import re
 import sys
 
 tree_path = sys.argv[1] if len(sys.argv) > 1 else "06_species_tree/astral/species_tree_astral.nwk"
-taxonomy_path = sys.argv[2] if len(sys.argv) > 2 else "00_inputs/cohort_taxonomy.tsv"
+taxonomy_path = sys.argv[2] if len(sys.argv) > 2 else "00_inputs/genomes.tsv"
 out_dir = sys.argv[3] if len(sys.argv) > 3 else "06_species_tree/itol"
 RANKS = ["phylum", "subphylum", "class", "order"]
 

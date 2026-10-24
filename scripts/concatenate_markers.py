@@ -10,7 +10,7 @@
 #
 # Usage (from the project folder):
 #   module load python-data
-#   python3 scripts/concatenate_markers.py [--trimmed-dir DIR] [--portal-list FILE] [--out-dir DIR]
+#   python3 scripts/concatenate_markers.py [--trimmed-dir DIR] [--genomes FILE] [--out-dir DIR]
 #       [--min-length 100] [--min-taxa-pct 90]
 #
 # A sequence that is only gaps after trimming counts as missing. A marker is kept when its trimmed
@@ -28,18 +28,13 @@ import argparse
 import os
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import genome_tables  # noqa: E402
+
 
 def fail(message):
     print(f"ERROR: {message}", file=sys.stderr)
     sys.exit(1)
-
-
-def read_portals(path):
-    """Portal IDs from column 1 of a TSV with a header row."""
-    with open(path) as f:
-        lines = f.read().splitlines()[1:]
-    portals = [line.split("\t")[0].strip() for line in lines]
-    return [p for p in portals if p]
 
 
 def read_alignment(path):
@@ -63,17 +58,17 @@ def read_alignment(path):
 
 parser = argparse.ArgumentParser(description="Filter and concatenate trimmed marker alignments")
 parser.add_argument("--trimmed-dir", default="06_species_tree/markers/trimmed")
-parser.add_argument("--portal-list", default="00_inputs/cohort_datasets.tsv")
+parser.add_argument("--genomes", default=genome_tables.GENOMES, help="cohort genomes (role = cohort)")
 parser.add_argument("--out-dir", default="06_species_tree/concatenated")
 parser.add_argument("--min-length", type=int, default=100)
 parser.add_argument("--min-taxa-pct", type=float, default=90)
 args = parser.parse_args()
 
-for path in (args.trimmed_dir, args.portal_list):
+for path in (args.trimmed_dir, args.genomes):
     if not os.path.exists(path):
         fail(f"'{path}' not found")
 
-portals = read_portals(args.portal_list)
+portals = genome_tables.portals(args.genomes)
 files = sorted(f for f in os.listdir(args.trimmed_dir) if f.endswith(".faa"))
 if not files:
     fail(f"no trimmed alignments in '{args.trimmed_dir}', run scripts/align_markers.sbatch first")

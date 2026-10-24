@@ -11,10 +11,10 @@
 #
 # Usage (from the project folder):
 #   module load python-data
-#   python3 scripts/select_busco_markers.py [--busco-table FILE] [--portal-list FILE] [--id-map FILE]
+#   python3 scripts/select_busco_markers.py [--busco-table FILE] [--genomes FILE] [--id-map FILE]
 #       [--out-dir DIR] [--min-single-pct 90] [--max-dup-pct 5] [--max-genome-dup-pct 6]
 #
-# Rules, per marker, over the genomes on the portal list (the cohort; shadows never enter the tree):
+# Rules, per marker, over the cohort genomes in genomes.tsv (shadows never enter the tree):
 #   - complete and single-copy in >= min-single-pct of the genomes;
 #   - duplicated in <= max-dup-pct of the genomes, counting only genomes with <= max-genome-dup-pct
 #     duplicated markers overall, so whole-genome duplications (e.g. Sacce1, Rhimi59_2) and
@@ -33,6 +33,9 @@ import argparse
 import os
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import genome_tables  # noqa: E402
+
 import pandas as pd
 
 
@@ -41,17 +44,9 @@ def fail(message):
     sys.exit(1)
 
 
-def read_portals(path):
-    """Portal IDs from column 1 of a TSV with a header row."""
-    with open(path) as f:
-        lines = f.read().splitlines()[1:]
-    portals = [line.split("\t")[0].strip() for line in lines]
-    return [p for p in portals if p]
-
-
 parser = argparse.ArgumentParser(description="Choose BUSCO markers for the species tree")
 parser.add_argument("--busco-table", default="04_BUSCO/busco_full_table_collapsed_proteomes.tsv")
-parser.add_argument("--portal-list", default="00_inputs/cohort_datasets.tsv")
+parser.add_argument("--genomes", default=genome_tables.GENOMES, help="cohort genomes (role = cohort)")
 parser.add_argument("--id-map", default="05_clean_proteomes/cohort/id_map.tsv")
 parser.add_argument("--out-dir", default="06_species_tree")
 parser.add_argument("--min-single-pct", type=float, default=90)
@@ -59,13 +54,13 @@ parser.add_argument("--max-dup-pct", type=float, default=5)
 parser.add_argument("--max-genome-dup-pct", type=float, default=6)
 args = parser.parse_args()
 
-for path in (args.busco_table, args.portal_list, args.id_map):
+for path in (args.busco_table, args.genomes, args.id_map):
     if not os.path.isfile(path):
         fail(f"'{path}' not found" + (", run scripts/clean_proteomes.py first" if path == args.id_map else ""))
 
-portals = read_portals(args.portal_list)
+portals = genome_tables.portals(args.genomes)
 if len(set(portals)) != len(portals):
-    fail(f"duplicated portals in '{args.portal_list}'")
+    fail(f"duplicated portals in '{args.genomes}'")
 
 table = pd.read_csv(args.busco_table, sep="\t", dtype=str)
 missing = sorted(set(portals) - set(table["portal"]))

@@ -8,14 +8,14 @@
 #
 # Usage (from the project folder): scripts/download_mycocosm_genomes.sh [portal_list] [output_dir]
 #   portal_list  TSV with a header row and portal IDs in column 1
-#                (default: 00_inputs/mycocosm_datasets.tsv).
+#                (default: 00_inputs/candidates.tsv).
 #   output_dir   Where files are saved (default: 01_genomes).
 #                Each portal gets its own subdirectory.
 #
 # Requires a JGI API key, saved alone in ~/.jgi_api_key (or set MYCOCOSM_API_KEY_FILE).
 # It is sent as the 'Authorization' header; without it every download returns HTTP 403.
 
-PORTAL_LIST=${1:-00_inputs/mycocosm_datasets.tsv}
+PORTAL_LIST=${1:-00_inputs/candidates.tsv}
 OUT_DIR=${2:-01_genomes}
 API='https://mycocosm.jgi.doe.gov/ext-api/mycocosm/download'
 API_KEY_FILE=${MYCOCOSM_API_KEY_FILE:-$HOME/.jgi_api_key}

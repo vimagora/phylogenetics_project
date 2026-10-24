@@ -11,10 +11,10 @@
 # Version: 1.1
 #
 # Usage (from the project folder):
-#   python3 scripts/prepare_species_tree.py [tree] [portal_list] [output_tree] [--outgroup PORTAL,...]
+#   python3 scripts/prepare_species_tree.py [tree] [genomes] [output_tree] [--outgroup PORTAL,...]
 #   tree         Newick tree, rooted unless --outgroup is given
 #                (default: 06_species_tree/astral/species_tree_astral.nwk).
-#   portal_list  TSV with a header row and portal IDs in column 1 (default: 00_inputs/cohort_datasets.tsv).
+#   genomes      Genome table; its cohort genomes must be the tree's tips (default: 00_inputs/genomes.tsv).
 #   output_tree  Where the topology is saved (default: 07_orthofinder/species_tree_rooted.nwk).
 #   --outgroup   Portal(s) to root on, comma-separated; they must form a clade in the unrooted tree.
 #                Without it, the tree's own root is kept. For OrthoFinder we root on Catan2
@@ -26,13 +26,16 @@ import os
 import re
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import genome_tables  # noqa: E402
+
 parser = argparse.ArgumentParser(description="Rooted species-tree topology for OrthoFinder")
 parser.add_argument("tree", nargs="?", default="06_species_tree/astral/species_tree_astral.nwk")
-parser.add_argument("portal_list", nargs="?", default="00_inputs/cohort_datasets.tsv")
+parser.add_argument("genomes", nargs="?", default=genome_tables.GENOMES)
 parser.add_argument("output_tree", nargs="?", default="07_orthofinder/species_tree_rooted.nwk")
 parser.add_argument("--outgroup", default="")
 args = parser.parse_args()
-tree_path, portal_list, out_path = args.tree, args.portal_list, args.output_tree
+tree_path, genomes_path, out_path = args.tree, args.genomes, args.output_tree
 
 
 def fail(message):
@@ -40,12 +43,11 @@ def fail(message):
     sys.exit(1)
 
 
-for path in (tree_path, portal_list):
+for path in (tree_path, genomes_path):
     if not os.path.isfile(path):
-        fail(f"'{path}' not found\nUsage: {sys.argv[0]} [tree] [portal_list] [output_tree] [--outgroup PORTAL,...]")
+        fail(f"'{path}' not found\nUsage: {sys.argv[0]} [tree] [genomes] [output_tree] [--outgroup PORTAL,...]")
 
-with open(portal_list) as f:
-    portals = {line.split("\t")[0].strip() for line in f.read().splitlines()[1:]} - {""}
+portals = set(genome_tables.portals(genomes_path))
 
 with open(tree_path) as f:
     newick = "".join(f.read().split())

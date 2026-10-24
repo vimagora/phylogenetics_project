@@ -9,14 +9,14 @@
 #
 # Usage (from the project folder): scripts/assembly_stats.sh [portal_list] [genomes_dir] [output_file]
 #   portal_list  TSV with a header row and portal IDs in column 1
-#                (default: 00_inputs/mycocosm_datasets.tsv).
+#                (default: 00_inputs/candidates.tsv).
 #   genomes_dir  Folder with one subdirectory per portal (default: 01_genomes).
 #   output_file  Where the report is saved (default: 02_assembly_stats/assembly_stats.tsv).
 #
 # Uses SeqKit from the Roihu bio-apps modules. The ';' comment lines at the top of MycoCosm
 # files are removed on the fly, since seqkit rejects them; the files themselves are not changed.
 
-PORTAL_LIST=${1:-00_inputs/mycocosm_datasets.tsv}
+PORTAL_LIST=${1:-00_inputs/candidates.tsv}
 GENOMES_DIR=${2:-01_genomes}
 OUT_FILE=${3:-02_assembly_stats/assembly_stats.tsv}
 

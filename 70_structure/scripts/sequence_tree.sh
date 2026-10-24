@@ -1,9 +1,9 @@
 #!/bin/bash
 # sequence_tree.sh
-# Family-specific: sugar transporters (structure concept test; see README, "Sugar transporter structures").
+# Family-specific: sugar transporters (structure concept test; see 70_structure/README.md).
 # Description: Sequence-only baseline for the structure trees: a maximum-likelihood tree of the same
 #              sugar transporters (those with a trimmed model), from their full sequences in
-#              08_structures/structure_ids.tsv. MAFFT L-INS-i alignment, ClipKIT gappy trimming
+#              70_structure/structure_ids.tsv. MAFFT L-INS-i alignment, ClipKIT gappy trimming
 #              (columns with > 50% gaps removed, as for the species tree) and IQ-TREE 3 with
 #              ModelFinder and 1000 ultrafast bootstraps.
 # Author: Victor M. Gonzalez Ramos
@@ -11,18 +11,18 @@
 # Version: 1.0
 #
 # Usage (from the project folder; needs mafft, clipkit and iqtree3, e.g. the structure_test env):
-#   scripts/sequence_tree.sh [models_dir] [out_dir] [threads]
-#   models_dir  Trimmed models; their names select the proteins (default: 08_structures/models_trimmed).
-#   out_dir     Where results are saved (default: 08_structures/trees).
+#   70_structure/scripts/sequence_tree.sh [models_dir] [out_dir] [threads]
+#   models_dir  Trimmed models; their names select the proteins (default: 70_structure/models_trimmed).
+#   out_dir     Where results are saved (default: 70_structure/trees).
 #   threads     Threads for MAFFT and IQ-TREE (default: all).
 #
 # Output, inside out_dir: sequences.faa, sequences_aligned.faa, sequences_trimmed.faa and
 # sequence_ml.* (IQ-TREE; sequence_ml.treefile is the tree with UFBoot support).
 
-MODELS_DIR=${1:-08_structures/models_trimmed}
-OUT_DIR=${2:-08_structures/trees}
+MODELS_DIR=${1:-70_structure/models_trimmed}
+OUT_DIR=${2:-70_structure/trees}
 THREADS=${3:-$(nproc)}
-IDS_TABLE=08_structures/structure_ids.tsv
+IDS_TABLE=70_structure/structure_ids.tsv
 
 for TOOL in mafft clipkit iqtree3; do
     if ! command -v "$TOOL" > /dev/null; then
@@ -31,7 +31,7 @@ for TOOL in mafft clipkit iqtree3; do
     fi
 done
 if ! compgen -G "$MODELS_DIR/*.pdb" > /dev/null; then
-    echo "No models in '$MODELS_DIR', run scripts/fetch_afdb_models.py first" >&2
+    echo "No models in '$MODELS_DIR', run 70_structure/scripts/fetch_afdb_models.py first" >&2
     exit 1
 fi
 

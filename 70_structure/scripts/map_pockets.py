@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # map_pockets.py
-# Family-specific: sugar transporters (structure concept test; see README, "Sugar transporter structures").
+# Family-specific: sugar transporters (structure concept test; see 70_structure/README.md).
 # Description: Maps the sugar-binding pocket of three sugar-porter crystal structures onto every
-#              sugar transporter in 08_structures/structure_ids.tsv, for the pocket concept test.
+#              sugar transporter in 70_structure/structure_ids.tsv, for the pocket concept test.
 #              1. Pocket residues: residues of the reference with any heavy atom within 5 A (core)
 #                 or 8 A (extended) of the bound sugar.
 #              2. Mapping (a), through sequence: MAFFT L-INS-i alignment of all proteins with the
@@ -16,14 +16,14 @@
 # Version: 1.0
 #
 # Usage (from the project folder; needs internet once, Biopython, mafft and foldseek):
-#   python3 scripts/map_pockets.py [--min-agreement 0.8] [--threads N]
+#   python3 70_structure/scripts/map_pockets.py [--min-agreement 0.8] [--threads N]
 #
 # References (sugar in the central binding site):
 #   xyle   Escherichia coli XylE, PDB 4GBY (D-xylose) and 4GBZ (D-glucose), inward-facing occluded
 #   glut3  Homo sapiens GLUT3, PDB 4ZW9 (D-glucose, both anomers), outward-occluded
 #   stp10  Arabidopsis thaliana STP10, PDB 6H7D (D-glucose), outward-occluded
 #
-# Output, inside 08_structures/pockets:
+# Output, inside 70_structure/pockets:
 #   references/<pdb>.cif, references/<name>.pdb   downloaded entries; protein chain of the first entry
 #   reference_pockets.tsv       pocket residues of each reference, with their distance to the sugar
 #   alignment.faa               MAFFT alignment of all proteins and the references (reused when
@@ -48,10 +48,10 @@ from Bio.Align import substitution_matrices
 from Bio.Data.PDBData import protein_letters_3to1_extended
 from Bio.PDB import MMCIFParser, NeighborSearch, PDBIO, PDBParser, Select
 
-IDS_TABLE = "08_structures/structure_ids.tsv"
-MODELS_DIR = "08_structures/models_trimmed"
-AFDB_DIR = "08_structures/afdb_models"
-OUT_DIR = "08_structures/pockets"
+IDS_TABLE = "70_structure/structure_ids.tsv"
+MODELS_DIR = "70_structure/models_trimmed"
+AFDB_DIR = "70_structure/afdb_models"
+OUT_DIR = "70_structure/pockets"
 REF_DIR = os.path.join(OUT_DIR, "references")
 REFERENCES = [
     ("xyle", "Escherichia coli XylE", [("4GBY", {"XYP"}), ("4GBZ", {"BGC"})]),
@@ -69,7 +69,7 @@ for tool in ("mafft", "foldseek"):
     if shutil.which(tool) is None:
         sys.exit(f"ERROR: {tool} not found; activate the structure_test environment")
 if not os.path.isdir(MODELS_DIR):
-    sys.exit(f"ERROR: '{MODELS_DIR}' not found, run scripts/fetch_afdb_models.py first")
+    sys.exit(f"ERROR: '{MODELS_DIR}' not found, run 70_structure/scripts/fetch_afdb_models.py first")
 os.makedirs(REF_DIR, exist_ok=True)
 
 

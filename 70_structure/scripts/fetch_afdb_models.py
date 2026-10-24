@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # fetch_afdb_models.py
-# Family-specific: sugar transporters (structure concept test; see README, "Sugar transporter structures").
+# Family-specific: sugar transporters (structure concept test; see 70_structure/README.md).
 # Description: Finds an AlphaFold Database (AFDB) model for each sugar transporter in
-#              08_structures/structure_ids.tsv, downloads it, and trims its low-confidence termini.
+#              70_structure/structure_ids.tsv, downloads it, and trims its low-confidence termini.
 #              A model is accepted when its sequence is identical to ours (found through UniParc by
 #              sequence checksum), or, failing that, when a UniProt entry of the same species has
 #              >= MIN_IDENTITY identity over the full length (e.g. another strain or an older version
@@ -12,9 +12,9 @@
 # Version: 1.0
 #
 # Usage (from the project folder; needs internet and Biopython):
-#   python3 scripts/fetch_afdb_models.py [--min-identity 0.98] [--min-plddt 70]
+#   python3 70_structure/scripts/fetch_afdb_models.py [--min-identity 0.98] [--min-plddt 70]
 #
-# Output, inside 08_structures:
+# Output, inside 70_structure:
 #   afdb_models/<structure_id>.cif      AFDB model as downloaded (pLDDT in the B-factor column)
 #   models_trimmed/<structure_id>.pdb   the same model without its low-confidence termini: residues
 #                                       before the first and after the last residue with pLDDT >=
@@ -38,10 +38,10 @@ from Bio import Align
 from Bio.Align import substitution_matrices
 from Bio.PDB import MMCIFParser, PDBIO, Select
 
-IDS_TABLE = "08_structures/structure_ids.tsv"
-MODELS_DIR = "08_structures/afdb_models"
-TRIMMED_DIR = "08_structures/models_trimmed"
-SUMMARY = "08_structures/models.tsv"
+IDS_TABLE = "70_structure/structure_ids.tsv"
+MODELS_DIR = "70_structure/afdb_models"
+TRIMMED_DIR = "70_structure/models_trimmed"
+SUMMARY = "70_structure/models.tsv"
 UNIPROT = "https://rest.uniprot.org"
 AFDB = "https://alphafold.ebi.ac.uk/api/prediction"
 
@@ -172,7 +172,7 @@ parser.add_argument("--min-plddt", type=float, default=70)
 args = parser.parse_args()
 
 if not os.path.isfile(IDS_TABLE):
-    print(f"ERROR: '{IDS_TABLE}' not found, run scripts/make_af3_inputs.py first", file=sys.stderr)
+    print(f"ERROR: '{IDS_TABLE}' not found, run 70_structure/scripts/make_af3_inputs.py first", file=sys.stderr)
     sys.exit(1)
 
 aligner = Align.PairwiseAligner(mode="global", open_gap_score=-10, extend_gap_score=-0.5)

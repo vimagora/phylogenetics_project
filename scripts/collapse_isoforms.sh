@@ -12,7 +12,7 @@
 # Usage (from the project folder):
 #   scripts/collapse_isoforms.sh [portal_list] [genomes_dir] [proteomes_dir] [output_dir]
 #   portal_list    TSV with a header row and portal IDs in column 1
-#                  (default: 00_inputs/mycocosm_datasets.tsv).
+#                  (default: 00_inputs/candidates.tsv).
 #   genomes_dir    Folder with one subdirectory per portal, with <portal>_genes.gff3.gz
 #                  (default: 01_genomes).
 #   proteomes_dir  Decompressed proteomes from extract_proteomes.sh (default: 04_BUSCO/proteomes).
@@ -28,7 +28,7 @@
 # Portals that already have a collapsed proteome are skipped.
 # Uses the python-data module on Roihu (pandas, numpy, networkx).
 
-PORTAL_LIST=${1:-00_inputs/mycocosm_datasets.tsv}
+PORTAL_LIST=${1:-00_inputs/candidates.tsv}
 GENOMES_DIR=${2:-01_genomes}
 PROTEOMES_DIR=${3:-04_BUSCO/proteomes}
 OUT_DIR=${4:-03_isoforms}

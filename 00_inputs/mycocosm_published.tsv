@@ -19,7 +19,7 @@
 18	Agaricostilbum hyphaenes  ATCC MYA-4628 v1.0	Agahy1	44565	17894169	7746	N	Y	Y	N				10.3897/imafungus.17.189848
 19	Agaricus bisporus var bisporus (H97) v2.0	Agabi_varbisH97_2	936046	30233745	10438	N	Y	Y	N		Morin E et al.,2012	23045686	
 20	Agaricus bisporus var. burnettii JB137-S8	Agabi_varbur_1	597362	32614401	11289	N	Y	Y	N		Morin E et al.,2012	23045686	
-21	Agrocybe pediades AH 40210 v1.0	Agrped1	84607	45056484	17281	N	Y	Y	N		Ruiz-Dueñas FJ et al.,2021	33211093	
+21	Agrocybe pediades AH 40210 v1.0	Agrped1	84607	45056484	17281	N	Y	Y	N		Ruiz-DueÃ±as FJ et al.,2021	33211093	
 22	Albophoma yamanashiensis M98 v1.0	Albya1	1635095	31184376	10216	N	Y	Y	N		Agirrezabala Z et al.,2025	40778765	
 23	Alloascoidea africana NRRL Y-6762-3	Allafr_NRRLY67623_1	27309	23710339	8312	N	Y	Y	N		Opulente DA et al.,2024	38662846	
 24	Alloascoidea hylecoeti JCM 7604	Allhyl_JCM7604_1	54196	24768155	8090	N	Y	Y	N		Opulente DA et al.,2024	38662846	
@@ -119,7 +119,7 @@
 118	Ascobotryozyma cognata CBS 8753	Asccog_CBS8753_1	219604	17802389	5547	N	Y	Y	N		Opulente DA et al.,2024	38662846	
 119	Ascochyta rabiei ArDII	Ascra1	5454	34658250	10596	N	Y	Y	N		Verma S et al.,2016	27091329	
 120	Ascocoryne sarcoides NRRL50072	Ascsa1	1016881	34170264	10672	N	Y	Y	N		Gianoulis TA et al.,2012	22396667	
-121	Ascodesmis nigricans CBS 389.68 v1.0	Ascni1	341454	27385218	9622	N	Y	Y	N		Lütkenhaus R et al.,2019	31604798	
+121	Ascodesmis nigricans CBS 389.68 v1.0	Ascni1	341454	27385218	9622	N	Y	Y	N		LÃ¼tkenhaus R et al.,2019	31604798	
 122	Ascoidea asiatica NRRL Y-17632	Ascasi_NRRLY17632_1	1301101	19915357	6487	N	Y	Y	N		Opulente DA et al.,2024	38662846	
 123	Ascoidea rubescens NRRL Y17699 v1.0	Ascru1	54195	17503998	6802	N	Y	Y	N		Riley R et al.,2016	27535936	
 124	Ascoidea tarda NRRL Y-2393	Asctar_NRRLY2393_1	1301102	17208089	6363	N	Y	Y	N		Opulente DA et al.,2024	38662846	
@@ -129,27 +129,27 @@
 128	Aspergillus aculeatinus CBS 121060 v1.0	Aspacu1	487661	36471649	12027	N	Y	Y	N		Vesth TC et al.,2018	30349117	
 129	Aspergillus aculeatus ATCC16872 v1.1	Aspac1	5053	35424414	10845	N	Y	Y	N		de Vries RP et al.,2017	28196534	
 130	Aspergillus alabamensis v1.0	Aspala1	657433	31994729	11841	N	Y	Y	N		Theobald S et al.,2024	39057392	
-131	Aspergillus albertensis v1.0	Aspalbe1	41046	40140031	12816	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
+131	Aspergillus albertensis v1.0	Aspalbe1	41046	40140031	12816	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
 132	Aspergillus allahabadii v1.0	Aspall1	1612426	29783189	11228	N	Y	Y	N		Theobald S et al.,2024	39057392	
-133	Aspergillus alliaceus CBS 536.65 v1.0	Aspalli1	209559	40168528	13099	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
+133	Aspergillus alliaceus CBS 536.65 v1.0	Aspalli1	209559	40168528	13099	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
 134	Aspergillus ambiguus v1.0	Aspamb1	176160	29374911	11088	N	Y	Y	N		Theobald S et al.,2024~Theobald S et al.,2025	39057392 39897699	
 135	Aspergillus amylovorus CBS 600.67 v1.0	Aspamy1	176166	34894441	12857	N	Y	Y	N		Nybo JL et al.,2025	40371420	
-136	Aspergillus arachidicola v1.0	Aspara19utr	656916	39764385	13895	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
+136	Aspergillus arachidicola v1.0	Aspara19utr	656916	39764385	13895	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
 137	Aspergillus aurantiobrunneus CBS 465.65 v1.0	Aspaura1	41725	31381522	11287	N	Y	Y	N		Theobald S et al.,2025	39897699	
 138	Aspergillus aureoterreus v1.0	Aspaur1	41288	29516179	11269	N	Y	Y	N		Theobald S et al.,2024	39057392	
-139	Aspergillus avenaceus IBT 18842 v1.0	Aspave1	36643	33765472	11293	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
-140	Aspergillus bertholletius IBT 29228 v1.0	Aspber1	1226010	37014000	12948	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
+139	Aspergillus avenaceus IBT 18842 v1.0	Aspave1	36643	33765472	11293	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
+140	Aspergillus bertholletius IBT 29228 v1.0	Aspber1	1226010	37014000	12948	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
 141	Aspergillus bombycis NRRL 26010	Aspbom1	109264	37474605	12265	N	Y	Y	N		Moore GG et al.,2016	27664179	
 142	Aspergillus brasiliensis v1.0	Aspbr1	767769	35808783	13000	N	Y	Y	N		de Vries RP et al.,2017	28196534	
 143	Aspergillus brunneoviolaceus CBS 621.78 v1.0	Aspbru1	1191711	37477200	12075	N	Y	Y	N		Vesth TC et al.,2018	30349117	
-144	Aspergillus caelatus CBS 763.97 v1.0	Aspcae1	61420	40016351	13916	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
+144	Aspergillus caelatus CBS 763.97 v1.0	Aspcae1	61420	40016351	13916	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
 145	Aspergillus calidoustus	Aspcal1	454130	41102685	15139	N	Y	Y	N		Horn F et al.,2016	26966204	
 146	Aspergillus californicus CBS 123895 v1.0	Aspcalif1	1810905	36744266	13881	N	Y	Y	N		Nybo JL et al.,2025	40371420	
-147	Aspergillus campestris IBT 28561 v1.0	Aspcam1	1392248	28257496	9764	N	Y	Y	N		Kjærbølling I et al.,2018	29317534	
-148	Aspergillus candidus CBS 102.13 v1.0	Aspcand1	41067	27317772	9641	N	Y	Y	N		Kjærbølling I et al.,2018	29317534	
+147	Aspergillus campestris IBT 28561 v1.0	Aspcam1	1392248	28257496	9764	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2018	29317534	
+148	Aspergillus candidus CBS 102.13 v1.0	Aspcand1	41067	27317772	9641	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2018	29317534	
 149	Aspergillus carlsbadensis CBS 123894 v1.0	Aspcar1	1810906	39460077	14289	N	Y	Y	N		Nybo JL et al.,2025	40371420	
 150	Aspergillus clavatus NRRL 1 from AspGD	Aspcl1	344612	27859441	9121	N	Y	Y	N		Arnaud MB et al.,2012	22080559	
-151	Aspergillus coremiiformis CBS 553.77 v1.0	Aspcor1	138285	30132285	9078	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
+151	Aspergillus coremiiformis CBS 553.77 v1.0	Aspcor1	138285	30132285	9078	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
 152	Aspergillus costaricaensis CBS 115574 v1.0	Aspcos1	319631	36947918	11966	N	Y	Y	N		Vesth TC et al.,2018	30349117	
 153	Aspergillus cristatus GZAAS20.1005	Aspcri1	573508	28454192	10344	N	Y	Y	N		Ge Y et al.,2016	27267057	
 154	Aspergillus crustosus CBS 478.65 v1.0	Aspcru1	41757	37360539	12063	N	Y	Y	N		Theobald S et al.,2025	39897699	
@@ -182,11 +182,11 @@
 181	Aspergillus karnatakaensis CBS 102800 v1.0	Aspkar1	1810916	36255367	13540	N	Y	Y	N		Theobald S et al.,2025	39897699	
 182	Aspergillus kawachii IFO 4308	Aspka1_1	1033177	36544702	11475	N	Y	Y	N		Futagami T et al.,2011	22045919	
 183	Aspergillus keveii CBS 209.92 v1.0	Aspkev1	714993	41415647	15687	N	Y	Y	N		Nybo JL et al.,2025	40371420	
-184	Aspergillus leporis CBS 151.66 v1.0	Asplep1	41062	39425861	12745	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
+184	Aspergillus leporis CBS 151.66 v1.0	Asplep1	41062	39425861	12745	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
 185	Aspergillus luchuensis CBS 106.47 v1.0	Aspfo1	1137211	37468345	13530	N	Y	Y	N		de Vries RP et al.,2017	28196534	
 186	Aspergillus lucknowensis CBS 449.75 v1.0	Aspluc1	176173	30792796	11541	N	Y	Y	N		Nybo JL et al.,2025	40371420	
 187	Aspergillus microcysticus v1.0	Aspmic1	176174	25913919	10236	N	Y	Y	N		Theobald S et al.,2024	39057392	
-188	Aspergillus minisclerotigenes CBS 117635 v1.0	Aspmin1	656917	37064162	13415	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
+188	Aspergillus minisclerotigenes CBS 117635 v1.0	Aspmin1	656917	37064162	13415	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
 189	Aspergillus multicolor v1.0	Aspmul1_1	41759	35254497	12821	N	Y	Y	N		Theobald S et al.,2025	39897699	
 190	Aspergillus navahoensis v1.0	Aspnav1_1	91484	32760877	11625	N	Y	Y	N		Theobald S et al.,2025	39897699	
 191	Aspergillus neoechinulatus CBS120.55 v1.0	Aspne1	2184044	30669358	10504	N	Y	Y	N		Theobald S et al.,2025	39897699	
@@ -199,21 +199,21 @@
 198	Aspergillus niger CBS 513.88	Aspni_DSM_1	425011	33975768	14097	N	Y	Y	N		Pel HJ et al.,2007	17259976	
 199	Aspergillus niger NRRL3	Aspni_NRRL3_1	1451139	35245396	11846	N	Y	Y	N		Vesth TC et al.,2018~Aguilar-Pontes MV et al.,2018	30349117 30425417	
 200	Aspergillus niger van Tieghem ATCC 13496 v1.0	Aspni_bvT_1	1353008	35690699	12197	N	Y	Y	N		Vesth TC et al.,2018	30349117	
-201	Aspergillus nomius IBT 12657 v1.0	Aspnom1	41061	36713177	12897	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
+201	Aspergillus nomius IBT 12657 v1.0	Aspnom1	41061	36713177	12897	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
 202	Aspergillus nomius NRRL 13137	Aspnom13137_1	1509407	36138823	11914	N	Y	Y	N		Moore GG et al.,2015	26216546	
-203	Aspergillus novofumigatus IBT 16806 v1.0	Aspnov1	1392255	32440129	11549	N	Y	Y	N		Kjærbølling I et al.,2018	29317534	
-204	Aspergillus novoparasiticus CBS 126849 v1.0	Aspnovo1	986946	40857493	14182	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
-205	Aspergillus ochraceoroseus IBT 24754 v1.0	Aspoch1	1392256	27718211	8924	N	Y	Y	N		Kjærbølling I et al.,2018	29317534	
+203	Aspergillus novofumigatus IBT 16806 v1.0	Aspnov1	1392255	32440129	11549	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2018	29317534	
+204	Aspergillus novoparasiticus CBS 126849 v1.0	Aspnovo1	986946	40857493	14182	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
+205	Aspergillus ochraceoroseus IBT 24754 v1.0	Aspoch1	1392256	27718211	8924	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2018	29317534	
 206	Aspergillus ochraceoroseus SRRC1432	Aspoch1432_1	138278	24273657	7829	N	Y	Y	N		Moore GG et al.,2015	26637470	
 207	Aspergillus olivicola v1.0	Aspoli1_1	1250372	33173879	12183	N	Y	Y	N		Theobald S et al.,2025	39897699	
 208	Aspergillus oryzae RIB40	Aspor1	510516	37882812	12030	N	Y	Y	N		Arnaud MB et al.,2012~Machida M et al.,2005	22080559 16372010	
-209	Aspergillus parasiticus CBS 117618 v1.0	Asppar1	5067	38390758	13752	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
-210	Aspergillus parvisclerotigenus CBS 121.62 v1.0	Asppari1	422207	37617783	13595	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
+209	Aspergillus parasiticus CBS 117618 v1.0	Asppar1	5067	38390758	13752	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
+210	Aspergillus parvisclerotigenus CBS 121.62 v1.0	Asppari1	422207	37617783	13595	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
 211	Aspergillus piperis CBS 112811 v1.0	Asppip1	319630	35280331	12069	N	Y	Y	N		Vesth TC et al.,2018	30349117	
-212	Aspergillus pseudocaelatus CBS 117616 v1.0	Asppsec1	1825620	39651556	13895	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
+212	Aspergillus pseudocaelatus CBS 117616 v1.0	Asppsec1	1825620	39651556	13895	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
 213	Aspergillus pseudodeflectus v1.0	Asppdef1	176178	39072803	14450	N	Y	Y	N		Nybo JL et al.,2025	40371420	
-214	Aspergillus pseudonomius CBS 119388 v1.0	Asppsen1	1506151	37780514	13384	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
-215	Aspergillus pseudotamarii CBS 117625 v1.0	Asppset1	132259	38243929	13428	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
+214	Aspergillus pseudonomius CBS 119388 v1.0	Asppsen1	1506151	37780514	13384	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
+215	Aspergillus pseudotamarii CBS 117625 v1.0	Asppset1	132259	38243929	13428	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
 216	Aspergillus pseudoterreus ATCC32359 v1.0	Asppseute1	1565506	29514308	10945	N	Y	Y	N		Deng S et al.,2020	32162091	
 217	Aspergillus pseudoustus CBS 123904 v1.0	Asppust1	1810923	41220403	15536	N	Y	Y	N		Nybo JL et al.,2025	40371420	
 218	Aspergillus quadrilineatus (floriformis) CBS 937.73 v1.0	Aspquaf1	41735	32523387	11243	N	Y	Y	N		Nybo JL et al.,2025	40371420	
@@ -223,17 +223,17 @@
 222	Aspergillus saccharolyticus JOP 1030-1 v1.0	Aspsac1	979771	31096189	10066	N	Y	Y	N		Vesth TC et al.,2018	30349117	
 223	Aspergillus sclerotiicarbonarius CBS 121057 v1.0	Aspscle1	487660	37621264	12571	N	Y	Y	N		Vesth TC et al.,2018	30349117	
 224	Aspergillus sclerotioniger CBS115572 v1.0	Aspscl1	319627	36720365	12338	N	Y	Y	N		Vesth TC et al.,2018	30349117	
-225	Aspergillus sergii CBS 130017 v1.0	Aspser1	1034303	38325693	13713	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
+225	Aspergillus sergii CBS 130017 v1.0	Aspser1	1034303	38325693	13713	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
 226	Aspergillus similis v1.0	Aspsim1_1	1810925	33170230	11407	N	Y	Y	N		Theobald S et al.,2025	39897699	
 227	Aspergillus stella-maris CBS 113639 v1.0	Aspstel1_1	1810926	33998249	12537	N	Y	Y	N		Theobald S et al.,2025	39897699	
 228	Aspergillus stercoraria CBS 428.93 v1.0	Aspstec1_1	1883081	29263932	10324	N	Y	Y	N		Theobald S et al.,2025	39897699	
-229	Aspergillus steynii IBT 23096 v1.0	Aspste1	1392250	37847960	13211	N	Y	Y	N		Kjærbølling I et al.,2018	29317534	
+229	Aspergillus steynii IBT 23096 v1.0	Aspste1	1392250	37847960	13211	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2018	29317534	
 230	Aspergillus sydowii CBS 593.65 v1.0	Aspsy1	1036612	34381026	13620	N	Y	Y	N		de Vries RP et al.,2017	28196534	
-231	Aspergillus taichungensis IBT 19404 v1.0	Asptaic1	482145	27121736	9692	N	Y	Y	N		Kjærbølling I et al.,2018	29317534	
-232	Aspergillus tamarii CBS 117626 v1.0	Asptam1	41984	38511287	13331	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
+231	Aspergillus taichungensis IBT 19404 v1.0	Asptaic1	482145	27121736	9692	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2018	29317534	
+232	Aspergillus tamarii CBS 117626 v1.0	Asptam1	41984	38511287	13331	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
 233	Aspergillus terreus NIH 2624	Aspte1	341663	29331195	10406	N	Y	Y	N		Arnaud MB et al.,2012	22080559	
 234	Aspergillus tetrazonus CBS 591.65A v1.0	Asptetr1	1883080	32143916	11156	N	Y	Y	N		Theobald S et al.,2025	39897699	
-235	Aspergillus transmontanensis CBS 130015 v1.0	Asptra1	1034304	39338775	14216	N	Y	Y	N		Kjærbølling I et al.,2020	32107379	
+235	Aspergillus transmontanensis CBS 130015 v1.0	Asptra1	1034304	39338775	14216	N	Y	Y	N		KjÃ¦rbÃ¸lling I et al.,2020	32107379	
 236	Aspergillus tubingensis v1.0	Asptu1	767770	35146149	12322	N	Y	Y	N		de Vries RP et al.,2017	28196534	
 237	Aspergillus udagawae IFM 46973	Aspuda1	91492	32185562	9999	N	Y	Y	N		Kusuya Y et al.,2015	26251487	
 238	Aspergillus undulatus CBS 261.88 v1.0	Aspund1_1	1810928	32112944	11802	N	Y	Y	N		Theobald S et al.,2025	39897699	
@@ -256,7 +256,7 @@
 255	Aureobasidium pullulans var. pullulans EXF-150	Aurpu_var_pul1	5580	29621078	11866	N	Y	Y	N		Gostin?ar C et al.,2014	24984952	
 256	Aureobasidium pullulans var. subglaciale EXF-2481	Aurpu_var_sub1	1043005	25796716	10809	N	Y	Y	N		Gostin?ar C et al.,2014	24984952	
 257	Auricularia subglabra v2.0	Aurde3_1	717982	76853599	25459	N	Y	Y	N		Floudas D et al.,2012	22745431	
-258	Auriculariopsis ampla NL-1724 v1.0	Auramp1	97359	49873921	15576	N	Y	Y	N		Almási É et al.,2019	31257601	
+258	Auriculariopsis ampla NL-1724 v1.0	Auramp1	97359	49873921	15576	N	Y	Y	N		AlmÃ¡si Ã‰ et al.,2019	31257601	
 259	Auriscalpium vulgare FP105234-Sp v1.0	Aurvu1	40419	39647923	16945	N	Y	Y	N		Looney B et al.,2022	34861049	
 260	Babjeviella inositovora NRRL Y-12698 v1.0	Babin1	45609	15221050	6403	N	Y	Y	N		Riley R et al.,2016	27535936	
 261	Backusella circina FSU 941 v1.0	Bacci1	64653	48648288	17039	N	Y	Y	N		Amses KR et al.,2022	36037379	
@@ -308,12 +308,12 @@
 307	Blastobotrys serpentis NRRL Y-48249	Blaser_NRRLY48249_1	456365	13736849	6291	N	Y	Y	N		Opulente DA et al.,2024	38662846	
 308	Blastobotrys terrestris NRRL Y-17704	Blater_NRRLY17704_1	43981	19111360	9579	N	Y	Y	N		Opulente DA et al.,2024	38662846	
 309	Blastocladiella britannica v1.0	Blabri1	64508	19075314	9431	N	Y	Y	N		Amses KR et al.,2022	36037379	
-310	Blastomyces dermatitidis ER-3	Blader1	559297	66608683	11539	N	Y	Y	N		Muñoz JF et al.,2015	26439490	
-311	Blastomyces dermatitidis SLH14081	Blade1	559298	75353942	11343	N	Y	Y	N		Muñoz JF et al.,2015	26439490	
+310	Blastomyces dermatitidis ER-3	Blader1	559297	66608683	11539	N	Y	Y	N		MuÃ±oz JF et al.,2015	26439490	
+311	Blastomyces dermatitidis SLH14081	Blade1	559298	75353942	11343	N	Y	Y	N		MuÃ±oz JF et al.,2015	26439490	
 312	Blastomyces percursus EI222	Blape1	1658174	32310953	10285	N	Y	Y	N		Dukik K et al.,2017	28176377	
 313	Blumeria graminis f. sp. hordei DH14	Blugr2	546991	124489486	7118	N	Y	Y	N		Frantzeskakis L et al.,2018	29788921	
 314	Blumeria graminis f. sp. hordei Race1	BlugrR1_1	62688	116475897	7239	N	Y	Y	N		Frantzeskakis L et al.,2018	29788921	
-315	Blumeria graminis f. sp. tritici 96224 v3.16	Blugra3_16	62690	140802721	6425	N	Y	Y	N		Müller MC et al.,2019	30388298	
+315	Blumeria graminis f. sp. tritici 96224 v3.16	Blugra3_16	62690	140802721	6425	N	Y	Y	N		MÃ¼ller MC et al.,2019	30388298	
 316	Blyttiomyces helicus single-cell v1.0	Blyhe1	388810	46472760	12167	N	Y	Y	N		Ahrendt SR et al.,2018	30297742	
 317	Boeremia exigua MPI-SDFR-AT-0100 v1.0	Boeex1	749465	35322113	12871	N	Y	Y	N		Mesny F et al.,2021	34893598	
 318	Boletus edulis BED1 v4.0	Boled5	1328754	66525535	18722	N	Y	Y	N		Miyauchi S et al.,2020	33046698	
@@ -640,7 +640,7 @@
 639	Clavispora lusitaniae ATCC 42720	Clalu1_2	306902	12114892	5936	N	Y	Y	N		Butler G et al.,2009	19465905	
 640	Clavispora opuntiae NRRL Y-11820	Claopu_NRRLY11820_1	36912	11556692	5244	N	Y	Y	N		Opulente DA et al.,2024	38662846	
 641	Clavispora reshetovae CBS 11556	Clares_CBS11556_1	657494	13477274	6098	N	Y	Y	N		Opulente DA et al.,2024	38662846	
-642	Clitocybe gibba IJFM A808 v1.0	Cligib1	378275	65973163	19049	N	Y	Y	N		Ruiz-Dueñas FJ et al.,2021	33211093	
+642	Clitocybe gibba IJFM A808 v1.0	Cligib1	378275	65973163	19049	N	Y	Y	N		Ruiz-DueÃ±as FJ et al.,2021	33211093	
 643	Clohesyomyces aquaticus v1.0	Cloaq1	1231657	49677730	15810	N	Y	Y	N		Mondo SJ et al.,2017	28481340	
 644	Clonostachys rosea CBS125111 v1.0	Cloro1	29856	52435476	18639	N	Y	Y	N		Doval RL et al.,2025	40560406	
 645	Clonostachys rosea IK726	Cloros1	29856	70045661	19941	N	Y	Y	N		Karlsson M et al.,2015~Broberg M et al.,2018~Broberg M et al.,2021	25575496 30524411 33664789	
@@ -696,11 +696,11 @@
 695	Colletotrichum orchidophilum IMI 309357	Color1	1209926	48556462	14496	N	Y	Y	N		Baroncelli R et al.,2018	29649963	
 696	Colletotrichum paranaense IMI 384185	Colpa1	1914294	49177916	16775	N	Y	Y	N		Baroncelli R et al.,2024	38940768	
 697	Colletotrichum phormii CBS102054 v1.0	Colph1	359342	51666170	15209	N	Y	Y	N		Baroncelli R et al.,2024	38940768	
-698	Colletotrichum plurivorum LFN00145	Colpl1	2175906	49689907	15024	N	Y	Y	N		Rogério F et al.,2020	32352862	
+698	Colletotrichum plurivorum LFN00145	Colpl1	2175906	49689907	15024	N	Y	Y	N		RogÃ©rio F et al.,2020	32352862	
 699	Colletotrichum salicis CBS607.94	Colsa1	1209931	48373413	13783	N	Y	Y	N		Baroncelli R et al.,2016	27496087	
 700	Colletotrichum siamense Cg363	Colsia1	690259	62936415	14772	N	Y	Y	N		Gan P et al.,2021	33780109	
 701	Colletotrichum simmondsii CBS122122	Colsi1	703756	50474234	13884	N	Y	Y	N		Baroncelli R et al.,2016	27496087	
-702	Colletotrichum sojae LFN0009	Colsoj1	2175907	49351125	14925	N	Y	Y	N		Rogério F et al.,2020	32352862	
+702	Colletotrichum sojae LFN0009	Colsoj1	2175907	49351125	14925	N	Y	Y	N		RogÃ©rio F et al.,2020	32352862	
 703	Colletotrichum somersetensis CBS 131599 v1.0	Colso1	1500509	53667270	15193	N	Y	Y	N		Baroncelli R et al.,2024	38940768	
 704	Colletotrichum sublineola CBS 131301 v1.0	Colsu1	1173701	46916122	15208	N	Y	Y	N		Baroncelli R et al.,2024	38940768	
 705	Colletotrichum sublineola TX430BB	Colsub1	1173701	46755813	12699	N	Y	Y	N		Baroncelli R et al.,2014	24926053	
@@ -708,11 +708,11 @@
 707	Colletotrichum tofieldiae 0861	Colto1	708197	52836184	12501	N	Y	Y	N		Hacquard S et al.,2016	27150427	
 708	Colletotrichum tofieldiae CBS 168.49	Coltof1	708197	52962735	16451	N	Y	Y	N		Hacquard S et al.,2016	27150427	
 709	Colletotrichum tropicale CgS9275	Coltro1	912113	55761935	14427	N	Y	Y	N		Gan P et al.,2021	33780109	
-710	Colletotrichum truncatum CMES1059	Coltr1	5467	57008971	14225	N	Y	Y	N		Rogério F et al.,2020	32352862	
+710	Colletotrichum truncatum CMES1059	Coltr1	5467	57008971	14225	N	Y	Y	N		RogÃ©rio F et al.,2020	32352862	
 711	Colletotrichum zoysiae MAFF238573 v1.0	Colzo1	1216348	46533813	15326	N	Y	Y	N		Baroncelli R et al.,2024	38940768	
 712	Conidiobolus coronatus NRRL28638 v1.0	Conco1	34488	39903661	10635	N	Y	Y	N		Chang Y et al.,2015	25977457	
 713	Conidiobolus thromboides FSU 785 v1.0	Conth1	1314799	24635576	8867	N	Y	Y	N		Amses KR et al.,2022	36037379	
-714	Coniochaeta ligniaria NRRL 30616 v1.0	Conlig1	177197	42382780	13657	N	Y	Y	N		Jiménez DJ et al.,2017	28126934	
+714	Coniochaeta ligniaria NRRL 30616 v1.0	Conlig1	177197	42382780	13657	N	Y	Y	N		JimÃ©nez DJ et al.,2017	28126934	
 715	Coniochaeta ligniaria R110-5 v1.0	ColoR110_1	177197	32102481	10509	N	Y	Y	N		Nelson AR et al.,2022	36008619	
 716	Coniochaeta sp. 2T2.1 v1.0	Conioc1	1571157	74351065	24735	N	Y	Y	N		Mondo SJ et al.,2019	31572496	
 717	Coniophora olivacea MUCL 20566 v1.0	Conol1	85977	39071688	14928	N	Y	Y	N		Castanera R et al.,2017	29145801	
@@ -722,7 +722,7 @@
 721	Coprinellus micaceus FP101781 v2.0	Copmic2	71717	77386123	23559	N	Y	Y	N		Varga T et al.,2019	30886374	
 722	Coprinopsis cinerea	Copci1	5346	36294355	13393	N	Y	Y	N		Stajich JE et al.,2010	20547848	
 723	Coprinopsis cinerea AmutBmut pab1-1 v1.0	Copci_AmutBmut1	1132390	34118803		N	Y	Y	N		Muraguchi H et al.,2015	26510163	
-724	Coprinopsis cinerea AmutBmut v2	Copcin2	5346	37271365	13154	N	Y	Y	N		Hegedüs B et al.,2025	40262612	
+724	Coprinopsis cinerea AmutBmut v2	Copcin2	5346	37271365	13154	N	Y	Y	N		HegedÃ¼s B et al.,2025	40262612	
 725	Coprinopsis marcescibilis CBS121175 v1.0	Copmar1	230819	38912666	14632	N	Y	Y	N		Varga T et al.,2019	30886374	
 726	Coprinopsis sp. MPI-PUGE-AT-0042 v1.0	Copph3	2107740	121013029	27373	N	Y	Y	N		Mesny F et al.,2021	34893598	
 727	Copromyces sp. CBS 386.78 v1.0	CopCBS38678_1	252197	50044663	10890	N	Y	Y	N		Hensen N et al.,2023	37820761	
@@ -734,7 +734,7 @@
 733	Corynascus sepedonium ATCC9787	Corse1	190048	33300067	10644	N	Y	Y	N		Steindorff AS et al.,2024	39266695	
 734	Corynespora cassiicola CCP v1.0	Corca1	59586	44846156	17166	N	Y	Y	N		Lopez D et al.,2018	29551995	
 735	Crassisporium funariophilum CBS 144457 v1.0	Crafun1	1954473	37117181	13637	N	Y	Y	N		Steindorff AS et al.,2021	33034064	
-736	Crepidotus variabilis CBS 506.95 v1.0	Crevar1	179855	38577924	14573	N	Y	Y	N		Ruiz-Dueñas FJ et al.,2021	33211093	
+736	Crepidotus variabilis CBS 506.95 v1.0	Crevar1	179855	38577924	14573	N	Y	Y	N		Ruiz-DueÃ±as FJ et al.,2021	33211093	
 737	Crinitomyces ghanaensis NRRL YB-1486	Crigha_NRRLYB1486_1	135453	12483637	5715	N	Y	Y	N		Opulente DA et al.,2024	38662846	
 738	Cronartium quercuum f. sp. fusiforme G11 v1.0	Croqu1	708437	76567842	13903	N	Y	Y	N		Pendleton AL et al.,2014	25018762	
 739	Crucibulum laeve CBS 166.37 v1.0	Crula1	68775	44728771	14218	N	Y	Y	N		Varga T et al.,2019	30886374	
@@ -755,7 +755,7 @@
 754	Cunninghamella echinulata NRRL 1382 v1.0	Cunech1	76405	29002410	10443	N	Y	Y	N		Chang Y et al.,2022	35996588	
 755	Cyathus pallidus NK-01 v1.0	Cyapal1	380665	158824083	32880	N	Y	Y	N		Kraisitudomsook N et al.,2024	38195011	
 756	Cyathus stercoreus NK-82 v1.0	Cyaste1	181520	202911832	33641	N	Y	Y	N		Kraisitudomsook N et al.,2024	38195011	
-757	Cyathus striatus AH 40144 v1.0	Cyastr2	68777	91180015	23513	N	Y	Y	N		Ruiz-Dueñas FJ et al.,2021	33211093	
+757	Cyathus striatus AH 40144 v1.0	Cyastr2	68777	91180015	23513	N	Y	Y	N		Ruiz-DueÃ±as FJ et al.,2021	33211093	
 758	Cyberlindnera americana NRRL Y-2156	Cybame_NRRLY2156_1	36016	11527520	5784	N	Y	Y	N		Opulente DA et al.,2024	38662846	
 759	Cyberlindnera amylophila NRRL YB-1287	Cybamy_NRRLYB1287_1	53489	12359491	6118	N	Y	Y	N		Opulente DA et al.,2024	38662846	
 760	Cyberlindnera bimundalis NRRL Y-5343	Cybbim_NRRLY5343_1	36017	12121557	5902	N	Y	Y	N		Opulente DA et al.,2024	38662846	
@@ -829,10 +829,10 @@
 828	Diaporthe helianthi str. 7/96	Diahe1	158607	63672038	13139	N	Y	Y	N		Baroncelli R et al.,2016	27872817	
 829	Dibaeis baeomyces	Dibbae1	83478	35272919	12729	N	Y	Y	N		McDonald TR et al.,2013	23557360	
 830	Dichomitus squalens CBS 464.89 v2.0	Dicsqu464_2	114155	45603164	13877	N	Y	Y	N		Gonzalez Ramos VM et al.,2026	41660831	
-831	Dichomitus squalens CBS463.89 v1.0	Dicsqu463_1	114155	36868345	14946	N	Y	Y	N		Casado López S et al.,2019	31048399	
-832	Dichomitus squalens CBS464.89 v1.0	Dicsqu464_1	114155	39597219	15295	N	Y	Y	N		Casado López S et al.,2019	31048399	
+831	Dichomitus squalens CBS463.89 v1.0	Dicsqu463_1	114155	36868345	14946	N	Y	Y	N		Casado LÃ³pez S et al.,2019	31048399	
+832	Dichomitus squalens CBS464.89 v1.0	Dicsqu464_1	114155	39597219	15295	N	Y	Y	N		Casado LÃ³pez S et al.,2019	31048399	
 833	Dichomitus squalens LYAD-421 SS1 v1.0	Dicsq1	114155	42748430	12290	N	Y	Y	N		Floudas D et al.,2012	22745431	
-834	Dichomitus squalens OM18370.1 v1.0	Dicsqu18370_1	114155	39319619	14950	N	Y	Y	N		Casado López S et al.,2019	31048399	
+834	Dichomitus squalens OM18370.1 v1.0	Dicsqu18370_1	114155	39319619	14950	N	Y	Y	N		Casado LÃ³pez S et al.,2019	31048399	
 835	Dichotomocladium elegans RSA 919- v1.0	Dicele1	101130	39778020	12396	N	Y	Y	N		Chang Y et al.,2022	35996588	
 836	Diddensiella caesifluorescens NRRL Y-48781	Didcae_NRRLY48781_1	1194607	11925625	5949	N	Y	Y	N		Opulente DA et al.,2024	38662846	
 837	Diddensiella santjacobensis NRRL Y-17667	Didsan_NRRLY17667_1	2704139	12501943	6327	N	Y	Y	N		Opulente DA et al.,2024	38662846	
@@ -888,8 +888,8 @@
 887	Emergomyces pasteurianus UAMH 9510	Emepa1	1955774	32410993	8950	N	Y	Y	N		Dukik K et al.,2017	28176377	
 888	Emericellopsis maritima CBS 491.71 v1.0	Ememar1	234930	27862787	9530	N	Y	Y	N		Doval RL et al.,2025	40560406	
 889	Emericellopsis sp. TS7 v1.0	AcreTS7_1	2614577	27300990	9964	N	Y	Y	N		Hagestad OC et al.,2021	34372938	
-890	Emmonsia crescens UAMH 4076	Emmcr1	73230	33754519	8908	N	Y	Y	N		Muñoz JF et al.,2018	29540755	
-891	Emmonsia parva UAMH 130	Emmpa1	2060905	27837035	8201	N	Y	Y	N		Muñoz JF et al.,2018	29540755	
+890	Emmonsia crescens UAMH 4076	Emmcr1	73230	33754519	8908	N	Y	Y	N		MuÃ±oz JF et al.,2018	29540755	
+891	Emmonsia parva UAMH 130	Emmpa1	2060905	27837035	8201	N	Y	Y	N		MuÃ±oz JF et al.,2018	29540755	
 892	Encephalitozoon cuniculi GB-M1	Enccu1	284813	2497519	1996	N	Y	Y	N		Peyretaillade E et al.,2009~Katinka MD et al.,2001	20003517 11719806	
 893	Encephalitozoon hellem ATCC 50504	Enche1	907965	2251784	1847	N	Y	Y	N		Pombert JF et al.,2012	22802648	
 894	Encephalitozoon intestinalis ATCC 50506	Encin1	876142	2216898	1833	N	Y	Y	N		Corradi N et al.,2010	20865802	
@@ -951,7 +951,7 @@
 950	Fusarium culmorum UK99	Fuscu1	5516	41928875	12472	N	Y	Y	N		Urban M et al.,2016	27634986	
 951	Fusarium fujikuroi IMI 58289	Fusfu1	1279085	43832314	14813	N	Y	Y	N		Wiemann P et al.,2013	23825955	
 952	Fusarium graminearum v1.0	Fusgr1	5518	36446046	13322	N	Y	Y	N		Cuomo CA et al.,2007	17823352	
-953	Fusarium langsethiae Fl201059	Fusla1	179993	37543021	11940	N	Y	Y	N		Lysøe E et al.,2016	26803271	
+953	Fusarium langsethiae Fl201059	Fusla1	179993	37543021	11940	N	Y	Y	N		LysÃ¸e E et al.,2016	26803271	
 954	Fusarium mangiferae MRC7560	Fusma1	192010	46292722	15804	N	Y	Y	N		Niehaus EM et al.,2016	28040774	
 955	Fusarium oxysporum f. sp. albedinis isolate 9 v1.0	Fusoxalb1	5507	65559131	19411	N	Y	Y	N		Khoulassa S et al.,2022	35536698	
 956	Fusarium oxysporum f. sp. conglutinans race 2 54008 (PHW808)	Fusoxcon1	1089457	53575352	26246	N	Y	Y	N		DeIulio GA et al.,2018	29898984	
@@ -1029,7 +1029,7 @@
 1028	Grosmannia clavigera kw1407	Grocl1	655863	29794006	8312	N	Y	Y	N		DiGuistini S et al.,2011	21262841	
 1029	Gryganskiella cystojenkinii 1230	Mocy1230_1	979690	42943035	12079	N	Y	Y	N		Vandepol N et al.,2020	33364917	
 1030	Guyanagaster necrorhizus MCA 3950 v1.0	Guyne1	856835	53686691	14276	N	Y	Y	N		Koch RA et al.,2021	34245690	
-1031	Gymnopilus junonius AH 44721 v1.0	Gymjun1	109634	59461163	16444	N	Y	Y	N		Ruiz-Dueñas FJ et al.,2021	33211093	
+1031	Gymnopilus junonius AH 44721 v1.0	Gymjun1	109634	59461163	16444	N	Y	Y	N		Ruiz-DueÃ±as FJ et al.,2021	33211093	
 1032	Gymnopus androsaceus JB14 v1.0	Gyman1	1447940	89149538	29375	N	Y	Y	N		Barbi F et al.,2020	31760680	
 1033	Gymnopus luxurians v1.0	Gymlu1	944289	66281680	22057	N	Y	Y	N		Kohler A et al.,2015	25706625	
 1034	Gyrodon lividus BX v1.0	Gyrli1	85971	43048674	11779	N	Y	Y	N		Miyauchi S et al.,2020	33046698	
@@ -1063,8 +1063,8 @@
 1062	Haplosporangium sp. NRRL 3175	HaspN3175_1	1897644	36129123	10850	N	Y	Y	N		Vandepol N et al.,2020	33364917	
 1063	Haplosporangium sp. NRRL A-10739	HapNA10739_1	1897648	33515068	9756	N	Y	Y	N		Vandepol N et al.,2020	33364917	
 1064	Haplosporangium sp. NRRL A-10996	HapNA10996_1	1897647	33513860	9755	N	Y	Y	N		Vandepol N et al.,2020	33364917	
-1065	Hebeloma cylindrosporum h7 v2.0	Hebcy2	76867	38226047	15382	N	Y	Y	N		Kohler A et al.,2015~Doré J et al.,2015~Doré J et al.,2017	25706625 26171947 28076886	
-1066	Helicocarpus griseus UAMH 5409	Helgr1	1447875	32035056	10224	N	Y	Y	N		Muñoz JF et al.,2018	29540755	
+1065	Hebeloma cylindrosporum h7 v2.0	Hebcy2	76867	38226047	15382	N	Y	Y	N		Kohler A et al.,2015~DorÃ© J et al.,2015~DorÃ© J et al.,2017	25706625 26171947 28076886	
+1066	Helicocarpus griseus UAMH 5409	Helgr1	1447875	32035056	10224	N	Y	Y	N		MuÃ±oz JF et al.,2018	29540755	
 1067	Helicostylum pulchrum RSA 2064 v1.0	Helpul1	562976	32727348	12794	N	Y	Y	N		Chang Y et al.,2022	35996588	
 1068	Heliocybe sulcata OMC1185 v1.0	Helsul1	5364	31948515	12570	N	Y	Y	N		Varga T et al.,2019	30886374	
 1069	Helotiales sp. UNIPAMPA011 v1.0	Helsp1	1755440	48198474	16711	N	Y	Y	N		Lucini F et al.,2026	41921590	
@@ -1072,7 +1072,7 @@
 1071	Hemisphaericaspora nanyangensis CBS 13020	Hemnan_CBS13020_1	1435455	14925434	5844	N	Y	Y	N		Opulente DA et al.,2024	38662846	
 1072	Hepatospora eriocheir GB1	Heper1	1081669	4570278	2691	N	Y	Y	N		Wiredu Boakye D et al.,2017	28345194	
 1073	Hesseltinella vesiculosa NRRL3301 v2.0	Hesve2finisherSC	101127	27224236	11141	N	Y	Y	N		Mondo SJ et al.,2017	28481340	
-1074	Heterobasidion annosum v2.0	Hetan2	747525	33649967	13383	N	Y	Y	N		Olson Å et al.,2012	22463738	
+1074	Heterobasidion annosum v2.0	Hetan2	747525	33649967	13383	N	Y	Y	N		Olson Ã… et al.,2012	22463738	
 1075	Heterogastridium pycnidioideum ATCC MYA-4631 v1.0	Hetpy1	1397325	17579447	7658	N	Y	Y	N				10.3897/imafungus.17.189848
 1076	Hexagonia nitida CIRM-BRFM 1802 v1.0	Hexnit1	1140402	41833432	14981	N	Y	Y	N		Hage H et al.,2021	33538380	
 1077	Hirsutella minnesotensis 3608	Hirmi1	1043627	51057407	10463	N	Y	Y	N		Lai Y et al.,2014	25359922	
@@ -1088,7 +1088,7 @@
 1087	Hydnopolyporus fimbriatus CBS384.51 v1.0	Hydfim1	378272	34571335	12424	N	Y	Y	N		Hage H et al.,2021	33538380	
 1088	Hydnum rufescens UP504 v2.0	Hydru2	139363	67135451	18665	N	Y	Y	N		Miyauchi S et al.,2020	33046698	
 1089	Hygrophoropsis aurantiaca ATCC 28755 v1.0	Hygaur1	72124	36975565	14285	N	Y	Y	N		Wu G et al.,2022	34767630	
-1090	Hymenopellis radicata IJFM A160 v1.0	Hymrad1	937743	78586887	27481	N	Y	Y	N		Ruiz-Dueñas FJ et al.,2021	33211093	
+1090	Hymenopellis radicata IJFM A160 v1.0	Hymrad1	937743	78586887	27481	N	Y	Y	N		Ruiz-DueÃ±as FJ et al.,2021	33211093	
 1091	Hypholoma sublateritium v1.0	Hypsu1	945553	48031814	17911	N	Y	Y	N		Kohler A et al.,2015	25706625	
 1092	Hyphopichia burtonii NRRL Y-1933 v1.0	Hypbu1	717740	12403110	6002	N	Y	Y	N		Riley R et al.,2016	27535936	
 1093	Hyphopichia buzzinii CBS 14300	Hypbuz_CBS14300_1	1979430	12729600	5811	N	Y	Y	N		Opulente DA et al.,2024	38662846	
@@ -1325,7 +1325,7 @@
 1324	Leotiomycetes sp. MPI-SDFR-AT-0126 v1.0	Phimu1	1709938	54044039	17024	N	Y	Y	N		Mesny F et al.,2021	34893598	
 1325	Leotiomycetes sp. R113_184 v1.0	ColoR113_1	147548	21085095	7458	N	Y	Y	N		Nelson AR et al.,2022	36008619	
 1326	Lepidopterella palustris v1.0	Leppa1	741139	45668136	13870	N	Y	Y	N		Peter M et al.,2016	27601008	
-1327	Lepista nuda CBS 247.69 v1.0	Lepnud1	64659	43493018	14880	N	Y	Y	N		Ruiz-Dueñas FJ et al.,2021	33211093	
+1327	Lepista nuda CBS 247.69 v1.0	Lepnud1	64659	43493018	14880	N	Y	Y	N		Ruiz-DueÃ±as FJ et al.,2021	33211093	
 1328	Leptodontidium sp. MPI-SDFR-AT-0119 v2.0	Lepor2	75374	77016911	21254	N	Y	Y	N		Mesny F et al.,2021	34893598	
 1329	Leptosphaeria maculans	Lepmu1	985895	44892605	12469	N	Y	Y	N		Rouxel T et al.,2011	21326234	
 1330	Leptosphaeria microscopica UNIPAMPA013 v1.0	Lepmi1	1979424	41197383	13848	N	Y	Y	N		Lucini F et al.,2026	41921590	
@@ -1393,7 +1393,7 @@
 1392	Lophiotrema nucula CBS 627.86 v1.0	Lopnu1	690887	48642237	18117	N	Y	Y	N		Haridas S et al.,2020	32206138	
 1393	Lophium mytilinum CBS 269.34 v1.0	Lopmy1	390894	43412209	15153	N	Y	Y	N		Haridas S et al.,2020	32206138	
 1394	Lyophyllum atratum CBS 144462 v1.0	Lyoat1	117065	64896558	15046	N	Y	Y	N		Steindorff AS et al.,2021	33034064	
-1395	Macrolepiota fuliginosa MF-IS2 v1.0	Macfu1	1400762	46396944	15801	N	Y	Y	N		Ruiz-Dueñas FJ et al.,2021	33211093	
+1395	Macrolepiota fuliginosa MF-IS2 v1.0	Macfu1	1400762	46396944	15801	N	Y	Y	N		Ruiz-DueÃ±as FJ et al.,2021	33211093	
 1396	Macrophomina phaseolina MPI-SDFR-AT-0080 v1.0	Macpha1	35725	53641247	14845	N	Y	Y	N		Mesny F et al.,2021	34893598	
 1397	Macrophomina phaseolina MS6	Macph1	1126212	48882845	13806	N	Y	Y	N		Islam MS et al.,2012	22992219	
 1398	Macroventuria anomochaeta CBS 525.71 v1.0	Macan1	301207	33336106	12954	N	Y	Y	N		Haridas S et al.,2020	32206138	
@@ -1663,10 +1663,10 @@
 1662	Naganishia friedmannii 6030m v2.0	Nagfr2	89922	22259180	7353	N	Y	Y	N		Vimercati L et al.,2025	40471702	
 1663	Naganishia vishniacii ANT03-052 v1.1	Nagvi1	89929	19679091	6711	N	Y	Y	N		Nizovoy P et al.,2021	33232451	
 1664	Naiadella fluitans ATCC 64713 v1.0	Naifl1	1397326	52667713	13270	N	Y	Y	N				10.3897/imafungus.17.189848
-1665	Nakaseomyces bacillisporus CBS 7720	Nakbac1	51660	10993726	5086	N	Y	Y	N		Gabaldón T et al.,2013	24034898	
+1665	Nakaseomyces bacillisporus CBS 7720	Nakbac1	51660	10993726	5086	N	Y	Y	N		GabaldÃ³n T et al.,2013	24034898	
 1666	Nakaseomyces bracarensis NRRL Y-48270	Nakbra_NRRLY48270_1	273131	12338801	5246	N	Y	Y	N		Opulente DA et al.,2024	38662846	
 1667	Nakaseomyces castellii NRRL Y-17070	Nakcas_NRRLY17070_1	51914	10287713	4785	N	Y	Y	N		Opulente DA et al.,2024	38662846	
-1668	Nakaseomyces delphensis CBS 2170	Nakdel1	51657	10932331	5103	N	Y	Y	N		Gabaldón T et al.,2013	24034898	
+1668	Nakaseomyces delphensis CBS 2170	Nakdel1	51657	10932331	5103	N	Y	Y	N		GabaldÃ³n T et al.,2013	24034898	
 1669	Nakaseomyces glabratus NRRL Y-65	Nakgla_NRRLY65_1	5478	12349887	5177	N	Y	Y	N		Opulente DA et al.,2024	38662846	
 1670	Nakaseomyces kungkrabaensis CBS 10927	Nakkun_CBS10927_1	644822	11726292	5154	N	Y	Y	N		Opulente DA et al.,2024	38662846	
 1671	Nakaseomyces nivariensis NRRL Y-48269	Nakniv_NRRLY48269_1	418086	11617224	5145	N	Y	Y	N		Opulente DA et al.,2024	38662846	
@@ -1710,7 +1710,7 @@
 1709	Neofusicoccum parvum UCRNP2	Neopa1	1287680	42592847	10366	N	Y	Y	N		Blanco-Ulate B et al.,2013	23766404	
 1710	Neolecta irregularis DAH-1 v1.0	Neoirr1	48691	14591686	6674	N	Y	Y	N		Nguyen TA et al.,2017	28176784	
 1711	Neolentinus lepideus v1.0	Neole1	1314782	35640188	13164	N	Y	Y	N		Nagy LG et al.,2016	26659563	
-1712	Neonectria ditissima R09/05	Neodi1	78410	45719213	12685	N	Y	Y	N		Gómez-Cortecero A et al.,2015	26586869	
+1712	Neonectria ditissima R09/05	Neodi1	78410	45719213	12685	N	Y	Y	N		GÃ³mez-Cortecero A et al.,2015	26586869	
 1713	Neosartorya fischeri NRRL 181	Neofi1	331117	32551711	10406	N	Y	Y	N		Arnaud MB et al.,2012~Lonial S et al.,1997	22080559 9156256	
 1714	Neurospora crassa clade B FGSC 4830 v1.0	Neucr4830_1	5141	37056930	10586	N	Y	Y	N		Hensen N et al.,2023	37820761	
 1715	Neurospora crassa FGSC 73 trp-3 v1.0	Neucr_trp3_1	5141	40416174	11978	N	Y	Y	N		Baker SE et al.,2015	25838471	
@@ -1784,12 +1784,12 @@
 1783	Ophiostoma piceae UAMH 11346	Ophpic1	1262450	32840360	8884	N	Y	Y	N		Haridas S et al.,2013	23725015	
 1784	Ordospora colligata OC4	Ordco1	1354746	2290528	1820	N	Y	Y	N		Pombert JF et al.,2015	25587016	
 1785	Ordospora pajunii v1.0	MicG_I_3	3039483	2239413	1602	N	Y	Y	N		Dziuba MK et al.,2024	38651867	
-1786	Oudemansiella mucida CBS 558.79 v1.0	Oudmuc1	139077	61732987	18562	N	Y	Y	N		Ruiz-Dueñas FJ et al.,2021	33211093	
+1786	Oudemansiella mucida CBS 558.79 v1.0	Oudmuc1	139077	61732987	18562	N	Y	Y	N		Ruiz-DueÃ±as FJ et al.,2021	33211093	
 1787	Pachysolen tannophilus NRRL Y-2460 v1.2	Pacta1_2	669874	12597116	5675	N	Y	Y	N		Riley R et al.,2016	27535936	
 1788	Paecilomyces niveus CO7 v1.0	Bysni1	5093	36022454	10584	N	Y	Y	N		Biango-Daniels MN et al.,2018	29930063	
 1789	Paecilomyces variotii CBS 101075 v1.0	Paevar1	264951	30105809	9270	N	Y	Y	N		Urquhart AS et al.,2018	30619145	
 1790	Paecilomyces variotii CBS144490 HYG1 v1.0	Paevar_HGY_1	264951	32365222	9230	N	Y	Y	N		Urquhart AS et al.,2018	30619145	
-1791	Panaeolus papilionaceus CIRM-BRFM 715 v1.0	Panpap1	330517	50889730	17466	N	Y	Y	N		Ruiz-Dueñas FJ et al.,2021	33211093	
+1791	Panaeolus papilionaceus CIRM-BRFM 715 v1.0	Panpap1	330517	50889730	17466	N	Y	Y	N		Ruiz-DueÃ±as FJ et al.,2021	33211093	
 1792	Panus rudis PR-1116 ss-1 v1.0	Panru1	48022	36358364	13568	N	Y	Y	N		Hage H et al.,2021	33538380	
 1793	Papiliotrema laurentii 5307AH v1.0	Papla1	5418	19510785	7537	N	Y	Y	N		Roman VA et al.,2024	38967461	
 1794	Paracoccidioides brasiliensis Pb03	Parbr1	482561	29059745	7876	N	Y	Y	N		Desjardins CA et al.,2011	22046142	
@@ -1861,20 +1861,20 @@
 1860	Phanerochaete chrysosporium RP-78 v2.2	Phchr2	5306	35149519	13602	N	Y	Y	N		Ohm RA et al.,2014	24853079	
 1861	Phascolomyces articulosus v1.0	Phaart1	60185	47605836	14495	N	Y	Y	N		Chang Y et al.,2022	35996588	
 1862	Phellinus noxius FFPRI411160	Pheno1	2282107	31444514	9820	N	Y	Y	N		Chung CL et al.,2017	28926153	
-1863	Phellopilus nigrolimitatus SigPhenig9 v1.0	Pheni1	127956	56764883	14792	N	Y	Y	N		Sønstebø JH et al.,2022	35076968	
+1863	Phellopilus nigrolimitatus SigPhenig9 v1.0	Pheni1	127956	56764883	14792	N	Y	Y	N		SÃ¸nstebÃ¸ JH et al.,2022	35076968	
 1864	Phialemonium atrogriseum 8032-3 v1.0	Phiatr1	1093897	33593884	11400	N	Y	Y	N		Hensen N et al.,2023	37820761	
 1865	Phialemonium thermophilum ATCC 24622	Acrth1	223376	28886936	10424	N	Y	Y	N		Steindorff AS et al.,2024	39266695	
 1866	Phialocephala scopiformis 5WS22E1 v1.0	Phisc1	149040	48876257	18573	N	Y	Y	N		Walker AK et al.,2016	26950333	
 1867	Phialocephala subalpina UAMH 11012	Phisu1	576137	69693031	20173	N	Y	Y	N		Schlegel M et al.,2016	27938347	
 1868	Phialophora attae CBS 131958	Phiatt1	1664694	30363635	11848	N	Y	Y	N		Moreno LF et al.,2015	26586868	
 1869	Phlebia brevispora HHB-7030 SS6 v1.0	Phlbr1	194682	49963746	16170	N	Y	Y	N		Binder M et al.,2013	23935031	
-1870	Phlebia centrifuga FBCC195 	Phlcen1	98765	34848156	13785	N	Y	Y	N		Mäkelä MR et al.,2018	29622620	
+1870	Phlebia centrifuga FBCC195 	Phlcen1	98765	34848156	13785	N	Y	Y	N		MÃ¤kelÃ¤ MR et al.,2018	29622620	
 1871	Phlebia radiata Fr. (isolate 79, FBCC0043)	Phlrad1	5308	40407200	14629	N	Y	Y	N		Kuuskeri J et al.,2016	27602055	
 1872	Phlebiopsis gigantea v1.0	Phlgi1	82310	30143925	11891	N	Y	Y	N		Hori C et al.,2014	25474575	
 1873	Phlebopus sp. FC_14 v2.0	PhlFC14_2	2060792	36096188	9409	N	Y	Y	N		Wu G et al.,2022	34767630	
 1874	Phlegmacium glaucopus AT 2004 276 v2.0	Corgl3	1149754	63450306	20377	N	Y	Y	N		Miyauchi S et al.,2020	33046698	
-1875	Pholiota alnicola AH 47727 v1.0	Phoaln1	109635	75008219	18795	N	Y	Y	N		Ruiz-Dueñas FJ et al.,2021	33211093	
-1876	Pholiota conissans CIRM-BRFM 674 v1.0	Phocon1	109636	43955553	16589	N	Y	Y	N		Ruiz-Dueñas FJ et al.,2021	33211093	
+1875	Pholiota alnicola AH 47727 v1.0	Phoaln1	109635	75008219	18795	N	Y	Y	N		Ruiz-DueÃ±as FJ et al.,2021	33211093	
+1876	Pholiota conissans CIRM-BRFM 674 v1.0	Phocon1	109636	43955553	16589	N	Y	Y	N		Ruiz-DueÃ±as FJ et al.,2021	33211093	
 1877	Pholiota molesta CBS 144467 v1.0	Phohig1	2066989	66044324	17825	N	Y	Y	N		Steindorff AS et al.,2021	33034064	
 1878	Phoma tracheiphila IPT5 v1.0	Photr1	1408161	34242632	13209	N	Y	Y	N		Haridas S et al.,2020	32206138	
 1879	Phycomyces blakesleeanus L51 v1.0	Phybl_L51_1	4837	62087297	12627	N	Y	Y	N		Lax C et al.,2024	39025853	
@@ -1957,13 +1957,13 @@
 1956	Pisolithus tinctorius Marx 270 v2.0	Pisti2	37468	92528219	16924	N	Y	Y	N		Kohler A et al.,2015~Plett JM et al.,2023	25706625 36811946	
 1957	Plectosphaerella cucumerina RP01 v1.0	Plecuc1	40658	36520717	12956	N	Y	Y	N		Mesny F et al.,2021	34893598	
 1958	Pleomassaria siparia v1.0	Plesi1	100044	43176591	13486	N	Y	Y	N		Haridas S et al.,2020	32206138	
-1959	Pleurotus eryngii ATCC 90797 v1.0	Pleery1	5323	44606964	15960	N	Y	Y	N		Ruiz-Dueñas FJ et al.,2021	33211093	
+1959	Pleurotus eryngii ATCC 90797 v1.0	Pleery1	5323	44606964	15960	N	Y	Y	N		Ruiz-DueÃ±as FJ et al.,2021	33211093	
 1960	Pleurotus ostreatus PC15 v2.0	PleosPC15_2	1137138	34343005	12330	N	Y	Y	N		Riley R et al.,2014~Castanera R et al.,2016~Alfaro M et al.,2016	24958869 27294409 27117896	
 1961	Pleurotus ostreatus PC9 v1.0	PleosPC9_1	5322	35630309	12206	N	Y	Y	N		Alfaro M et al.,2016	27117896	
 1962	Plicaturopsis crispa v1.0	Plicr1	944288	34498416	13626	N	Y	Y	N		Kohler A et al.,2015	25706625	
 1963	Pluteus cervinus NL-1719 v1.0	Plucer1	181527	52193021	19818	N	Y	Y	N		Varga T et al.,2019	30886374	
 1964	Pneumocystis carinii B80	Pneca1	1408658	7661456	3646	N	Y	Y	N		Ma L et al.,2016	26899007	
-1965	Pneumocystis jirovecii	Pneji1	42068	8152515	3520	N	Y	Y	N		Cissé OH et al.,2012	23269827	
+1965	Pneumocystis jirovecii	Pneji1	42068	8152515	3520	N	Y	Y	N		CissÃ© OH et al.,2012	23269827	
 1966	Pneumocystis jirovecii RU7	Pnejir1	1408657	8396240	3761	N	Y	Y	N		Ma L et al.,2016	26899007	
 1967	Pneumocystis murina B123	Pnemu1	1069680	7501343	3623	N	Y	Y	N		Ma L et al.,2016	26899007	
 1968	Pochonia chlamydosporia 170	Pocchl1	1380566	44215803	14204	N	Y	Y	N		Wang G et al.,2016	27416025	
@@ -1995,7 +1995,7 @@
 1994	Polyporus arcularius v1.0	Polar1	1314778	43452342	17525	N	Y	Y	N		Varga T et al.,2019	30886374	
 1995	Polyporus brumalis CIRM-BRFM 1820 v1.0	Polbr1	139420	45718511	18244	N	Y	Y	N		Miyauchi S et al.,2018	30061923	
 1996	Polyporus squamosus CCBS 676 v1.0	Polsqu1	2829415	55468683	15283	N	Y	Y	N		Hage H et al.,2021	33538380	
-1997	Polytolypa hystricis UAMH 7299	Polhy1	1447883	34692036	9934	N	Y	Y	N		Muñoz JF et al.,2018	29540755	
+1997	Polytolypa hystricis UAMH 7299	Polhy1	1447883	34692036	9934	N	Y	Y	N		MuÃ±oz JF et al.,2018	29540755	
 1998	Poronia punctata CBS 180.79 v1.0	Porpun1	101475	47990914	9862	N	Y	Y	N		Franco MEE et al.,2022	34797921	
 1999	Porosterum spadiceum BS34 v1.0	Porspa1	103378	85198711	16879	N	Y	Y	N		Ben Ayed A et al.,2024	38198896	
 2000	Postia placenta MAD 698-R v1.0	Pospl1	104341	90927236	9113	N	Y	Y	N		Martinez D et al.,2009	19193860	
@@ -2095,7 +2095,7 @@
 2094	Rhizopus microsporus var. microsporus ATCC52813 v1.0	Rhimi1_1	1340429	25972395	10905	N	Y	Y	N		Mondo SJ et al.,2017	29184190	
 2095	Rhizopus microsporus var. microsporus ATCC52814 v1.0	Rhimi_ATCC52814_1	58291	24950816	11502	N	Y	Y	N		Lastovetsky OA et al.,2016	27956601	
 2096	Rhizoscyphus ericae UAMH 7357 v1.0	Rhier1	1745343	57408471	16784	N	Y	Y	N		Martino E et al.,2018	29315638	
-2097	Rhodocollybia butyracea AH 40177 v1.0	Rhobut1_1	206335	96282412	22870	N	Y	Y	N		Ruiz-Dueñas FJ et al.,2021	33211093	
+2097	Rhodocollybia butyracea AH 40177 v1.0	Rhobut1_1	206335	96282412	22870	N	Y	Y	N		Ruiz-DueÃ±as FJ et al.,2021	33211093	
 2098	Rhodofomes roseus CIRM-BRFM 1785 v1.0	Fomros1	34475	38369625	12986	N	Y	Y	N		Hage H et al.,2021	33538380	
 2099	Rhodosporidium glutinis ATCC 204091 v1.0	Rhoglu91_1	5535	20478880	7374	N	Y	Y	N		Paul D et al.,2014	24526636	
 2100	Rhodosporidium toruloides ATCC26217 v1.0	Rhoto_ATCC26217_1	5286	20209575	8226	N	Y	Y	N		Mondo SJ et al.,2025	40491964	
@@ -2115,7 +2115,7 @@
 2114	Rhypophila sp. PSN 637 v1.0	Rhsp637_1	2905927	46869963	14238	N	Y	Y	N		Tangthirasunun N et al.,2025	41440705	
 2115	Rhytidhysteron rufulum	Rhyru1_1	37885	40184762	12117	N	Y	Y	N		Ohm RA et al.,2012	23236275	
 2116	Rickenella fibula HBK330-10 v1.0	Ricfib1	264144	59345457	18897	N	Y	Y	N		Korotkin HB et al.,2018	30368779	
-2117	Rickenella mellea v1.0 (SZMC22713)	Ricmel1	50990	45069463	17139	N	Y	Y	N		Krizsán K et al.,2019	30902897	
+2117	Rickenella mellea v1.0 (SZMC22713)	Ricmel1	50990	45069463	17139	N	Y	Y	N		KrizsÃ¡n K et al.,2019	30902897	
 2118	Rigidoporus microporus ED310 v1.0	Rigmic1	219653	42090139	10917	N	Y	Y	N		Oghenekaro AO et al.,2020	32251355	
 2119	Roridomyces roridus 9284 v1.0	Rorror1	1738132	91122911	26381	N	Y	Y	N		Harder CB et al.,2024	38942024	
 2120	Rosellinia necatrix W97	Rosne1	77044	44257831	12444	N	Y	Y	N		Shimizu T et al.,2018	29688132	
@@ -2407,10 +2407,10 @@
 2406	Talaromyces islandicus WF3812	Talis1	28573	34715840	9927	N	Y	Y	N		Schafhauser T et al.,2015	26197417	
 2407	Talaromyces marneffei ATCC 18224	Talma1_2	441960	28643865	10638	N	Y	Y	N		Nierman WC et al.,2015	25676766	
 2408	Talaromyces stipitatus ATCC 10500	Talst1_2	441959	35685443	13252	N	Y	Y	N		Nierman WC et al.,2015	25676766	
-2409	Taphrina deformans	Tapde1_1	1097556	13364053	4609	N	Y	Y	N		Cissé OH et al.,2013	23631913	
+2409	Taphrina deformans	Tapde1_1	1097556	13364053	4609	N	Y	Y	N		CissÃ© OH et al.,2013	23631913	
 2410	Teratosphaeria nubilosa CBS 116005 v1.0	Ternu1	161662	28443146	10998	N	Y	Y	N		Haridas S et al.,2020	32206138	
 2411	Terfezia boudieri ATCC MYA-4762 v1.1	Terbo2	82571	63234573	12114	N	Y	Y	N		Murat C et al.,2018	30420746	
-2412	Terfezia claveryi T7 v1.0	Tercla1	139407	74471381	12765	N	Y	Y	N		Miyauchi S et al.,2020~Marqués-Gálvez JE et al.,2021	33046698 33118170	
+2412	Terfezia claveryi T7 v1.0	Tercla1	139407	74471381	12765	N	Y	Y	N		Miyauchi S et al.,2020~MarquÃ©s-GÃ¡lvez JE et al.,2021	33046698 33118170	
 2413	Termitomyces sp. J132	TerJ132_1	1306850	67296805	11143	N	Y	Y	N		Poulsen M et al.,2014	25246537	
 2414	Testicularia cyperi MCA 3645 v1.0	Tescy1	1882483	20778962	7069	N	Y	Y	N		Kijpornyongpan T et al.,2018	29771364	
 2415	Tetrapisispora arboricola NRRL Y-27308	Tetarb_NRRLY27308_1	113605	12808485	5179	N	Y	Y	N		Opulente DA et al.,2024	38662846	
@@ -2459,7 +2459,7 @@
 2458	Tilletia walkeri DAOM 236422	Tilwal1	117179	24286172	7970	N	Y	Y	N		Nguyen HDT et al.,2019	32355611	
 2459	Tilletiaria anomala UBC 951 v1.0	Tilan2	1037660	18704010	6810	N	Y	Y	N		Toome M et al.,2014	24926052	
 2460	Tilletiopsis washingtonensis MCA 4186 v1.0	Tilwa1	58919	18761941	7011	N	Y	Y	N		Kijpornyongpan T et al.,2018	29771364	
-2461	Tirmania nivea G3 v1.0	Tirniv1	160517	63133441	10591	N	Y	Y	N		Miyauchi S et al.,2020~Marqués-Gálvez JE et al.,2021	33046698 33118170	
+2461	Tirmania nivea G3 v1.0	Tirniv1	160517	63133441	10591	N	Y	Y	N		Miyauchi S et al.,2020~MarquÃ©s-GÃ¡lvez JE et al.,2021	33046698 33118170	
 2462	Tolypocladium capitatum CBS 113982	Tolca1	45235	22985095	7646	N	Y	Y	N		Quandt CA et al.,2018	29863984	
 2463	Tolypocladium inflatum NRRL 8044	Tolinf1	29910	30348711	9998	N	Y	Y	N		Bushley KE et al.,2013	23818858	
 2464	Tolypocladium ophioglossoides CBS100239	Tolop1	71617	31240685	9317	N	Y	Y	N		Quandt CA et al.,2015	26215153	
@@ -2593,7 +2593,7 @@
 2592	Ustilaginoidea virens	Ustvir1	1159556	33567624	6451	N	Y	Y	N		Kumagai T et al.,2016	27151791	
 2593	Ustilago bromivora UB2112	Ustbr1	307758	20447485	7185	N	Y	Y	N		Rabe F et al.,2016	27835569	
 2594	Ustilago hordei Uh4857_4	Usthor1	1128400	21150702	7110	N	Y	Y	N		Laurie JD et al.,2012	22623492	
-2595	Ustilago maydis 521 v2.0	Ustma2_2	237631	19664388	6785	N	Y	Y	N		Kämper J et al.,2006	17080091	
+2595	Ustilago maydis 521 v2.0	Ustma2_2	237631	19664388	6785	N	Y	Y	N		KÃ¤mper J et al.,2006	17080091	
 2596	Valetoniellopsis laxa CBS 191.97 v1.0	Valla1	152775	22125270	8026	N	Y	Y	N		Doval RL et al.,2025	40560406	
 2597	Valsa mali str. 03-8	Valma1	578113	44725953	11165	N	Y	Y	N		Yin Z et al.,2015	26137988	
 2598	Vanderwaltozyma polyspora DSM 70294	Vanpo1	436907	14674591	5367	N	Y	Y	N		Scannell DR et al.,2007	17494770	

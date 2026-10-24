@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=af3
-#SBATCH --output=08_structures/logs/af3_%j.out
-#SBATCH --error=08_structures/logs/af3_%j.err
+#SBATCH --output=70_structure/logs/af3_%j.out
+#SBATCH --error=70_structure/logs/af3_%j.err
 #SBATCH --open-mode=append
 #SBATCH --partition=gputest
 #SBATCH --time=00:15:00
@@ -11,7 +11,7 @@
 #SBATCH --mem=217086
 #SBATCH --gres=gpu:gh200:1
 # run_af3.sbatch
-# Family-specific: sugar transporters (structure concept test; see README, "Sugar transporter structures").
+# Family-specific: sugar transporters (structure concept test; see 70_structure/README.md).
 # Description: Slurm job that predicts structures with AlphaFold3 (CSC container, GH200 GPU node)
 #              for every input JSON in a folder that has no finished model yet, in one AlphaFold3
 #              run (database search and prediction). Based on CSC's template
@@ -20,11 +20,11 @@
 # Date: 2026-10-22
 # Version: 1.0
 #
-# Usage (from the project folder): sbatch [slurm options] scripts/run_af3.sbatch [input_dir] [output_dir]
-#   input_dir   AlphaFold3 JSONs from make_af3_inputs.py (default: 08_structures/af3_inputs).
-#   output_dir  One subfolder per protein (default: 08_structures/af3_outputs).
+# Usage (from the project folder): sbatch [slurm options] 70_structure/scripts/run_af3.sbatch [input_dir] [output_dir]
+#   input_dir   AlphaFold3 JSONs from make_af3_inputs.py (default: 70_structure/af3_inputs).
+#   output_dir  One subfolder per protein (default: 70_structure/af3_outputs).
 # The defaults above (gputest, 15 min) are for tests; for the full set, override them, e.g.
-#   sbatch --partition=<gpu partition> --time=<hours> scripts/run_af3.sbatch
+#   sbatch --partition=<gpu partition> --time=<hours> 70_structure/scripts/run_af3.sbatch
 #
 # A protein is finished when <output_dir>/<name>/<name>_model.cif exists; finished proteins are
 # skipped, and the folders of unfinished ones are removed first (AlphaFold3 would otherwise write
@@ -52,12 +52,12 @@ if ! compgen -G "$AF3_MODEL_DIR/af3.bin*" > /dev/null; then
     exit 1
 fi
 
-INPUT_DIR=${1:-08_structures/af3_inputs}
-OUTPUT_DIR=${2:-08_structures/af3_outputs}
-QUEUE_DIR="08_structures/af3_queue_${SLURM_JOB_ID}"
+INPUT_DIR=${1:-70_structure/af3_inputs}
+OUTPUT_DIR=${2:-70_structure/af3_outputs}
+QUEUE_DIR="70_structure/af3_queue_${SLURM_JOB_ID}"
 
 if ! compgen -G "$INPUT_DIR/*.json" > /dev/null; then
-    echo "No JSONs in '$INPUT_DIR', run scripts/make_af3_inputs.py first" >&2
+    echo "No JSONs in '$INPUT_DIR', run 70_structure/scripts/make_af3_inputs.py first" >&2
     exit 1
 fi
 

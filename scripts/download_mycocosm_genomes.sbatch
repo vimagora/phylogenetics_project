@@ -16,7 +16,7 @@
 # Version: 1.0
 #
 # Usage (submit from the project folder): sbatch scripts/download_mycocosm_genomes.sbatch [portal_list]
-#   portal_list  Passed on to download_mycocosm_genomes.sh (default: 00_inputs/mycocosm_datasets.tsv).
+#   portal_list  Passed on to download_mycocosm_genomes.sh (default: 00_inputs/candidates.tsv).
 #
 # The Slurm account comes from config.sh: run 'source config.sh' before sbatch. The log is written
 # to 01_genomes/download_<jobid>.log. Re-submitting skips files that were already downloaded.

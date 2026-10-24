@@ -64,9 +64,9 @@ while (( $# > 0 )); do
         *) echo "Unknown argument '$1'; usage: sbatch scripts/species_trees.sbatch [--outgroup PORTAL]" >&2; exit 1 ;;
     esac
 done
-if ! awk -F'\t' -v p="$OUTGROUP" 'NR > 1 { sub(/\r$/, "", $1); if ($1 == p) found = 1 } END { exit !found }' \
-    00_inputs/cohort_datasets.tsv; then
-    echo "Outgroup '$OUTGROUP' is not a cohort portal (00_inputs/cohort_datasets.tsv)" >&2
+if ! awk -F'\t' -v p="$OUTGROUP" 'NR == 1 { for (i = 1; i <= NF; i++) col[$i] = i; next }
+    $col["role"] == "cohort" && $col["portal"] == p { found = 1 } END { exit !found }' 00_inputs/genomes.tsv; then
+    echo "Outgroup '$OUTGROUP' is not a cohort genome in 00_inputs/genomes.tsv" >&2
     exit 1
 fi
 

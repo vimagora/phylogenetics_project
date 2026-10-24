@@ -32,18 +32,18 @@
 07_orthofinder/logs/*
 !07_orthofinder/logs/.gitkeep
 
-# 08: AlphaFold3 inputs (re-create with scripts/make_af3_inputs.py), outputs and Slurm logs
-08_structures/af3_inputs/
-08_structures/af3_test_*/
-08_structures/af3_outputs/
-08_structures/af3_queue_*/
-08_structures/afdb_models/
-08_structures/models_trimmed/
-08_structures/trees/foldseek_allvsall.tsv
-08_structures/pockets/references/
-08_structures/pockets/foldseek_references.tsv
-08_structures/logs/*
-!08_structures/logs/.gitkeep
+# 70_structure (concept test): AlphaFold3 inputs (re-create with 70_structure/scripts/make_af3_inputs.py), outputs and Slurm logs
+70_structure/af3_inputs/
+70_structure/af3_test_*/
+70_structure/af3_outputs/
+70_structure/af3_queue_*/
+70_structure/afdb_models/
+70_structure/models_trimmed/
+70_structure/trees/foldseek_allvsall.tsv
+70_structure/pockets/references/
+70_structure/pockets/foldseek_references.tsv
+70_structure/logs/*
+!70_structure/logs/.gitkeep
 09_families/*/search/cohort_proteins.*
 09_families/*/search/*.part
 09_families/logs/*
@@ -77,3 +77,6 @@ config.sh
 
 # Notes, reports and reference documents (kept local)
 /80_documents/
+
+# Personal helpers and curated working tables (not part of the pipeline)
+/local_scripts/

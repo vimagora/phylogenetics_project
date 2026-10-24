@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # evaluate_pockets.py
-# Family-specific: sugar transporters (structure concept test; see README, "Sugar transporter structures").
+# Family-specific: sugar transporters (structure concept test; see 70_structure/README.md).
 # Description: Scores whether sugar-binding pocket residues (map_pockets.py) group characterized
 #              sugar transporters by substrate better than the whole protein does. Each method gives
 #              a distance between every two transporters:
@@ -22,9 +22,9 @@
 # Version: 1.0
 #
 # Usage (from the project folder; needs numpy and Biopython):
-#   python3 scripts/evaluate_pockets.py [--max-identity 0.4] [--random-sets 1000] [--permutations 1000]
+#   python3 70_structure/scripts/evaluate_pockets.py [--max-identity 0.4] [--random-sets 1000] [--permutations 1000]
 #
-# Output, inside 08_structures/pockets:
+# Output, inside 70_structure/pockets:
 #   trees/pocket_core.nwk, trees/pocket_extended.nwk   neighbour-joining trees of all models (midpoint
 #                                                       rooted), scored by evaluate_substrate_clustering.py
 #                                                       into evaluation/trees/
@@ -48,9 +48,9 @@ from Bio.Phylo.TreeConstruction import DistanceMatrix, DistanceTreeConstructor
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from evaluate_substrate_clustering import category, expanded, path_lengths, tokens  # noqa: E402
 
-IDS_TABLE = "08_structures/structure_ids.tsv"
-POCKET_DIR = "08_structures/pockets"
-SEQUENCE_TREE = "08_structures/trees/sequence_ml.treefile"
+IDS_TABLE = "70_structure/structure_ids.tsv"
+POCKET_DIR = "70_structure/pockets"
+SEQUENCE_TREE = "70_structure/trees/sequence_ml.treefile"
 EVAL_DIR = os.path.join(POCKET_DIR, "evaluation")
 TREE_DIR = os.path.join(POCKET_DIR, "trees")
 
@@ -64,7 +64,7 @@ args = parser.parse_args()
 
 for path in (IDS_TABLE, SEQUENCE_TREE, os.path.join(POCKET_DIR, "pocket_signatures.tsv")):
     if not os.path.isfile(path):
-        sys.exit(f"ERROR: '{path}' not found; run scripts/sequence_tree.sh and scripts/map_pockets.py first")
+        sys.exit(f"ERROR: '{path}' not found; run 70_structure/scripts/sequence_tree.sh and 70_structure/scripts/map_pockets.py first")
 
 with open(IDS_TABLE) as f:
     proteins = {row["structure_id"]: row for row in csv.DictReader(f, delimiter="\t")}

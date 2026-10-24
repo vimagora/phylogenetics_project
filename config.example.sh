@@ -11,6 +11,7 @@ BUSCO_DOWNLOADS=/path/to/busco_downloads/
 # Tykky container with OrthoFinder 3 (envs/of3_env.yaml), i.e. the folder that contains bin/orthofinder
 ORTHOFINDER_DIR=/path/to/orthofinder/
 
+# Optional, only for the structure concept test in 70_structure (not part of the pipeline).
 # AlphaFold3: folder with your own model parameters (af3.bin.zst; licence: never share or commit them),
 # and the container and databases provided by CSC on Roihu
 AF3_MODEL_DIR=/path/to/alphafold3_params/

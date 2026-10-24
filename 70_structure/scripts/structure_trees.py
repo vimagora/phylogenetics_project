@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # structure_trees.py
-# Family-specific: sugar transporters (structure concept test; see README, "Sugar transporter structures").
+# Family-specific: sugar transporters (structure concept test; see 70_structure/README.md).
 # Description: Foldtree-style structure trees: an all-vs-all Foldseek comparison of the trimmed
 #              models, then one neighbour-joining tree per structural similarity score:
 #              fident (sequence identity of the structural alignment), alntmscore (TM-score of the
@@ -12,9 +12,9 @@
 # Version: 1.0
 #
 # Usage (from the project folder; needs foldseek and Biopython):
-#   python3 scripts/structure_trees.py [--models-dir DIR] [--out-dir DIR] [--threads N]
-#   --models-dir  Trimmed models from fetch_afdb_models.py (default: 08_structures/models_trimmed).
-#   --out-dir     Where results are saved (default: 08_structures/trees).
+#   python3 70_structure/scripts/structure_trees.py [--models-dir DIR] [--out-dir DIR] [--threads N]
+#   --models-dir  Trimmed models from fetch_afdb_models.py (default: 70_structure/models_trimmed).
+#   --out-dir     Where results are saved (default: 70_structure/trees).
 #
 # Output, inside out-dir: foldseek_allvsall.tsv, and structure_<score>.nwk for each score.
 
@@ -31,8 +31,8 @@ from Bio.Phylo.TreeConstruction import DistanceMatrix, DistanceTreeConstructor
 SCORES = ["fident", "alntmscore", "lddt"]
 
 parser = argparse.ArgumentParser(description="Foldtree-style structure trees")
-parser.add_argument("--models-dir", default="08_structures/models_trimmed")
-parser.add_argument("--out-dir", default="08_structures/trees")
+parser.add_argument("--models-dir", default="70_structure/models_trimmed")
+parser.add_argument("--out-dir", default="70_structure/trees")
 parser.add_argument("--threads", type=int, default=os.cpu_count())
 args = parser.parse_args()
 
@@ -40,7 +40,7 @@ if shutil.which("foldseek") is None:
     sys.exit("ERROR: foldseek not found; activate the structure_test environment")
 models = sorted(f[:-4] for f in os.listdir(args.models_dir) if f.endswith(".pdb"))
 if len(models) < 4:
-    sys.exit(f"ERROR: fewer than 4 models in '{args.models_dir}', run scripts/fetch_afdb_models.py first")
+    sys.exit(f"ERROR: fewer than 4 models in '{args.models_dir}', run 70_structure/scripts/fetch_afdb_models.py first")
 os.makedirs(args.out_dir, exist_ok=True)
 
 # All-vs-all search: exhaustive and without an E-value cut-off, so that every pair gets scores

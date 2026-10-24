@@ -7,19 +7,18 @@
 #              Portal IDs only contain letters, digits and '_', so the last '-' always separates
 #              the portal from the proteinId.
 # Author: Victor M. Gonzalez Ramos
+#              It is the first step of the second half of the pipeline, so it first checks
+#              00_inputs/genomes.tsv (see check_genomes.py) and stops if a genome is not ready.
 # Date: 2026-10-20
-# Version: 1.0
+# Version: 1.1
 #
 # Usage (from the project folder):
 #   module load python-data
-#   python3 scripts/clean_proteomes.py [portal_list] [proteomes_dir] [output_dir]
-#   portal_list    TSV with a header row and portal IDs in column 1
-#                  (default: 00_inputs/cohort_datasets.tsv).
-#   proteomes_dir  Collapsed proteomes (default: 03_isoforms/collapsed_proteomes).
-#   output_dir     Where the results are saved (default: 05_clean_proteomes/cohort).
-# For the shadow proteomes:
-#   python3 scripts/clean_proteomes.py 00_inputs/shadows_datasets.tsv \
-#       03_isoforms/collapsed_proteomes 05_clean_proteomes/shadows
+#   python3 scripts/clean_proteomes.py [--role cohort|shadow] [--genomes FILE] [--proteomes-dir DIR]
+#       [--out-dir DIR]
+#   --role           Genomes of this role in genomes.tsv (default: cohort).
+#   --proteomes-dir  Collapsed proteomes (default: 03_isoforms/collapsed_proteomes).
+#   --out-dir        Where the results are saved (default: 05_clean_proteomes/cohort or .../shadows).
 #
 # Output, inside output_dir:
 #   proteomes/<portal>.faa  one protein per line, header '>portal-proteinId' only; the file name
@@ -31,9 +30,13 @@
 # with the portal of the file name, if a proteinId appears twice, if a sequence is empty, or if a
 # sequence has characters other than letters. All proteomes are rewritten on every run.
 
+import argparse
 import os
 import re
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import genome_tables  # noqa: E402
 
 HEADER = re.compile(r"^>jgi\|([^|\s]+)\|(\d+)\|(\S*)")
 MAP_COLUMNS = ["clean_id", "portal", "proteinId", "name", "original_header"]
@@ -42,14 +45,6 @@ MAP_COLUMNS = ["clean_id", "portal", "proteinId", "name", "original_header"]
 def fail(portal, message):
     print(f"ERROR ({portal}): {message}", file=sys.stderr)
     sys.exit(1)
-
-
-def read_portals(path):
-    """Portal IDs from column 1 of a TSV with a header row."""
-    with open(path) as f:
-        lines = f.read().splitlines()[1:]
-    portals = [line.split("\t")[0].strip() for line in lines]
-    return [p for p in portals if p]
 
 
 def read_fasta(path):
@@ -101,24 +96,17 @@ def clean_proteome(portal, in_path, out_path):
     return rows, n_internal
 
 
-portal_list = sys.argv[1] if len(sys.argv) > 1 else "00_inputs/cohort_datasets.tsv"
-proteomes_dir = sys.argv[2] if len(sys.argv) > 2 else "03_isoforms/collapsed_proteomes"
-out_dir = sys.argv[3] if len(sys.argv) > 3 else "05_clean_proteomes/cohort"
-usage = f"Usage: {sys.argv[0]} [portal_list] [proteomes_dir] [output_dir]"
+parser = argparse.ArgumentParser(description="Clean protein IDs of the collapsed proteomes")
+parser.add_argument("--role", choices=genome_tables.ROLES, default="cohort")
+parser.add_argument("--genomes", default=genome_tables.GENOMES)
+parser.add_argument("--proteomes-dir", default=genome_tables.COLLAPSED_DIR)
+parser.add_argument("--out-dir")
+args = parser.parse_args()
+proteomes_dir = args.proteomes_dir
+out_dir = args.out_dir or os.path.join("05_clean_proteomes", {"cohort": "cohort", "shadow": "shadows"}[args.role])
 
-if not os.path.isfile(portal_list):
-    print(f"Portal list file '{portal_list}' not found\n{usage}", file=sys.stderr)
-    sys.exit(1)
-if not os.path.isdir(proteomes_dir):
-    print(f"Proteomes folder '{proteomes_dir}' not found\n{usage}", file=sys.stderr)
-    sys.exit(1)
-
-portals = read_portals(portal_list)
-missing = [p for p in portals if not os.path.isfile(os.path.join(proteomes_dir, f"{p}_proteins.faa"))]
-if missing:
-    print(f"{len(missing)} portals on the list have no proteome in '{proteomes_dir}':", file=sys.stderr)
-    print("\n".join(f"  {p}" for p in missing), file=sys.stderr)
-    sys.exit(1)
+genome_tables.require(args.genomes, (args.role,), collapsed_dir=proteomes_dir)
+portals = genome_tables.portals(args.genomes, (args.role,))
 
 os.makedirs(os.path.join(out_dir, "proteomes"), exist_ok=True)
 map_path = os.path.join(out_dir, "id_map.tsv")

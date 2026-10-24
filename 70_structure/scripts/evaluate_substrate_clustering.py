@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # evaluate_substrate_clustering.py
-# Family-specific: sugar transporters (structure concept test; see README, "Sugar transporter structures").
+# Family-specific: sugar transporters (structure concept test; see 70_structure/README.md).
 # Description: Scores how well trees of sugar transporters group proteins with the same substrates,
 #              using only characterized transporters (sensors, D. squalens and transporters without
 #              a specific substrate are left out of the scores):
@@ -19,11 +19,11 @@
 # Version: 1.0
 #
 # Usage (from the project folder; needs Biopython):
-#   python3 scripts/evaluate_substrate_clustering.py [tree.nwk ...] [--out-dir DIR] [--permutations 1000]
-#   Trees default to the four in 08_structures/trees (structure_fident, structure_alntmscore,
+#   python3 70_structure/scripts/evaluate_substrate_clustering.py [tree.nwk ...] [--out-dir DIR] [--permutations 1000]
+#   Trees default to the four in 70_structure/trees (structure_fident, structure_alntmscore,
 #   structure_lddt, sequence_ml.treefile).
 #
-# Output, inside out-dir (default: 08_structures/evaluation):
+# Output, inside out-dir (default: 70_structure/evaluation):
 #   summary.tsv              per tree: (a) share, mean share with shuffled labels and p-value, (b) mean purity
 #   per_substrate.tsv        per tree and substrate: transporters, clade size, purity, support
 #   nearest_neighbours.tsv   per tree and transporter: nearest neighbour and whether they share a substrate
@@ -40,9 +40,9 @@ import sys
 
 from Bio import Phylo
 
-IDS_TABLE = "08_structures/structure_ids.tsv"
-DEFAULT_TREES = ["08_structures/trees/structure_fident.nwk", "08_structures/trees/structure_alntmscore.nwk",
-                 "08_structures/trees/structure_lddt.nwk", "08_structures/trees/sequence_ml.treefile"]
+IDS_TABLE = "70_structure/structure_ids.tsv"
+DEFAULT_TREES = ["70_structure/trees/structure_fident.nwk", "70_structure/trees/structure_alntmscore.nwk",
+                 "70_structure/trees/structure_lddt.nwk", "70_structure/trees/sequence_ml.treefile"]
 # Spelling differences, including the shorter names of the predicted D. squalens specificities
 SYNONYMS = {"galactose": "d-galactose", "mannitol": "d-mannitol", "inositol": "myo-inositol",
             "xylose": "d-xylose", "arabitol": "d-arabitol", "uronic": "d-galacturonic acid"}
@@ -134,7 +134,7 @@ def category(row):
 def main():
     parser = argparse.ArgumentParser(description="Score substrate clustering on transporter trees")
     parser.add_argument("trees", nargs="*", default=DEFAULT_TREES)
-    parser.add_argument("--out-dir", default="08_structures/evaluation")
+    parser.add_argument("--out-dir", default="70_structure/evaluation")
     parser.add_argument("--permutations", type=int, default=1000)
     args = parser.parse_args()
 

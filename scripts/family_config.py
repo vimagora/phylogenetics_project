@@ -13,7 +13,7 @@ import os
 import re
 import sys
 
-TAXONOMY = "00_inputs/cohort_taxonomy.tsv"
+GENOMES = "00_inputs/genomes.tsv"
 OG_DIR = "07_orthofinder/run/Results_cohort/Orthogroups"
 
 
@@ -60,8 +60,9 @@ def write_tsv(path, header, rows):
 
 
 def taxonomy():
-    """Cohort taxonomy by portal (Windows line endings tolerated)."""
-    return {r["portal"].strip(): {k: v.strip() for k, v in r.items()} for r in read_tsv(TAXONOMY)}
+    """Taxonomy of the cohort genomes (role = cohort in genomes.tsv) by portal; shadows are left out."""
+    return {r["portal"].strip(): {k: (v or "").strip() for k, v in r.items()} for r in read_tsv(GENOMES)
+            if r["role"].strip() == "cohort"}
 
 
 def portal_of(protein_id):

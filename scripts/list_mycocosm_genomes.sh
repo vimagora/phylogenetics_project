@@ -34,6 +34,10 @@ if ! head -n 1 "$PART" | grep -q $'\tportal\t'; then
     rm -f "$PART"
     exit 1
 fi
+# The catalog comes in Windows-1252 (e.g. accented names); stored as UTF-8 so it reads anywhere
+if ! iconv -f UTF-8 -t UTF-8 "$PART" > /dev/null 2>&1; then
+    iconv -f WINDOWS-1252 -t UTF-8 "$PART" > "$PART.utf8" && mv "$PART.utf8" "$PART" || exit 1
+fi
 mv "$PART" "$OUT_FILE"
 
 echo "Saved $(( $(wc -l < "$OUT_FILE") - 1 )) genomes to $OUT_FILE"
