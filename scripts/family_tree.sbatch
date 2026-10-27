@@ -20,11 +20,16 @@
 #                           marked root = TRUE in outgroups.tsv.
 #              IQ-TREE picks its number of threads (-T AUTO, at most the CPUs of the job): family
 #              alignments are short after trimming, and more threads than columns can use only add cost.
+#              Both IQ-TREE modes use a fixed random seed (SEED below), so a rerun draws the same random
+#              numbers (record SEED with the results).
+#              The tree mode uses the safe likelihood kernel (-safe): with thousands of sequences the
+#              default kernel underflowed while refining the bootstrap trees (sugar transporters, 8,681
+#              sequences); -safe is slower but avoids it.
 #              The IQ-TREE modes resume from their checkpoint when resubmitted (e.g. after the time
 #              limit); a finished run is not repeated.
 # Author: Victor M. Gonzalez Ramos
-# Date: 2026-10-23
-# Version: 1.0
+# Date: 2026-10-27
+# Version: 1.1
 #
 # Usage (from the project folder): sbatch [--time=...] scripts/family_tree.sbatch <family> <mode>
 #   e.g. sbatch --time=04:00:00 scripts/family_tree.sbatch sugar_transporters fasttree
@@ -55,6 +60,7 @@ source "$CONF"
 DIR="$OUT_DIR/tree"
 ALIGNMENT="$DIR/trimmed.faa"
 THREADS=${SLURM_CPUS_PER_TASK:-4}
+SEED=12345
 if [[ ! -s "$ALIGNMENT" ]]; then
     echo "'$ALIGNMENT' not found, run scripts/align_family.sbatch $FAMILY first" >&2
     exit 1
@@ -102,7 +108,7 @@ if [[ $MODE == modelfinder ]]; then
         echo "ModelFinder already finished: $(grep -m1 'Best-fit model' "$PREFIX.iqtree")"
         exit 0
     fi
-    iqtree3 -s "$ALIGNMENT" -m MF -T AUTO --threads-max "$THREADS" --prefix "$PREFIX" --quiet
+    iqtree3 -s "$ALIGNMENT" -m MF -seed "$SEED" -T AUTO --threads-max "$THREADS" --prefix "$PREFIX" --quiet
     STATUS=$?
     (( STATUS == 0 )) && echo "Done $(date): $(grep -m1 'Best-fit model' "$PREFIX.iqtree")"
     exit $STATUS
@@ -122,7 +128,7 @@ if [[ -s "$PREFIX.iqtree" && -s "$PREFIX.treefile" ]]; then
     exit 0
 fi
 echo "Model $MODEL; rooted on $ROOT"
-iqtree3 -s "$ALIGNMENT" -m "$MODEL" -B 1000 -bnni -alrt 1000 ${ROOT:+-o "$ROOT"} -T AUTO --threads-max "$THREADS" \
+iqtree3 -s "$ALIGNMENT" -m "$MODEL" -B 1000 -bnni -alrt 1000 ${ROOT:+-o "$ROOT"} -safe -seed "$SEED" -T AUTO --threads-max "$THREADS" \
     --prefix "$PREFIX" --quiet
 STATUS=$?
 echo "Finished $(date) with exit code $STATUS"
