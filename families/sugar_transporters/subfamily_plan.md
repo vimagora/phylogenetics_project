@@ -84,8 +84,7 @@ as well as a root, so its comparison set replaces the rule of §3:
 | More distant MFS | root | Flr1 (P38124) and Tpo1 (Q07824), 2.A.1.2; Atr1 (P13090), 2.A.1.3; Dal5 (P15365), 2.A.1.14; *A. nidulans* CrnA (P22152), 2.A.1.8 |
 
 The tree is rooted on the distant MFS proteins. Identity across MFS families is low, so a placement
-counts only with strong support. As an independent test, the 335 proteins are scored with the MFS_1
-HMM (PF07690) against PF00083 on Roihu, which needs no tree. Pho84, Git1 and Jen1 hit PF00083, so
+counts only with strong support. Pho84, Git1 and Jen1 hit PF00083, so
 their *S. cerevisiae* copies may already be family members; F11 uses the member instead of the UniProt
 sequence if so, and that check also shows whether non-sugar porters are in the family.
 
@@ -150,9 +149,9 @@ earlier aromatic analysis, rather than from all members.
 
 ## 6. Open points
 
-- What to do with the tips in no subfamily (§2), and the scope of tree 9, which may widen to the whole
-  lineage of 2,088 tips (0.97). OG0000544 (331 tips, 1.00), OG0000297 (405, 1.00), OG0000018 (450, 0.99),
-  OG0000296 (310, 0.97) and OG0000015 (110, 0.79) meet the rule of §2 as FastTree clades, but none has a
-  characterized member, and they may not be sugar porters at all. Two cheap checks on Roihu come first:
-  the full run of F11, which shows whether Pho84, Git1 and Jen1 are family members, and the MFS_1 against
-  PF00083 scores of §2, extended from the 335 proteins of tree 9 to all members.
+- What to do with the tips in no subfamily (§2), and whether tree 9 is still needed. The full run of F11
+  (2026-11-05) found four non-sugar transporters among the family's members: Pho84 in OG0000297, Git1 in
+  OG0000544, Jen1 in OG0000772 and Tpo1 in OG0000018. All four are in the lineage of 2,088 tips (0.97) outside the
+  sugar transporter subfamilies, and none is in the eight. That lineage is therefore probably made of
+  other MFS families that hit PF00083, not of sugar porters, though OG0000772 also holds Tr44175, which
+  is characterized on cellodextrins, and OG0000296, OG0000102 and OG0000015 have no known member.

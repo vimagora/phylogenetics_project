@@ -12,16 +12,17 @@
 # align_family.sbatch
 # Description: Slurm job that aligns a gene family's tree sequences (build_family_fasta.py) with
 #              MAFFT --auto, which picks a strategy for the number of sequences (FFT-NS-2 for
-#              thousands), and trims the alignment with ClipKIT in gappy mode (columns with more than
-#              50% gaps removed), as for the species tree. Columns of rare extra domains, e.g. from
-#              fusions, are mostly gaps and are trimmed away.
+#              thousands), or a subfamily's sequences (build_subfamilies.py) with MAFFT L-INS-i, which
+#              is slower and more accurate; and trims the alignment with ClipKIT in gappy mode (columns
+#              with more than 50% gaps removed), as for the species tree. Columns of rare extra domains,
+#              e.g. from fusions, are mostly gaps and are trimmed away.
 # Author: Victor M. Gonzalez Ramos
-# Date: 2026-10-23
-# Version: 1.0
+# Date: 2026-11-05
+# Version: 1.1
 #
-# Usage (from the project folder): sbatch scripts/align_family.sbatch <family>
+# Usage (from the project folder): sbatch [--time=...] scripts/align_family.sbatch <family> [subfamily]
 #
-# Output, inside <OUT_DIR>/tree (OUT_DIR from families/<family>/family.conf):
+# Output, inside <OUT_DIR>/tree, or <OUT_DIR>/subfamilies/<subfamily> (OUT_DIR from families/<family>/family.conf):
 #   aligned.faa   MAFFT alignment (the strategy MAFFT chose is in the job's .err log)
 #   trimmed.faa   ClipKIT-trimmed alignment, the input of family_tree.sbatch
 # An existing alignment is reused; delete it to realign.
@@ -37,15 +38,26 @@ fi
 FAMILY=$1
 CONF="families/$FAMILY/family.conf"
 if [[ -z "$FAMILY" || ! -s "$CONF" ]]; then
-    echo "Usage: sbatch scripts/align_family.sbatch <family>" >&2
+    echo "Usage: sbatch scripts/align_family.sbatch <family> [subfamily]" >&2
     exit 1
 fi
 # shellcheck source=/dev/null
 source "$CONF"
-DIR="$OUT_DIR/tree"
+SUBFAMILY=$2
+if [[ -n "$SUBFAMILY" ]]; then
+    DIR="$OUT_DIR/subfamilies/$SUBFAMILY"
+    STRATEGY=(--localpair --maxiterate 1000)
+    BUILD="scripts/build_subfamilies.py"
+    LABEL="$NAME, subfamily $SUBFAMILY"
+else
+    DIR="$OUT_DIR/tree"
+    STRATEGY=(--auto)
+    BUILD="scripts/build_family_fasta.py"
+    LABEL="$NAME"
+fi
 TRIM_GAPS=0.5
 if [[ ! -s "$DIR/sequences.faa" ]]; then
-    echo "'$DIR/sequences.faa' not found, run scripts/build_family_fasta.py $FAMILY first" >&2
+    echo "'$DIR/sequences.faa' not found, run $BUILD $FAMILY first" >&2
     exit 1
 fi
 
@@ -59,11 +71,11 @@ for TOOL in mafft clipkit; do
     fi
 done
 
-echo "Job $SLURM_JOB_ID on $(hostname), started $(date): $(grep -c '^>' "$DIR/sequences.faa") sequences of $NAME"
+echo "Job $SLURM_JOB_ID on $(hostname), started $(date): $(grep -c '^>' "$DIR/sequences.faa") sequences of $LABEL"
 if [[ -s "$DIR/aligned.faa" ]]; then
     echo "Alignment already exists: $DIR/aligned.faa"
 else
-    if ! mafft --auto --anysymbol --thread "$SLURM_CPUS_PER_TASK" "$DIR/sequences.faa" > "$DIR/aligned.faa.part"; then
+    if ! mafft "${STRATEGY[@]}" --anysymbol --thread "$SLURM_CPUS_PER_TASK" "$DIR/sequences.faa" > "$DIR/aligned.faa.part"; then
         echo "MAFFT failed" >&2
         rm -f "$DIR/aligned.faa.part"
         exit 1
@@ -77,4 +89,4 @@ fi
 mv "$DIR/trimmed.faa.part" "$DIR/trimmed.faa"
 length() { awk '/^>/ { if (seen++) exit; next } { n += length($0) } END { print n }' "$1"; }
 echo "Done $(date): $(length "$DIR/aligned.faa") aligned columns, $(length "$DIR/trimmed.faa") after trimming." \
-    "Next: sbatch --time=04:00:00 scripts/family_tree.sbatch $FAMILY fasttree"
+    "Next: sbatch --time=04:00:00 scripts/family_tree.sbatch $FAMILY fasttree $SUBFAMILY"

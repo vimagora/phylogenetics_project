@@ -5,7 +5,7 @@ A pipeline for the phylogenetic study of fungal gene families across a cohort of
 1. **Genome assessment** (steps 1–7): downloads candidate genomes, computes assembly statistics,
    reduces each proteome to one protein per gene and runs BUSCO before and after, as the basis for
    choosing a cohort.
-2. **Analysis** (steps 8–18 and F1–F11): for the chosen genomes, clean protein IDs, a species tree from
+2. **Analysis** (steps 8–18 and F1–F13): for the chosen genomes, clean protein IDs, a species tree from
    BUSCO markers (coalescent and concatenated), OrthoFinder orthogroups, and per gene family:
    anchoring of characterized proteins, family members and orthogroups, and family trees.
 
@@ -102,6 +102,8 @@ Gene families (`<family>` is a folder in `families/`):
 | F10. Subfamilies | Choose them on the node figure and table, and record them in `families/<family>/subfamilies.tsv` (by hand) | |
 | F11. Subfamily tip lists | `python3 scripts/build_subfamilies.py <family>` | `subfamilies/report.md`, `subfamilies/<subfamily>/tips.tsv`, `sequences.faa` |
 | ⏸ | Review of the report before aligning | |
+| F12. Subfamily alignment | `sbatch scripts/align_family.sbatch <family> <subfamily>` | `subfamilies/<subfamily>/aligned.faa`, `trimmed.faa` |
+| F13. Subfamily trees | `sbatch --time=04:00:00 scripts/family_tree.sbatch <family> fasttree <subfamily>`, then `modelfinder` and `tree` with the same arguments | `subfamilies/<subfamily>/fasttree.nwk`, `modelfinder.*`, `ml.*` |
 
 Steps 8–11, 13, 15 and 17 use Python from `module load python-data`. Step 10 reads the combined table of
 the collapsed proteomes from step 7.
@@ -187,7 +189,7 @@ a finished run with another species tree, unpack `WorkingDirectory.tar.gz` first
 
 ## Gene families
 
-Steps F1–F11 work on any gene family described by a folder `families/<family>/`. The scripts never
+Steps F1–F13 work on any gene family described by a folder `families/<family>/`. The scripts never
 transfer a function to an uncharacterized protein; they stop at alignments, trees and annotation
 files, and the reviews between them are done by a person.
 
@@ -271,7 +273,9 @@ each outgroup lineage: it cuts the clade into as many parts as tips wanted and t
 the characterized protein, else the member with HMM coverage ≥ 0.8, with the shortest terminal branch.
 A UniProt protein identical to a family tip is replaced by that tip. The report lists each subfamily's
 sets, orthogroups, anchors and outgroups, and the tips in no subfamily. `--lists-only` writes the lists
-and report without sequences.
+and report without sequences. Each subfamily is then aligned with MAFFT L-INS-i and trimmed like the
+family (F12), and gets a FastTree tree, ModelFinder restricted to Q.pfam, LG, WAG, JTT and Q.yeast, and
+IQ-TREE with the same supports (F13). Its tree is not rooted at this stage.
 
 ## MycoCosm notes
 

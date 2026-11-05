@@ -7,17 +7,20 @@
 #SBATCH --time=3-00:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=32
-#SBATCH --mem=192G
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=32G
 # family_tree.sbatch
-# Description: Slurm job that infers a gene family's tree from the trimmed alignment
+# Description: Slurm job that infers a gene family's tree, or a subfamily's, from the trimmed alignment
 #              (align_family.sbatch), in one of three modes, each reviewed before the next:
 #              fasttree     FastTree (LG + Gamma), a quick tree to check the outgroup and the
 #                           expectations (families/<family>/expectations.md) before the long runs;
 #              modelfinder  IQ-TREE 3 ModelFinder (-m MF) on the full alignment;
 #              tree         IQ-TREE 3 with the ModelFinder model, 1000 ultrafast bootstraps with NNI
 #                           refinement and 1000 SH-aLRT replicates, drawn rooted on the outgroups
-#                           marked root = TRUE in outgroups.tsv.
+#                           marked root = TRUE in outgroups.tsv. A subfamily's tree is not rooted here;
+#                           its outgroup lineages are checked when the tree is reviewed.
+#              A subfamily's ModelFinder tests the plausible matrices only (-mset), which saves most of
+#              its time; the whole family's tests all of them.
 #              IQ-TREE picks its number of threads (-T AUTO, at most the CPUs of the job): family
 #              alignments are short after trimming, and more threads than columns can use only add cost.
 #              Both IQ-TREE modes use a fixed random seed (SEED below), so a rerun draws the same random
@@ -28,13 +31,14 @@
 #              The IQ-TREE modes resume from their checkpoint when resubmitted (e.g. after the time
 #              limit); a finished run is not repeated.
 # Author: Victor M. Gonzalez Ramos
-# Date: 2026-10-27
-# Version: 1.1
+# Date: 2026-11-05
+# Version: 1.2
 #
-# Usage (from the project folder): sbatch [--time=...] scripts/family_tree.sbatch <family> <mode>
+# Usage (from the project folder): sbatch [--time=...] scripts/family_tree.sbatch <family> <mode> [subfamily]
 #   e.g. sbatch --time=04:00:00 scripts/family_tree.sbatch sugar_transporters fasttree
+#        sbatch scripts/family_tree.sbatch sugar_transporters tree hexose
 #
-# Output, inside <OUT_DIR>/tree (OUT_DIR from families/<family>/family.conf):
+# Output, inside <OUT_DIR>/tree, or <OUT_DIR>/subfamilies/<subfamily> (OUT_DIR from families/<family>/family.conf):
 #   fasttree.nwk, fasttree.log     FastTree tree (local support values) and log
 #   modelfinder.*                  ModelFinder results; the best model is in modelfinder.iqtree
 #   ml.*                           IQ-TREE results; ml.treefile is the tree with SH-aLRT/UFBoot support
@@ -51,22 +55,30 @@ fi
 FAMILY=$1
 MODE=$2
 CONF="families/$FAMILY/family.conf"
+SUBFAMILY=$3
 if [[ -z "$FAMILY" || ! -s "$CONF" || ! "$MODE" =~ ^(fasttree|modelfinder|tree)$ ]]; then
-    echo "Usage: sbatch scripts/family_tree.sbatch <family> fasttree|modelfinder|tree" >&2
+    echo "Usage: sbatch scripts/family_tree.sbatch <family> fasttree|modelfinder|tree [subfamily]" >&2
     exit 1
 fi
 # shellcheck source=/dev/null
 source "$CONF"
 DIR="$OUT_DIR/tree"
+LABEL="$NAME"
+MODEL_SET=()
+if [[ -n "$SUBFAMILY" ]]; then
+    DIR="$OUT_DIR/subfamilies/$SUBFAMILY"
+    LABEL="$NAME, subfamily $SUBFAMILY"
+    MODEL_SET=(-mset Q.pfam,LG,WAG,JTT,Q.yeast)
+fi
 ALIGNMENT="$DIR/trimmed.faa"
 THREADS=${SLURM_CPUS_PER_TASK:-4}
 SEED=12345
 if [[ ! -s "$ALIGNMENT" ]]; then
-    echo "'$ALIGNMENT' not found, run scripts/align_family.sbatch $FAMILY first" >&2
+    echo "'$ALIGNMENT' not found, run scripts/align_family.sbatch $FAMILY $SUBFAMILY first" >&2
     exit 1
 fi
 
-echo "Job $SLURM_JOB_ID on $(hostname), started $(date): $MODE for $NAME"
+echo "Job $SLURM_JOB_ID on $(hostname), started $(date): $MODE for $LABEL"
 module load bio-apps/v202603
 
 if [[ $MODE == fasttree ]]; then
@@ -92,7 +104,11 @@ if [[ $MODE == fasttree ]]; then
         exit 1
     fi
     mv "$DIR/fasttree.nwk.part" "$DIR/fasttree.nwk"
-    echo "Done $(date): $DIR/fasttree.nwk ($FASTTREE). Next: python3 scripts/make_family_itol.py $FAMILY, then review"
+    if [[ -n "$SUBFAMILY" ]]; then
+        echo "Done $(date): $DIR/fasttree.nwk ($FASTTREE). Next: sbatch scripts/family_tree.sbatch $FAMILY modelfinder $SUBFAMILY"
+    else
+        echo "Done $(date): $DIR/fasttree.nwk ($FASTTREE). Next: python3 scripts/make_family_itol.py $FAMILY, then review"
+    fi
     exit 0
 fi
 
@@ -108,7 +124,7 @@ if [[ $MODE == modelfinder ]]; then
         echo "ModelFinder already finished: $(grep -m1 'Best-fit model' "$PREFIX.iqtree")"
         exit 0
     fi
-    iqtree3 -s "$ALIGNMENT" -m MF -seed "$SEED" -T AUTO --threads-max "$THREADS" --prefix "$PREFIX" --quiet
+    iqtree3 -s "$ALIGNMENT" -m MF "${MODEL_SET[@]}" -seed "$SEED" -T AUTO --threads-max "$THREADS" --prefix "$PREFIX" --quiet
     STATUS=$?
     (( STATUS == 0 )) && echo "Done $(date): $(grep -m1 'Best-fit model' "$PREFIX.iqtree")"
     exit $STATUS
@@ -120,17 +136,20 @@ if [[ -z "$MODEL" ]]; then
     echo "No ModelFinder result in $DIR/modelfinder.iqtree; run the modelfinder mode first" >&2
     exit 1
 fi
-ROOT=$(awk -F'\t' 'NR == 1 { for (i = 1; i <= NF; i++) col[$i] = i; next }
-    $col["root"] == "TRUE" { printf "%s%s", sep, $col["outgroup_id"]; sep = "," }' "families/$FAMILY/outgroups.tsv")
+ROOT=""
+if [[ -z "$SUBFAMILY" ]]; then
+    ROOT=$(awk -F'\t' 'NR == 1 { for (i = 1; i <= NF; i++) col[$i] = i; next }
+        $col["root"] == "TRUE" { printf "%s%s", sep, $col["outgroup_id"]; sep = "," }' "families/$FAMILY/outgroups.tsv")
+fi
 PREFIX="$DIR/ml"
 if [[ -s "$PREFIX.iqtree" && -s "$PREFIX.treefile" ]]; then
     echo "Tree already finished: $PREFIX.treefile"
     exit 0
 fi
-echo "Model $MODEL; rooted on $ROOT"
+echo "Model $MODEL; rooted on ${ROOT:-nothing here (a subfamily tree)}"
 iqtree3 -s "$ALIGNMENT" -m "$MODEL" -B 1000 -bnni -alrt 1000 ${ROOT:+-o "$ROOT"} -safe -seed "$SEED" -T AUTO --threads-max "$THREADS" \
     --prefix "$PREFIX" --quiet
 STATUS=$?
 echo "Finished $(date) with exit code $STATUS"
-(( STATUS == 0 )) && echo "Tree: $PREFIX.treefile. Next: python3 scripts/make_family_itol.py $FAMILY, then review"
+(( STATUS == 0 )) && echo "Tree: $PREFIX.treefile. Next: review it (for a whole family, python3 scripts/make_family_itol.py $FAMILY first)"
 exit $STATUS
