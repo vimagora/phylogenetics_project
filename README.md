@@ -5,9 +5,10 @@ A pipeline for the phylogenetic study of fungal gene families across a cohort of
 1. **Genome assessment** (steps 1–7): downloads candidate genomes, computes assembly statistics,
    reduces each proteome to one protein per gene and runs BUSCO before and after, as the basis for
    choosing a cohort.
-2. **Analysis** (steps 8–18 and F1–F13): for the chosen genomes, clean protein IDs, a species tree from
+2. **Analysis** (steps 8–18 and F1–F14): for the chosen genomes, clean protein IDs, a species tree from
    BUSCO markers (coalescent and concatenated), OrthoFinder orthogroups, and per gene family:
-   anchoring of characterized proteins, family members and orthogroups, and family trees.
+   anchoring of characterized proteins, family members and orthogroups, a whole-family tree for
+   choosing subfamilies, and subfamily trees.
 
 The repository holds the inputs and results of our study (150 genomes, sugar transporters), which can
 be reproduced or replaced by your own. How our cohort was chosen is described in a separate report.
@@ -35,7 +36,7 @@ candidate, has no collapsed proteome or BUSCO results, or a cohort genome lacks 
 
 **Gene families**, one folder each in `families/<family>/` (see [Gene families](#gene-families)):
 `family.conf`, `references.tsv`, `outgroups.tsv`, and `orphans.tsv` if the family has orphans;
-optionally `function_columns.tsv`.
+optionally `function_columns.tsv`. `subfamilies.tsv` is written later, at step F10.
 
 ## Requirements
 
@@ -96,21 +97,24 @@ Gene families (`<family>` is a folder in `families/`):
 | F6. Quick tree | `sbatch --time=04:00:00 scripts/family_tree.sbatch <family> fasttree` | `tree/fasttree.nwk` |
 | F7. iTOL files and figure | `python3 scripts/make_family_itol.py <family>`; `python3 scripts/make_family_figure.py <family>` | `itol/`; `figures/<family>_fasttree.svg`, `_nodes.svg`, `_nodes.tsv` |
 | ⏸ | Review of the quick tree against the criteria you set for the family | |
-| F8. Model selection | `sbatch scripts/family_tree.sbatch <family> modelfinder` | `tree/modelfinder.*` |
-| F9. Tree | `sbatch scripts/family_tree.sbatch <family> tree` | `tree/ml.*` |
-| ⏸ | Review of the tree (F7 again for the iTOL files) | |
-| F10. Subfamilies | Choose them on the node figure and table, and record them in `families/<family>/subfamilies.tsv` (by hand) | |
+| F8. Model selection (optional) | `sbatch scripts/family_tree.sbatch <family> modelfinder` | `tree/modelfinder.*` |
+| F9. Maximum-likelihood tree (optional) | `sbatch scripts/family_tree.sbatch <family> tree` | `tree/ml.*` |
+| ⏸ | Review of the tree, if F9 was run (F7 again, with `--tree ml`, for the figure) | |
+| F10. Subfamilies | Choose them on the node figure and table of F7, and record them in `families/<family>/subfamilies.tsv` (by hand) | |
 | F11. Subfamily tip lists | `python3 scripts/build_subfamilies.py <family>` | `subfamilies/report.md`, `subfamilies/<subfamily>/tips.tsv`, `sequences.faa` |
-| ⏸ | Review of the report before aligning | |
+| ⏸ | Review of the report before aligning; `python3 scripts/make_family_figure.py <family> --subfamilies [A,B,...]` shows where the subfamilies landed | `figures/<family>_<tree>_subfamilies.svg` |
 | F12. Subfamily alignment | `sbatch scripts/align_family.sbatch <family> <subfamily>` | `subfamilies/<subfamily>/aligned.faa`, `trimmed.faa` |
 | F13. Subfamily trees | `sbatch --time=04:00:00 scripts/family_tree.sbatch <family> fasttree <subfamily>`, then `modelfinder` and `tree` with the same arguments | `subfamilies/<subfamily>/fasttree.nwk`, `modelfinder.*`, `ml.*` |
+| F14. Subfamily checks and figure | `python3 scripts/check_subfamily.py <family> <subfamily> [--tree ml]`; `python3 scripts/make_family_figure.py <family> --subfamily <subfamily> [--tree ml]` | `subfamilies/<subfamily>/checks_<tree>.md`, `<tree>_rooted.nwk`; `figures/<family>_<subfamily>_<tree>.svg` |
+| ⏸ | Review of the checks and the figure; run F14 on FastTree before the long IQ-TREE run, and again on its tree | |
 
 Steps 8–11, 13, 15 and 17 use Python from `module load python-data`. Step 10 reads the combined table of
-the collapsed proteomes from step 7.
+the collapsed proteomes from step 7. The family scripts need only the Python standard library, except
+`check_subfamily.py`, which needs numpy.
 
 The download, extraction, collapse, BUSCO and alignment steps skip finished work, so new candidates can
 be added and the steps re-run; BUSCO needs a new batch folder for new proteomes. Steps 8–11, 13 and 15
-are fast and rewrite their outputs on every run. The tree jobs (14, 16, F8, F9) resume when resubmitted.
+are fast and rewrite their outputs on every run. The tree jobs (14, 16, F8, F9, and the IQ-TREE modes of F13) resume when resubmitted.
 
 `70_structure/` holds a concept test on protein structures of sugar transporters, which is not part of
 the pipeline (see `70_structure/README.md`).
@@ -189,7 +193,7 @@ a finished run with another species tree, unpack `WorkingDirectory.tar.gz` first
 
 ## Gene families
 
-Steps F1–F13 work on any gene family described by a folder `families/<family>/`. The scripts never
+Steps F1–F14 work on any gene family described by a folder `families/<family>/`. The scripts never
 transfer a function to an uncharacterized protein; they stop at alignments, trees and annotation
 files, and the reviews between them are done by a person.
 
@@ -215,6 +219,9 @@ files, and the reviews between them are done by a person.
   for example `hexose  ingroup  node  fasttree  37  all`. A `clade` is the most recent common ancestor of
   the tips in `definition`, in that tree rooted on the family's root outgroups; a `uniprot` item is
   `<tip_id>=<accession>`.
+- Notes (optional, read by no script): for example `expectations.md`, written before any tree is built
+  and checked at the reviews, and review or planning notes such as `review_fasttree.md` and
+  `subfamily_plan.md`.
 
 **Anchors and orphans (F2).** The references are searched against all cohort proteins with DIAMOND
 (`--ultra-sensitive`). The first rule that applies gives each reference its status:
@@ -233,14 +240,21 @@ files, and the reviews between them are done by a person.
 at Pfam's gathering threshold (`hmmsearch --cut_ga`). There is deliberately no score filter beyond
 that (e.g. the lowest score of the characterized proteins), so that unusual members are kept; hits
 below the coverage are listed in `hmm_hits.tsv`. Orthogroups are OrthoFinder's `Orthogroups.tsv`.
+Members are therefore proteins that match the HMM, not proteins of a proven function: neighbouring
+families can match it too, sometimes with high scores. Placing their characterized proteins with a
+`uniprot` row in `subfamilies.tsv` shows where they fall.
 
 **Trees (F4–F9).** Members (full sequences from the clean proteomes; shadows never enter), orphans
 that pass the membership rule themselves, and outgroups are aligned with MAFFT `--auto` and trimmed
 with ClipKIT gappy 0.5, as for the species tree. Extra domains (e.g. from fusions or misannotations)
-are not removed beforehand; their columns are mostly gaps and are trimmed. FastTree gives a quick
-tree for the first review; the final tree is IQ-TREE 3 with ModelFinder on the full alignment, then
-1000 ultrafast bootstraps and 1000 SH-aLRT replicates, rooted on the outgroups marked `root`. IQ-TREE
-chooses its number of threads (`-T AUTO`), since trimmed family alignments are short.
+are not removed beforehand; their columns are mostly gaps and are trimmed. FastTree gives the standard
+whole-family tree, on which subfamilies are chosen. IQ-TREE 3 on the whole family is optional: ModelFinder
+on the full alignment, then 1000 ultrafast bootstraps with NNI refinement and 1000 SH-aLRT replicates,
+rooted on the outgroups marked `root`, with a fixed seed and `-safe`, which avoids the numerical underflow
+of large trees. IQ-TREE chooses its number of threads (`-T AUTO`), since trimmed family alignments are
+short. The job's defaults (8 CPUs, 32 GB, 3 days) are meant for subfamilies; give a whole family more, e.g.
+`sbatch --cpus-per-task=32 --mem=192G`. Our family of 8,681 tips ran with those settings and took about
+101 hours, with one resubmission.
 `make_family_itol.py` shows function only for characterized references.
 
 **Figure (F7).** `make_family_figure.py` draws the tree as a circular SVG with editable text, using only
@@ -267,15 +281,32 @@ has changed since the table was written.
 **Subfamilies (F10–F11).** Large families are split into subfamily trees: the whole-family tree shows
 where to cut, and the subfamily trees, each with its own alignment, are the ones interpreted. Choose
 clades that are mostly one orthogroup or a coherent set of them, look consistent in the score and
-coverage rings, or have a pattern you can explain, and hold 100–2,500 tips. A lineage
-outside a supported ingroup roots it whatever its exact position, so `build_subfamilies.py` samples
-each outgroup lineage: it cuts the clade into as many parts as tips wanted and takes from each part
+coverage rings, or have a pattern you can explain, and hold 100–2,500 tips, the upper limit being what
+L-INS-i can reasonably align. A lineage outside a supported ingroup roots it whatever its exact position,
+so give each subfamily two or three neighbouring lineages, 10–20 sequences in all, which allows checking
+that rooting on either gives the same root. `build_subfamilies.py` samples each outgroup lineage: it cuts the clade into as many parts as tips wanted and takes from each part
 the characterized protein, else the member with HMM coverage ≥ 0.8, with the shortest terminal branch.
 A UniProt protein identical to a family tip is replaced by that tip. The report lists each subfamily's
 sets, orthogroups, anchors and outgroups, and the tips in no subfamily. `--lists-only` writes the lists
-and report without sequences. Each subfamily is then aligned with MAFFT L-INS-i and trimmed like the
+and report without sequences. `make_family_figure.py --subfamilies` confirms the choice on the tree: it
+writes a copy of the figure with each ingroup as a semitransparent slice behind the tree, starting at its
+common ancestor and stopping at the rings so that their colours stay true, continued by an arc outside them
+and named on its largest piece. With `--tree ml` it shows whether the groups hold in the other tree. A group
+that is not a clade in the tree shows as several pieces, printed with their sizes, and overlaps as darker
+areas. Each subfamily is then aligned with MAFFT L-INS-i and trimmed like the
 family (F12), and gets a FastTree tree, ModelFinder restricted to Q.pfam, LG, WAG, JTT and Q.yeast, and
 IQ-TREE with the same supports (F13). Its tree is not rooted at this stage.
+
+**Subfamily checks (F14).** `check_subfamily.py` reports, without deciding anything: whether the ingroup
+and each outgroup lineage are monophyletic; whether rooting on each lineage gives the same ingroup root;
+whether the midpoint and MAD roots (minimal ancestor deviation, with its ambiguity index) fall outside the
+ingroup, and what they separate if not; the share of well-supported ingroup nodes; and the ingroup splits
+shared with the whole-family trees. MAD assumes roughly clock-like evolution, so a disagreement is
+something to explain, not a reason to replace the outgroup root. If the ingroup is not monophyletic, revise
+its boundary in `subfamilies.tsv` and rerun; no rooted tree is written. MAD takes seconds for hundreds of
+tips and minutes for thousands (about 7 minutes and 300 MB for 2,176 tips), so run large subfamilies as a
+job or an interactive session. `make_family_figure.py --subfamily` draws the same figure as for the family,
+rooted on the outgroups; the family's iTOL files also fit the rooted tree, since tips keep their IDs.
 
 ## MycoCosm notes
 

@@ -2,12 +2,12 @@
 # newick_tree.py
 # Description: Shared helpers for reading and querying gene family trees (not run on its own):
 #              reads Newick trees with support labels (FastTree, IQ-TREE), roots an unrooted tree on
-#              a tip, a clade or the midpoint, and finds clades. Written without recursion, for trees of thousands of tips.
+#              a tip, a clade or the midpoint, finds clades and writes Newick. Written without recursion, for trees of thousands of tips.
 #              A node's length and label belong to the branch above it, so they stay with the same
 #              split when the tree is rooted differently.
 # Author: Victor M. Gonzalez Ramos
 # Date: 2026-11-05
-# Version: 1.0
+# Version: 1.1
 
 import sys
 
@@ -129,6 +129,14 @@ class Tree:
                 node = node.parent
             lowest = max(lowest, position[id(node)])
         return ancestors[lowest]
+
+    def newick(self):
+        """The tree as Newick text."""
+        text = {}
+        for node in reversed(self.preorder()):
+            inner = f"({','.join(text.pop(id(c)) for c in node.children)})" if node.children else ""
+            text[id(node)] = inner + (node.name or node.label) + (f":{node.length:.10g}" if node.parent else "")
+        return text[id(self.root)] + ";"
 
     def tips_under(self, node):
         """Names of the tips below a node, in tree order."""

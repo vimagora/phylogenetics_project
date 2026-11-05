@@ -105,7 +105,7 @@ if [[ $MODE == fasttree ]]; then
     fi
     mv "$DIR/fasttree.nwk.part" "$DIR/fasttree.nwk"
     if [[ -n "$SUBFAMILY" ]]; then
-        echo "Done $(date): $DIR/fasttree.nwk ($FASTTREE). Next: sbatch scripts/family_tree.sbatch $FAMILY modelfinder $SUBFAMILY"
+        echo "Done $(date): $DIR/fasttree.nwk ($FASTTREE). Next: python3 scripts/check_subfamily.py $FAMILY $SUBFAMILY, then sbatch scripts/family_tree.sbatch $FAMILY modelfinder $SUBFAMILY"
     else
         echo "Done $(date): $DIR/fasttree.nwk ($FASTTREE). Next: python3 scripts/make_family_itol.py $FAMILY, then review"
     fi
@@ -151,5 +151,5 @@ iqtree3 -s "$ALIGNMENT" -m "$MODEL" -B 1000 -bnni -alrt 1000 ${ROOT:+-o "$ROOT"}
     --prefix "$PREFIX" --quiet
 STATUS=$?
 echo "Finished $(date) with exit code $STATUS"
-(( STATUS == 0 )) && echo "Tree: $PREFIX.treefile. Next: review it (for a whole family, python3 scripts/make_family_itol.py $FAMILY first)"
+(( STATUS == 0 )) && echo "Tree: $PREFIX.treefile. Next: for a subfamily, python3 scripts/check_subfamily.py $FAMILY $SUBFAMILY --tree ml; for a whole family, python3 scripts/make_family_itol.py $FAMILY"
 exit $STATUS

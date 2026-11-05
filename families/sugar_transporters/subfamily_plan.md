@@ -140,7 +140,7 @@ written for any family:
 | F11 | `scripts/build_subfamilies.py`: each subfamily's tip list, outgroup sample and sequences, with a report (sizes, anchors, *D. squalens* proteins, orthogroups, tips in no subfamily) for review | script |
 | F12 | Align and trim per subfamily | `align_family.sbatch` with a subfamily argument and L-INS-i |
 | F13 | FastTree, then ModelFinder and IQ-TREE per subfamily | `family_tree.sbatch` with a subfamily argument and `-mset` |
-| F14 | Ingroup and outgroup checks; outgroup, midpoint and MAD roots; iTOL files | script, then human review |
+| F14 | `scripts/check_subfamily.py`: ingroup and outgroup checks; outgroup, midpoint and MAD roots; `make_family_figure.py --subfamily` for the figure. The family's iTOL files fit, since tips keep their IDs | script, then human review |
 
 The whole-family tree is FastTree, and F7 draws it with its orthogroup, score and coverage rings for
 choosing subfamilies. If a supported backbone is wanted, it comes from IQ-TREE on one

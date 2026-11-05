@@ -15,18 +15,30 @@
 #              --min-node-tips tips, numbered by size, evenly spaced to show how they nest (not branch
 #              length), each in a circle coloured by support. Support is a flag, not a filter. The table
 #              describes each numbered clade; subfamilies.tsv can name them by number (kind = node).
+#              With --subfamily it draws that subfamily's tree instead (step F14), rooted on its outgroups,
+#              whose names are red and whose tips without a name show their tip ID, with no node figure.
+#              With --subfamilies it also writes a copy of the figure showing where the subfamilies
+#              landed: each ingroup is a semitransparent slice behind the tree, starting at its common
+#              ancestor and stopping at the rings (so their colours stay true), continued by an arc outside
+#              them and named on its largest piece. A group that is not a clade in this tree shows as
+#              several pieces, and overlaps as darker areas.
 # Author: Victor M. Gonzalez Ramos
 # Date: 2026-11-05
-# Version: 1.0
+# Version: 1.1
 #
 # Usage (from the project folder; standard library only):
-#   python3 scripts/make_family_figure.py <family> [--tree fasttree|ml] [--out FILE] [--min-node-tips N]
-#   --tree           The whole-family tree to draw (default: fasttree).
-#   --out            Where to write the figure (default: <OUT_DIR>/figures/<family>_<tree>.svg); the node
+#   python3 scripts/make_family_figure.py <family> [--subfamily NAME | --subfamilies [A,B,...]] [--tree fasttree|ml]
+#                                         [--out FILE] [--min-node-tips N]
+#   --subfamily      The subfamily to draw, a folder in <OUT_DIR>/subfamilies (default: the whole family).
+#   --subfamilies    Also write <figure>_subfamilies.svg, with slices for the listed subfamilies (default: all
+#                    in subfamilies.tsv, which need their tips.tsv from build_subfamilies.py).
+#   --tree           The tree to draw (default: fasttree).
+#   --out            Where to write the figure (default: <OUT_DIR>/figures/<family>[_<subfamily>]_<tree>.svg); the node
 #                    figure goes next to it, as <name>_nodes.svg.
 #   --min-node-tips  Smallest clade to number (default: 100, the smallest planned subfamily).
 #
-# Reads, inside <OUT_DIR> (family.conf): tree/tips.tsv, tree/fasttree.nwk or tree/ml.treefile, and
+# Reads, inside <OUT_DIR> (family.conf): tree/tips.tsv, tree/fasttree.nwk or tree/ml.treefile (with
+# --subfamily, the same files in subfamilies/<subfamily>), and
 # search/<hmm>_cohort.domtbl and search/<hmm>_references.domtbl for each HMM; and from
 # families/<family>/: references.tsv, outgroups.tsv (optional).
 #
@@ -66,6 +78,11 @@ SCORE_RAMP = ("#ffffcc", "#fd8d3c", "#800026")
 COVERAGE_RAMP = ("#f7fcf0", "#7bccc4", "#084081")
 ROOT_COLOUR = "#b2182b"
 SCORE_QUANTILE = 0.99           # top of each score ring, so that outliers do not wash it out
+SLICE_COLOURS = ("#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#6250d6", "#e34948")
+SLICE_EXTRA_COLOUR = "#8c8c8c"   # subfamilies beyond the colours; each slice carries its name
+SLICE_OPACITY = 0.2
+SLICE_ARC = 2.0
+SLICE_FONT_SIZE = 8.0
 NODE_RADIUS = 3.4
 NODE_FONT_SIZE = 2.9
 SUPPORT_COLOURS = ("#f46d43", "#fee08b", "#66bd63")  # low, middle, high
@@ -108,35 +125,54 @@ def spread(positions, gap, low, high):
 
 parser = argparse.ArgumentParser(description="Circular figure of a gene family's tree")
 parser.add_argument("family")
+parser.add_argument("--subfamily")
+parser.add_argument("--subfamilies", nargs="?", const="all")
 parser.add_argument("--tree", choices=TREES, default="fasttree")
 parser.add_argument("--out")
 parser.add_argument("--min-node-tips", type=int, default=100)
 args = parser.parse_args()
+if args.subfamily and args.subfamilies:
+    fail("--subfamilies adds slices to the whole-family figure, so it cannot go with --subfamily")
 config = read_config(args.family)
+planned, chosen = [], []
+if args.subfamilies:
+    planned = list(dict.fromkeys(r["subfamily"] for r in read_tsv(os.path.join(config["FAMILY_DIR"], "subfamilies.tsv"))))
+    chosen = planned if args.subfamilies == "all" else args.subfamilies.split(",")
+    for name in chosen:
+        if name not in planned:
+            fail(f"subfamily '{name}' is not in subfamilies.tsv")
+        if not os.path.isfile(os.path.join(config["OUT_DIR"], "subfamilies", name, "tips.tsv")):
+            fail(f"no tip list for subfamily '{name}'; run scripts/build_subfamilies.py {args.family}")
 out_dir = config["OUT_DIR"]
 tree_file, tree_method = TREES[args.tree]
-out_path = args.out or os.path.join(out_dir, "figures", f"{args.family}_{args.tree}.svg")
-tree_path = os.path.join(out_dir, "tree", tree_file)
+tree_dir = os.path.join(out_dir, "subfamilies", args.subfamily) if args.subfamily else os.path.join(out_dir, "tree")
+out_stem = f"{args.family}_{args.subfamily}" if args.subfamily else args.family
+out_path = args.out or os.path.join(out_dir, "figures", f"{out_stem}_{args.tree}.svg")
+tree_path = os.path.join(tree_dir, tree_file)
+title = f"{config['NAME']}, subfamily {args.subfamily}" if args.subfamily else config["NAME"]
 if not os.path.isfile(tree_path):
     fail(f"'{tree_path}' not found")
 
-tips_table = {t["tip_id"]: t for t in read_tsv(os.path.join(out_dir, "tree", "tips.tsv"))}
+tips_table = {t["tip_id"]: t for t in read_tsv(os.path.join(tree_dir, "tips.tsv"))}
 references = {r["reference_id"]: r for r in read_tsv(os.path.join(config["FAMILY_DIR"], "references.tsv"))}
 outgroups = read_tsv(os.path.join(config["FAMILY_DIR"], "outgroups.tsv"), required=False)
 outgroup_by_id = {o["outgroup_id"]: o for o in outgroups}
 tree = read_tree(tree_path)
 if set(tree.tips) != set(tips_table):
-    fail(f"the tips of {tree_path} differ from tree/tips.tsv; rebuild the tree or the table")
+    fail(f"the tips of {tree_path} differ from {tree_dir}/tips.tsv; rebuild the tree or the table")
 
 # 1. Root
-root_tips = [o["outgroup_id"] for o in outgroups if o["root"] == "TRUE"]
+if args.subfamily:
+    root_tips = [t for t, info in tips_table.items() if info["set"] != "ingroup"]
+else:
+    root_tips = [o["outgroup_id"] for o in outgroups if o["root"] == "TRUE"]
 if root_tips and all(t in tree.tips for t in root_tips) and tree.root_on_clade(root_tips):
     names = [re.sub(r"^[^-]*-", "", t) for t in root_tips]
-    root_text = f"rooted on {' + '.join(names)}"
+    root_text = "rooted on its outgroups" if args.subfamily else f"rooted on {' + '.join(names)}"
     root_key = ",".join(root_tips)
 else:
     if root_tips:
-        print(f"  note: the root outgroups ({', '.join(root_tips)}) do not form a clade; using the midpoint root")
+        print(f"  note: the {len(root_tips)} root outgroups do not form a clade; using the midpoint root")
     tree = read_tree(tree_path)
     tree.midpoint_root()
     root_text = "midpoint root"
@@ -192,6 +228,7 @@ def xy(radius, angle):
 marked = set(config.get("MARK_PORTALS", "").split())
 labels = []
 for tip, info in tips_table.items():
+    in_outgroup = info.get("role") == "outgroup"
     if info["kind"] == "outgroup":
         organism = outgroup_by_id[tip]["organism"] if tip in outgroup_by_id else tip.split("-")[0]
         labels.append((tip, f"{species_prefix(organism)} {tip.split('-', 1)[1]}", True))
@@ -203,7 +240,9 @@ for tip, info in tips_table.items():
             name = re.sub(r"\s*\(.*?\)", "", ref["protein_name"]).strip()
             if name.lower() not in [x.lower() for x in names]:
                 names.append(name)
-        labels.append((tip, f"{species_prefix(refs[0]['species'])} {'/'.join(names)}", False))
+        labels.append((tip, f"{species_prefix(refs[0]['species'])} {'/'.join(names)}", in_outgroup))
+    elif in_outgroup:
+        labels.append((tip, tip, True))
 labels.sort(key=lambda x: tip_index[x[0]])
 
 font = FONT_SIZE
@@ -276,7 +315,8 @@ for node in tree.preorder():
         large = 1 if b - a > math.pi else 0
         branches.append(f"M{xy(r, a)}A{r:.2f} {r:.2f} 0 {large} 1 {xy(r, b)}")
 root_dot = f'<circle cx="{WIDTH / 2}" cy="{WIDTH / 2}" r="3" fill="{ROOT_COLOUR}"/>'
-tree_parts = [f'<path fill="none" stroke="#404040" stroke-width="0.12" d="{"".join(branches)}"/>', root_dot]
+branch_width = min(0.5, max(0.12, 300 / n_tips))  # thin lines for a whole family, heavier for a subfamily
+tree_parts = [f'<path fill="none" stroke="#404040" stroke-width="{branch_width:.2f}" d="{"".join(branches)}"/>', root_dot]
 
 # The node figure's tree: only the numbered clades, by size; a clade's radius comes from how many numbered
 # clades nest inside it, so that small clades sit outward, where there is room
@@ -476,44 +516,100 @@ def write_figure(path, parts, extra_legend, caption, bottom):
 
 
 write_figure(out_path, tree_parts, [],
-             [f"{tree_method} tree of {config['NAME']}, {n_tips:,} tips, {root_text} (red dot)."
+             [f"{tree_method} tree of {title}, {n_tips:,} tips, {root_text} (red dot)."
               f" Names: characterized or genetically supported references (black) and outgroups (red).",
               f"Each protein's score and coverage add up the pieces of a split domain. "
               + (f"{long_branches} long terminal branches are cut at the rings." if long_branches else "")],
              legend_bottom)
 
 # 9. The node figure and the node table
-node_legend = [f'<text x="{x_right}" y="{row + 2:.1f}" font-size="8">Node support:</text>']
-for i, (colour, text) in enumerate(zip(SUPPORT_COLOURS, support_labels)):
-    x = x_right + 68 + 75 * i
-    node_legend.append(f'<circle cx="{x}" cy="{row - 1:.1f}" r="4" fill="{colour}" stroke="#404040" stroke-width="0.2"/>')
-    node_legend.append(f'<text x="{x + 7}" y="{row + 2:.1f}" font-size="8">{escape(text)}</text>')
-stem, extension = os.path.splitext(out_path)
-nodes_figure = f"{stem}_nodes{extension}"
-write_figure(nodes_figure, node_parts, node_legend,
-             [f"{tree_method} tree of {config['NAME']}, {root_text}: the {len(numbered)} clades of at least "
-              f"{args.min_node_tips} tips, numbered by size. Positions show how clades nest, not branch length.",
-              "Grey wedges show the tips of clades with no numbered clade inside. "
-              "Support is a flag, not a filter: low support means looking harder at that clade's own tree."],
-             max(legend_bottom, row + 10))
+if not args.subfamily:
+    node_legend = [f'<text x="{x_right}" y="{row + 2:.1f}" font-size="8">Node support:</text>']
+    for i, (colour, text) in enumerate(zip(SUPPORT_COLOURS, support_labels)):
+        x = x_right + 68 + 75 * i
+        node_legend.append(f'<circle cx="{x}" cy="{row - 1:.1f}" r="4" fill="{colour}" stroke="#404040" stroke-width="0.2"/>')
+        node_legend.append(f'<text x="{x + 7}" y="{row + 2:.1f}" font-size="8">{escape(text)}</text>')
+    stem, extension = os.path.splitext(out_path)
+    nodes_figure = f"{stem}_nodes{extension}"
+    write_figure(nodes_figure, node_parts, node_legend,
+                 [f"{tree_method} tree of {config['NAME']}, {root_text}: the {len(numbered)} clades of at least "
+                  f"{args.min_node_tips} tips, numbered by size. Positions show how clades nest, not branch length.",
+                  "Grey wedges show the tips of clades with no numbered clade inside. "
+                  "Support is a flag, not a filter: low support means looking harder at that clade's own tree."],
+                 max(legend_bottom, row + 10))
 
-with open(tree_path, "rb") as f:
-    tree_md5 = hashlib.md5(f.read()).hexdigest()
-name_of = {tip: text for tip, text, _ in labels}
-table = []
-for node in numbered:
-    inside = tree.tips_under(node)
-    groups = {}
-    for tip in inside:
-        og = tips_table[tip]["orthogroup"] or "(none)"
-        groups[og] = groups.get(og, 0) + 1
-    main = sorted(groups, key=lambda og: (-groups[og], og))[:3]
-    table.append([number_of[id(node)], len(inside), node.label, ", ".join(f"{og} {groups[og]}" for og in main),
-                  round(groups[main[0]] / len(inside), 3), ", ".join(name_of[t] for t in inside if t in name_of),
-                  sum(tips_table[t]["portal"] in marked for t in inside), inside[0], inside[-1], tree_md5, root_key])
-nodes_table = os.path.join(out_dir, "figures", f"{args.family}_{args.tree}_nodes.tsv")
-write_tsv(nodes_table, ["node", "tips", "support", "main_orthogroups", "main_share", "named", "marked", "tip_a", "tip_b",
-                        "tree_md5", "root"], table)
-print(f"{nodes_figure} and {nodes_table}: {len(numbered)} clades of at least {args.min_node_tips} tips")
+    with open(tree_path, "rb") as f:
+        tree_md5 = hashlib.md5(f.read()).hexdigest()
+    name_of = {tip: text for tip, text, _ in labels}
+    table = []
+    for node in numbered:
+        inside = tree.tips_under(node)
+        groups = {}
+        for tip in inside:
+            og = tips_table[tip]["orthogroup"] or "(none)"
+            groups[og] = groups.get(og, 0) + 1
+        main = sorted(groups, key=lambda og: (-groups[og], og))[:3]
+        table.append([number_of[id(node)], len(inside), node.label, ", ".join(f"{og} {groups[og]}" for og in main),
+                      round(groups[main[0]] / len(inside), 3), ", ".join(name_of[t] for t in inside if t in name_of),
+                      sum(tips_table[t]["portal"] in marked for t in inside), inside[0], inside[-1], tree_md5, root_key])
+    nodes_table = os.path.join(out_dir, "figures", f"{args.family}_{args.tree}_nodes.tsv")
+    write_tsv(nodes_table, ["node", "tips", "support", "main_orthogroups", "main_share", "named", "marked", "tip_a", "tip_b",
+                            "tree_md5", "root"], table)
+    print(f"{nodes_figure} and {nodes_table}: {len(numbered)} clades of at least {args.min_node_tips} tips")
+# 10. The figure with the subfamilies as slices
+if args.subfamilies:
+    slice_parts, slice_labels = [], []
+    covered = {}
+    for name in chosen:
+        # the colour follows the subfamily's row, so it stays the same whichever subfamilies are drawn
+        slot = planned.index(name)
+        colour = SLICE_COLOURS[slot] if slot < len(SLICE_COLOURS) else SLICE_EXTRA_COLOUR
+        ingroup = [t["tip_id"] for t in read_tsv(os.path.join(out_dir, "subfamilies", name, "tips.tsv")) if t["set"] == "ingroup"]
+        positions = sorted(tip_index[t] for t in ingroup if t in tip_index)
+        if len(positions) < len(ingroup):
+            print(f"  WARNING: {name}: {len(ingroup) - len(positions)} ingroup tips are not in this tree")
+        if not positions:
+            continue
+        for position in positions:
+            covered[position] = covered.get(position, 0) + 1
+        pieces = [[positions[0], positions[0]]]
+        for position in positions[1:]:
+            if position == pieces[-1][1] + 1:
+                pieces[-1][1] = position
+            else:
+                pieces.append([position, position])
+        wedges, arcs = [], []
+        for first, last in pieces:
+            start = min(depth[id(tree.mrca(tip_order[first:last + 1]))] * scale, limit - 2)
+            wedges.append(sector(start, limit, first, last))
+            arcs.append(sector(leader_start - 0.5, leader_start - 0.5 + SLICE_ARC, first, last))
+        slice_parts.append(f'<path fill="{colour}" fill-opacity="{SLICE_OPACITY}" d="{"".join(wedges)}"/>')
+        slice_parts.append(f'<path fill="{colour}" d="{"".join(arcs)}"/>')
+        first, last = max(pieces, key=lambda piece: piece[1] - piece[0])
+        angle = tip_angle((first + last) / 2)
+        x, y = polar(limit - 3, angle)
+        degrees = math.degrees(angle)
+        flip = 90 < degrees < 270
+        rotation = degrees + 180 if flip else degrees
+        box = len(name) * 0.56 * SLICE_FONT_SIZE
+        transform = f'transform="rotate({rotation:.2f} {x:.2f} {y:.2f})"'
+        slice_labels.append(f'<rect x="{x if flip else x - box:.2f}" y="{y - SLICE_FONT_SIZE * 0.65:.2f}" width="{box:.2f}" '
+                            f'height="{SLICE_FONT_SIZE * 1.3:.2f}" fill="#ffffff" fill-opacity="0.8" {transform}/>')
+        slice_labels.append(f'<text x="{x:.2f}" y="{y:.2f}" font-size="{SLICE_FONT_SIZE}" text-anchor="{"start" if flip else "end"}" '
+                            f'dominant-baseline="central" {transform}>{escape(name)}</text>')
+        sizes = sorted((last - first + 1 for first, last in pieces), reverse=True)
+        print(f"  {name}: {len(positions)} tips in {len(pieces)} piece(s)" + (f": {', '.join(map(str, sizes))}" if len(sizes) > 1 else ""))
+    shared = sum(count > 1 for count in covered.values())
+    outside = n_tips - len(covered)
+    print(f"  {shared} tips are in more than one subfamily; {outside} tips are in none of those drawn")
+    stem, extension = os.path.splitext(out_path)
+    slices_figure = f"{stem}_subfamilies{extension}"
+    write_figure(slices_figure, slice_parts + tree_parts + slice_labels, [],
+                 [f"{tree_method} tree of {title}, {n_tips:,} tips, {root_text} (red dot). Shaded slices: subfamily "
+                  f"ingroups, from their common ancestor; {outside:,} tips are in none of them.",
+                  "Names: characterized or genetically supported references (black) and outgroups (red). "
+                  "A subfamily in several pieces is not a clade in this tree; darker areas are in two subfamilies."],
+                 legend_bottom)
+    print(f"{slices_figure}: {len(chosen)} subfamilies")
 print(f"{out_path}: {n_tips} tips, {len(labels)} names at {font:.1f} pt, {root_text}, "
       f"{len(marked_tips)} marked proteins, {long_branches} long branches cut")
