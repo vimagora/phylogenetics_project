@@ -1,0 +1,707 @@
+tip_id	set	role	kind	portal	orthogroup	references	status
+Cryne_H99_1-3080	ingroup	ingroup	member	Cryne_H99_1	OG0000008		
+Rhoto_IFO0880_4-11075	ingroup	ingroup	member	Rhoto_IFO0880_4	OG0000008		
+Spipu1-7537	ingroup	ingroup	member	Spipu1	OG0000008		
+Klula1-3698	ingroup	ingroup	member	Klula1	OG0000008		
+Sacce1-5055	ingroup	ingroup	member	Sacce1	OG0000008	sacce_hxt14	anchor
+Zygrou1-233625	ingroup	ingroup	member	Zygrou1	OG0000008		
+Dekbr2-25434	ingroup	ingroup	member	Dekbr2	OG0000008		
+Ambmon_NRRLY1484_1-3912	ingroup	ingroup	member	Ambmon_NRRLY1484_1	OG0000008		
+Ambmon_NRRLY1484_1-3967	ingroup	ingroup	member	Ambmon_NRRLY1484_1	OG0000008		
+Dekbr2-66929	ingroup	ingroup	member	Dekbr2	OG0000008		
+Hanpo2-13736	ingroup	ingroup	member	Hanpo2	OG0000008		
+Cangly-CgHxt6	ingroup	ingroup	orphan	Cangly		cangly_cghxt6	orphan_species_not_in_cohort
+Cangly-CgHxt5	ingroup	ingroup	orphan	Cangly		cangly_cghxt5	orphan_species_not_in_cohort
+Cangly-CgHxt4	ingroup	ingroup	orphan	Cangly		cangly_cghxt4	orphan_species_not_in_cohort
+Dekbr-BHT1	ingroup	ingroup	orphan	Dekbr		dekbr_bht1	orphan_no_copy_in_genome
+Dekbr-BHT2	ingroup	ingroup	orphan	Dekbr		dekbr_bht2	orphan_no_copy_in_genome
+Dekbr-BHT3	ingroup	ingroup	orphan	Dekbr		dekbr_bht3	orphan_no_copy_in_genome
+Ambmon_NRRLY1484_1-724	ingroup	ingroup	member	Ambmon_NRRLY1484_1	OG0000008		
+Zygrou1-102497	ingroup	ingroup	member	Zygrou1	OG0000008		
+Sacce1-2222	ingroup	ingroup	member	Sacce1	OG0000008	sacce_hxt10	anchor
+Sacce1-4684	ingroup	ingroup	member	Sacce1	OG0000008	sacce_hxt2	anchor
+Sacce1-3596	ingroup	ingroup	member	Sacce1	OG0000008	sacce_hxt16	anchor
+Sacce1-761	ingroup	ingroup	member	Sacce1	OG0000008	sacce_hxt15	anchor
+Sacce1-1845	ingroup	ingroup	member	Sacce1	OG0000008	sacce_hxt13	anchor
+Sacce1-5460	ingroup	ingroup	member	Sacce1	OG0000008	sacce_hxt17	anchor
+Zygrou1-214396	ingroup	ingroup	member	Zygrou1	OG0000008		
+Sacce1-3211	ingroup	ingroup	member	Sacce1	OG0000008	sacce_hxt9	anchor
+Sacce1-5480	ingroup	ingroup	member	Sacce1	OG0000008	sacce_hxt11	anchor
+Zygrou1-232252	ingroup	ingroup	member	Zygrou1	OG0000008		
+Sacce1-1375	ingroup	ingroup	member	Sacce1	OG0000008	sacce_hxt7	anchor
+Sacce1-1376	ingroup	ingroup	member	Sacce1	OG0000008	sacce_hxt6	anchor
+Sacce1-3055	ingroup	ingroup	member	Sacce1	OG0000008	sacce_hxt4	anchor
+Sacce1-4100	ingroup	ingroup	member	Sacce1	OG0000008	sacce_gal2	anchor
+Sacce1-3216	ingroup	ingroup	member	Sacce1	OG0000008	sacce_hxt8	anchor
+Sacce1-1378	ingroup	ingroup	member	Sacce1	OG0000008	sacce_hxt3	anchor
+Sacce1-3057	ingroup	ingroup	member	Sacce1	OG0000008	sacce_hxt1	anchor
+Klula1-2521	ingroup	ingroup	member	Klula1	OG0000008	klula_rag1	anchor
+Sacce1-3059	ingroup	ingroup	member	Sacce1	OG0000008	sacce_hxt5	anchor
+Canpa1-3765	ingroup	ingroup	member	Canpa1	OG0000008		
+Picst3-66414	ingroup	ingroup	member	Picst3	OG0000008	picst_sut1	anchor
+Picst3-27984	ingroup	ingroup	member	Picst3	OG0000008	picst_sut3	anchor
+Picst3-27983	ingroup	ingroup	member	Picst3	OG0000008		
+Picst3-64741	ingroup	ingroup	member	Picst3	OG0000008		
+Canint_NRRLY981_1-4396	ingroup	ingroup	member	Canint_NRRLY981_1	OG0000008	canint_gxf1	anchor
+Debha1-1574	ingroup	ingroup	member	Debha1	OG0000008		
+Canalb1-58139	ingroup	ingroup	member	Canalb1	OG0000008		
+Canalb1-58138	ingroup	ingroup	member	Canalb1	OG0000008		
+Canalb1-58140	ingroup	ingroup	member	Canalb1	OG0000008		
+Canpa1-4036	ingroup	ingroup	member	Canpa1	OG0000008		
+Canpa1-4037	ingroup	ingroup	member	Canpa1	OG0000008		
+Debha1-1336	ingroup	ingroup	member	Debha1	OG0000008		
+Debha1-2941	ingroup	ingroup	member	Debha1	OG0000008		
+Canint_NRRLY981_1-3469	ingroup	ingroup	member	Canint_NRRLY981_1	OG0000008		
+Arxad1-1863	ingroup	ingroup	member	Arxad1	OG0000008		
+Yarli1-70401	ingroup	ingroup	member	Yarli1	OG0000008	yarli_yht3	anchor
+Glost2-440923	ingroup	ingroup	member	Glost2	OG0000008		
+Lipst1_1-205437	ingroup	ingroup	member	Lipst1_1	OG0000008		
+Rhier1-673493	ingroup	ingroup	member	Rhier1	OG0000008		
+Lepor2-682954	ingroup	ingroup	member	Lepor2	OG0000008		
+Bcine1-3543	ingroup	ingroup	member	Bcine1	OG0000008		
+Sclsc1-8311	ingroup	ingroup	member	Sclsc1	OG0000008		
+Cocsa1-241201	ingroup	ingroup	member	Cocsa1	OG0000008		
+Stano2-9113	ingroup	ingroup	member	Stano2	OG0000008		
+Glotr1_1-79159	ingroup	ingroup	member	Glotr1_1	OG0000008		
+Macpha1-568546	ingroup	ingroup	member	Macpha1	OG0000008		
+Clafu1-192318	ingroup	ingroup	member	Clafu1	OG0000008		
+Zymtr1-56560	ingroup	ingroup	member	Zymtr1	OG0000008		
+Neucr2-3373	ingroup	ingroup	member	Neucr2	OG0000008	neucr_glt1	anchor
+Podan3-209455	ingroup	ingroup	member	Podan3	OG0000008		
+Thite2-2124217	ingroup	ingroup	member	Thite2	OG0000008		
+Chagl_1-20125	ingroup	ingroup	member	Chagl_1	OG0000008		
+Spoth2-112491	ingroup	ingroup	member	Spoth2	OG0000008		
+Colgr2-9711	ingroup	ingroup	member	Colgr2	OG0000008	colgr_hxt5	anchor
+Triat2-146895	ingroup	ingroup	member	Triat2	OG0000008		
+Trire-Glt1	ingroup	ingroup	orphan	Trire		trire_glt1	orphan_no_copy_in_genome
+Metro1-10939	ingroup	ingroup	member	Metro1	OG0000008		
+Corco1-10538	ingroup	ingroup	member	Corco1	OG0000008		
+Fusgr1-5230	ingroup	ingroup	member	Fusgr1	OG0000008		
+Fusox3_1-2468124	ingroup	ingroup	member	Fusox3_1	OG0000008		
+Xylhel2-493779	ingroup	ingroup	member	Xylhel2	OG0000008		
+Dales1-420752	ingroup	ingroup	member	Dales1	OG0000008		
+HypEC38_3-411043	ingroup	ingroup	member	HypEC38_3	OG0000008		
+AurpulNBB1-46542	ingroup	ingroup	member	AurpulNBB1	OG0000008		
+Pench1-86475	ingroup	ingroup	member	Pench1	OG0000008		
+Penox1-3125	ingroup	ingroup	member	Penox1	OG0000008		
+Aspfu1-2640	ingroup	ingroup	member	Aspfu1	OG0000008		
+Aspnid1-4453	ingroup	ingroup	member	Aspnid1	OG0000008	aspnid_mste	anchor
+Aspni_NRRL3_1-5973	ingroup	ingroup	member	Aspni_NRRL3_1	OG0000008	aspnig_mstc	anchor
+Aspac1-1855468	ingroup	ingroup	member	Aspac1	OG0000008		
+Aspor1-5270	ingroup	ingroup	member	Aspor1	OG0000008		
+Penoc1-6255	ingroup	ingroup	member	Penoc1	OG0000008		
+Theau2-591040	ingroup	ingroup	member	Theau2	OG0000008		
+Glost2-386166	ingroup	ingroup	member	Glost2	OG0000008		
+Cocsa1-40466	ingroup	ingroup	member	Cocsa1	OG0000008		
+Stano2-11406	ingroup	ingroup	member	Stano2	OG0000008		
+Clafu1-188146	ingroup	ingroup	member	Clafu1	OG0000008		
+AurpulNBB1-80104	ingroup	ingroup	member	AurpulNBB1	OG0000008		
+Valma1-5118	ingroup	ingroup	member	Valma1	OG0000008		
+Grocl1-1527	ingroup	ingroup	member	Grocl1	OG0000008		
+Verda1-961	ingroup	ingroup	member	Verda1	OG0000008		
+Oidma1-190492	ingroup	ingroup	member	Oidma1	OG0000008		
+Lepor2-483757	ingroup	ingroup	member	Lepor2	OG0000008		
+Rhier1-565216	ingroup	ingroup	member	Rhier1	OG0000008		
+Bcine1-12881	ingroup	ingroup	member	Bcine1	OG0000008		
+Sclsc1-11812	ingroup	ingroup	member	Sclsc1	OG0000008		
+Capcor1-6898	ingroup	ingroup	member	Capcor1	OG0000008		
+Claps1-12297	ingroup	ingroup	member	Claps1	OG0000008		
+Lepor2-630615	ingroup	ingroup	member	Lepor2	OG0000008		
+Clafu1-197081	ingroup	ingroup	member	Clafu1	OG0000008		
+Zymtr1-61946	ingroup	ingroup	member	Zymtr1	OG0000008		
+Oidma1-54639	ingroup	ingroup	member	Oidma1	OG0000008		
+Lepor2-578912	ingroup	ingroup	member	Lepor2	OG0000008		
+Rhier1-696790	ingroup	ingroup	member	Rhier1	OG0000008		
+Cocim1-5284	ingroup	ingroup	member	Cocim1	OG0000008		
+Penox1-195	ingroup	ingroup	member	Penox1	OG0000008		
+Pench1-32879	ingroup	ingroup	member	Pench1	OG0000008		
+Aspfu1-6017	ingroup	ingroup	member	Aspfu1	OG0000008		
+Aspor1-9077	ingroup	ingroup	member	Aspor1	OG0000008		
+Aspac1-110693	ingroup	ingroup	member	Aspac1	OG0000008		
+Aspni_NRRL3_1-8621	ingroup	ingroup	member	Aspni_NRRL3_1	OG0000008		
+Penoc1-10082	ingroup	ingroup	member	Penoc1	OG0000008		
+Penoc1-2044	ingroup	ingroup	member	Penoc1	OG0000008		
+Aspor1-11908	ingroup	ingroup	member	Aspor1	OG0000008		
+Aspfu1-8602	ingroup	ingroup	member	Aspfu1	OG0000008		
+Pench1-68045	ingroup	ingroup	member	Pench1	OG0000008		
+Penox1-6002	ingroup	ingroup	member	Penox1	OG0000008		
+Aspac1-80440	ingroup	ingroup	member	Aspac1	OG0000008		
+Aspni_NRRL3_1-8911	ingroup	ingroup	member	Aspni_NRRL3_1	OG0000008	aspnig_mstg	anchor
+Aspnid1-8742	ingroup	ingroup	member	Aspnid1	OG0000008		
+Theau2-146537	ingroup	ingroup	member	Theau2	OG0000008		
+Aspnid1-1796	ingroup	ingroup	member	Aspnid1	OG0000008		
+Pench1-28748	ingroup	ingroup	member	Pench1	OG0000008		
+Cenge3-531655	ingroup	ingroup	member	Cenge3	OG0000008		
+Glost2-296382	ingroup	ingroup	member	Glost2	OG0000008		
+Cocsa1-176182	ingroup	ingroup	member	Cocsa1	OG0000008		
+Stano2-4051	ingroup	ingroup	member	Stano2	OG0000008		
+Grocl1-3442	ingroup	ingroup	member	Grocl1	OG0000008		
+Triat2-153153	ingroup	ingroup	member	Triat2	OG0000008		
+Trire_Chr-110990	ingroup	ingroup	member	Trire_Chr	OG0000008	trire_str3	anchor
+Corco1-1478	ingroup	ingroup	member	Corco1	OG0002107		
+Metro1-2636	ingroup	ingroup	member	Metro1	OG0000008		
+Colgr2-4530	ingroup	ingroup	member	Colgr2	OG0000008		
+Kredeu1-510793	ingroup	ingroup	member	Kredeu1	OG0000008		
+Xylhel2-488265	ingroup	ingroup	member	Xylhel2	OG0000008		
+Claps1-1428	ingroup	ingroup	member	Claps1	OG0102364		
+Valma1-3964	ingroup	ingroup	member	Valma1	OG0000008		
+Fusgr1-8772	ingroup	ingroup	member	Fusgr1	OG0000008		
+Fusox3_1-2218924	ingroup	ingroup	member	Fusox3_1	OG0000008		
+Clafu1-190400	ingroup	ingroup	member	Clafu1	OG0000008		
+Capcor1-6317	ingroup	ingroup	member	Capcor1	OG0000008		
+Claps1-7249	ingroup	ingroup	member	Claps1	OG0000008		
+Saico1-63870	ingroup	ingroup	member	Saico1	OG0000008		
+Saico1-62683	ingroup	ingroup	member	Saico1	OG0000008		
+Schpo1-4278	ingroup	ingroup	member	Schpo1	OG0000008	schpo_ght6	anchor
+Schpo1-3750	ingroup	ingroup	member	Schpo1	OG0000008	schpo_ght2	anchor
+Schpo1-2382	ingroup	ingroup	member	Schpo1	OG0000008	schpo_ght4	anchor
+Schpo1-28	ingroup	ingroup	member	Schpo1	OG0000008	schpo_ght3	anchor
+Schpo1-4287	ingroup	ingroup	member	Schpo1	OG0000008	schpo_ght1	anchor
+Schpo1-2349	ingroup	ingroup	member	Schpo1	OG0000008		
+Schpo1-4281	ingroup	ingroup	member	Schpo1	OG0000008	schpo_ght5	anchor
+Schpo1-4286	ingroup	ingroup	member	Schpo1	OG0000008		
+Artol1-6197	ingroup	ingroup	member	Artol1	OG0000008		
+Ascim1-319714	ingroup	ingroup	member	Ascim1	OG0000008		
+Morco1-512304	ingroup	ingroup	member	Morco1	OG0000008		
+Cocsa1-95126	ingroup	ingroup	member	Cocsa1	OG0000008		
+Stano2-10363	ingroup	ingroup	member	Stano2	OG0000008		
+Fusox3_1-1464543	ingroup	ingroup	member	Fusox3_1	OG0000008		
+Triat2-81195	ingroup	ingroup	member	Triat2	OG0000008		
+Trire_Chr-118600	ingroup	ingroup	member	Trire_Chr	OG0000008		
+Corco1-7705	ingroup	ingroup	member	Corco1	OG0000008		
+Fusgr1-5864	ingroup	ingroup	member	Fusgr1	OG0000008		
+Fusox3_1-2283160	ingroup	ingroup	member	Fusox3_1	OG0000008		
+Neucr2-8885	ingroup	ingroup	member	Neucr2	OG0000008	neucr_xyt1	anchor
+Podan3-206590	ingroup	ingroup	member	Podan3	OG0000008		
+Chagl_1-20441	ingroup	ingroup	member	Chagl_1	OG0000008		
+Spoth2-108924	ingroup	ingroup	member	Spoth2	OG0000008		
+Colgr2-12327	ingroup	ingroup	member	Colgr2	OG0000008	colgr_hxt2	anchor
+Magor1-10421	ingroup	ingroup	member	Magor1	OG0000008	magor_mohxt2	anchor
+Verda1-3704	ingroup	ingroup	member	Verda1	OG0000008		
+Treme1-71013	ingroup	ingroup	member	Treme1	OG0000008		
+Sphst1-49239	ingroup	ingroup	member	Sphst1	OG0000008		
+Aurde3_1-1311869	ingroup	ingroup	member	Aurde3_1	OG0000008		
+Exigl1-723182	ingroup	ingroup	member	Exigl1	OG0000008		
+Calco1-550841	ingroup	ingroup	member	Calco1	OG0000008		
+Dacsp1-119474	ingroup	ingroup	member	Dacsp1	OG0000008		
+Rhoto_IFO0880_4-11893	ingroup	ingroup	member	Rhoto_IFO0880_4	OG0000008		
+Ustma2_2-9230	ingroup	ingroup	member	Ustma2_2	OG0000008		
+Rhomi1-165270	ingroup	ingroup	member	Rhomi1	OG0000008		
+Fomme1-94521	ingroup	ingroup	member	Fomme1	OG0000008		
+Schpa1-909147	ingroup	ingroup	member	Schpa1	OG0000008		
+Glocon1-843860	ingroup	ingroup	member	Glocon1	OG0000008		
+Lacind1-2082639	ingroup	ingroup	member	Lacind1	OG0000008		
+Hetan2-53448	ingroup	ingroup	member	Hetan2	OG0000008		
+Punst1-93198	ingroup	ingroup	member	Punst1	OG0000008		
+Stehi1-150351	ingroup	ingroup	member	Stehi1	OG0000008		
+Plicr1-106860	ingroup	ingroup	member	Plicr1	OG0000008		
+PleosPC15_2-1095022	ingroup	ingroup	member	PleosPC15_2	OG0000008		
+Agrped1-822923	ingroup	ingroup	member	Agrped1	OG0000008		
+Copcin2-2256905	ingroup	ingroup	member	Copcin2	OG0000008		
+Hypsu1-44786	ingroup	ingroup	member	Hypsu1	OG0000008		
+Hebcy2-443104	ingroup	ingroup	member	Hebcy2	OG0000008		
+Cylto1-426800	ingroup	ingroup	member	Cylto1	OG0000008		
+Armmel1-1201255	ingroup	ingroup	member	Armmel1	OG0000008		
+Schco3-68300	ingroup	ingroup	member	Schco3	OG0000008		
+Fishe1-47128	ingroup	ingroup	member	Fishe1	OG0000008		
+Gyman1-965746	ingroup	ingroup	member	Gyman1	OG0000008		
+Lenedo1-1101750	ingroup	ingroup	member	Lenedo1	OG0000008		
+Jaaar1-193541	ingroup	ingroup	member	Jaaar1	OG0000008		
+Glotr1_1-100826	ingroup	ingroup	member	Glotr1_1	OG0000008		
+Neole1-1153487	ingroup	ingroup	member	Neole1	OG0000008		
+Trave1-175168	ingroup	ingroup	member	Trave1	OG0000008		
+Pyccin1-951966	ingroup	ingroup	member	Pyccin1	OG0000008		
+Pycco1-1467950	ingroup	ingroup	member	Pycco1	OG0000008		
+Fomfom1-1232421	ingroup	ingroup	member	Fomfom1	OG0000008		
+Dicsqu464_2-3243512	ingroup	ingroup	member	Dicsqu464_2	OG0000008	dicsqu_dsst13	anchor_listed_id
+Ganluc1-124179	ingroup	ingroup	member	Ganluc1	OG0000008		
+Obbri1-806882	ingroup	ingroup	member	Obbri1	OG0000008		
+Cersu1-85182	ingroup	ingroup	member	Cersu1	OG0000008		
+Cersu1-113964	ingroup	ingroup	member	Cersu1	OG0000008		
+Wolco1-27321	ingroup	ingroup	member	Wolco1	OG0000008		
+PosplRSB12_1-1039800	ingroup	ingroup	member	PosplRSB12_1	OG0000008		
+Pipbet1_1-859940	ingroup	ingroup	member	Pipbet1_1	OG0000008		
+Fompi3-1033352	ingroup	ingroup	member	Fompi3	OG0000008		
+Fompi3-1053016	ingroup	ingroup	member	Fompi3	OG0000008		
+Panru1-1709465	ingroup	ingroup	member	Panru1	OG0000008		
+Phlrad1-137860	ingroup	ingroup	member	Phlrad1	OG0000008		
+Phlrad1-137857	ingroup	ingroup	member	Phlrad1	OG0000008		
+Phlrad1-142571	ingroup	ingroup	member	Phlrad1	OG0000008		
+Phchr2-3032367	ingroup	ingroup	member	Phchr2	OG0000008		
+Phaca1-263484	ingroup	ingroup	member	Phaca1	OG0000008		
+Phlgi1-93500	ingroup	ingroup	member	Phlgi1	OG0000008		
+Bjead1_1-62495	ingroup	ingroup	member	Bjead1_1	OG0000008		
+Pilcr1-823581	ingroup	ingroup	member	Pilcr1	OG0000008		
+Pilcr1-98210	ingroup	ingroup	member	Pilcr1	OG0000008		
+Conol1-883630	ingroup	ingroup	member	Conol1	OG0000008		
+Hydpi2-165963	ingroup	ingroup	member	Hydpi2	OG0000008		
+Suilu4-9440	ingroup	ingroup	member	Suilu4	OG0000008		
+SerlaS7_9_2-1063191	ingroup	ingroup	member	SerlaS7_9_2	OG0000008		
+Pisti2-4169430	ingroup	ingroup	member	Pisti2	OG0000008		
+Theter1-221404	ingroup	ingroup	member	Theter1	OG0000008		
+Cylto1-92984	ingroup	ingroup	member	Cylto1	OG0000008		
+Cylto1-448322	ingroup	ingroup	member	Cylto1	OG0000008		
+Cylto1-448301	ingroup	ingroup	member	Cylto1	OG0000008		
+Cylto1-418064	ingroup	ingroup	member	Cylto1	OG0000008		
+Cylto1-34777	ingroup	ingroup	member	Cylto1	OG0000008		
+Cylto1-421747	ingroup	ingroup	member	Cylto1	OG0000008		
+Cylto1-423509	ingroup	ingroup	member	Cylto1	OG0000008		
+Cylto1-425225	ingroup	ingroup	member	Cylto1	OG0000008		
+Punst1-101204	ingroup	ingroup	member	Punst1	OG0000008		
+Rhomi1-163732	ingroup	ingroup	member	Rhomi1	OG0000008		
+Hetan2-106809	ingroup	ingroup	member	Hetan2	OG0000008		
+Pilcr1-70080	ingroup	ingroup	member	Pilcr1	OG0000008		
+Pilcr1-70109	ingroup	ingroup	member	Pilcr1	OG0000008		
+Ustma2_2-9406	ingroup	ingroup	member	Ustma2_2	OG0000008		
+Cryne_H99_1-5665	ingroup	ingroup	member	Cryne_H99_1	OG0000008		
+Triol1-206691	ingroup	ingroup	member	Triol1	OG0000008		
+Calco1-486166	ingroup	ingroup	member	Calco1	OG0000008		
+Calco1-43393	ingroup	ingroup	member	Calco1	OG0000008		
+Dacsp1-107689	ingroup	ingroup	member	Dacsp1	OG0000008		
+Hydru2-233252	ingroup	ingroup	member	Hydru2	OG0000008		
+Sphst1-24987	ingroup	ingroup	member	Sphst1	OG0000008		
+Sphst1-34232	ingroup	ingroup	member	Sphst1	OG0000008		
+Aurde3_1-1329712	ingroup	ingroup	member	Aurde3_1	OG0000008		
+Exigl1-250744	ingroup	ingroup	member	Exigl1	OG0000008		
+Sissu1-492902	ingroup	ingroup	member	Sissu1	OG0000008		
+Fomme1-98052	ingroup	ingroup	member	Fomme1	OG0000008		
+Schpa1-880081	ingroup	ingroup	member	Schpa1	OG0000008		
+Hydpi2-109514	ingroup	ingroup	member	Hydpi2	OG0000008		
+SerlaS7_9_2-432855	ingroup	ingroup	member	SerlaS7_9_2	OG0000008		
+Conol1-824364	ingroup	ingroup	member	Conol1	OG0000008		
+Suilu4-530134	ingroup	ingroup	member	Suilu4	OG0000008		
+Hydpi2-86208	ingroup	ingroup	member	Hydpi2	OG0000008		
+Paxin1-86777	ingroup	ingroup	member	Paxin1	OG0000008		
+Paxru2-129008	ingroup	ingroup	member	Paxru2	OG0000008		
+SerlaS7_9_2-353795	ingroup	ingroup	member	SerlaS7_9_2	OG0000008		
+Conol1-961885	ingroup	ingroup	member	Conol1	OG0000008		
+Plicr1-27180	ingroup	ingroup	member	Plicr1	OG0000008		
+Plicr1-36565	ingroup	ingroup	member	Plicr1	OG0000008		
+Glocon1-51491	ingroup	ingroup	member	Glocon1	OG0000008		
+Glocon1-51635	ingroup	ingroup	member	Glocon1	OG0000008		
+Punst1-49055	ingroup	ingroup	member	Punst1	OG0000008		
+Jaaar1-185381	ingroup	ingroup	member	Jaaar1	OG0000008		
+Glotr1_1-67351	ingroup	ingroup	member	Glotr1_1	OG0000008		
+Neole1-1071137	ingroup	ingroup	member	Neole1	OG0000008		
+Panru1-169736	ingroup	ingroup	member	Panru1	OG0000008		
+Bjead1_1-191337	ingroup	ingroup	member	Bjead1_1	OG0000008		
+Phlgi1-130034	ingroup	ingroup	member	Phlgi1	OG0000008		
+Phaca1-248481	ingroup	ingroup	member	Phaca1	OG0000008		
+Phchr2-1701398	ingroup	ingroup	member	Phchr2	OG0000008		
+Phlrad1-140576	ingroup	ingroup	member	Phlrad1	OG0000008		
+Pyccin1-674050	ingroup	ingroup	member	Pyccin1	OG0000008		
+Pycco1-1452937	ingroup	ingroup	member	Pycco1	OG0000008		
+Ganluc1-478816	ingroup	ingroup	member	Ganluc1	OG0000008		
+Fomfom1-1454742	ingroup	ingroup	member	Fomfom1	OG0000008		
+Trave1-138035	ingroup	ingroup	member	Trave1	OG0000008		
+Dicsqu464_2-2966884	ingroup	ingroup	member	Dicsqu464_2	OG0000008	dicsqu_dsst10	anchor_listed_id
+Cersu1-120076	ingroup	ingroup	member	Cersu1	OG0000008		
+Obbri1-889705	ingroup	ingroup	member	Obbri1	OG0000008		
+PosplRSB12_1-1042397	ingroup	ingroup	member	PosplRSB12_1	OG0000008		
+Fompi3-1114383	ingroup	ingroup	member	Fompi3	OG0000008		
+Pipbet1_1-918852	ingroup	ingroup	member	Pipbet1_1	OG0000008		
+Wolco1-134402	ingroup	ingroup	member	Wolco1	OG0000008		
+Wolco1-94965	ingroup	ingroup	member	Wolco1	OG0000008		
+PosplRSB12_1-1126998	ingroup	ingroup	member	PosplRSB12_1	OG0000008		
+Wolco1-135536	ingroup	ingroup	member	Wolco1	OG0000008		
+Fompi3-1024316	ingroup	ingroup	member	Fompi3	OG0000008		
+Pipbet1_1-779626	ingroup	ingroup	member	Pipbet1_1	OG0000008		
+Pleery1-1452019	ingroup	ingroup	member	Pleery1	OG0000008		
+PleosPC15_2-1082467	ingroup	ingroup	member	PleosPC15_2	OG0000008		
+Hypsu1-33830	ingroup	ingroup	member	Hypsu1	OG0000008		
+Copcin2-2256994	ingroup	ingroup	member	Copcin2	OG0000008		
+Agrped1-563088	ingroup	ingroup	member	Agrped1	OG0000008		
+Agrped1-63047	ingroup	ingroup	member	Agrped1	OG0000008		
+Agabi_varbisH97_2-213473	ingroup	ingroup	member	Agabi_varbisH97_2	OG0000008		
+Amath1-75996	ingroup	ingroup	member	Amath1	OG0000008		
+Cylto1-385569	ingroup	ingroup	member	Cylto1	OG0000008		
+Cylto1-424120	ingroup	ingroup	member	Cylto1	OG0000008		
+Cylto1-425160	ingroup	ingroup	member	Cylto1	OG0000008		
+Armmel1-1022472	ingroup	ingroup	member	Armmel1	OG0000008		
+Schco3-2613255	ingroup	ingroup	member	Schco3	OG0000008		
+Fishe1-35972	ingroup	ingroup	member	Fishe1	OG0000008		
+Fishe1-36091	ingroup	ingroup	member	Fishe1	OG0000008		
+Stehi1-159863	ingroup	ingroup	member	Stehi1	OG0000008		
+Gyman1-956660	ingroup	ingroup	member	Gyman1	OG0000008		
+Lenedo1-319133	ingroup	ingroup	member	Lenedo1	OG0000008		
+Jaaar1-140816	ingroup	ingroup	member	Jaaar1	OG0000008		
+Glotr1_1-51845	ingroup	ingroup	member	Glotr1_1	OG0000008		
+Neole1-1119210	ingroup	ingroup	member	Neole1	OG0000008		
+Glotr1_1-118470	ingroup	ingroup	member	Glotr1_1	OG0000008		
+Neole1-634781	ingroup	ingroup	member	Neole1	OG0000008		
+Lipst1_1-27377	ingroup	ingroup	member	Lipst1_1	OG0000008		
+Spipu1-6108	ingroup	ingroup	member	Spipu1	OG0000008		
+Fusox3_1-2373246	ingroup	ingroup	member	Fusox3_1	OG0000008		
+Fusox3_1-2474014	ingroup	ingroup	member	Fusox3_1	OG0000008		
+Fusox3_1-2521635	ingroup	ingroup	member	Fusox3_1	OG0000008		
+Punst1-106179	ingroup	ingroup	member	Punst1	OG0000008		
+Calco1-525364	ingroup	ingroup	member	Calco1	OG0000008		
+Dacsp1-22972	ingroup	ingroup	member	Dacsp1	OG0000008		
+Artol1-2157	ingroup	ingroup	member	Artol1	OG0000008		
+Macpha1-578138	ingroup	ingroup	member	Macpha1	OG0000008		
+Cenge3-584042	ingroup	ingroup	member	Cenge3	OG0000008		
+Glost2-429940	ingroup	ingroup	member	Glost2	OG0000008		
+Stano2-3209	ingroup	ingroup	member	Stano2	OG0000008		
+Lepor2-486637	ingroup	ingroup	member	Lepor2	OG0000008		
+AurpulNBB1-67942	ingroup	ingroup	member	AurpulNBB1	OG0000008		
+Clafu1-196496	ingroup	ingroup	member	Clafu1	OG0000008		
+Zymtr1-56441	ingroup	ingroup	member	Zymtr1	OG0000008		
+Triol1-243841	ingroup	ingroup	member	Triol1	OG0000008		
+Cryne_H99_1-3380	ingroup	ingroup	member	Cryne_H99_1	OG0000008		
+Treme1-56909	ingroup	ingroup	member	Treme1	OG0000008		
+Morel2-138741	ingroup	ingroup	member	Morel2	OG0000008		
+Rhomi1-145574	ingroup	ingroup	member	Rhomi1	OG0000008		
+Botbo1-118938	ingroup	ingroup	member	Botbo1	OG0000008		
+Hydpi2-153775	ingroup	ingroup	member	Hydpi2	OG0000008		
+Paxru2-13135	ingroup	ingroup	member	Paxru2	OG0000008		
+Paxin1-113728	ingroup	ingroup	member	Paxin1	OG0000008		
+Paxin1-169976	ingroup	ingroup	member	Paxin1	OG0000008		
+Paxru2-834328	ingroup	ingroup	member	Paxru2	OG0000008		
+Paxru2-139872	ingroup	ingroup	member	Paxru2	OG0000008		
+Rhoto_IFO0880_4-11990	ingroup	ingroup	member	Rhoto_IFO0880_4	OG0000008		
+Capcor1-8343	ingroup	ingroup	member	Capcor1	OG0000008		
+Claps1-12535	ingroup	ingroup	member	Claps1	OG0000008		
+AurpulNBB1-85608	ingroup	ingroup	member	AurpulNBB1	OG0000008		
+Clafu1-189465	ingroup	ingroup	member	Clafu1	OG0000008		
+Zymtr1-62661	ingroup	ingroup	member	Zymtr1	OG0000008		
+Lepor2-501604	ingroup	ingroup	member	Lepor2	OG0000008		
+Lepor2-622546	ingroup	ingroup	member	Lepor2	OG0000008		
+Pench1-27636	ingroup	ingroup	member	Pench1	OG0000008		
+Penoc1-6284	ingroup	ingroup	member	Penoc1	OG0000008		
+Claps1-6425	ingroup	ingroup	member	Claps1	OG0000008		
+Oidma1-153275	ingroup	ingroup	member	Oidma1	OG0000008		
+Corco1-6914	ingroup	ingroup	member	Corco1	OG0000008		
+Fusox3_1-2347285	ingroup	ingroup	member	Fusox3_1	OG0000008		
+Metro1-1099	ingroup	ingroup	member	Metro1	OG0000008		
+Triat2-150280	ingroup	ingroup	member	Triat2	OG0000008		
+Trire_Chr-111552	ingroup	ingroup	member	Trire_Chr	OG0000008	trire_stp1	anchor
+Verda1-7868	ingroup	ingroup	member	Verda1	OG0000008		
+Colgr2-9608	ingroup	ingroup	member	Colgr2	OG0000008	colgr_hxt3	anchor
+Neucr2-9976	ingroup	ingroup	member	Neucr2	OG0000008	neucr_hgt_1	anchor
+Spoth2-2308157	ingroup	ingroup	member	Spoth2	OG0000008		
+Podan3-208039	ingroup	ingroup	member	Podan3	OG0000008		
+Thite2-2170736	ingroup	ingroup	member	Thite2	OG0000008		
+Valma1-9288	ingroup	ingroup	member	Valma1	OG0000008		
+Grocl1-3355	ingroup	ingroup	member	Grocl1	OG0000008		
+Cylto1-453464	ingroup	ingroup	member	Cylto1	OG0000008		
+Cylto1-389398	ingroup	ingroup	member	Cylto1	OG0000008		
+Cylto1-392344	ingroup	ingroup	member	Cylto1	OG0000008		
+Gyman1-958735	ingroup	ingroup	member	Gyman1	OG0000008		
+Lenedo1-1057756	ingroup	ingroup	member	Lenedo1	OG0000008		
+Lipst1_1-74605	ingroup	ingroup	member	Lipst1_1	OG0000008		
+Cocim1-3778	ingroup	ingroup	member	Cocim1	OG0000008		
+Cenge3-666065	ingroup	ingroup	member	Cenge3	OG0000008		
+Glost2-390638	ingroup	ingroup	member	Glost2	OG0000008		
+Claps1-9402	ingroup	ingroup	member	Claps1	OG0000008		
+Capcor1-271	ingroup	ingroup	member	Capcor1	OG0000008		
+Claps1-10557	ingroup	ingroup	member	Claps1	OG0000008		
+AurpulNBB1-72484	ingroup	ingroup	member	AurpulNBB1	OG0000008		
+Cenge3-157087	ingroup	ingroup	member	Cenge3	OG0000008		
+Glost2-392342	ingroup	ingroup	member	Glost2	OG0000008		
+Cocsa1-33703	ingroup	ingroup	member	Cocsa1	OG0000008		
+Stano2-5618	ingroup	ingroup	member	Stano2	OG0000008		
+Oidma1-35127	ingroup	ingroup	member	Oidma1	OG0000008		
+Bcine1-2521	ingroup	ingroup	member	Bcine1	OG0000008		
+Sclsc1-13591	ingroup	ingroup	member	Sclsc1	OG0000008		
+Lepor2-641413	ingroup	ingroup	member	Lepor2	OG0000008		
+Rhier1-672763	ingroup	ingroup	member	Rhier1	OG0000008		
+Aurde3_1-1271702	ingroup	ingroup	member	Aurde3_1	OG0000008		
+Exigl1-695207	ingroup	ingroup	member	Exigl1	OG0000008		
+Fusox3_1-2461830	ingroup	ingroup	member	Fusox3_1	OG0000008		
+Verda1-580	ingroup	ingroup	member	Verda1	OG0000008		
+Neucr2-5896	ingroup	ingroup	member	Neucr2	OG0000008		
+Podan3-203571	ingroup	ingroup	member	Podan3	OG0000008		
+Spoth2-98222	ingroup	ingroup	member	Spoth2	OG0000008		
+Thite2-2070615	ingroup	ingroup	member	Thite2	OG0000008		
+Magor1-3612	ingroup	ingroup	member	Magor1	OG0000008	magor_mohxt1_mosnf3	anchor
+Dales1-418514	ingroup	ingroup	member	Dales1	OG0000008		
+HypEC38_3-402323	ingroup	ingroup	member	HypEC38_3	OG0000008		
+Kredeu1-486267	ingroup	ingroup	member	Kredeu1	OG0000008		
+Xylhel2-509095	ingroup	ingroup	member	Xylhel2	OG0000008		
+Dales1-397309	ingroup	ingroup	member	Dales1	OG0000008		
+HypEC38_3-325182	ingroup	ingroup	member	HypEC38_3	OG0000008		
+Kredeu1-489832	ingroup	ingroup	member	Kredeu1	OG0000008		
+Xylhel2-520584	ingroup	ingroup	member	Xylhel2	OG0000008		
+Podan3-207985	ingroup	ingroup	member	Podan3	OG0000008		
+Neucr2-10037	ingroup	ingroup	member	Neucr2	OG0000008		
+Chagl_1-12086	ingroup	ingroup	member	Chagl_1	OG0000008		
+Spoth2-2127519	ingroup	ingroup	member	Spoth2	OG0000008		
+Theau2-620930	ingroup	ingroup	member	Theau2	OG0000008		
+Aspac1-76578	ingroup	ingroup	member	Aspac1	OG0000008		
+Aspnid1-1082	ingroup	ingroup	member	Aspnid1	OG0000008	aspnid_hxtd_msta	anchor
+Aspnid1-4727	ingroup	ingroup	member	Aspnid1	OG0000008	aspnid_hxtb_mstc	anchor
+Aspni_NRRL3_1-3147	ingroup	ingroup	member	Aspni_NRRL3_1	OG0000008	aspnig_msta	anchor
+Aspfu1-7475	ingroup	ingroup	member	Aspfu1	OG0000008		
+Aspor1-5024	ingroup	ingroup	member	Aspor1	OG0000008		
+Pench1-84321	ingroup	ingroup	member	Pench1	OG0000008		
+Penox1-3460	ingroup	ingroup	member	Penox1	OG0000008		
+Ambmon_NRRLY1484_1-4745	ingroup	ingroup	member	Ambmon_NRRLY1484_1	OG0000008		
+Ambmon_NRRLY1484_1-4746	ingroup	ingroup	member	Ambmon_NRRLY1484_1	OG0000008		
+Ambmon_NRRLY1484_1-4741	ingroup	ingroup	member	Ambmon_NRRLY1484_1	OG0000008		
+Ambmon_NRRLY1484_1-5592	ingroup	ingroup	member	Ambmon_NRRLY1484_1	OG0000008		
+Ambmon_NRRLY1484_1-4743	ingroup	ingroup	member	Ambmon_NRRLY1484_1	OG0000008		
+Ambmon_NRRLY1484_1-4744	ingroup	ingroup	member	Ambmon_NRRLY1484_1	OG0000008		
+Hanpo2-94217	ingroup	ingroup	member	Hanpo2	OG0000008	hanpo_hpgcr1	anchor
+Cangly-CgHxt1	ingroup	ingroup	orphan	Cangly		cangly_cghxt1	orphan_species_not_in_cohort
+Cangly-CgHxt2	ingroup	ingroup	orphan	Cangly		cangly_cghxt2	orphan_species_not_in_cohort
+Rhier1-673631	ingroup	ingroup	member	Rhier1	OG0000008		
+Bcine1-3097	ingroup	ingroup	member	Bcine1	OG0000008		
+Sclsc1-1969	ingroup	ingroup	member	Sclsc1	OG0000008		
+Lepor2-288224	ingroup	ingroup	member	Lepor2	OG0000008		
+Rhier1-265939	ingroup	ingroup	member	Rhier1	OG0000008		
+Rhier1-737262	ingroup	ingroup	member	Rhier1	OG0000008		
+Lepor2-572048	ingroup	ingroup	member	Lepor2	OG0000008		
+Oidma1-55147	ingroup	ingroup	member	Oidma1	OG0000008		
+Penox1-3106	ingroup	ingroup	member	Penox1	OG0000008		
+Bcine1-10594	ingroup	ingroup	member	Bcine1	OG0000008		
+Sclsc1-9429	ingroup	ingroup	member	Sclsc1	OG0000008		
+Lepor2-524968	ingroup	ingroup	member	Lepor2	OG0000008		
+Rhier1-464787	ingroup	ingroup	member	Rhier1	OG0000008		
+Saico1-89671	ingroup	ingroup	member	Saico1	OG0062669		
+Ustma2_2-12155	ingroup	ingroup	member	Ustma2_2	OG0000008	ustma_umhxt1	anchor
+Pilcr1-77069	ingroup	ingroup	member	Pilcr1	OG0000008		
+Pilcr1-825630	ingroup	ingroup	member	Pilcr1	OG0000008		
+Pilcr1-91287	ingroup	ingroup	member	Pilcr1	OG0000008		
+Hydru2-1381619	ingroup	ingroup	member	Hydru2	OG0000008		
+Hydru2-1391822	ingroup	ingroup	member	Hydru2	OG0000008		
+Hebcy2-440341	ingroup	ingroup	member	Hebcy2	OG0000008		
+Hebcy2-75786	ingroup	ingroup	member	Hebcy2	OG0000008		
+Agrped1-712512	ingroup	ingroup	member	Agrped1	OG0000008		
+Hypsu1-42596	ingroup	ingroup	member	Hypsu1	OG0000008		
+Lacbi2-481081	ingroup	ingroup	member	Lacbi2	OG0000008		
+Lacbi2-702552	ingroup	ingroup	member	Lacbi2	OG0000008	lacbi_mst1_3	anchor
+Agrped1-266550	ingroup	ingroup	member	Agrped1	OG0000008		
+Hypsu1-42600	ingroup	ingroup	member	Hypsu1	OG0000008		
+Pirin1-72504	ingroup	ingroup	member	Pirin1	OG0000008		
+Pirin1-75246	ingroup	ingroup	member	Pirin1	OG0000008		
+Pirin1-73656	ingroup	ingroup	member	Pirin1	OG0000008		
+Jaaar1-55028	ingroup	ingroup	member	Jaaar1	OG0000008		
+Glotr1_1-39986	ingroup	ingroup	member	Glotr1_1	OG0000008		
+Neole1-1130205	ingroup	ingroup	member	Neole1	OG0000008		
+Fishe1-75321	ingroup	ingroup	member	Fishe1	OG0000008		
+Gyman1-1020059	ingroup	ingroup	member	Gyman1	OG0000008		
+Gyman1-924828	ingroup	ingroup	member	Gyman1	OG0000008		
+Plicr1-174010	ingroup	ingroup	member	Plicr1	OG0000008		
+Plicr1-44270	ingroup	ingroup	member	Plicr1	OG0000008		
+Fomme1-16043	ingroup	ingroup	member	Fomme1	OG0000008		
+Schpa1-867312	ingroup	ingroup	member	Schpa1	OG0000008		
+Stehi1-97806	ingroup	ingroup	member	Stehi1	OG0000008		
+Hetan2-35934	ingroup	ingroup	member	Hetan2	OG0000008		
+Punst1-107304	ingroup	ingroup	member	Punst1	OG0000008		
+Punst1-54324	ingroup	ingroup	member	Punst1	OG0000008		
+Schco3-2619010	ingroup	ingroup	member	Schco3	OG0000008		
+Pyccin1-936280	ingroup	ingroup	member	Pyccin1	OG0000008		
+Trave1-149223	ingroup	ingroup	member	Trave1	OG0000008		
+Pycco1-1434836	ingroup	ingroup	member	Pycco1	OG0000008		
+Dicsqu464_2-2101791	ingroup	ingroup	member	Dicsqu464_2	OG0000008	dicsqu_dsst12	anchor_listed_id
+Ganluc1-491837	ingroup	ingroup	member	Ganluc1	OG0000008		
+Fomfom1-1215457	ingroup	ingroup	member	Fomfom1	OG0000008		
+Ganluc1-491821	ingroup	ingroup	member	Ganluc1	OG0000008		
+Fomfom1-1194748	ingroup	ingroup	member	Fomfom1	OG0000008		
+Fomfom1-1211317	ingroup	ingroup	member	Fomfom1	OG0000008		
+Trave1-39656	ingroup	ingroup	member	Trave1	OG0000008		
+Pyccin1-925837	ingroup	ingroup	member	Pyccin1	OG0000008		
+Pycco1-1447236	ingroup	ingroup	member	Pycco1	OG0000008		
+Trave1-132907	ingroup	ingroup	member	Trave1	OG0000008		
+Pyccin1-1049130	ingroup	ingroup	member	Pyccin1	OG0000008		
+Pycco1-1480377	ingroup	ingroup	member	Pycco1	OG0000008		
+Trave1-51645	ingroup	ingroup	member	Trave1	OG0000008		
+Trave1-51646	ingroup	ingroup	member	Trave1	OG0000008		
+Trave1-168510	ingroup	ingroup	member	Trave1	OG0000008		
+Pyccin1-1053111	ingroup	ingroup	member	Pyccin1	OG0000008		
+Pycco1-1366597	ingroup	ingroup	member	Pycco1	OG0000008		
+Dicsqu464_2-3092199	ingroup	ingroup	member	Dicsqu464_2	OG0000008	dicsqu_dsst11	anchor_listed_id
+Cersu1-112620	ingroup	ingroup	member	Cersu1	OG0000008		
+Obbri1-159242	ingroup	ingroup	member	Obbri1	OG0000008		
+Fompi3-1021676	ingroup	ingroup	member	Fompi3	OG0000008		
+Pipbet1_1-783182	ingroup	ingroup	member	Pipbet1_1	OG0000008		
+PosplRSB12_1-1054823	ingroup	ingroup	member	PosplRSB12_1	OG0000008		
+Wolco1-104972	ingroup	ingroup	member	Wolco1	OG0000008		
+Panru1-1661288	ingroup	ingroup	member	Panru1	OG0000008		
+Phlrad1-142506	ingroup	ingroup	member	Phlrad1	OG0000008		
+Phlgi1-87669	ingroup	ingroup	member	Phlgi1	OG0000008		
+Bjead1_1-37636	ingroup	ingroup	member	Bjead1_1	OG0000008		
+Phchr2-3015932	ingroup	ingroup	member	Phchr2	OG0000008		
+Phaso-Pshxt1	ingroup	ingroup	orphan	Phaso		phaso_pshxt1	orphan_species_not_in_cohort
+Phaca1-263731	ingroup	ingroup	member	Phaca1	OG0000008		
+SerlaS7_9_2-1064354	ingroup	ingroup	member	SerlaS7_9_2	OG0000008		
+Glocon1-857530	ingroup	ingroup	member	Glocon1	OG0000008		
+Lacind1-1811926	ingroup	ingroup	member	Lacind1	OG0000008		
+Lacind1-1938816	ingroup	ingroup	member	Lacind1	OG0000008		
+Agabi_varbisH97_2-189964	ingroup	ingroup	member	Agabi_varbisH97_2	OG0000008		
+Agabi_varbisH97_2-193226	ingroup	ingroup	member	Agabi_varbisH97_2	OG0000008		
+Amath1-141714	ingroup	ingroup	member	Amath1	OG0000008		
+Amamu1-70220	ingroup	ingroup	member	Amamu1	OG0000008	amamu_ammst1	probable_anchor
+Armmel1-1104384	ingroup	ingroup	member	Armmel1	OG0000008		
+Copcin2-2263498	ingroup	ingroup	member	Copcin2	OG0000008		
+Agrped1-816752	ingroup	ingroup	member	Agrped1	OG0000008		
+Hebcy2-34130	ingroup	ingroup	member	Hebcy2	OG0000008		
+Lacbi2-305352	ingroup	ingroup	member	Lacbi2	OG0000008		
+Lacbi2-473872	ingroup	ingroup	member	Lacbi2	OG0000008	lacbi_mst1_2	probable_anchor
+Theter1-1131252	ingroup	ingroup	member	Theter1	OG0000008		
+Theter1-826196	ingroup	ingroup	member	Theter1	OG0000008		
+Pleery1-1441948	ingroup	ingroup	member	Pleery1	OG0000008		
+PleosPC15_2-1089962	ingroup	ingroup	member	PleosPC15_2	OG0000008		
+Sissu1-978668	ingroup	ingroup	member	Sissu1	OG0000008		
+Calco1-481816	ingroup	ingroup	member	Calco1	OG0000008		
+Dacsp1-14822	ingroup	ingroup	member	Dacsp1	OG0000008		
+Sphst1-23957	ingroup	ingroup	member	Sphst1	OG0000008		
+Botbo1-28136	ingroup	ingroup	member	Botbo1	OG0000008		
+Tulca1-246291	ingroup	ingroup	member	Tulca1	OG0000008		
+Mellp3_H0-1088985	ingroup	ingroup	member	Mellp3_H0	OG0000008		
+Pgt_201_A1-8973	ingroup	ingroup	member	Pgt_201_A1	OG0000008		
+Urofa-HXT1	ingroup	ingroup	orphan	Urofa		urofa_hxt1	orphan_species_not_in_cohort
+Rhoto_IFO0880_4-11924	ingroup	ingroup	member	Rhoto_IFO0880_4	OG0000008		
+Cryne_H99_1-4445	ingroup	ingroup	member	Cryne_H99_1	OG0000008		
+Triol1-271722	ingroup	ingroup	member	Triol1	OG0000008		
+Rhoto_IFO0880_4-9588	ingroup	ingroup	member	Rhoto_IFO0880_4	OG0000008		
+Pgt_201_A1-9166	ingroup	ingroup	member	Pgt_201_A1	OG0000008		
+Mellp3_H0-1329248	ingroup	ingroup	member	Mellp3_H0	OG0000008		
+Mellp3_H0-1200149	ingroup	ingroup	member	Mellp3_H0	OG0000008		
+Mellp3_H0-1329041	ingroup	ingroup	member	Mellp3_H0	OG0000008		
+Mellp3_H0-1082937	ingroup	ingroup	member	Mellp3_H0	OG0000008		
+Mellp3_H0-1357022	ingroup	ingroup	member	Mellp3_H0	OG0000008		
+Saico1-61687	ingroup	ingroup	member	Saico1	OG0112303		
+Yarli1-66345	ingroup	ingroup	member	Yarli1	OG0000008	yarli_yht1	anchor
+Yarli1-66448	ingroup	ingroup	member	Yarli1	OG0000008	yarli_yht2	anchor
+Canint_NRRLY981_1-3291	ingroup	ingroup	member	Canint_NRRLY981_1	OG0000008	canint_gxs1	anchor
+Canalb1-55350	ingroup	ingroup	member	Canalb1	OG0000008		
+Picst3-91253	ingroup	ingroup	member	Picst3	OG0000008		
+Debha1-1358	ingroup	ingroup	member	Debha1	OG0000008		
+Debha1-2188	ingroup	ingroup	member	Debha1	OG0000008		
+Dekbr2-29923	ingroup	ingroup	member	Dekbr2	OG0000008		
+Ambmon_NRRLY1484_1-3493	ingroup	ingroup	member	Ambmon_NRRLY1484_1	OG0000008		
+Hanpo2-102418	ingroup	ingroup	member	Hanpo2	OG0000008	hanpo_hxs1	anchor
+Debha1-1234	ingroup	ingroup	member	Debha1	OG0000008		
+Canint_NRRLY981_1-1569	ingroup	ingroup	member	Canint_NRRLY981_1	OG0000008		
+Picst3-85501	ingroup	ingroup	member	Picst3	OG0000008		
+Canpa1-5139	ingroup	ingroup	member	Canpa1	OG0000008		
+Canalb1-57761	ingroup	ingroup	member	Canalb1	OG0000008		
+Klula1-4102	ingroup	ingroup	member	Klula1	OG0000008	klula_rag4	anchor
+Zygrou1-128496	ingroup	ingroup	member	Zygrou1	OG0000008		
+Sacce1-813	ingroup	ingroup	member	Sacce1	OG0000008	sacce_snf3	anchor
+Sacce1-873	ingroup	ingroup	member	Sacce1	OG0000008	sacce_rgt2	anchor
+Lipst1_1-73058	ingroup	ingroup	member	Lipst1_1	OG0000008		
+Lipst1_1-7313	ingroup	ingroup	member	Lipst1_1	OG0000008		
+Lipst1_1-106361	ingroup	ingroup	member	Lipst1_1	OG0000008		
+Lipst1_1-4204	ingroup	ingroup	member	Lipst1_1	OG0000008		
+Lepor2-738458	ingroup	ingroup	member	Lepor2	OG0000008		
+Artol1-6208	ingroup	ingroup	member	Artol1	OG0000008		
+Macpha1-652487	ingroup	ingroup	member	Macpha1	OG0000008		
+Cocsa1-34464	ingroup	ingroup	member	Cocsa1	OG0000008		
+Stano2-2987	ingroup	ingroup	member	Stano2	OG0000008		
+Cenge3-605087	ingroup	ingroup	member	Cenge3	OG0000008		
+Glost2-331810	ingroup	ingroup	member	Glost2	OG0000008		
+Zymtr1-62247	ingroup	ingroup	member	Zymtr1	OG0000008		
+AurpulNBB1-37281	ingroup	ingroup	member	AurpulNBB1	OG0000008		
+Aspor1-4050	ingroup	ingroup	member	Aspor1	OG0000008		
+Pench1-32468	ingroup	ingroup	member	Pench1	OG0000008		
+Lepor2-58519	ingroup	ingroup	member	Lepor2	OG0000008		
+Aspfu1-4737	ingroup	ingroup	member	Aspfu1	OG0000008		
+Lepor2-497435	ingroup	ingroup	member	Lepor2	OG0000008		
+Oidma1-106418	ingroup	ingroup	member	Oidma1	OG0000008		
+Neucr2-5420	ingroup	ingroup	member	Neucr2	OG0000008	neucr_hgt2	anchor
+Rhier1-672608	ingroup	ingroup	member	Rhier1	OG0000008		
+Pench1-28889	ingroup	ingroup	member	Pench1	OG0000008		
+Penox1-1382	ingroup	ingroup	member	Penox1	OG0000008		
+Penoc1-1400	ingroup	ingroup	member	Penoc1	OG0000008		
+Penoc1-7055	ingroup	ingroup	member	Penoc1	OG0000008		
+Penoc1-3983	ingroup	ingroup	member	Penoc1	OG0000008		
+Aspnid1-3082	ingroup	ingroup	member	Aspnid1	OG0000008	aspnid_hxtc	anchor
+Grocl1-3468	ingroup	ingroup	member	Grocl1	OG0000008		
+Chagl_1-13546	ingroup	ingroup	member	Chagl_1	OG0000008		
+Thite2-124996	ingroup	ingroup	member	Thite2	OG0000008		
+Magor1-6021	ingroup	ingroup	member	Magor1	OG0000008	magor_mohxt3	anchor
+Colgr2-12121	ingroup	ingroup	member	Colgr2	OG0000008	colgr_hxt1	anchor
+Corco1-4388	ingroup	ingroup	member	Corco1	OG0000008		
+Metro1-2124	ingroup	ingroup	member	Metro1	OG0000008		
+Triat2-293668	ingroup	ingroup	member	Triat2	OG0000008		
+Trire_Chr-115240	ingroup	ingroup	member	Trire_Chr	OG0000008	trire_xltr1p	anchor
+Verda1-8137	ingroup	ingroup	member	Verda1	OG0000008		
+Fusox3_1-2042299	ingroup	ingroup	member	Fusox3_1	OG0000008		
+Fusox3_1-2512593	ingroup	ingroup	member	Fusox3_1	OG0000008		
+Fusgr1-3020	ingroup	ingroup	member	Fusgr1	OG0000008		
+Fusox3_1-2318663	ingroup	ingroup	member	Fusox3_1	OG0000008		
+Fusox3_1-2210374	ingroup	ingroup	member	Fusox3_1	OG0000008		
+Kredeu1-242018	ingroup	ingroup	member	Kredeu1	OG0000008		
+Xylhel2-482651	ingroup	ingroup	member	Xylhel2	OG0000008		
+Verda1-5227	ingroup	ingroup	member	Verda1	OG0147583		
+Dales1-291812	ingroup	ingroup	member	Dales1	OG0000008		
+HypEC38_3-20150	ingroup	ingroup	member	HypEC38_3	OG0000008		
+Neucr2-10599	ingroup	ingroup	member	Neucr2	OG0000008		
+Lepor2-178348	ingroup	ingroup	member	Lepor2	OG0000008		
+Rhier1-565449	ingroup	ingroup	member	Rhier1	OG0000008		
+Bcine1-13500	ingroup	ingroup	member	Bcine1	OG0000008		
+Sclsc1-12427	ingroup	ingroup	member	Sclsc1	OG0000008		
+AurpulNBB1-41765	ingroup	ingroup	member	AurpulNBB1	OG0000008		
+Macpha1-705117	ingroup	ingroup	member	Macpha1	OG0000008		
+Cenge3-661227	ingroup	ingroup	member	Cenge3	OG0000008		
+Glost2-33112	ingroup	ingroup	member	Glost2	OG0000008		
+Cocsa1-119797	ingroup	ingroup	member	Cocsa1	OG0000008		
+Stano2-10424	ingroup	ingroup	member	Stano2	OG0000008		
+AurpulNBB1-49197	ingroup	ingroup	member	AurpulNBB1	OG0000008		
+Zymtr1-59859	ingroup	ingroup	member	Zymtr1	OG0000008		
+Clafu1-185398	ingroup	ingroup	member	Clafu1	OG0000008		
+Bcine1-9681	ingroup	ingroup	member	Bcine1	OG0000008		
+Sclsc1-12994	ingroup	ingroup	member	Sclsc1	OG0000008		
+Lepor2-693022	ingroup	ingroup	member	Lepor2	OG0000008		
+Rhier1-573131	ingroup	ingroup	member	Rhier1	OG0000008		
+Capcor1-8247	ingroup	ingroup	member	Capcor1	OG0000008		
+Claps1-2874	ingroup	ingroup	member	Claps1	OG0000008		
+Theau2-550937	ingroup	ingroup	member	Theau2	OG0000008		
+Aspac1-1890247	ingroup	ingroup	member	Aspac1	OG0000008		
+Aspni_NRRL3_1-3879	ingroup	ingroup	member	Aspni_NRRL3_1	OG0000008	aspnig_msth	anchor
+Pench1-38724	ingroup	ingroup	member	Pench1	OG0000008		
+Penox1-6373	ingroup	ingroup	member	Penox1	OG0000008		
+Aspfu1-2936	ingroup	ingroup	member	Aspfu1	OG0000008		
+Aspor1-1959	ingroup	ingroup	member	Aspor1	OG0000008		
+Aspnid1-7483	ingroup	ingroup	member	Aspnid1	OG0000008	aspnid_hxte	probable_anchor
+Neucr2-763	ingroup	ingroup	member	Neucr2	OG0000008	neucr_rco_3	anchor
+Podan3-201889	ingroup	ingroup	member	Podan3	OG0000008		
+Chagl_1-11207	ingroup	ingroup	member	Chagl_1	OG0000008		
+Spoth2-2295230	ingroup	ingroup	member	Spoth2	OG0000008		
+Thite2-2122070	ingroup	ingroup	member	Thite2	OG0000008		
+Valma1-7680	ingroup	ingroup	member	Valma1	OG0000008		
+Kredeu1-487216	ingroup	ingroup	member	Kredeu1	OG0000008		
+Xylhel2-514443	ingroup	ingroup	member	Xylhel2	OG0000008		
+Dales1-429069	ingroup	ingroup	member	Dales1	OG0000008		
+HypEC38_3-408079	ingroup	ingroup	member	HypEC38_3	OG0000008		
+Grocl1-5778	ingroup	ingroup	member	Grocl1	OG0000008		
+Fusgr1-4612	ingroup	ingroup	member	Fusgr1	OG0000008		
+Fusox3_1-2428268	ingroup	ingroup	member	Fusox3_1	OG0000008		
+Fusgr1-10825	ingroup	ingroup	member	Fusgr1	OG0000008		
+Fusox3_1-2261135	ingroup	ingroup	member	Fusox3_1	OG0000008		
+Corco1-501	ingroup	ingroup	member	Corco1	OG0000008		
+Triat2-296763	ingroup	ingroup	member	Triat2	OG0000008		
+Trire_Chr-112220	ingroup	ingroup	member	Trire_Chr	OG0000008		
+Metro1-9613	ingroup	ingroup	member	Metro1	OG0000008		
+Colgr2-2488	ingroup	ingroup	member	Colgr2	OG0000008		
+Verda1-3974	ingroup	ingroup	member	Verda1	OG0000008		
+Magor1-7588	ingroup	ingroup	member	Magor1	OG0000008	magor_most1_morco3	anchor
+Bcine1-9861	ingroup	ingroup	member	Bcine1	OG0000008		
+Sclsc1-13194	ingroup	ingroup	member	Sclsc1	OG0000008		
+Oidma1-128878	ingroup	ingroup	member	Oidma1	OG0000008		
+Lepor2-92281	ingroup	ingroup	member	Lepor2	OG0000008		
+Rhier1-157640	ingroup	ingroup	member	Rhier1	OG0000008		
+Penoc1-6326	ingroup	ingroup	member	Penoc1	OG0000008		
+Morco1-480010	ingroup	ingroup	member	Morco1	OG0000008		
+Tubme1v2-5563	ingroup	ingroup	member	Tubme1v2	OG0000008	tubme_tmelhxt1	anchor
+Ascim1-205106	ingroup	ingroup	member	Ascim1	OG0000008		
+Artol1-2106	ingroup	ingroup	member	Artol1	OG0000008		
+Saico1-85607	ingroup	ingroup	member	Saico1	OG0000008		
+Aspni_NRRL3_1-8653	mal_group	outgroup	member	Aspni_NRRL3_1	OG0000008	aspnig_fsyx	anchor_listed_id
+Fusox3_1-2580761	mal_group	outgroup	member	Fusox3_1	OG0000174		
+Ustma-UmSrt1	mal_group	outgroup	orphan	Ustma		ustma_umsrt1	orphan_no_copy_in_genome
+Fusox3_1-2512555	mal_group	outgroup	member	Fusox3_1	OG0000174		
+Aspac1-53789	mal_group	outgroup	member	Aspac1	OG0000174		
+Kredeu1-490247	mal_group	outgroup	member	Kredeu1	OG0000174		
+Fusox3_1-2030885	mal_group	outgroup	member	Fusox3_1	OG0000174		
+Sacce1-3598	mal_group	outgroup	member	Sacce1	OG0000174	sacce_mph3	anchor
+Rhier1-738949	galacturonate_quinate	outgroup	member	Rhier1	OG0000008		
+Rhimi59_2-1907711	galacturonate_quinate	outgroup	member	Rhimi59_2	OG0000008		
+Lepor2-622677	galacturonate_quinate	outgroup	member	Lepor2	OG0000008		
+Trire_Chr-109101	galacturonate_quinate	outgroup	member	Trire_Chr	OG0000008	trire_gat1	anchor
+Neucr2-10204	galacturonate_quinate	outgroup	member	Neucr2	OG0000008	neucr_qa_y	anchor
+Arxad1-3619	galacturonate_quinate	outgroup	member	Arxad1	OG0000008		
+Bcine1-11562	galacturonate_quinate	outgroup	member	Bcine1	OG0000008	bcine_gala	anchor
+Aspni_NRRL3_1-9845	galacturonate_quinate	outgroup	member	Aspni_NRRL3_1	OG0000008		

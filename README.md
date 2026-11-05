@@ -5,7 +5,7 @@ A pipeline for the phylogenetic study of fungal gene families across a cohort of
 1. **Genome assessment** (steps 1–7): downloads candidate genomes, computes assembly statistics,
    reduces each proteome to one protein per gene and runs BUSCO before and after, as the basis for
    choosing a cohort.
-2. **Analysis** (steps 8–18 and F1–F9): for the chosen genomes, clean protein IDs, a species tree from
+2. **Analysis** (steps 8–18 and F1–F11): for the chosen genomes, clean protein IDs, a species tree from
    BUSCO markers (coalescent and concatenated), OrthoFinder orthogroups, and per gene family:
    anchoring of characterized proteins, family members and orthogroups, and family trees.
 
@@ -94,11 +94,14 @@ Gene families (`<family>` is a folder in `families/`):
 | F4. Tree sequences | `python3 scripts/build_family_fasta.py <family>` | `tree/sequences.faa`, `tree/tips.tsv` |
 | F5. Alignment | `sbatch scripts/align_family.sbatch <family>` | `tree/aligned.faa`, `tree/trimmed.faa` |
 | F6. Quick tree | `sbatch --time=04:00:00 scripts/family_tree.sbatch <family> fasttree` | `tree/fasttree.nwk` |
-| F7. iTOL files | `python3 scripts/make_family_itol.py <family>` | `itol/` |
+| F7. iTOL files and figure | `python3 scripts/make_family_itol.py <family>`; `python3 scripts/make_family_figure.py <family>` | `itol/`; `figures/<family>_fasttree.svg` |
 | ⏸ | Review of the quick tree against the criteria you set for the family | |
 | F8. Model selection | `sbatch scripts/family_tree.sbatch <family> modelfinder` | `tree/modelfinder.*` |
 | F9. Tree | `sbatch scripts/family_tree.sbatch <family> tree` | `tree/ml.*` |
 | ⏸ | Review of the tree (F7 again for the iTOL files) | |
+| F10. Subfamilies | Choose them on the trees and record them in `families/<family>/subfamilies.tsv` (by hand) | |
+| F11. Subfamily tip lists | `python3 scripts/build_subfamilies.py <family>` | `subfamilies/report.md`, `subfamilies/<subfamily>/tips.tsv`, `sequences.faa` |
+| ⏸ | Review of the report before aligning | |
 
 Steps 8–11, 13, 15 and 17 use Python from `module load python-data`. Step 10 reads the combined table of
 the collapsed proteomes from step 7.
@@ -184,15 +187,16 @@ a finished run with another species tree, unpack `WorkingDirectory.tar.gz` first
 
 ## Gene families
 
-Steps F1–F9 work on any gene family described by a folder `families/<family>/`. The scripts never
+Steps F1–F11 work on any gene family described by a folder `families/<family>/`. The scripts never
 transfer a function to an uncharacterized protein; they stop at alignments, trees and annotation
 files, and the reviews between them are done by a person.
 
 **Files of a family**
 - `family.conf`: `NAME`, `HMMS` (Pfam accessions defining the family, space-separated),
-  `MIN_HMM_COVERAGE` and `OUT_DIR` (results folder).
+  `MIN_HMM_COVERAGE`, `OUT_DIR` (results folder) and, optionally, `MARK_PORTALS` (portals whose proteins
+  get a tick in the figure, space-separated).
 - `references.tsv`: the reference proteins, one row each: `reference_id` (lowercase letters, digits,
-  `_`), `evidence` (`characterized` or `predicted`), `species`, `short_name` (species abbreviation,
+  `_`), `evidence` (`characterized`, `genetic` for a deletion phenotype without an assay, or `predicted`), `species`, `short_name` (species abbreviation,
   e.g. `Dekbr`; used as the pseudo-portal of orphans), `protein_name`, `role`, `function`
   (`;`-separated), `cohort_portal` (the protein's own cohort genome, if known), `cohort_id` (its clean
   ID, if known), `use` (`TRUE`/`FALSE`), `references`, `notes`, `sequence`.
@@ -202,6 +206,11 @@ files, and the reviews between them are done by a person.
   `class`, `order`, `nearest_cohort_portal`, `notes`. F2 lists pseudo-portals still missing here.
 - `function_columns.tsv` (optional): `label`, `colour`, `terms`: the iTOL function columns, each ticked
   by any of its terms (lowercase, comma-separated) in a characterized reference's `function`.
+- `subfamilies.tsv` (F10): one row per set of tips: `subfamily`, `set` (`ingroup`, whose rows add up, or
+  the name of an outgroup lineage), `kind` (`clade`, `orthogroups`, `tips` or `uniprot`), `tree` (`ml` or
+  `fasttree`, for `clade`), `definition`, `sample` (`all`, or the number of tips to take from a clade) and
+  `notes`. A `clade` is the most recent common ancestor of the tips in `definition`, in that tree rooted
+  on the family's root outgroups; a `uniprot` item is `<tip_id>=<accession>`.
 
 **Anchors and orphans (F2).** The references are searched against all cohort proteins with DIAMOND
 (`--ultra-sensitive`). The first rule that applies gives each reference its status:
@@ -229,6 +238,28 @@ tree for the first review; the final tree is IQ-TREE 3 with ModelFinder on the f
 1000 ultrafast bootstraps and 1000 SH-aLRT replicates, rooted on the outgroups marked `root`. IQ-TREE
 chooses its number of threads (`-T AUTO`), since trimmed family alignments are short.
 `make_family_itol.py` shows function only for characterized references.
+
+**Figure (F7).** `make_family_figure.py` draws the tree as a circular SVG with editable text, using only
+the Python standard library. From the centre outward: the tree; a ring coloured by orthogroup (those
+with at least 1% of the tips, in the same colours as the iTOL files); for each family HMM, a ring of the
+full-sequence bit score (0 to the 99th percentile) and a ring of the HMM's coverage (with the membership
+threshold on its colour bar); ticks for `MARK_PORTALS`; and the names of `characterized` and `genetic`
+references (black) and outgroups (red), moved apart along the circle as little as possible. The
+full-sequence score is used rather than the best or mean domain score because it adds up the pieces of
+a split domain; coverage counts each HMM position once. Read together, low score with low coverage is a
+fragment, low score with high coverage a poor match to the model, and a score above the usual range
+with full coverage a possible tandem duplicate. The tree is rooted on the outgroups with `root` = TRUE,
+or at its midpoint if there are none or they do not form a clade, as the caption states. `--tree ml`
+draws the IQ-TREE tree and `--out` writes elsewhere.
+
+**Subfamilies (F10–F11).** Large families are split into subfamily trees: the whole-family tree shows
+where to cut, and the subfamily trees, each with its own alignment, are the ones interpreted. A lineage
+outside a supported ingroup roots it whatever its exact position, so `build_subfamilies.py` samples
+each outgroup lineage: it cuts the clade into as many parts as tips wanted and takes from each part
+the characterized protein, else the member with HMM coverage ≥ 0.8, with the shortest terminal branch.
+A UniProt protein identical to a family tip is replaced by that tip. The report lists each subfamily's
+sets, orthogroups, anchors and outgroups, and the tips in no subfamily. `--lists-only` writes the lists
+and report without sequences.
 
 ## MycoCosm notes
 

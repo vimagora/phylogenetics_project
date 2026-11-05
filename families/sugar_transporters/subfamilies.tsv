@@ -1,0 +1,30 @@
+subfamily	set	kind	tree	definition	sample	notes
+hexose	ingroup	clade	fasttree	Aspni_NRRL3_1-5973,Amamu1-70220	all	hexose transporters and sensors; OG0000008 piece B
+hexose	mal_group	clade	fasttree	Aspni_NRRL3_1-8653,Aspor1-9642	8	sister
+hexose	galacturonate_quinate	clade	fasttree	Claps1-11524,Aspni_NRRL3_1-958	8	
+mal	ingroup	clade	fasttree	Aspni_NRRL3_1-8653,Aspor1-9642	all	MAL with 186 OG0000008 members; 99.6/100 in the IQ-TREE tree
+mal	hexose_group	clade	fasttree	Aspni_NRRL3_1-5973,Amamu1-70220	8	sister
+mal	galacturonate_quinate	clade	fasttree	Claps1-11524,Aspni_NRRL3_1-958	8	
+cdt	ingroup	clade	fasttree	Aspni_NRRL3_1-3028,Cryne_H99_1-3109	all	OG0000100
+cdt	fsy_group	clade	fasttree	Aspni_NRRL3_1-11807,Debha1-1605	8	
+cdt	og0000544	clade	fasttree	Agabi_varbisH97_2-121489,Agrped1-677307	8	no characterized member
+fsy	ingroup	clade	fasttree	Aspni_NRRL3_1-11807,Debha1-1605	all	OG0000345; two clades in the IQ-TREE tree, which its own tree tests
+fsy	cdt_group	clade	fasttree	Aspni_NRRL3_1-3028,Cryne_H99_1-3109	8	
+fsy	og0000297	clade	fasttree	Agabi_varbisH97_2-183903,Ascim1-88930	8	no characterized member
+itr	ingroup	clade	fasttree	Canalb1-58502,Geopyr-GpMst1	all	OG0001120 + OG0003609; STPs and GLUTs stay inside as landmarks
+itr	ecoli	tips		Escco-GalP,Escco-AraE	all	the family root; ITR is the first large lineage to branch
+itr	hexose_group	clade	fasttree	Aspni_NRRL3_1-5973,Amamu1-70220	8	
+galacturonate_quinate	ingroup	clade	fasttree	Claps1-11524,Aspni_NRRL3_1-958	all	OG0000008 piece C core
+galacturonate_quinate	hexose_group	clade	fasttree	Aspni_NRRL3_1-5973,Amamu1-70220	8	
+galacturonate_quinate	pentose_group	clade	fasttree	Agabi_varbisH97_2-191173,Ambmon_NRRLY1484_1-1618	8	
+gut_fungi	ingroup	clade	fasttree	Anasp1-231088,Anasp1-185340	all	OG0000008; a separate clade from galacturonate_quinate in FastTree; IQ-TREE joins them without support (13.1/12)
+gut_fungi	galacturonate_quinate	clade	fasttree	Claps1-11524,Aspni_NRRL3_1-958	8	
+gut_fungi	pentose_group	clade	fasttree	Agabi_varbisH97_2-191173,Ambmon_NRRLY1484_1-1618	8	
+pentose	ingroup	clade	fasttree	Agabi_varbisH97_2-191173,Ambmon_NRRLY1484_1-1618	all	OG0000008 piece A; holds the 76-tip clade that IQ-TREE keeps apart
+pentose	hexose_group	clade	fasttree	Aspni_NRRL3_1-5973,Amamu1-70220	8	
+pentose	galacturonate_quinate	clade	fasttree	Claps1-11524,Aspni_NRRL3_1-958	8	
+weak	ingroup	orthogroups		OG0000772,OG0000102	all	ON HOLD until the Roihu checks; kept so that F11 checks the UniProt proteins. Asks whether they belong in the family; the comparison sets replace the neighbouring lineages
+weak	sugar_porters	tips		Sacce1-3057,Aspni_NRRL3_1-3147,Aspni_NRRL3_1-11715,Picst3-33008,Sacce1-759,Aspor1-9642,Neucr2-1907,Klula1-1118,Sacce1-1538,Schpo1-573	all	two characterized proteins from each of five subfamilies
+weak	other_pf00083	uniprot		Sacce-Pho84=P25297,Sacce-Git1=P25346,Sacce-Jen1=P36035	all	non-sugar MFS proteins that hit PF00083 (TCDB 2.A.1.9, 2.A.1.12)
+weak	monocarboxylate	uniprot		Homsa-MCT1=P53985,Sacce-Mch5=Q08777	all	TCDB 2.A.1.13; the one characterized clade member, Tr44175, is annotated in this family
+weak	distant_mfs	uniprot		Sacce-Flr1=P38124,Sacce-Tpo1=Q07824,Sacce-Atr1=P13090,Sacce-Dal5=P15365,Aspnid-CrnA=P22152	all	the root of this tree (TCDB 2.A.1.2, 2.A.1.3, 2.A.1.14, 2.A.1.8)

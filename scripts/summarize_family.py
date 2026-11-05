@@ -43,7 +43,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from family_config import OG_DIR, fail, portal_of, read_config, read_tsv, taxonomy, write_tsv  # noqa: E402
+from family_config import OG_DIR, fail, portal_of, read_config, read_domtbl, read_tsv, taxonomy, write_tsv  # noqa: E402
 
 ANCHOR_IDENTITY, PROBABLE_IDENTITY, MIN_COVERAGE = 98.0, 95.0, 0.9
 # Older names in reference tables for species named differently in the cohort taxonomy
@@ -164,24 +164,6 @@ for ref in references:
                         orthogroup.get(chosen["subject"], "") if chosen else "", tree_id])
 
 # 2. HMM hits: coverage from the union of each HMM's domain coordinates
-
-
-def read_domtbl(path):
-    proteins = {}
-    with open(path) as f:
-        for line in f:
-            if line.startswith("#"):
-                continue
-            x = line.split()
-            p = proteins.setdefault(x[0], dict(length=int(x[2]), hmm=x[4], hmm_length=int(x[5]),
-                                               evalue=float(x[6]), score=float(x[7]), spans=[]))
-            p["spans"].append((int(x[15]), int(x[16])))
-    for p in proteins.values():
-        covered = set()
-        for a, b in p["spans"]:
-            covered.update(range(a, b + 1))
-        p["coverage"] = len(covered) / p["hmm_length"]
-    return proteins
 
 
 cohort_hits, reference_cov = {}, {}

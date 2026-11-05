@@ -3,10 +3,10 @@
 # Description: Shared helpers of the generic family scripts: reads a family's settings
 #              (families/<family>/family.conf) and the tables every family script needs.
 #              Not run on its own; imported by summarize_family.py, build_family_fasta.py,
-#              fetch_outgroups.py and make_family_itol.py.
+#              fetch_outgroups.py, make_family_itol.py, make_family_figure.py and build_subfamilies.py.
 # Author: Victor M. Gonzalez Ramos
-# Date: 2026-10-23
-# Version: 1.0
+# Date: 2026-11-05
+# Version: 1.1
 
 import csv
 import os
@@ -15,6 +15,10 @@ import sys
 
 GENOMES = "00_inputs/genomes.tsv"
 OG_DIR = "07_orthofinder/run/Results_cohort/Orthogroups"
+PALETTE = ["#1b9e77", "#d95f02", "#7570b3", "#e7298a", "#66a61e", "#e6ab02", "#a6761d", "#1f78b4", "#b2df8a",
+           "#fb9a99", "#cab2d6", "#ffff99", "#8dd3c7", "#bebada", "#fb8072", "#80b1d3", "#fdb462", "#b3de69",
+           "#fccde5", "#bc80bd", "#ccebc5", "#ffed6f", "#9e0142", "#5e4fa2"]
+MIN_COLOURED_ORTHOGROUP = 0.01  # share of a tree's tips an orthogroup needs for its own colour
 
 
 def fail(message):
@@ -81,3 +85,36 @@ def read_fasta(path):
             elif name:
                 sequences[name].append(line)
     return {k: "".join(v) for k, v in sequences.items()}
+
+
+def read_domtbl(path):
+    """Hits of an hmmsearch domain table by protein: full-sequence score, and coverage of the HMM as the
+    share of its positions covered by the protein's domains, so that the pieces of a split domain add up
+    and repeated domains count once."""
+    proteins = {}
+    with open(path) as f:
+        for line in f:
+            if line.startswith("#"):
+                continue
+            x = line.split()
+            p = proteins.setdefault(x[0], dict(length=int(x[2]), hmm=x[4], hmm_length=int(x[5]),
+                                               evalue=float(x[6]), score=float(x[7]), spans=[]))
+            p["spans"].append((int(x[15]), int(x[16])))
+    for p in proteins.values():
+        covered = set()
+        for a, b in p["spans"]:
+            covered.update(range(a, b + 1))
+        p["coverage"] = len(covered) / p["hmm_length"]
+    return proteins
+
+
+def orthogroup_colours(tips):
+    """Colours of the orthogroups holding at least 1% of a tree's tips, largest first, up to the size of
+    the palette; the iTOL files and the figure share them. tips: rows of tree/tips.tsv."""
+    sizes = {}
+    for t in tips:
+        if t["orthogroup"]:
+            sizes[t["orthogroup"]] = sizes.get(t["orthogroup"], 0) + 1
+    large = [og for og in sorted(sizes, key=lambda og: (-sizes[og], og))
+             if sizes[og] >= MIN_COLOURED_ORTHOGROUP * len(tips)]
+    return dict(zip(large, PALETTE))

@@ -4,8 +4,8 @@
 #              for review by eye. Function is shown only for characterized references (not for
 #              predictions, sensors or unanchored members); nothing is inferred for other tips.
 # Author: Victor M. Gonzalez Ramos
-# Date: 2026-10-23
-# Version: 1.0
+# Date: 2026-11-05
+# Version: 1.1
 #
 # Usage (from the project folder; standard library only): python3 scripts/make_family_itol.py <family>
 #
@@ -18,7 +18,8 @@
 #   kind.txt        colour strip: characterized anchor, probable anchor, predicted, sensor, orphan,
 #                   outgroup, member
 #   phylum.txt, class.txt   colour strips of the tip's genome (orphans: orphans.tsv; outgroups: group)
-#   orthogroup.txt  colour strip of the 12 largest orthogroups (others grey)
+#   orthogroup.txt  colour strip of the orthogroups with at least 1% of the tips (others grey), in the
+#                   colours of make_family_figure.py
 #   function.txt    binary dataset of function_columns.tsv, characterized references only
 #                   (without function_columns.tsv: function as text, characterized references only)
 
@@ -27,11 +28,8 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from family_config import fail, read_config, read_tsv, taxonomy  # noqa: E402
+from family_config import PALETTE, fail, orthogroup_colours, read_config, read_tsv, taxonomy  # noqa: E402
 
-PALETTE = ["#1b9e77", "#d95f02", "#7570b3", "#e7298a", "#66a61e", "#e6ab02", "#a6761d", "#1f78b4", "#b2df8a",
-           "#fb9a99", "#cab2d6", "#ffff99", "#8dd3c7", "#bebada", "#fb8072", "#80b1d3", "#fdb462", "#b3de69",
-           "#fccde5", "#bc80bd", "#ccebc5", "#ffed6f", "#9e0142", "#5e4fa2"]
 KIND_COLOURS = {"characterized anchor": "#e41a1c", "probable anchor": "#ff7f00", "predicted (D. squalens)": "#377eb8",
                 "sensor": "#984ea3", "orphan (characterized)": "#a65628", "outgroup": "#000000", "member": "#dddddd"}
 
@@ -89,9 +87,11 @@ def species(tip):
     return " ".join(row["species"].split()[:2]) if row else tip["portal"]
 
 
-def colour_strip(name, label, values, legend=True):
+def colour_strip(name, label, values, legend=True, fixed_colours=None):
     groups = sorted(set(values.values()), key=lambda g: (g in ("unknown", "other"), g))
     colours = {g: ("#dddddd" if g in ("unknown", "other") else PALETTE[i % len(PALETTE)]) for i, g in enumerate(groups)}
+    if fixed_colours:
+        colours.update(fixed_colours)
     if name == "kind.txt":
         colours = KIND_COLOURS
         groups = [g for g in KIND_COLOURS if g in set(values.values())]
@@ -119,13 +119,10 @@ with open(os.path.join(itol, "labels.txt"), "w") as f:
 colour_strip("kind.txt", "Kind", {t["tip_id"]: kind(t) for t in tips})
 colour_strip("phylum.txt", "Phylum", {t["tip_id"]: lineage(t, "phylum") for t in tips})
 colour_strip("class.txt", "Class", {t["tip_id"]: lineage(t, "class") for t in tips}, legend=False)
-sizes = {}
-for t in tips:
-    if t["orthogroup"]:
-        sizes[t["orthogroup"]] = sizes.get(t["orthogroup"], 0) + 1
-top = set(sorted(sizes, key=lambda og: -sizes[og])[:12])
+og_colours = orthogroup_colours(tips)
 colour_strip("orthogroup.txt", "Orthogroup",
-             {t["tip_id"]: (t["orthogroup"] if t["orthogroup"] in top else "other") for t in tips})
+             {t["tip_id"]: (t["orthogroup"] if t["orthogroup"] in og_colours else "other") for t in tips},
+             fixed_colours=og_colours)
 
 characterized = {t["tip_id"]: functions(t) for t in tips if functions(t)}
 if columns:
