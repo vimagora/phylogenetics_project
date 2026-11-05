@@ -18,9 +18,9 @@ Written by `scripts/build_subfamilies.py` with `--lists-only`.
 
 | Set | Kind | Tree | Tips in the set | Support | Sample |
 |---|---|---|---|---|---|
-| ingroup | clade | fasttree | 690 | 1.000 | all |
-| mal_group | clade | fasttree | 903 | 0.579 | 8 |
-| galacturonate_quinate | clade | fasttree | 575 | 0.984 | 8 |
+| ingroup | node 37 | fasttree | 690 | 1.000 | all |
+| mal_group | node 28 | fasttree | 903 | 0.579 | 8 |
+| galacturonate_quinate | node 44 | fasttree | 575 | 0.984 | 8 |
 
 Orthogroups: OG0000008 674, (none) 11, OG0002107 1, OG0102364 1, OG0062669 1, OG0112303 1.
 
@@ -34,9 +34,9 @@ Outgroup `galacturonate_quinate`: Rhier1-738949, Rhimi59_2-1907711, Lepor2-62267
 
 | Set | Kind | Tree | Tips in the set | Support | Sample |
 |---|---|---|---|---|---|
-| ingroup | clade | fasttree | 903 | 0.579 | all |
-| hexose_group | clade | fasttree | 690 | 1.000 | 8 |
-| galacturonate_quinate | clade | fasttree | 575 | 0.984 | 8 |
+| ingroup | node 28 | fasttree | 903 | 0.579 | all |
+| hexose_group | node 37 | fasttree | 690 | 1.000 | 8 |
+| galacturonate_quinate | node 44 | fasttree | 575 | 0.984 | 8 |
 
 Orthogroups: OG0000174 694, OG0000008 186, OG0016147 8, OG0227384 1, OG0001222 1, OG0000527 1.
 
@@ -52,9 +52,9 @@ Outgroup `galacturonate_quinate`: Rhier1-738949, Rhimi59_2-1907711, Lepor2-62267
 
 | Set | Kind | Tree | Tips in the set | Support | Sample |
 |---|---|---|---|---|---|
-| ingroup | clade | fasttree | 1080 | 0.888 | all |
-| fsy_group | clade | fasttree | 462 | 0.875 | 8 |
-| og0000544 | clade | fasttree | 331 | 1.000 | 8 |
+| ingroup | node 22 | fasttree | 1080 | 0.888 | all |
+| fsy_group | node 61 | fasttree | 462 | 0.875 | 8 |
+| og0000544 | node 80 | fasttree | 331 | 1.000 | 8 |
 
 Orthogroups: OG0000100 1066, OG0000102 3, OG0000395 2, (none) 2, OG0000079 1, OG0000527 1.
 
@@ -68,9 +68,9 @@ Outgroup `og0000544`: Tulca1-163642, Stamag_NRRLY2024_1-2216, Rhimi59_2-1874264,
 
 | Set | Kind | Tree | Tips in the set | Support | Sample |
 |---|---|---|---|---|---|
-| ingroup | clade | fasttree | 462 | 0.875 | all |
-| cdt_group | clade | fasttree | 1080 | 0.888 | 8 |
-| og0000297 | clade | fasttree | 405 | 0.997 | 8 |
+| ingroup | node 61 | fasttree | 462 | 0.875 | all |
+| cdt_group | node 22 | fasttree | 1080 | 0.888 | 8 |
+| og0000297 | node 64 | fasttree | 405 | 0.997 | 8 |
 
 Orthogroups: OG0000345 453, (none) 4, OG0091281 1, OG0218944 1, OG0229254 1, OG0001033 1.
 
@@ -84,9 +84,9 @@ Outgroup `og0000297`: Kredeu1-499307, Canpa1-3570, Morel2-132939, Lacind1-194350
 
 | Set | Kind | Tree | Tips in the set | Support | Sample |
 |---|---|---|---|---|---|
-| ingroup | clade | fasttree | 390 | 0.840 | all |
+| ingroup | node 68 | fasttree | 390 | 0.840 | all |
 | ecoli | tips |  | 2 |  | all |
-| hexose_group | clade | fasttree | 690 | 1.000 | 8 |
+| hexose_group | node 37 | fasttree | 690 | 1.000 | 8 |
 
 Orthogroups: OG0001120 215, OG0003609 148, (none) 12, OG0002200 4, OG0003502 2, OG0156484 1.
 
@@ -100,9 +100,9 @@ Outgroup `hexose_group`: Lipst1_1-27377, Fusox3_1-2474014, Trire_Chr-111552 (Stp
 
 | Set | Kind | Tree | Tips in the set | Support | Sample |
 |---|---|---|---|---|---|
-| ingroup | clade | fasttree | 575 | 0.984 | all |
-| hexose_group | clade | fasttree | 690 | 1.000 | 8 |
-| pentose_group | clade | fasttree | 2160 | 0.920 | 8 |
+| ingroup | node 44 | fasttree | 575 | 0.984 | all |
+| hexose_group | node 37 | fasttree | 690 | 1.000 | 8 |
+| pentose_group | node 10 | fasttree | 2160 | 0.920 | 8 |
 
 Orthogroups: OG0000008 572, (none) 1, OG0008922 1, OG0064474 1.
 
@@ -116,9 +116,9 @@ Outgroup `pentose_group`: Pilcr1-94396, Dales1-253029, Pilcr1-78995, Aspni_NRRL3
 
 | Set | Kind | Tree | Tips in the set | Support | Sample |
 |---|---|---|---|---|---|
-| ingroup | clade | fasttree | 155 | 0.997 | all |
-| galacturonate_quinate | clade | fasttree | 575 | 0.984 | 8 |
-| pentose_group | clade | fasttree | 2160 | 0.920 | 8 |
+| ingroup | node 150 | fasttree | 155 | 0.997 | all |
+| galacturonate_quinate | node 44 | fasttree | 575 | 0.984 | 8 |
+| pentose_group | node 10 | fasttree | 2160 | 0.920 | 8 |
 
 Orthogroups: OG0000008 151, OG0022899 4.
 
@@ -132,9 +132,9 @@ Outgroup `pentose_group`: Pilcr1-94396, Dales1-253029, Pilcr1-78995, Aspni_NRRL3
 
 | Set | Kind | Tree | Tips in the set | Support | Sample |
 |---|---|---|---|---|---|
-| ingroup | clade | fasttree | 2160 | 0.920 | all |
-| hexose_group | clade | fasttree | 690 | 1.000 | 8 |
-| galacturonate_quinate | clade | fasttree | 575 | 0.984 | 8 |
+| ingroup | node 10 | fasttree | 2160 | 0.920 | all |
+| hexose_group | node 37 | fasttree | 690 | 1.000 | 8 |
+| galacturonate_quinate | node 44 | fasttree | 575 | 0.984 | 8 |
 
 Orthogroups: OG0000008 2129, (none) 7, OG0092402 1, OG0156532 1, OG0123645 1, OG0000006 1.
 

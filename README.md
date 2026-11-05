@@ -94,12 +94,12 @@ Gene families (`<family>` is a folder in `families/`):
 | F4. Tree sequences | `python3 scripts/build_family_fasta.py <family>` | `tree/sequences.faa`, `tree/tips.tsv` |
 | F5. Alignment | `sbatch scripts/align_family.sbatch <family>` | `tree/aligned.faa`, `tree/trimmed.faa` |
 | F6. Quick tree | `sbatch --time=04:00:00 scripts/family_tree.sbatch <family> fasttree` | `tree/fasttree.nwk` |
-| F7. iTOL files and figure | `python3 scripts/make_family_itol.py <family>`; `python3 scripts/make_family_figure.py <family>` | `itol/`; `figures/<family>_fasttree.svg` |
+| F7. iTOL files and figure | `python3 scripts/make_family_itol.py <family>`; `python3 scripts/make_family_figure.py <family>` | `itol/`; `figures/<family>_fasttree.svg`, `_nodes.svg`, `_nodes.tsv` |
 | ⏸ | Review of the quick tree against the criteria you set for the family | |
 | F8. Model selection | `sbatch scripts/family_tree.sbatch <family> modelfinder` | `tree/modelfinder.*` |
 | F9. Tree | `sbatch scripts/family_tree.sbatch <family> tree` | `tree/ml.*` |
 | ⏸ | Review of the tree (F7 again for the iTOL files) | |
-| F10. Subfamilies | Choose them on the trees and record them in `families/<family>/subfamilies.tsv` (by hand) | |
+| F10. Subfamilies | Choose them on the node figure and table, and record them in `families/<family>/subfamilies.tsv` (by hand) | |
 | F11. Subfamily tip lists | `python3 scripts/build_subfamilies.py <family>` | `subfamilies/report.md`, `subfamilies/<subfamily>/tips.tsv`, `sequences.faa` |
 | ⏸ | Review of the report before aligning | |
 
@@ -207,10 +207,12 @@ files, and the reviews between them are done by a person.
 - `function_columns.tsv` (optional): `label`, `colour`, `terms`: the iTOL function columns, each ticked
   by any of its terms (lowercase, comma-separated) in a characterized reference's `function`.
 - `subfamilies.tsv` (F10): one row per set of tips: `subfamily`, `set` (`ingroup`, whose rows add up, or
-  the name of an outgroup lineage), `kind` (`clade`, `orthogroups`, `tips` or `uniprot`), `tree` (`ml` or
-  `fasttree`, for `clade`), `definition`, `sample` (`all`, or the number of tips to take from a clade) and
-  `notes`. A `clade` is the most recent common ancestor of the tips in `definition`, in that tree rooted
-  on the family's root outgroups; a `uniprot` item is `<tip_id>=<accession>`.
+  the name of an outgroup lineage), `kind` (`node`, `clade`, `orthogroups`, `tips` or `uniprot`), `tree`
+  (`ml` or `fasttree`, for `node` and `clade`), `definition`, `sample` (`all`, or the number of tips to take
+  from a node or clade) and `notes`. A `node` is a number from the node table, which is all most rows need;
+  for example `hexose  ingroup  node  fasttree  37  all`. A `clade` is the most recent common ancestor of
+  the tips in `definition`, in that tree rooted on the family's root outgroups; a `uniprot` item is
+  `<tip_id>=<accession>`.
 
 **Anchors and orphans (F2).** The references are searched against all cohort proteins with DIAMOND
 (`--ultra-sensitive`). The first rule that applies gives each reference its status:
@@ -252,8 +254,18 @@ with full coverage a possible tandem duplicate. The tree is rooted on the outgro
 or at its midpoint if there are none or they do not form a clade, as the caption states. `--tree ml`
 draws the IQ-TREE tree and `--out` writes elsewhere.
 
+The same run writes the tools for choosing subfamilies. The node figure has the same rings and names,
+at the same positions, but its tree shows only the clades of at least 100 tips (`--min-node-tips`, the
+smallest planned subfamily), numbered by size and evenly spaced to show how they nest, each in a circle
+coloured by support. Support is a flag, not a filter: FastTree's local support did not predict the
+IQ-TREE support in either direction. The node table describes each clade: tips, support, main
+orthogroups, names and marked proteins. Numbers belong to one tree and one root, so F11 stops if either
+has changed since the table was written.
+
 **Subfamilies (F10–F11).** Large families are split into subfamily trees: the whole-family tree shows
-where to cut, and the subfamily trees, each with its own alignment, are the ones interpreted. A lineage
+where to cut, and the subfamily trees, each with its own alignment, are the ones interpreted. Choose
+clades that are mostly one orthogroup or a coherent set of them, look consistent in the score and
+coverage rings, or have a pattern you can explain, and hold 100–2,500 tips. A lineage
 outside a supported ingroup roots it whatever its exact position, so `build_subfamilies.py` samples
 each outgroup lineage: it cuts the clade into as many parts as tips wanted and takes from each part
 the characterized protein, else the member with HMM coverage ≥ 0.8, with the shortest terminal branch.

@@ -5,14 +5,16 @@
 #              alignment. One row per set of tips, with these columns:
 #                subfamily   name of the subfamily
 #                set         'ingroup' (rows add up), or the name of an outgroup lineage
-#                kind        clade        the most recent common ancestor of the tips in 'definition',
+#                kind        node         the clade with the number in 'definition', from the node table
+#                                         of make_family_figure.py for the tree named in 'tree'
+#                            clade        the most recent common ancestor of the tips in 'definition',
 #                                         in the tree named in 'tree'
 #                            orthogroups  all tips of the orthogroups in 'definition'
 #                            tips         the tips in 'definition'
 #                            uniprot      proteins outside the family tree, as '<tip_id>=<accession>'
-#                tree        'ml' or 'fasttree' (kind = clade only)
+#                tree        'ml' or 'fasttree' (kinds node and clade)
 #                definition  comma-separated, as above
-#                sample      'all', or how many tips to take from an outgroup lineage
+#                sample      'all', or how many tips to take from an outgroup lineage (kinds node and clade)
 #                notes       free text
 #              Whole-family trees are rooted on the outgroups with root = TRUE in outgroups.tsv, so
 #              that a clade means the same thing in both. A lineage is sampled by cutting its clade
@@ -30,7 +32,8 @@
 #                 The full run needs internet for kind = uniprot.
 #
 # Reads, inside <OUT_DIR> (family.conf): tree/tips.tsv, tree/ml.treefile, tree/fasttree.nwk,
-# tree/sequences.faa, members.tsv; and families/<family>/: subfamilies.tsv, outgroups.tsv, references.tsv.
+# tree/sequences.faa, members.tsv, figures/<family>_<tree>_nodes.tsv (kind = node); and families/<family>/:
+# subfamilies.tsv, outgroups.tsv, references.tsv.
 #
 # Output, inside <OUT_DIR>/subfamilies:
 #   report.md             per subfamily: sets, size, orthogroups, anchors, sampled outgroups; tips in
@@ -40,6 +43,7 @@
 
 import argparse
 import collections
+import hashlib
 import os
 import sys
 import time
@@ -50,7 +54,8 @@ from family_config import fail, portal_of, read_config, read_fasta, read_tsv, wr
 from newick_tree import read_tree  # noqa: E402
 
 TREE_FILES = {"ml": "ml.treefile", "fasttree": "fasttree.nwk"}
-KINDS = ("clade", "orthogroups", "tips", "uniprot")
+KINDS = ("node", "clade", "orthogroups", "tips", "uniprot")
+TREE_KINDS = ("node", "clade")
 MIN_SAMPLE_COVERAGE = 0.8
 SIZE_RANGE = (100, 2500)  # the range the plan allows a subfamily tree; outside it the report warns
 
@@ -141,6 +146,45 @@ def sample_clade(tree, node, wanted, excluded):
     return picks
 
 
+node_tables = {}
+
+
+def node_table(tree_name):
+    """Node table of make_family_figure.py for a tree; stops if it belongs to another tree or root."""
+    if tree_name not in node_tables:
+        path = os.path.join(out_dir, "figures", f"{args.family}_{tree_name}_nodes.tsv")
+        if not os.path.isfile(path):
+            fail(f"'{path}' not found; run scripts/make_family_figure.py {args.family} --tree {tree_name}")
+        table = {r["node"]: r for r in read_tsv(path)}
+        with open(os.path.join(tree_dir, TREE_FILES[tree_name]), "rb") as f:
+            md5 = hashlib.md5(f.read()).hexdigest()
+        for r in table.values():
+            if r["tree_md5"] != md5:
+                fail(f"'{path}' was made from another version of the tree, so its numbers may mean other clades; "
+                     f"run scripts/make_family_figure.py {args.family} --tree {tree_name} and choose the nodes again")
+            if r["root"] != ",".join(root_tips):
+                fail(f"'{path}' was made with the root '{r['root']}', not {','.join(root_tips)}; "
+                     f"run scripts/make_family_figure.py {args.family} --tree {tree_name} and choose the nodes again")
+            break
+        node_tables[tree_name] = table
+    return node_tables[tree_name]
+
+
+def clade_tips(row):
+    """The tips whose most recent common ancestor defines a row of kind node or clade."""
+    if row["kind"] == "clade":
+        return [x.strip() for x in row["definition"].split(",") if x.strip()]
+    number = row["definition"].strip()
+    table = node_table(row["tree"])
+    if number not in table:
+        fail(f"{row['subfamily']}/{row['set']}: node '{number}' is not in the node table of the {row['tree']} tree")
+    tree = get_tree(row["tree"])
+    entry = table[number]
+    if len(tree.tips_under(tree.mrca([entry["tip_a"], entry["tip_b"]]))) != int(entry["tips"]):
+        fail(f"{row['subfamily']}/{row['set']}: node {number} does not match the tree; rerun make_family_figure.py")
+    return [entry["tip_a"], entry["tip_b"]]
+
+
 def check_no_root(found, row):
     """A clade holding a root outgroup is not a clade of the rooted tree."""
     inside = [t for t in root_tips if t in found]
@@ -150,7 +194,7 @@ def check_no_root(found, row):
 
 def tips_of_row(row):
     """Tips of a row of the table, as a list (kind = uniprot is handled by the caller)."""
-    names = [x.strip() for x in row["definition"].split(",") if x.strip()]
+    names = clade_tips(row) if row["kind"] in TREE_KINDS else [x.strip() for x in row["definition"].split(",") if x.strip()]
     if not names:
         fail(f"{row['subfamily']}/{row['set']}: empty definition")
     if row["kind"] == "orthogroups":
@@ -178,8 +222,8 @@ subfamilies = collections.OrderedDict()
 for row in rows:
     if row["kind"] not in KINDS:
         fail(f"{row['subfamily']}/{row['set']}: kind must be one of {', '.join(KINDS)}")
-    if row["sample"] != "all" and (row["kind"] != "clade" or not row["sample"].isdigit() or int(row["sample"]) < 1):
-        fail(f"{row['subfamily']}/{row['set']}: sample must be 'all', or a positive number for kind = clade")
+    if row["sample"] != "all" and (row["kind"] not in TREE_KINDS or not row["sample"].isdigit() or int(row["sample"]) < 1):
+        fail(f"{row['subfamily']}/{row['set']}: sample must be 'all', or a positive number for a node or clade")
     subfamilies.setdefault(row["subfamily"], []).append(row)
 
 results = collections.OrderedDict()
@@ -195,9 +239,8 @@ for name, sub_rows in subfamilies.items():
         found = tips_of_row(row)
         ingroup.update(dict.fromkeys(found))
         support = ""
-        if row["kind"] == "clade":
-            tree = get_tree(row["tree"])
-            support = tree.mrca([x.strip() for x in row["definition"].split(",")]).label
+        if row["kind"] in TREE_KINDS:
+            support = get_tree(row["tree"]).mrca(clade_tips(row)).label
         row_notes.append((row, len(found), support))
     lineages = collections.OrderedDict()
     external = []
@@ -213,9 +256,9 @@ for name, sub_rows in subfamilies.items():
                 external.append((tip_id, accession, lineage))
             lineages.setdefault(lineage, [])
             continue
-        if row["kind"] == "clade" and row["sample"] != "all":
+        if row["kind"] in TREE_KINDS and row["sample"] != "all":
             tree = get_tree(row["tree"])
-            node = tree.mrca([x.strip() for x in row["definition"].split(",")])
+            node = tree.mrca(clade_tips(row))
             check_no_root(tree.tips_under(node), row)
             picks = sample_clade(tree, node, int(row["sample"]), set(ingroup))
             row_notes.append((row, len(tree.tips_under(node)), node.label))
@@ -328,7 +371,8 @@ for name, result in results.items():
         lines += [f"**Ingroup tips also in:** {', '.join(shared)}.", ""]
     lines += ["| Set | Kind | Tree | Tips in the set | Support | Sample |", "|---|---|---|---|---|---|"]
     for row, size, support in result["rows"]:
-        lines.append(f"| {row['set']} | {row['kind']} | {row['tree']} | {size} | {support} | {row['sample']} |")
+        kind = f"node {row['definition']}" if row["kind"] == "node" else row["kind"]
+        lines.append(f"| {row['set']} | {kind} | {row['tree']} | {size} | {support} | {row['sample']} |")
     names = sorted({n for t in ingroup for n in characterized_names(t)})
     lines += ["", f"Orthogroups: {top([family_tips[t]['orthogroup'] or '(none)' for t in ingroup], 6)}.", "",
               f"Characterized ({len(names)}): {', '.join(names) if names else 'none'}.", ""]

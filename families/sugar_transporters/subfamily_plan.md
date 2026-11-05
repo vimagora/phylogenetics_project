@@ -65,9 +65,10 @@ protein is Tr44175. See §6. The rest are small groups, the four proteins branch
 IQ-TREE tree (`Klula1-2178`, `Sacce1-2186`, `Zygrou1-124717`, `Lepor2-574981`) and XylE with its four
 gut-fungal proteins; they stay in the whole-family trees.
 
-The exact ingroup of each subfamily is set in a table (§5, `subfamilies.tsv`) by most recent common
-ancestors of named tips in the FastTree tree, so that it can be rebuilt; the member lists it gives are
-reviewed before alignment.
+The exact ingroup and outgroup lineages of each subfamily are set in a table (§5, `subfamilies.tsv`) by
+node numbers of the FastTree tree (hexose: node 37; mal: 28; cdt: 22; fsy: 61; itr: 68;
+galacturonate_quinate: 44; pentose: 10; gut_fungi: 150); the member lists it gives are reviewed before
+alignment.
 
 **Tree 9** asks whether OG0000772 + OG0000102 belong in the family: they are the weakest PF00083
 members (mean HMM score 127 and 38, against 264 for all members), and OG0000102 may belong to another
@@ -136,7 +137,7 @@ written for any family:
 
 | Step | What | Kind |
 |---|---|---|
-| F10 | Choose subfamilies on the whole-family trees and record them in `families/<family>/subfamilies.tsv`: one row per set of tips, as an MRCA of named tips in a named tree, orthogroups, listed tips, or UniProt proteins, with the sample size for outgroup lineages | human decision, like `references.tsv` |
+| F10 | Choose subfamilies on the node figure and table of F7 (`scripts/make_family_figure.py`) and record them in `families/<family>/subfamilies.tsv`: one row per set of tips, as a node number, orthogroups, listed tips, or UniProt proteins, with the sample size for outgroup lineages | human decision, like `references.tsv` |
 | F11 | `scripts/build_subfamilies.py`: each subfamily's tip list, outgroup sample and sequences, with a report (sizes, anchors, *D. squalens* proteins, orthogroups, tips in no subfamily) for review | script |
 | F12 | Align and trim per subfamily | `align_family.sbatch` with a subfamily argument and L-INS-i |
 | F13 | FastTree, then ModelFinder and IQ-TREE per subfamily | `family_tree.sbatch` with a subfamily argument and `-mset` |
