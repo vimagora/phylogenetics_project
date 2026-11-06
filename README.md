@@ -199,8 +199,8 @@ files, and the reviews between them are done by a person.
 
 **Files of a family**
 - `family.conf`: `NAME`, `HMMS` (Pfam accessions defining the family, space-separated),
-  `MIN_HMM_COVERAGE`, `OUT_DIR` (results folder) and, optionally, `MARK_PORTALS` (portals whose proteins
-  get a tick in the figure, space-separated).
+  `MIN_HMM_COVERAGE`, `OUT_DIR` (results folder) and, optionally, `MARK_PORTALS` (up to four portals whose
+  proteins get a tick in the figure, one colour each, space-separated; `--mark` overrides them).
 - `references.tsv`: the reference proteins, one row each: `reference_id` (lowercase letters, digits,
   `_`), `evidence` (`characterized`, `genetic` for a deletion phenotype without an assay, or `predicted`), `species`, `short_name` (species abbreviation,
   e.g. `Dekbr`; used as the pseudo-portal of orphans), `protein_name`, `role`, `function`
@@ -261,14 +261,15 @@ short. The job's defaults (8 CPUs, 32 GB, 3 days) are meant for subfamilies; giv
 the Python standard library. From the centre outward: the tree; a ring coloured by orthogroup (those
 with at least 1% of the tips, in the same colours as the iTOL files); for each family HMM, a ring of the
 full-sequence bit score (0 to the 99th percentile) and a ring of the HMM's coverage (with the membership
-threshold on its colour bar); ticks for `MARK_PORTALS`; and the names of `characterized` and `genetic`
-references (black) and outgroups (red), moved apart along the circle as little as possible. The
-full-sequence score is used rather than the best or mean domain score because it adds up the pieces of
-a split domain; coverage counts each HMM position once. Read together, low score with low coverage is a
-fragment, low score with high coverage a poor match to the model, and a score above the usual range
-with full coverage a possible tandem duplicate. The tree is rooted on the outgroups with `root` = TRUE,
-or at its midpoint if there are none or they do not form a clade, as the caption states. `--tree ml`
-draws the IQ-TREE tree and `--out` writes elsewhere.
+threshold on its colour bar); ticks for the proteins of up to four portals, one colour each
+(`--mark Dicsqu464_2,Aspni_NRRL3_1`, or `MARK_PORTALS`); and the names of `characterized` and `genetic`
+references (bold) and outgroups (red), moved apart along the circle as little as possible. The
+full-sequence score is used rather than the best or mean domain score because it adds up the pieces of a
+split domain; coverage counts each HMM position once. Read together, low score with low coverage is a
+fragment, low score with high coverage a poor match to the model, and a score above the usual range with
+full coverage a possible tandem duplicate. The tree is rooted on the outgroups with `root` = TRUE, or at
+its midpoint if there are none or they do not form a clade, as the caption states. `--tree ml` draws the
+IQ-TREE tree and `--out` writes elsewhere.
 
 The same run writes the tools for choosing subfamilies. The node figure has the same rings and names,
 at the same positions, but its tree shows only the clades of at least 100 tips (`--min-node-tips`, the
@@ -305,8 +306,13 @@ shared with the whole-family trees. MAD assumes roughly clock-like evolution, so
 something to explain, not a reason to replace the outgroup root. If the ingroup is not monophyletic, revise
 its boundary in `subfamilies.tsv` and rerun; no rooted tree is written. MAD takes seconds for hundreds of
 tips and minutes for thousands (about 7 minutes and 300 MB for 2,176 tips), so run large subfamilies as a
-job or an interactive session. `make_family_figure.py --subfamily` draws the same figure as for the family,
-rooted on the outgroups; the family's iTOL files also fit the rooted tree, since tips keep their IDs.
+job or an interactive session. `make_family_figure.py --subfamily` draws the subfamily's tree rooted on its
+outgroups, with the rings of the family figure plus a phylum ring and a subphylum ring (shades of the
+phylum's colour; the phylum colours are those of the iTOL phylum file). Every tip is named by its ID, with
+the protein name of references and outgroups in red, and the figure grows until the names fit at full
+size (about 3,300 pt wide for 2,176 tips). The family's iTOL files also fit the rooted tree, since tips
+keep their IDs. The check accepts the outgroup root when the ingroup is a clade, so that every outgroup
+tip falls outside it, even if one outgroup lineage is not a clade itself; that is reported.
 
 ## MycoCosm notes
 

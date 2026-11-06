@@ -6,7 +6,7 @@
 #              fetch_outgroups.py, make_family_itol.py, make_family_figure.py and build_subfamilies.py.
 # Author: Victor M. Gonzalez Ramos
 # Date: 2026-11-05
-# Version: 1.1
+# Version: 1.2
 
 import csv
 import os
@@ -19,6 +19,14 @@ PALETTE = ["#1b9e77", "#d95f02", "#7570b3", "#e7298a", "#66a61e", "#e6ab02", "#a
            "#fb9a99", "#cab2d6", "#ffff99", "#8dd3c7", "#bebada", "#fb8072", "#80b1d3", "#fdb462", "#b3de69",
            "#fccde5", "#bc80bd", "#ccebc5", "#ffed6f", "#9e0142", "#5e4fa2"]
 MIN_COLOURED_ORTHOGROUP = 0.01  # share of a tree's tips an orthogroup needs for its own colour
+# Phyla, largest in the cohort first, in an order checked for colour-blind separation; the largest avoid the
+# blue of the coverage ring next to them. Further phyla are grey. Subphyla are shades of their phylum.
+# Groups of non-fungal outgroups (e.g. plants) are greys.
+TAXON_PALETTE = ["#eda100", "#e87ba4", "#008300", "#6250d6", "#e34948", "#2a78d6", "#eb6834", "#1baf7a"]
+EXTRA_PHYLUM = "#8c8c8c"
+NO_SUBPHYLUM = "#e0e0e0"
+NON_FUNGAL_GREYS = ["#525252", "#7f7f7f", "#a6a6a6", "#c8c8c8"]
+UNKNOWN_TAXON = "#ececec"
 
 
 def fail(message):
@@ -67,6 +75,54 @@ def taxonomy():
     """Taxonomy of the cohort genomes (role = cohort in genomes.tsv) by portal; shadows are left out."""
     return {r["portal"].strip(): {k: (v or "").strip() for k, v in r.items()} for r in read_tsv(GENOMES)
             if r["role"].strip() == "cohort"}
+
+
+def lineage_of(family_dir):
+    """A function giving a tip's phylum, subphylum or class (rank): from genomes.tsv for cohort proteins,
+    orphans.tsv for orphans, and the outgroup's group (e.g. plants) for outgroups; 'unknown' otherwise.
+    tip: a row of a tips.tsv."""
+    tax = taxonomy()
+    orphans = {r["pseudo_portal"]: r for r in read_tsv(os.path.join(family_dir, "orphans.tsv"), required=False)}
+    outgroups = {r["outgroup_id"]: r for r in read_tsv(os.path.join(family_dir, "outgroups.tsv"), required=False)}
+
+    def lineage(tip, rank):
+        if tip["kind"] == "outgroup" and tip["tip_id"] in outgroups:
+            return outgroups[tip["tip_id"]]["group"]
+        row = tax.get(tip["portal"]) or orphans.get(tip["portal"])
+        return (row[rank] or "unknown") if row else "unknown"
+    return lineage
+
+
+def shade(colour, t):
+    """A colour darkened (t < 0) or lightened (t > 0) by the share t."""
+    rgb = [int(colour[i:i + 2], 16) for i in (1, 3, 5)]
+    target = 0 if t < 0 else 255
+    return "#" + "".join(f"{round(c + (target - c) * abs(t)):02x}" for c in rgb)
+
+
+def taxon_colours(family_dir):
+    """Colours of phyla and subphyla, the same in every figure and iTOL file of a family: phyla in the order
+    of their genome count in the cohort, subphyla as shades of their phylum (darkest for the largest), and
+    the groups of non-fungal outgroups in greys. Returns (phylum colours, subphylum colours)."""
+    counts, subphyla = {}, {}
+    rows = list(taxonomy().values()) + read_tsv(os.path.join(family_dir, "orphans.tsv"), required=False)
+    for row in rows:
+        counts[row["phylum"]] = counts.get(row["phylum"], 0) + 1
+        if row["subphylum"] and row["subphylum"] != "none":
+            sub = subphyla.setdefault(row["phylum"], {})
+            sub[row["subphylum"]] = sub.get(row["subphylum"], 0) + 1
+    phyla = sorted((p for p in counts if p), key=lambda p: (-counts[p], p))
+    phylum_colours = {p: TAXON_PALETTE[i] if i < len(TAXON_PALETTE) else EXTRA_PHYLUM for i, p in enumerate(phyla)}
+    subphylum_colours = {}
+    for phylum, sizes in subphyla.items():
+        names = sorted(sizes, key=lambda s: (-sizes[s], s))
+        for i, name in enumerate(names):
+            t = -0.3 + 0.8 * i / (len(names) - 1) if len(names) > 1 else 0.0
+            subphylum_colours[name] = shade(phylum_colours[phylum], t)
+    groups = sorted({r["group"] for r in read_tsv(os.path.join(family_dir, "outgroups.tsv"), required=False)})
+    for i, group in enumerate(groups):
+        phylum_colours[group] = subphylum_colours[group] = NON_FUNGAL_GREYS[min(i, len(NON_FUNGAL_GREYS) - 1)]
+    return phylum_colours, subphylum_colours
 
 
 def portal_of(protein_id):

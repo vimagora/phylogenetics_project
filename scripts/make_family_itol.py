@@ -4,8 +4,8 @@
 #              for review by eye. Function is shown only for characterized references (not for
 #              predictions, sensors or unanchored members); nothing is inferred for other tips.
 # Author: Victor M. Gonzalez Ramos
-# Date: 2026-11-05
-# Version: 1.1
+# Date: 2026-11-06
+# Version: 1.2
 #
 # Usage (from the project folder; standard library only): python3 scripts/make_family_itol.py <family>
 #
@@ -17,7 +17,8 @@
 #   labels.txt      tip labels: ID, reference names and species
 #   kind.txt        colour strip: characterized anchor, probable anchor, predicted, sensor, orphan,
 #                   outgroup, member
-#   phylum.txt, class.txt   colour strips of the tip's genome (orphans: orphans.tsv; outgroups: group)
+#   phylum.txt, class.txt   colour strips of the tip's genome (orphans: orphans.tsv; outgroups: group);
+#                   phyla in the colours of make_family_figure.py
 #   orthogroup.txt  colour strip of the orthogroups with at least 1% of the tips (others grey), in the
 #                   colours of make_family_figure.py
 #   function.txt    binary dataset of function_columns.tsv, characterized references only
@@ -28,7 +29,8 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from family_config import PALETTE, fail, orthogroup_colours, read_config, read_tsv, taxonomy  # noqa: E402
+from family_config import (PALETTE, fail, lineage_of, orthogroup_colours, read_config, read_tsv,  # noqa: E402
+                           taxon_colours, taxonomy)
 
 KIND_COLOURS = {"characterized anchor": "#e41a1c", "probable anchor": "#ff7f00", "predicted (D. squalens)": "#377eb8",
                 "sensor": "#984ea3", "orphan (characterized)": "#a65628", "outgroup": "#000000", "member": "#dddddd"}
@@ -62,13 +64,6 @@ def kind(tip):
     if all(r["evidence"] != "characterized" for r in refs):
         return "predicted (D. squalens)"
     return "probable anchor" if "probable_anchor" in tip["status"] else "characterized anchor"
-
-
-def lineage(tip, rank):
-    if tip["kind"] == "outgroup":
-        return outgroups[tip["tip_id"]]["group"]
-    row = tax.get(tip["portal"]) or orphans.get(tip["portal"])
-    return row[rank] if row else "unknown"
 
 
 def functions(tip):
@@ -117,7 +112,9 @@ with open(os.path.join(itol, "labels.txt"), "w") as f:
         f.write(f"{t['tip_id']}\t{t['tip_id']}{' ' + names if names else ''} ({species(t)})\n")
 
 colour_strip("kind.txt", "Kind", {t["tip_id"]: kind(t) for t in tips})
-colour_strip("phylum.txt", "Phylum", {t["tip_id"]: lineage(t, "phylum") for t in tips})
+lineage = lineage_of(config["FAMILY_DIR"])
+colour_strip("phylum.txt", "Phylum", {t["tip_id"]: lineage(t, "phylum") for t in tips},
+             fixed_colours=taxon_colours(config["FAMILY_DIR"])[0])
 colour_strip("class.txt", "Class", {t["tip_id"]: lineage(t, "class") for t in tips}, legend=False)
 og_colours = orthogroup_colours(tips)
 colour_strip("orthogroup.txt", "Orthogroup",

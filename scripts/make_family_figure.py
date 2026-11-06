@@ -3,9 +3,10 @@
 # Description: Draws a gene family's tree as a circular figure (SVG), for slides and for review. From
 #              the centre outward: the tree; one ring coloured by orthogroup (those with at least 1% of
 #              the tips, in the colours of the iTOL files); per family HMM, a ring of the full-sequence
-#              bit score and a ring of the HMM's coverage; ticks for the proteins of the portals in
-#              MARK_PORTALS (family.conf, optional); and the names of characterized and genetically
-#              supported references (black) and of outgroups (red). Names are moved apart along the
+#              bit score and a ring of the HMM's coverage; a ring of the phylum of each tip's genome (in the
+#              colours of the iTOL phylum file); ticks for the proteins of up to four portals,
+#              one colour each (--mark, or MARK_PORTALS in family.conf); and the names of characterized and
+#              genetically supported references (bold) and of outgroups (red). Names are moved apart along the
 #              circle as little as possible, with leader lines to their tips. Nothing is inferred for
 #              other tips.
 #              The tree is rooted on the outgroups with root = TRUE in outgroups.tsv, or at its midpoint
@@ -16,7 +17,9 @@
 #              length), each in a circle coloured by support. Support is a flag, not a filter. The table
 #              describes each numbered clade; subfamilies.tsv can name them by number (kind = node).
 #              With --subfamily it draws that subfamily's tree instead (step F14), rooted on its outgroups,
-#              whose names are red and whose tips without a name show their tip ID, with no node figure.
+#              with no node figure. Every tip is named by its ID (with the protein name of references;
+#              outgroups red), the circle growing until the names fit at full size, and a subphylum ring
+#              (shades of the phylum's colour) follows the phylum ring.
 #              With --subfamilies it also writes a copy of the figure showing where the subfamilies
 #              landed: each ingroup is a semitransparent slice behind the tree, starting at its common
 #              ancestor and stopping at the rings (so their colours stay true), continued by an arc outside
@@ -24,15 +27,17 @@
 #              several pieces, and overlaps as darker areas.
 # Author: Victor M. Gonzalez Ramos
 # Date: 2026-11-05
-# Version: 1.1
+# Version: 1.2
 #
 # Usage (from the project folder; standard library only):
 #   python3 scripts/make_family_figure.py <family> [--subfamily NAME | --subfamilies [A,B,...]] [--tree fasttree|ml]
-#                                         [--out FILE] [--min-node-tips N]
+#                                         [--mark PORTAL,...] [--out FILE] [--min-node-tips N]
 #   --subfamily      The subfamily to draw, a folder in <OUT_DIR>/subfamilies (default: the whole family).
 #   --subfamilies    Also write <figure>_subfamilies.svg, with slices for the listed subfamilies (default: all
 #                    in subfamilies.tsv, which need their tips.tsv from build_subfamilies.py).
 #   --tree           The tree to draw (default: fasttree).
+#   --mark           Up to four portals whose proteins get a tick, in that order's colours (default: MARK_PORTALS
+#                    in family.conf, space-separated).
 #   --out            Where to write the figure (default: <OUT_DIR>/figures/<family>[_<subfamily>]_<tree>.svg); the node
 #                    figure goes next to it, as <name>_nodes.svg.
 #   --min-node-tips  Smallest clade to number (default: 100, the smallest planned subfamily).
@@ -43,7 +48,7 @@
 # families/<family>/: references.tsv, outgroups.tsv (optional).
 #
 # Output: the figure, the node figure, and <OUT_DIR>/figures/<family>_<tree>_nodes.tsv: node, tips, support,
-# main_orthogroups, main_share, named (names in the clade), marked (MARK_PORTALS proteins), tip_a and tip_b
+# main_orthogroups, main_share, named (names in the clade), marked (proteins of the marked portals), tip_a and tip_b
 # (two tips whose most recent common ancestor is the clade), tree_md5 and root (what the numbers belong to).
 
 import argparse
@@ -55,8 +60,8 @@ import sys
 from xml.sax.saxutils import escape
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from family_config import (fail, orthogroup_colours, read_config, read_domtbl, read_tsv, taxonomy,  # noqa: E402
-                           write_tsv)
+from family_config import (NO_SUBPHYLUM, UNKNOWN_TAXON, fail, lineage_of, orthogroup_colours,  # noqa: E402
+                           read_config, read_domtbl, read_tsv, taxon_colours, taxonomy, write_tsv)
 from newick_tree import read_tree  # noqa: E402
 
 TREES = {"fasttree": ("fasttree.nwk", "FastTree"), "ml": ("ml.treefile", "IQ-TREE")}
@@ -67,6 +72,9 @@ BAND = 36.0                     # total width of the rings
 RING_GAP = 1.2
 TICK_TRACK = 6.0
 LEADER = 26.0                   # room between the last ring and the names
+SUBFAMILY_LEADER = 4.0          # the same when every tip is named, each name at its own tip
+MARK_COLOURS = ("#2a78d6", "#eb6834", "#6250d6", "#008300")  # one per marked portal, in the order given
+BOLD_WIDTH = 1.12               # bold names are this much wider
 FONT_SIZE = 3.4
 MIN_FONT_SIZE = 2.4             # below this, the names are too many to read on a slide: a warning is printed
 LINE_HEIGHT = 1.3               # space per name along the circle, in font sizes
@@ -128,6 +136,7 @@ parser.add_argument("family")
 parser.add_argument("--subfamily")
 parser.add_argument("--subfamilies", nargs="?", const="all")
 parser.add_argument("--tree", choices=TREES, default="fasttree")
+parser.add_argument("--mark")
 parser.add_argument("--out")
 parser.add_argument("--min-node-tips", type=int, default=100)
 args = parser.parse_args()
@@ -150,6 +159,7 @@ out_stem = f"{args.family}_{args.subfamily}" if args.subfamily else args.family
 out_path = args.out or os.path.join(out_dir, "figures", f"{out_stem}_{args.tree}.svg")
 tree_path = os.path.join(tree_dir, tree_file)
 title = f"{config['NAME']}, subfamily {args.subfamily}" if args.subfamily else config["NAME"]
+width, outer_radius = WIDTH, OUTER_RADIUS  # a subfamily figure grows to fit all its names
 if not os.path.isfile(tree_path):
     fail(f"'{tree_path}' not found")
 
@@ -216,7 +226,7 @@ def tip_angle(position):
 
 
 def polar(radius, angle):
-    return WIDTH / 2 + radius * math.cos(angle), WIDTH / 2 + radius * math.sin(angle)
+    return width / 2 + radius * math.cos(angle), width / 2 + radius * math.sin(angle)
 
 
 def xy(radius, angle):
@@ -225,13 +235,23 @@ def xy(radius, angle):
 
 
 # 4. Names, and how far in the rings must stop to leave them room
-marked = set(config.get("MARK_PORTALS", "").split())
-labels = []
+mark_portals = args.mark.split(",") if args.mark else config.get("MARK_PORTALS", "").split()
+if len(mark_portals) > len(MARK_COLOURS):
+    fail(f"at most {len(MARK_COLOURS)} portals can be marked, as their tick colours must stay distinct")
+cohort = taxonomy()
+for portal in mark_portals:
+    if portal not in cohort:
+        fail(f"'{portal}' is not a cohort portal in genomes.tsv")
+marked = dict(zip(mark_portals, MARK_COLOURS))
+labels = []  # (tip, text, outgroup, reference)
 for tip, info in tips_table.items():
     in_outgroup = info.get("role") == "outgroup"
+    if info["kind"] == "outgroup" and args.subfamily:
+        labels.append((tip, tip, True, False))
+        continue
     if info["kind"] == "outgroup":
         organism = outgroup_by_id[tip]["organism"] if tip in outgroup_by_id else tip.split("-")[0]
-        labels.append((tip, f"{species_prefix(organism)} {tip.split('-', 1)[1]}", True))
+        labels.append((tip, f"{species_prefix(organism)} {tip.split('-', 1)[1]}", True, False))
         continue
     refs = [references[r] for r in tip_refs[tip] if r in references and references[r]["evidence"] in LABEL_EVIDENCE]
     if refs:
@@ -240,31 +260,41 @@ for tip, info in tips_table.items():
             name = re.sub(r"\s*\(.*?\)", "", ref["protein_name"]).strip()
             if name.lower() not in [x.lower() for x in names]:
                 names.append(name)
-        labels.append((tip, f"{species_prefix(refs[0]['species'])} {'/'.join(names)}", in_outgroup))
-    elif in_outgroup:
-        labels.append((tip, tip, True))
+        prefix = tip if args.subfamily else species_prefix(refs[0]["species"])
+        labels.append((tip, f"{prefix} {'/'.join(names)}", in_outgroup, True))
+    elif args.subfamily:
+        labels.append((tip, tip, in_outgroup, False))
 labels.sort(key=lambda x: tip_index[x[0]])
 
 font = FONT_SIZE
 char_width = 0.5
-longest = max((len(text) for _, text, _ in labels), default=0)
-label_radius = OUTER_RADIUS - longest * char_width * font
-if labels:
+longest = max((len(text) * (BOLD_WIDTH if bold else 1) for _, text, _, bold in labels), default=0)
+label_radius = outer_radius - longest * char_width * font
+if args.subfamily:
+    # every tip is named: the circle grows until the names fit at the full font size
+    needed = len(labels) * LINE_HEIGHT * font / (2 * math.pi * 0.97)
+    if needed > label_radius:
+        label_radius = needed
+        outer_radius = label_radius + longest * char_width * font
+        width = 2 * outer_radius + (WIDTH - 2 * OUTER_RADIUS)
+elif labels:
     fitting = 2 * math.pi * label_radius * 0.97 / (len(labels) * LINE_HEIGHT)
     font = min(font, fitting)
-    label_radius = OUTER_RADIUS - longest * char_width * font
+    label_radius = outer_radius - longest * char_width * font
     if font < MIN_FONT_SIZE:
         print(f"  WARNING: {len(labels)} names only fit at {font:.1f} pt; they will be hard to read")
 gap = font * LINE_HEIGHT / label_radius * n_tips / (2 * math.pi)  # the space a name needs, in tips
 if labels:
-    placed = spread([tip_index[t] for t, _, _ in labels], gap, 0, n_tips - 1)
+    placed = spread([tip_index[label[0]] for label in labels], gap, 0, n_tips - 1)
 else:
     placed = []
 
-n_rings = 1 + 2 * len(tracks)
-ring_width = (BAND - RING_GAP * (n_rings - 1)) / n_rings
+n_rings = 1 + 2 * len(tracks) + (2 if args.subfamily else 1)
+band = BAND * n_rings / (1 + 2 * len(tracks))  # the taxonomy rings widen the band
+ring_width = (band - RING_GAP * (n_rings - 1)) / n_rings
 tick_width = TICK_TRACK if marked else 0.0
-ring_start = label_radius - LEADER - tick_width - BAND
+leader = SUBFAMILY_LEADER if args.subfamily else LEADER
+ring_start = label_radius - leader - tick_width - band
 scale = ring_start / reach
 long_branches = sum(d > reach for d in tip_depths)
 
@@ -314,7 +344,7 @@ for node in tree.preorder():
         a, b = angle_of[id(node.children[0])], angle_of[id(node.children[-1])]
         large = 1 if b - a > math.pi else 0
         branches.append(f"M{xy(r, a)}A{r:.2f} {r:.2f} 0 {large} 1 {xy(r, b)}")
-root_dot = f'<circle cx="{WIDTH / 2}" cy="{WIDTH / 2}" r="3" fill="{ROOT_COLOUR}"/>'
+root_dot = f'<circle cx="{width / 2}" cy="{width / 2}" r="3" fill="{ROOT_COLOUR}"/>'
 branch_width = min(0.5, max(0.12, 300 / n_tips))  # thin lines for a whole family, heavier for a subfamily
 tree_parts = [f'<path fill="none" stroke="#404040" stroke-width="{branch_width:.2f}" d="{"".join(branches)}"/>', root_dot]
 
@@ -410,21 +440,32 @@ for track in tracks:
     draw_ring(radius, lambda t: binned(hits[t]["score"] / top_score, SCORE_RAMP) if t in hits else NO_SCORE)
     radius += ring_width + RING_GAP
     draw_ring(radius, lambda t: binned(hits[t]["coverage"], COVERAGE_RAMP) if t in hits else NO_SCORE)
+lineage = lineage_of(config["FAMILY_DIR"])
+phylum_colours, subphylum_colours = taxon_colours(config["FAMILY_DIR"])
+phylum_of = {t: lineage(info, "phylum") for t, info in tips_table.items()}
+subphylum_of = {t: lineage(info, "subphylum") for t, info in tips_table.items()}
+radius += ring_width + RING_GAP
+draw_ring(radius, lambda t: phylum_colours.get(phylum_of[t], UNKNOWN_TAXON))
+if args.subfamily:
+    radius += ring_width + RING_GAP
+    draw_ring(radius, lambda t: subphylum_colours.get(subphylum_of[t], NO_SUBPHYLUM if phylum_of[t] in phylum_colours
+                                                      else UNKNOWN_TAXON))
 ring_end = radius + ring_width
 
 marked_tips = [t for t in tip_order if tips_table[t]["portal"] in marked]
-if marked_tips:
+for portal, colour in marked.items():
     ticks = "".join(f"M{xy(ring_end + 1, tip_angle(tip_index[t]))}L{xy(ring_end + tick_width - 1, tip_angle(tip_index[t]))}"
-                    for t in marked_tips)
-    svg.append(f'<path fill="none" stroke="#000000" stroke-width="0.5" d="{ticks}"/>')
+                    for t in marked_tips if tips_table[t]["portal"] == portal)
+    if ticks:
+        svg.append(f'<path fill="none" stroke="{colour}" stroke-width="0.5" d="{ticks}"/>')
 
 # 7. Names and leader lines; a leader's radius grows along its way, so it never crosses the rings
 leader_start = ring_end + tick_width + 1
-leader_mid = leader_start + LEADER * 0.25
+leader_mid = leader_start + leader * 0.25
 leader_end = label_radius - 1.5
 leaders = []
 texts = []
-for (tip, text, is_outgroup), position in zip(labels, placed):
+for (tip, text, is_outgroup, bold), position in zip(labels, placed):
     a, b = tip_angle(tip_index[tip]), tip_angle(position)
     steps = max(1, int(abs(b - a) / math.radians(1.5)))
     points = [xy(leader_start, a), xy(leader_mid, a)]
@@ -436,14 +477,15 @@ for (tip, text, is_outgroup), position in zip(labels, placed):
     rotation = degrees + 180 if flip else degrees
     colour = ROOT_COLOUR if is_outgroup else "#000000"
     anchor = "end" if flip else "start"
-    texts.append(f'<text x="{x:.2f}" y="{y:.2f}" font-size="{font:.2f}" fill="{colour}" text-anchor="{anchor}" '
+    weight = ' font-weight="bold"' if bold else ""
+    texts.append(f'<text x="{x:.2f}" y="{y:.2f}" font-size="{font:.2f}"{weight} fill="{colour}" text-anchor="{anchor}" '
                  f'dominant-baseline="central" transform="rotate({rotation:.2f} {x:.2f} {y:.2f})">{escape(text)}</text>')
 if leaders:
     svg.append(f'<path fill="none" stroke="#808080" stroke-width="0.15" d="{"".join(leaders)}"/>')
 svg.extend(texts)
 
 # 8. Legend and caption
-y = WIDTH + 12
+y = width + 12
 legend = []
 counts = {}
 for info in tips_table.values():
@@ -492,32 +534,70 @@ for track in tracks:
     row += 30
 swatch(x_right, row + 4, NO_SCORE, "no hit to this HMM (outgroups are not searched)")
 row += 14
-if marked_tips:
-    tax = taxonomy()
-    who = ", ".join(sorted(" ".join(tax[p]["species"].split()[:2]) if p in tax else p for p in marked))
-    legend.append(f'<path d="M{x_right + 4} {row - 7:.1f}L{x_right + 4} {row + 2:.1f}" stroke="#000000" stroke-width="1"/>')
-    legend.append(f'<text x="{x_right + 12}" y="{row:.1f}" font-size="8">{escape(who)} proteins ({len(marked_tips)})</text>')
-    row += 14
+for portal, colour in marked.items():
+    species = " ".join(cohort[portal]["species"].split()[:2])
+    count = sum(tips_table[t]["portal"] == portal for t in marked_tips)
+    legend.append(f'<path d="M{x_right + 4} {row - 7:.1f}L{x_right + 4} {row + 2:.1f}" stroke="{colour}" stroke-width="1.5"/>')
+    legend.append(f'<text x="{x_right + 12}" y="{row:.1f}" font-size="8">{escape(species)} ({portal}) proteins ({count})</text>')
+    row += 12
+if marked:
+    row += 2
+# phyla in the order of their colours, each followed (in a subfamily) by its subphyla in this tree
+row += 6
+legend.append(f'<text x="{x_right}" y="{row:.1f}" font-size="9" font-weight="bold">'
+              f'{"Phylum and subphylum rings" if args.subfamily else "Phylum ring"} (tips)</text>')
+row += 14
+groups = []  # one per phylum, kept in one column
+for phylum, colour in phylum_colours.items():
+    inside = [t for t in tips_table if phylum_of[t] == phylum]
+    if not inside:
+        continue
+    entries = [(0, colour, f"{phylum} ({len(inside)})")]
+    groups.append(entries)
+    subs = {}
+    for t in inside if args.subfamily else []:
+        subs[subphylum_of[t]] = subs.get(subphylum_of[t], 0) + 1
+    for sub in sorted(subs, key=lambda s: (s not in subphylum_colours, -subs[s], s)):
+        if sub in subphylum_colours and sub != phylum:
+            entries.append((12, subphylum_colours[sub], f"{sub} ({subs[sub]})"))
+        elif sub != phylum:
+            entries.append((12, NO_SUBPHYLUM, f"no subphylum ({subs[sub]})"))
+unknown = sum(phylum_of[t] not in phylum_colours for t in tips_table)
+if unknown:
+    groups.append([(0, UNKNOWN_TAXON, f"unknown ({unknown})")])
+per_column = 9
+column, line, deepest = 0, 0, 0
+for entries in groups:
+    if line and line + len(entries) > per_column:
+        column, line = column + 1, 0
+    for indent, colour, text in entries:
+        swatch(x_right + 160 * column + indent, row + 12 * line, colour, text)
+        line += 1
+    deepest = max(deepest, line)
+row += 12 * deepest
 legend_bottom = max(legend_bottom, row)
 
 
 
 def write_figure(path, parts, extra_legend, caption, bottom):
     for i, line in enumerate(caption):
-        extra_legend.append(f'<text x="{WIDTH / 2}" y="{bottom + 8 + 10 * i:.1f}" font-size="7.5" text-anchor="middle">'
+        extra_legend.append(f'<text x="{width / 2}" y="{bottom + 8 + 10 * i:.1f}" font-size="7.5" text-anchor="middle">'
                             f'{escape(line)}</text>')
     height = bottom + 8 + 10 * len(caption) + 6
     os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
-        f.write(f'<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}pt" '
-                f'height="{height:.0f}pt" viewBox="0 0 {WIDTH} {height:.0f}" font-family="Arial, Helvetica, sans-serif">\n')
-        f.write(f'<rect width="{WIDTH}" height="{height:.0f}" fill="#ffffff"/>\n')
+        f.write(f'<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="{width:.1f}pt" '
+                f'height="{height:.0f}pt" viewBox="0 0 {width:.1f} {height:.0f}" font-family="Arial, Helvetica, sans-serif">\n')
+        f.write(f'<rect width="{width:.1f}" height="{height:.0f}" fill="#ffffff"/>\n')
         f.write("\n".join(parts + svg + legend + extra_legend) + "\n</svg>\n")
 
 
 write_figure(out_path, tree_parts, [],
              [f"{tree_method} tree of {title}, {n_tips:,} tips, {root_text} (red dot)."
-              f" Names: characterized or genetically supported references (black) and outgroups (red).",
+              + (" Names: every tip's ID; references in bold, with their protein name; outgroups in red." if args.subfamily else
+                 " Names: characterized or genetically supported references (bold) and outgroups (red)."),
+              "Rings from the centre outward: orthogroup, HMM score and coverage, phylum"
+              + (", subphylum." if args.subfamily else "."),
               f"Each protein's score and coverage add up the pieces of a split domain. "
               + (f"{long_branches} long terminal branches are cut at the rings." if long_branches else "")],
              legend_bottom)
@@ -540,7 +620,7 @@ if not args.subfamily:
 
     with open(tree_path, "rb") as f:
         tree_md5 = hashlib.md5(f.read()).hexdigest()
-    name_of = {tip: text for tip, text, _ in labels}
+    name_of = {label[0]: label[1] for label in labels}
     table = []
     for node in numbered:
         inside = tree.tips_under(node)

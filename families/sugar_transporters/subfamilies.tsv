@@ -11,9 +11,12 @@ cdt	og0000544	node	fasttree	80	8	no characterized member
 fsy	ingroup	node	fasttree	61	all	OG0000345; two clades in the IQ-TREE tree, which its own tree tests
 fsy	cdt_group	node	fasttree	22	8	
 fsy	og0000297	node	fasttree	64	8	no characterized member
-itr	ingroup	node	fasttree	68	all	OG0001120 + OG0003609; STPs and GLUTs stay inside as landmarks
+itr	ingroup	node	fasttree	117	all	ITR (OG0001120); split from node 68 because its own trees put the hexose sample and plant STPs between ITR and mst1 (IQ-TREE 79.1/73, its parts 96-100)
+itr	mst1_group	node	fasttree	131	8	the other half of node 68
 itr	ecoli	tips		Escco-GalP,Escco-AraE	all	the family root; ITR is the first large lineage to branch
-itr	hexose_group	node	fasttree	37	8	
+mst1	ingroup	node	fasttree	131	all	OG0003609 + 15 OG0001120, with GpMst1 and the human GLUTs; sister to the hexose transporters and plant STPs in the itr trees
+mst1	hexose_group	node	fasttree	37	8	the sister lineage in the itr trees
+mst1	itr_group	node	fasttree	117	8	
 galacturonate_quinate	ingroup	node	fasttree	44	all	OG0000008 piece C core
 galacturonate_quinate	hexose_group	node	fasttree	37	8	
 galacturonate_quinate	pentose_group	node	fasttree	10	8	

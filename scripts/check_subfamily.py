@@ -2,14 +2,17 @@
 # check_subfamily.py
 # Description: Checks a subfamily's tree (step F14), for a person to review; nothing is decided here.
 #              It reports: whether the ingroup is monophyletic; whether each outgroup lineage is
-#              monophyletic; whether rooting on each lineage gives the same ingroup root; where the
-#              midpoint and MAD roots fall against the outgroup root; ingroup support; and how many ingroup
+#              monophyletic; whether rooting on each lineage gives the same ingroup root; whether the
+#              outgroup root is accepted: when the ingroup is a clade, so that every outgroup tip falls
+#              outside it, even if a lineage is not a clade itself (that is reported); where the midpoint and
+#              MAD roots fall against the outgroup root, and whether they only move the outgroups to the other
+#              side of the ingroup's first split; ingroup support; and how many ingroup
 #              splits the whole-family trees share. MAD (minimal ancestor deviation; Tria, Landan & Dagan
 #              2017, Nat Ecol Evol 1:0193) assumes roughly clock-like evolution, so a disagreement is
 #              something to explain, not a reason to replace the outgroup root.
 # Author: Victor M. Gonzalez Ramos
 # Date: 2026-11-05
-# Version: 1.0
+# Version: 1.1
 #
 # Usage (from the project folder; needs numpy, e.g. module load python-data):
 #   python3 scripts/check_subfamily.py <family> <subfamily> [--tree fasttree|ml]
@@ -169,18 +172,32 @@ same = len(set(ingroup_roots.values())) == 1
 report.append(f"- Same ingroup root from all lineages: {'PASS' if same else 'FAIL'}"
               + (" (only one lineage)" if len(lineages) == 1 else ""))
 
-# 2. Each outgroup lineage
+# 2. Each outgroup lineage, then the verdict on the outgroup root
+failed_lineages = []
 for lineage, members in lineages.items():
     rooted = read_tree(tree_path)
     rooted.root_on_tip(members[0])
     rest = [t for t in tips_table if t not in set(members)]
     node = rooted.mrca(rest)
     clade = len(rooted.tips_under(node)) == len(rest)
+    if not clade:
+        failed_lineages.append(lineage)
     report.append(f"- Lineage {lineage} monophyletic: {'PASS' if clade else 'FAIL'}"
                   + (f" (support {node.label or 'none'})" if clade else ""))
 
-# 3. The midpoint and MAD roots against the outgroup root
+if ingroup_clade:
+    report.append(f"- Outgroup root: ACCEPTED, all {len(outgroups)} outgroup tips fall outside the ingroup"
+                  + (f" (not a clade itself, reported only: {', '.join(failed_lineages)})" if failed_lineages else ""))
+else:
+    report.append("- Outgroup root: NOT ACCEPTED, outgroup tips fall inside the ingroup")
+
+# 3. The midpoint and MAD roots against the outgroup root, and the ingroup's first split under that root
 report += ["", "## Other roots", ""]
+first_split = set()
+if ingroup_clade:
+    rooted = read_tree(tree_path)
+    rooted.root_on_clade(outgroups)
+    first_split = {frozenset(rooted.tips_under(c)) & ingroup_set for c in rooted.mrca(ingroup).children}
 
 
 def place_root(method, side, extra=""):
@@ -191,8 +208,11 @@ def place_root(method, side, extra=""):
         report.append(f"- {method}: outside the ingroup, as the outgroup root{extra}")
         return
     smaller, larger = sorted((one, other), key=len)
+    same_split = frozenset(smaller) in first_split or frozenset(larger) in first_split
     report.append(f"- {method}: INSIDE the ingroup, separating {len(smaller)} tip(s) from {len(larger)}{extra}. "
-                  f"The {len(smaller)}: {named_in(smaller)}")
+                  f"The {len(smaller)}: {named_in(smaller)}"
+                  + (". This is the ingroup's first split under the outgroup root: the two roots agree on it and "
+                     "differ only in the side the outgroups join" if same_split else ""))
 
 
 midpoint = read_tree(tree_path)
