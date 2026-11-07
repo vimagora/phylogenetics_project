@@ -62,6 +62,15 @@ match the clades of both pentose trees (one tip apart), became `hgt1` (node 69, 
 Triat2-265450), `xylose` (node 79, 340), `stl1` (node 26, 983) and `og8_c` (node 62, 451). Only
 Treme1-61644 is in none of them, as it changes side between the two pentose trees.
 
+Three of the four failed in their own trees (2026-11-07), each with a supported core and a small group
+at its base that falls outside it, beside the outgroups: the deep branches within OG0000008 are short.
+`stl1` became node 27 (974 tips, without 9 basal tips) and `hgt1` node 92 (276 tips, plus
+Triat2-265450, without the 101-tip uncharacterized node 271 and 7 tips beside the `stl1` sample), both
+matching their own trees. `og8_c` has no tree of its own: it has no characterized protein, and its own
+IQ-TREE tree could not separate it from the `stl1` sample (29.5/49). It stays an outgroup lineage of
+`stl1`. If a narrowed core fails again, its tree is reported unrooted rather than cut further; a
+supported backbone for OG0000008 would need a tree of representatives rooted on distant lineages.
+
 Tree 8 comes almost entirely from anaerobic gut fungi: *Neocallimastix* (106 tips), *Anaeromyces* (21),
 *Caecomyces* (12) and *Piromyces* (12). *Neocallimastix* has many duplicated genes (36.3% duplicated BUSCO
 markers), so this is probably a lineage-specific expansion.
