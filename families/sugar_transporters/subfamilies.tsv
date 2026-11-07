@@ -23,9 +23,19 @@ galacturonate_quinate	pentose_group	node	fasttree	10	8
 gut_fungi	ingroup	node	fasttree	150	all	OG0000008; a separate clade from galacturonate_quinate in FastTree; IQ-TREE joins them without support (13.1/12)
 gut_fungi	galacturonate_quinate	node	fasttree	44	8	
 gut_fungi	pentose_group	node	fasttree	10	8	
-pentose	ingroup	node	fasttree	10	all	OG0000008 piece A; holds the 76-tip clade that IQ-TREE keeps apart
-pentose	hexose_group	node	fasttree	37	8	
-pentose	galacturonate_quinate	node	fasttree	44	8	
+hgt1	ingroup	node	fasttree	69	all	from the pentose split (node 10): HGT1, HxtA, AraT, LAT-1, Gtt1; branches first in the pentose IQ-TREE tree (93/74)
+hgt1	ingroup	tips		Triat2-265450	all	joins this clade in both pentose trees, outside node 69 in the family tree
+hgt1	hexose_group	node	fasttree	37	8	
+hgt1	stl1_group	node	fasttree	26	8	
+xylose	ingroup	node	fasttree	79	all	from the pentose split: Xut1/3, XltA/B, Str1/2, XtrD, Xylh, CgMfs1; 100/100 in the pentose IQ-TREE tree
+xylose	hgt1_group	node	fasttree	69	8	
+xylose	stl1_group	node	fasttree	26	8	
+stl1	ingroup	node	fasttree	26	all	from the pentose split: Stl1, GlpA-C, LAT2/LatA, An25, XAT1, XltD; 72.9/86 in the pentose IQ-TREE tree
+stl1	xylose_group	node	fasttree	79	8	
+stl1	og8_c_group	node	fasttree	62	8	
+og8_c	ingroup	node	fasttree	62	all	from the pentose split: no characterized member; joins the galacturonate_quinate sample in the pentose IQ-TREE tree (94.1/61)
+og8_c	galacturonate_quinate	node	fasttree	44	8	
+og8_c	stl1_group	node	fasttree	26	8	
 weak	ingroup	orthogroups		OG0000772,OG0000102	all	ON HOLD until the Roihu checks; kept so that F11 checks the UniProt proteins. Asks whether they belong in the family; the comparison sets replace the neighbouring lineages
 weak	sugar_porters	tips		Sacce1-3057,Aspni_NRRL3_1-3147,Aspni_NRRL3_1-11715,Picst3-33008,Sacce1-759,Aspor1-9642,Neucr2-1907,Klula1-1118,Sacce1-1538,Schpo1-573	all	two characterized proteins from each of five subfamilies
 weak	other_pf00083	uniprot		Sacce-Pho84=P25297,Sacce-Git1=P25346,Sacce-Jen1=P36035	all	non-sugar MFS proteins that hit PF00083 (TCDB 2.A.1.9, 2.A.1.12)

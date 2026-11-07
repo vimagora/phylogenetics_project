@@ -103,7 +103,7 @@ Gene families (`<family>` is a folder in `families/`):
 | F10. Subfamilies | Choose them on the node figure and table of F7, and record them in `families/<family>/subfamilies.tsv` (by hand) | |
 | F11. Subfamily tip lists | `python3 scripts/build_subfamilies.py <family>` | `subfamilies/report.md`, `subfamilies/<subfamily>/tips.tsv`, `sequences.faa` |
 | ⏸ | Review of the report before aligning; `python3 scripts/make_family_figure.py <family> --subfamilies [A,B,...]` shows where the subfamilies landed | `figures/<family>_<tree>_subfamilies.svg` |
-| F12. Subfamily alignment | `sbatch scripts/align_family.sbatch <family> <subfamily>` | `subfamilies/<subfamily>/aligned.faa`, `trimmed.faa` |
+| F12. Subfamily alignment | `sbatch --cpus-per-task=16 --mem=16G scripts/align_family.sbatch <family> <subfamily>` (32 GB above about 1,500 sequences) | `subfamilies/<subfamily>/aligned.faa`, `trimmed.faa` |
 | F13. Subfamily trees | `sbatch --time=04:00:00 scripts/family_tree.sbatch <family> fasttree <subfamily>`, then `modelfinder` and `tree` with the same arguments | `subfamilies/<subfamily>/fasttree.nwk`, `modelfinder.*`, `ml.*` |
 | F14. Subfamily checks and figure | `python3 scripts/check_subfamily.py <family> <subfamily> [--tree ml]`; `python3 scripts/make_family_figure.py <family> --subfamily <subfamily> [--tree ml]` | `subfamilies/<subfamily>/checks_<tree>.md`, `<tree>_rooted.nwk`; `figures/<family>_<subfamily>_<tree>.svg` |
 | ⏸ | Review of the checks and the figure; run F14 on FastTree before the long IQ-TREE run, and again on its tree | |
@@ -252,9 +252,13 @@ whole-family tree, on which subfamilies are chosen. IQ-TREE 3 on the whole famil
 on the full alignment, then 1000 ultrafast bootstraps with NNI refinement and 1000 SH-aLRT replicates,
 rooted on the outgroups marked `root`, with a fixed seed and `-safe`, which avoids the numerical underflow
 of large trees. IQ-TREE chooses its number of threads (`-T AUTO`), since trimmed family alignments are
-short. The job's defaults (8 CPUs, 32 GB, 3 days) are meant for subfamilies; give a whole family more, e.g.
-`sbatch --cpus-per-task=32 --mem=192G`. Our family of 8,681 tips ran with those settings and took about
-101 hours, with one resubmission.
+short. The job's defaults (8 CPUs, 8 GB, 1 day) are meant for subfamilies; give a whole family more, e.g.
+`sbatch --time=3-00:00:00 --cpus-per-task=32 --mem=192G`. Our family of 8,681 tips ran with those settings
+and took about 101 hours, with one resubmission. For subfamilies of 171–2,176 sequences (CSC Roihu), the
+alignment took up to 48 minutes and 7.5 GB with `--cpus-per-task=16 --mem=16G` (about 1,100 sequences),
+and 5 hours and 14.5 GB for 2,176 sequences; FastTree under a minute and 0.5 GB; ModelFinder up to 1 h 41 min
+and 2.2 GB; IQ-TREE up to 6 h 33 min and 3.8 GB. Memory follows sequence length more than number, so
+keep some margin.
 `make_family_itol.py` shows function only for characterized references.
 
 **Figure (F7).** `make_family_figure.py` draws the tree as a circular SVG with editable text, using only

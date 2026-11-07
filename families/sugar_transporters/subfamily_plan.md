@@ -44,16 +44,23 @@ Anchors are tips with characterized references; *D. squalens* counts are all its
 | 3 | `cdt` | CDT/lactose (OG0000100) | 1,080 (0.89) | same size, one tip differs, 35.6/50 | 18, incl. CDT-1, CDT-2, CltB/LacpB, LAC12 | 2 |
 | 4 | `fsy` | Fsy (OG0000345) | 462 (0.88) | two clades in IQ-TREE (402, 77.7/86, and 60, 100/100); its own tree tests this | 9, incl. Fsy1 orthologs and Frt1 | 2 |
 | 5 | `itr` | ITR (OG0001120) + OG0003609, with the STPs and GLUTs inside as landmarks | 390 (0.84) | same clade, 88.9/46; ITR core 100/99 | 4, incl. ITR1, ITR2, Itr2; STPs, GLUTs | 2 |
+| 6 | `galacturonate_quinate` | OG0000008 piece C | 575 (0.98) | all 572 of its OG0000008 members are in IQ-TREE's 730-tip clade, which joins it with tree 8 without support (13.1/12) | 8: GatA, Gat-1, Gat1, Gat2, GalA, Qut-D, qa-y, AHA12287.1; 2 *D. squalens* proteins | 3 |
+| 7 | `pentose` | OG0000008 piece A | 2,160 (0.92) | core 96% shared, 61.2/43; a 76-tip clade inside it stands apart in IQ-TREE (86.9/81) | 43, incl. XltA–C, Xut1, Xut3, Str1–2, LAT-1, AraT, HGT1; 11 *D. squalens* proteins | 3 |
+| 8 | `gut_fungi` | OG0000008 clade of early-diverging fungi | 155 (1.00) | IQ-TREE joins it with tree 6 without support (13.1/12) | none; no *D. squalens* proteins | 4 |
+| 9 | `weak` | all 335 members of OG0000772 + OG0000102 | by orthogroup; OG0000772 is a clade of 227 (1.00), OG0000102 of 114 (0.16), together 342 (0.33) | OG0000772 stays together; only 7 of OG0000102 join it (236 tips, 92.8/94) | 1 (Tr Tr44175, in OG0000772) | on hold (§6) |
 
 Tree 5 was split after its own trees (2026-11-06): in both its FastTree and IQ-TREE trees, rooted on
 *E. coli*, the hexose outgroup sample and the plant STPs (96/90) join the OG0003609 group (100/100) rather
 than ITR (99.1/100), with 79.1/73 for that grouping, so node 68 is not a clade there. It became `itr`
 (node 117, 207 tips) and `mst1` (node 131, 176 tips, with GpMst1 and the human GLUTs); the STPs are in
 neither.
-| 6 | `galacturonate_quinate` | OG0000008 piece C | 575 (0.98) | all 572 of its OG0000008 members are in IQ-TREE's 730-tip clade, which joins it with tree 8 without support (13.1/12) | 8: GatA, Gat-1, Gat1, Gat2, GalA, Qut-D, qa-y, AHA12287.1; 2 *D. squalens* proteins | 3 |
-| 7 | `pentose` | OG0000008 piece A | 2,160 (0.92) | core 96% shared, 61.2/43; a 76-tip clade inside it stands apart in IQ-TREE (86.9/81) | 43, incl. XltA–C, Xut1, Xut3, Str1–2, LAT-1, AraT, HGT1; 11 *D. squalens* proteins | 3 |
-| 8 | `gut_fungi` | OG0000008 clade of early-diverging fungi | 155 (1.00) | IQ-TREE joins it with tree 6 without support (13.1/12) | none; no *D. squalens* proteins | 4 |
-| 9 | `weak` | all 335 members of OG0000772 + OG0000102 | by orthogroup; OG0000772 is a clade of 227 (1.00), OG0000102 of 114 (0.16), together 342 (0.33) | OG0000772 stays together; only 7 of OG0000102 join it (236 tips, 92.8/94) | 1 (Tr Tr44175, in OG0000772) | on hold (§6) |
+
+Tree 7 was split for the same reason (2026-11-07): in its IQ-TREE tree the `galacturonate_quinate`
+outgroup sample falls inside it, beside a 451-tip lineage with no characterized member (94.1/61), and
+the rest forms two further lineages. Its four parts, numbered clades of the family FastTree tree that
+match the clades of both pentose trees (one tip apart), became `hgt1` (node 69, 384 tips, plus
+Triat2-265450), `xylose` (node 79, 340), `stl1` (node 26, 983) and `og8_c` (node 62, 451). Only
+Treme1-61644 is in none of them, as it changes side between the two pentose trees.
 
 Tree 8 comes almost entirely from anaerobic gut fungi: *Neocallimastix* (106 tips), *Anaeromyces* (21),
 *Caecomyces* (12) and *Piromyces* (12). *Neocallimastix* has many duplicated genes (36.3% duplicated BUSCO

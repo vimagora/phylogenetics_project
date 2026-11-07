@@ -4,11 +4,11 @@
 #SBATCH --error=09_families/logs/tree_%j.err
 #SBATCH --open-mode=append
 #SBATCH --partition=small
-#SBATCH --time=3-00:00:00
+#SBATCH --time=1-00:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=32G
+#SBATCH --mem=8G
 # family_tree.sbatch
 # Description: Slurm job that infers a gene family's tree, or a subfamily's, from the trimmed alignment
 #              (align_family.sbatch), in one of three modes, each reviewed before the next:
